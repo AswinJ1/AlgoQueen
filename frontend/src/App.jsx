@@ -1,6 +1,8 @@
 import React from 'react'
 import HeroComponent from './components/HeroComponent'
 import About from './components/AboutSection'
+import RegisterSection from './components/RegisterSection'
+import TrainingMaterials from './components/TrainingMaterials'
 const App = () => {
   return (
     
@@ -11,6 +13,12 @@ const App = () => {
     </div>
     <div>
       <About></About>
+    </div>
+    <div>
+      <RegisterSection></RegisterSection>
+    </div>
+    <div>
+      <TrainingMaterials></TrainingMaterials>
     </div>
     </div>
   )
