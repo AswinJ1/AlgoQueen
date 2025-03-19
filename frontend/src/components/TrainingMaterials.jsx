@@ -126,9 +126,9 @@ const TrainingMaterials = () => {
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-1.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Priya Sharma</h5>
-                                  <p className="text-sm text-gray-600">IIT Bombay</p>
-                                  <p className="text-xs text-gray-500">1st Year</p>
+                                  <h5 className="font-semibold">Kezia Aurelia Cendranata</h5>
+                                  <p className="text-sm text-gray-600">Binus University , Indonesia</p>
+                                  <p className="text-xs text-gray-500">3rd Year </p>
                                 </div>
                                 
                                 {/* College Winner 2 */}
@@ -136,8 +136,8 @@ const TrainingMaterials = () => {
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-2.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Anjali Patel</h5>
-                                  <p className="text-sm text-gray-600">BITS Pilani</p>
+                                  <h5 className="font-semibold">Riya Singh</h5>
+                                  <p className="text-sm text-gray-600"> MNNIT, Allahabad</p>
                                   <p className="text-xs text-gray-500">2nd Year</p>
                                 </div>
                                 
@@ -146,8 +146,8 @@ const TrainingMaterials = () => {
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-3.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Meera Desai</h5>
-                                  <p className="text-sm text-gray-600">MIT Manipal</p>
+                                  <h5 className="font-semibold">Anushka Goyal</h5>
+                                  <p className="text-sm text-gray-600">TIET, Punjab</p>
                                   <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 
@@ -156,26 +156,27 @@ const TrainingMaterials = () => {
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-4.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Roshni Kumar</h5>
-                                  <p className="text-sm text-gray-600">IIT Madras</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
+                                  <h5 className="font-semibold">Divya Porwal
+                                  </h5>
+                                  <p className="text-sm text-gray-600">KNIT Sultanpur</p>
+                                  <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-5.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Anika Choudhary</h5>
-                                  <p className="text-sm text-gray-600">NIT Warangal</p>
-                                  <p className="text-xs text-gray-500">1st Year</p>
+                                  <h5 className="font-semibold">Sayeda Tahmina</h5>
+                                  <p className="text-sm text-gray-600">CUET, Bangladesh</p>
+                                  <p className="text-xs text-gray-500">4th Year</p>
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-6.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Tanvi Mehta</h5>
-                                  <p className="text-sm text-gray-600">IIIT Delhi</p>
+                                  <h5 className="font-semibold">Urmi Biswas</h5>
+                                  <p className="text-sm text-gray-600">CUET, Bangladesh</p>
                                   <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 
@@ -183,44 +184,45 @@ const TrainingMaterials = () => {
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-no.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Sona Bhattacharya</h5>
-                                  <p className="text-sm text-gray-600">Jadavpur University</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
+                                  <h5 className="font-semibold">Pragati Kesarwani
+                                  </h5>
+                                  <p className="text-sm text-gray-600">SIET, UP</p>
+                                  <p className="text-xs text-gray-500">4th Year</p>
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-8.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Ishita Jain</h5>
-                                  <p className="text-sm text-gray-600">VIT Vellore</p>
-                                  <p className="text-xs text-gray-500">1st Year</p>
+                                  <h5 className="font-semibold">Tanisha Pareek</h5>
+                                  <p className="text-sm text-gray-600">PICT Pune</p>
+                                  <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-9.jpeg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Deepa Sharma</h5>
-                                  <p className="text-sm text-gray-600">MNIT Jaipur</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
+                                  <h5 className="font-semibold">Ekta Rani</h5>
+                                  <p className="text-sm text-gray-600">IIT(ISM) Dhanbad</p>
+                                  <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-10.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Maya Pillai</h5>
-                                  <p className="text-sm text-gray-600">IISC Bangalore</p>
-                                  <p className="text-xs text-gray-500">1st Year</p>
+                                  <h5 className="font-semibold">Khushi Agarwal</h5>
+                                  <p className="text-sm text-gray-600">IIT Indore</p>
+                                  <p className="text-xs text-gray-500">2nd Year</p>
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-11.png" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Aditi Raman</h5>
-                                  <p className="text-sm text-gray-600">BITS Goa</p>
+                                  <h5 className="font-semibold">Anu Sharma</h5>
+                                  <p className="text-sm text-gray-600">IGDTUW Delhi</p>
                                   <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 
@@ -228,32 +230,33 @@ const TrainingMaterials = () => {
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-12.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Nisha Verma</h5>
-                                  <p className="text-sm text-gray-600">DTU Delhi</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
+                                  <h5 className="font-semibold">Mansura Naznine</h5>
+                                  <p className="text-sm text-gray-600">RUET, Bangladesh</p>
+                                  <p className="text-xs text-gray-500">4th Year</p>
                                 </div>
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-college-1.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Nisha Verma</h5>
-                                  <p className="text-sm text-gray-600">DTU Delhi</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
+                                  <h5 className="font-semibold">Sanjida Nuri Pearl</h5>
+                                  <p className="text-sm text-gray-600">CUET, Bangladesh</p>
+                                  <p className="text-xs text-gray-500">4th Year</p>
                                 </div>
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-college-2.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Nisha Verma</h5>
-                                  <p className="text-sm text-gray-600">DTU Delhi</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
+                                  <h5 className="font-semibold">Vaidehi Desai
+                                  </h5>
+                                  <p className="text-sm text-gray-600">PDEU, Gujarat</p>
+                                  <p className="text-xs text-gray-500">3rd Year</p>
                                 </div>
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-no.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Nisha Verma</h5>
-                                  <p className="text-sm text-gray-600">DTU Delhi</p>
+                                  <h5 className="font-semibold">Kajal Pawar</h5>
+                                  <p className="text-sm text-gray-600">WCE, Sangli</p>
                                   <p className="text-xs text-gray-500">2nd Year</p>
                                 </div>
                               </div>
@@ -268,8 +271,9 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-1.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Aisha Khan</h5>
-                            <p className="text-sm text-gray-600">Delhi Public School</p>
+                            <h5 className="font-semibold">Nino Chkhaidze</h5>
+                            <p className="text-sm text-gray-600">V.Komarov Tbilisi School of Physics and Mathematics N199</p>
+                            <p className="text-xs text-gray-500">11th Gradern</p>
                           </div>
                           
                           {/* School Winner 2 */}
