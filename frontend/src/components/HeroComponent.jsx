@@ -8,9 +8,11 @@ import Tilt from 'react-parallax-tilt';
 
 const navigation = [
   { name: 'Home', href: '#' },
-  { name: 'Why Amrita', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'About', href: '#' },
+  { name: 'participate', href: '#' },
+  { name: 'learn', href: '#' },
+  {name: 'FAQ', href: '#'},
+  {name: 'Contact', href: '#'}
 ];
 
 export default function HeroComponent() {
@@ -31,7 +33,7 @@ export default function HeroComponent() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Algo Queen</span>
               <img
                 alt=""
                 src="/logo.png"
@@ -70,7 +72,7 @@ export default function HeroComponent() {
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                  src="/logo.png"
                   className="h-8 w-auto"
                 />
               </a>
@@ -99,9 +101,9 @@ export default function HeroComponent() {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="block w-full rounded-lg px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
                   >
-                    Log in
+                    Register now
                   </a>
                 </div>
               </div>

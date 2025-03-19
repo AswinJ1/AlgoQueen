@@ -272,7 +272,7 @@ const TrainingMaterials = () => {
                               <img src="/profile-s-1.jpg" alt="Winner" />
                             </Avatar>
                             <h5 className="font-semibold">Nino Chkhaidze</h5>
-                            <p className="text-sm text-gray-600">V.Komarov Tbilisi School of Physics and Mathematics N199</p>
+                            <p className="text-sm text-gray-600">V. Komarov Physics & Math School, Tbilisi</p>
                             <p className="text-xs text-gray-500">11th Gradern</p>
                           </div>
                           
