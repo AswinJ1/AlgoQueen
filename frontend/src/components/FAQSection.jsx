@@ -9,25 +9,63 @@ import SectionHeading from './SectionHeading';
 
 const faqs = [
   {
-    question: "How do I get started with your product?",
-    answer: "Getting started is simple. Just create an account, follow the onboarding guide, and you'll be up and running in minutes. Our intuitive interface makes it easy to navigate and explore all features."
+    question: "What is ICPC Algo Queen 2025?",
+    answer: "ICPC Algo Queen 2025 is a competitive programming competition organized by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation. It aims to empower students, inspire coding excellence, and promote diversity in the tech community."
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards including Visa, Mastercard, and American Express. We also support payments through PayPal, Apple Pay, and Google Pay for your convenience."
+    question: "Who can participate in ICPC Algo Queen?",
+    answer: "ICPC Algo Queen is open to both school and college students who have an interest in competitive programming and coding."
   },
   {
-    question: "Is there a free trial available?",
-    answer: "Yes, we offer a 14-day free trial with full access to all features. No credit card is required to start your trial. You can upgrade to a paid plan anytime during or after your trial period."
+    question: "Is there an entry fee for the competition?",
+    answer: "No, participation in ICPC Algo Queen is absolutely free."
   },
   {
-    question: "How can I get support if I have issues?",
-    answer: "Our support team is available 24/7. You can reach us through the in-app chat, email at support@example.com, or by phone at +1 (555) 123-4567. We typically respond to all inquiries within 2 hours."
+    question: "Do I need to have prior coding experience to participate?",
+    answer: "While prior coding experience can be helpful, ICPC Algo Queen welcomes participants of all skill levels. The competition is designed to encourage growth and learning."
   },
   {
-    question: "Can I cancel my subscription at any time?",
-    answer: "Absolutely. You can cancel your subscription at any time from your account settings. There are no cancellation fees or hidden charges. If you cancel, you'll still have access until the end of your billing period."
+    question: "Can I participate as a team or only as an individual?",
+    answer: "You can participate only individually. Check the competition guidelines for more details."
+  },
+  {
+    question: "What are the prizes for the winners?",
+    answer:"Winners will be awarded exciting prizes that recognize their coding skills and achievements."
+
+  },{
+    question: "How will the competition be conducted?",
+    answer:"Round 1 will be online for all the participants and Round 2 will be On-Site for Indian participants and Online (remotely proctored) for International Participants. Registered participants will receive detailed instructions about the competition format and rules closer to the event date."
+  },
+  {
+    question:"Will there be any training provided before the competition?",
+    answer:"Yes, ICPC Algo Queen aims to provide training resources to registered participants to help them prepare for the competition. Further details will be updated soon."
+  },
+  {
+    question:"How will the judging process work?",
+    answer:"The judging process will involve evaluating participants’ solutions to programming challenges based on accuracy, efficiency, and correctness."
+  },
+  {
+    question:"Is there a specific programming language I need to use?",
+    answer:"Participants can use C++/Python/Java/Kotlin"
+  },
+
+  {
+    question:"Will certificates be provided for participation?",
+    answer:"Yes, participants will receive certificates acknowledging their participation in ICPC Algo Queen 2025. "
+  },
+  {
+    question: "How can I stay updated about the competition?",
+    answer: "Keep an eye on the official ICPC Algo Queen website and follow our social media channels for updates, announcements, and important dates. Join our <a href=''>Telegram Channel</a>."
+  },
+  {
+    question:"Who can I contact for further inquiries?",
+    answer:"If you have more questions, feel free to reach out to our support team at algoqueen@cb.amrita.edu / +91 9072100134."
+  },
+  {
+    question:"How can I get involved as a sponsor or mentor?",
+    answer:""
   }
+
 ];
 
 const FAQSection = () => {
