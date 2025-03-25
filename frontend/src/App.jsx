@@ -6,14 +6,18 @@ import TrainingMaterials from './components/TrainingMaterials'
 import FAQSection from './components/FAQSection'
 import ContactInfo from './components/ContactInfo'
 import Footer from './components/Footer'
+import InfoSection from './components/InfoCard';
+
 const App = () => {
   return (
     
     <div>
       <div>
       <HeroComponent></HeroComponent>
-  
     </div>
+    <div>
+     <InfoSection></InfoSection>
+    </div> 
     <div>
       <About></About>
     </div>
@@ -25,9 +29,6 @@ const App = () => {
     </div>
     <div>
       <FAQSection></FAQSection>
-    </div>
-    <div>
-      <ContactInfo></ContactInfo>
     </div>
     <div>
       <Footer></Footer>

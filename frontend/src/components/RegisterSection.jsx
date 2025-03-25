@@ -28,7 +28,7 @@ const RegisterSection = () => {
               <p className="text-xl text-gray-600">Join the ICPC AlgoQueen Competition</p>
             </div>
             
-            <Card className="border-algo-accent border-l-4">
+            {/* <Card className="border-algo-accent border-l-4">
               <h2 className="text-2xl text-algo-primary font-semibold">Registration Information</h2>
               <p className="text-gray-600">Everything you need to know before registering</p>
               <ul className="space-y-3 mt-4">
@@ -51,8 +51,8 @@ const RegisterSection = () => {
                   Register Now     <Zap size={16} />
                 </Button>
               </div>
-            </Card>
-            
+            </Card> */}
+{/*             
             <Card className="mt-8">
               <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
                 <Trophy className="h-6 w-6 mr-2 text-indigo-600 " /> Why Participate?
@@ -80,7 +80,7 @@ const RegisterSection = () => {
                   <Award className="h-5 w-5 mr-2 text-indigo-600" />
                   Special prizes exclusively for girl students.
                 </p>
-                    </Card>
+                    </Card> */}
             
             <Card className="mt-8">
             <div className="space-y-6">

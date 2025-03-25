@@ -36,8 +36,8 @@ export default function HeroComponent() {
               <span className="sr-only">Algo Queen</span>
               <img
                 alt=""
-                src="/logo.png"
-                className="h-20 w-auto"
+                src="/5.png"
+                className="h-14 w-auto"
               />
             </a>
           </div>
@@ -58,11 +58,7 @@ export default function HeroComponent() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        
-             <img src="/telegram.png" className='cursor-pointer' alt="" />
          
-          </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
@@ -115,12 +111,13 @@ export default function HeroComponent() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20">
           <div>
             <h1 className="text-5xl font-bold text-gray-900 leading-tight">
-            ICPC Algo Queen: Empowering Young Women in Competitive programming
+            ICPC Algo Queen: Empowering the Next Generation of Women in Tech
 
 
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-            Amrita Vishwa Vidyapeetham's pioneering initiative, endorsed by the prestigious ICPC Foundation, inspires and equips school and college students to excel in innovative problem-solving
+            ICPC Algo Queen, an initiative by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation, empowers young women with problem-solving skills and fosters innovation and global recognition in tech.
+            
 
             </p>
             <div className="mt-6 flex gap-x-4">

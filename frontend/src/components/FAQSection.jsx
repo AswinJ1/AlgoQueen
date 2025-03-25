@@ -55,15 +55,16 @@ const faqs = [
   },
   {
     question: "How can I stay updated about the competition?",
-    answer: "Keep an eye on the official ICPC Algo Queen website and follow our social media channels for updates, announcements, and important dates. Join our <a href=''>Telegram Channel</a>."
-  },
+    answer: "Keep an eye on the official ICPC Algo Queen website and follow our social media channels for updates, announcements, and important dates. Join our <a href='https://t.me/algoqueen2023' target='_blank' class='text-indigo-600 underline'>Telegram Channel</a>."
+  }
+  ,
   {
     question:"Who can I contact for further inquiries?",
-    answer:"If you have more questions, feel free to reach out to our support team at algoqueen@cb.amrita.edu / +91 9072100134."
+    answer:"If you have more questions, feel free to reach out to our support team at <a href='mailto:algoqueen@cb.amrita.edu'>algoqueen@cb.amrita.edu</a> / +91 9072100134"
   },
   {
     question:"How can I get involved as a sponsor or mentor?",
-    answer:""
+    answer:"If you’re interested in sponsoring or mentoring participants, please contact us at algoqueen@cb.amrita.ed For any additional questions, don’t hesitate to get in touch with us. We’re here to help you have the best experience in ICPC Algo Queen 2024!"
   }
 
 ];
@@ -75,6 +76,7 @@ const FAQSection = () => {
         <SectionHeading 
           title="Frequently Asked Questions" 
           subtitle="Find answers to common questions about our products and services"
+          className={"text-indigo-600"}
         />
         
         <Accordion type="single" collapsible className="w-full">
@@ -88,8 +90,9 @@ const FAQSection = () => {
                 <p className="text-lg font-medium">{faq.question}</p>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-6 pt-2 text-gray-600">
-                {faq.answer}
+               <span dangerouslySetInnerHTML={{ __html: faq.answer }} />
               </AccordionContent>
+
             </AccordionItem>
           ))}
         </Accordion>

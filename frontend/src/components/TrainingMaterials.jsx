@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown } from 'lucide-react';
+import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Avatar } from '@/components/ui/avatar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -11,22 +11,16 @@ const TrainingMaterials = () => {
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-white to-purple-100">
     
       
-      <main className="flex-grow">
+      <div className="flex-grow">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-algo-dark mb-4">Training Materials</h1>
+              <h1 className="text-4xl font-bold text-indigo-600 mb-4">Training Materials</h1>
               <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p>
             </div>
             
-            <Tabs defaultValue="training" className="w-full">
-              <TabsList className="grid grid-cols-3 mb-8">
-                <TabsTrigger value="training">Training Sessions</TabsTrigger>
-                <TabsTrigger value="winners">Past Winners</TabsTrigger>
-                <TabsTrigger value="sponsors">Sponsors</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="training" className="space-y-6">
+          
+              <div  className="space-y-6 mb-16">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
@@ -78,28 +72,216 @@ const TrainingMaterials = () => {
                       </Card>
                     </div>
                     
-                    <div className="mt-6">
-                      <h3 className="text-xl font-semibold mb-4">Upcoming Workshops</h3>
-                      <ul className="space-y-4">
-                        <li className="bg-gray-50 p-4 rounded-md">
-                          <div className="font-medium">Dynamic Programming Workshop</div>
-                          <div className="text-sm text-gray-600">Date: TBD</div>
-                        </li>
-                        <li className="bg-gray-50 p-4 rounded-md">
-                          <div className="font-medium">Graph Algorithms Masterclass</div>
-                          <div className="text-sm text-gray-600">Date: TBD</div>
-                        </li>
-                        <li className="bg-gray-50 p-4 rounded-md">
-                          <div className="font-medium">Competitive Coding Tips & Tricks</div>
-                          <div className="text-sm text-gray-600">Date: TBD</div>
-                        </li>
-                      </ul>
+                    <div className="mt-6 mb-16">
+                    <Accordion type="single" collapsible className="w-full">
+                      
+                          <AccordionItem value="video-1" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Introduction to Problem Solving</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/7bj17348HredG8QK-eU0SlVL89tyyyO0kWYCg1tR8kt2ni8z3Sq7PoK4dg4UO0i-.NKvXMk-8yrfhv3Gk?startTime=1659183555000" 
+                                  title="Introduction to Competitive Programming"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Anuradha Sharma</span>
+                                <span className="text-gray-600">Duration: 45 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                          
+                          <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Basic Problem Solving</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/FjV6zQ9RZMtv12FPDLZA7_bQX7-eb0_x7XBBL547qkmYmPm_gE-_demxdvKJuFe9.mE0bggmzbjR7DEpY" 
+                                  title="Time Complexity and Big O Notation"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Prof. Rajesh Kumar</span>
+                                <span className="text-gray-600">Duration: 38 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                          
+                          <AccordionItem value="video-3" className="border border-gray-200 rounded-lg overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Array/List Problems</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/mgtl7u6Ot4nBWrIaeRSJWW-3i2wde4fljxzyivnaFAAFx78ibTPFfRnsz5I0K796.BFORs6FZdpXvaU35" 
+                                  title="Dynamic Programming Techniques"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Duration: 52 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                          <AccordionItem value="video-4" className="border border-gray-200 rounded-lg overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Sorting & Divide-and-Conquer</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/hsRwt6m2rNl0OwBVBI8Nim6tT8eX2e90GuLuHOqmjRJfEN2bD2FIIKdjH1w_utDH.AvTxn9dBrC_BMC73?startTime=1661602632000" 
+                                  title="Dynamic Programming Techniques"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Duration: 52 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                          <AccordionItem value="video-5" className="border border-gray-200 rounded-lg overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>String Problems</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/p4Aq1BCYOjrcWZlwbe2JKxUTZiWsUP4GcaDsqVsDW6lNG6ekJHcWlTMjVrVx08Ap.a4lsB9fuTMbY8qKz?startTime=1662812466000" 
+                                  title="Dynamic Programming Techniques"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Duration: 52 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                          <AccordionItem value="video-6" className="border border-gray-200 rounded-lg overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Greedy</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/ZZKpiUIYmKj7DhQrUKGk9wM2AXYRYHOk51sT97ren6mdqDoR0ZDRMt8LWtYCCxNj.wFOakKt84EGhJuNz" 
+                                  title="Dynamic Programming Techniques"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Duration: 52 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+
+                          <AccordionItem value="video-7" className="border border-gray-200 rounded-lg overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Dynamic Programming</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/FhmUY3t6DZZ-xInYNSIdMOQ9UzIM3Z4Q2DmNWh_HKfm3rVcWl2m6kc-eJjD5C5Gd.vvAN63c6USMsGsSd?startTime=1664021653000" 
+                                  title="Dynamic Programming Techniques"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Duration: 52 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                          <AccordionItem value="video-8" className="border border-gray-200 rounded-lg overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Graph Representation and Traversal</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                                <iframe 
+                                  className="w-full h-full rounded-md"
+                                  src="https://us06web.zoom.us/rec/share/pPJWzoFTKNOODhhYB4z6-QaS6ezahBkFdT2DP_Eaz1zzpmNIEkCreW_rOe_ywbg.TIMwy2vyXI4Ic8_8" 
+                                  title="Dynamic Programming Techniques"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Duration: 52 minutes</span>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                       
+                        </Accordion>
                     </div>
                   </CardContent>
                 </Card>
-              </TabsContent>
+              </div>
               
-              <TabsContent value="winners" className="space-y-6">
+              <div className="space-y-6 mb-16 ">
+              <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-indigo-600 mb-4">ICPC Algo Queen Winners</h1>
+              {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
+            </div>
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
@@ -602,60 +784,108 @@ const TrainingMaterials = () => {
                     </Accordion>
                   </CardContent>
                 </Card>
-              </TabsContent>
               
-              <TabsContent value="sponsors" className="space-y-6">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Building className="h-6 w-6 text-indigo-600 mr-2" />
-                      Sponsors
-                    </CardTitle>
-                    <CardDescription>
-                      Organizations supporting the ICPC AlgoQueen Competition
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
-                        <div className="text-3xl font-bold text-indigo-600 mb-4">
-                          <img src="/icpc.png" className="h-20" alt="ICPC Logo" />ICPC
-                        </div>
-                        <p className="text-center text-sm text-gray-600">
-                          The International Collegiate Programming Contest is an algorithmic 
-                          programming contest for college students.
-                        </p>
-                      </div>
-                      
-                      <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
-                        <div className="text-3xl font-bold text-indigo-600 mb-4">
-                          <img src="/codedrills.png" className="h-20" alt="CodeDrills Logo" />CodeDrills
-                        </div>
-                        <p className="text-center text-sm text-gray-600">
-                          Platform partner providing infrastructure for the online competition rounds.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center mt-12">
-                      <h3 className="text-lg font-medium mb-2">Interested in Sponsoring?</h3>
-                      <p className="text-sm text-gray-600 mb-4">
-                        Join our mission to promote competitive programming among students.
-                      </p>
-                      <a href="#" className="text-indigo-600 font-medium hover:underline">
-                        Contact us for sponsorship opportunities
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
+              </div>
+              <div className="space-y-6 ">
+              <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-indigo-600 mb-4">Sponsored By
+              </h1>
+              {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
+            </div>
+           
+  {/* Sponsors Card Section */}
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center">
+        <Building className="h-6 w-6 text-indigo-600 mr-2" />
+        Sponsors
+      </CardTitle>
+      <CardDescription>
+        Organizations supporting the ICPC AlgoQueen Competition
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+          <div className="text-3xl font-bold text-indigo-600 mb-4">
+            <img src="/jetbrains.png" className="h-20" alt="jetbrainslogo" />
+          </div>
+          <p className="text-center text-sm text-gray-600">
+          JetBrains is a leading developer of intelligent coding tools and IDEs,
+          empowering programmers to write clean, efficient code. With a strong commitment to education and innovation, 
+          JetBrains supports coding competitions and learning initiatives worldwide.
+
+          </p>
+        </div>
+        
+        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+          <div className="text-3xl font-bold text-indigo-600 mb-4">
+            <img src="/jane1.png" className="h-20" alt="" />
+          </div>
+          <p className="text-center text-sm text-gray-600">
+          Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
+          and innovative thinking to financial markets. With a deep-rooted history in competitive programming, 
+          Jane Street actively supports coding communities and offers exciting career opportunities in technology
+          and finance.
+
+          </p>
+        </div>
+      </div>
+      
+      <div className="text-center mt-12">
+        <h3 className="text-lg font-medium mb-2">Interested in Sponsoring?</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          Join our mission to promote competitive programming among students.
+        </p>
+        <a href="mailto:algoqueen@cb.amrita.edu" className="text-indigo-600 font-medium hover:underline">
+          Contact us for sponsorship opportunities
+        </a>
+      </div>
+    </CardContent>
+  </Card>
+  <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-indigo-600 mb-4">Organized By
+              </h1>
+              {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
+            </div>
+{/* Sponsors Card Section */}
+<Card>
+    <CardHeader>
+      <CardTitle className="flex items-center">
+        <Building className="h-6 w-6 text-indigo-600 mr-2" />
+        Organizers
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+          <div className="text-3xl font-bold text-indigo-600 mb-4">
+            <img src="/amrita.png" className="h-20" alt="jetbrainslogo" />
+          </div>
+          
+        </div>
+        
+        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+          <div className="text-3xl font-bold text-indigo-600 mb-4">
+            <img src="/icpc2.png" className="h-20" alt="" />
           </div>
         </div>
-      </main>
+      </div>
       
+    
      
-    </div>
+    </CardContent>
+  </Card>
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
   );
 };
 

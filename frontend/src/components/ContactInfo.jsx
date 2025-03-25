@@ -32,10 +32,10 @@ const ContactInfo = () => {
 
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8">
-          <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-sm font-medium text-gray-800 mb-3">
+          <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-sm font-medium text-indigo-600 mb-3">
             Get in Touch
           </span>
-          <h2 className="text-3xl font-bold tracking-tight">Contact Information</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-indigo-600 ">Contact Information</h2>
           <p className="mt-4 text-gray-500 max-w-md mx-auto">
             If you have any questions regarding ICPC Algo Queen 2025, please feel free to reach out.
           </p>
