@@ -8,7 +8,7 @@ const InfoCard = ({ icon, title, description, delay }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay / 1000, duration: 0.5 }}
-      className="flex flex-col items-center text-center space-y-3 rounded-md p-6 bg-white shadow-md"
+      className="flex flex-col items-center text-center space-y-3 rounded-md p-6 bg-white shadow-md "
     >
       <div className="text-primary">{icon}</div>
       <h3 className="font-bold text-lg">{title}</h3>
@@ -19,7 +19,7 @@ const InfoCard = ({ icon, title, description, delay }) => {
 
 const InfoSection = () => {
   return (
-    <div className="  py-10 rounded-md shadow-md bg-gradient-to-r from-white to-purple-100">
+    <div className=" py-10 rounded-md shadow-md bg-gradient-to-r from-white to-purple-100 ">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
      
       <InfoCard

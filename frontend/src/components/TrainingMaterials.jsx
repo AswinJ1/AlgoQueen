@@ -466,7 +466,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Nino Chkhaidze</h5>
                             <p className="text-sm text-gray-600">V. Komarov Physics & Math School, Tbilisi</p>
-                            <p className="text-xs text-gray-500">11th Gradern</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           
                           {/* School Winner 2 */}
@@ -476,7 +476,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Snikitha Siddavatam</h5>
                             <p className="text-sm text-gray-600">Oakridge International School, Bachupally</p>
-                            <p className="text-xs text-gray-500">11th Gradern</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           
                           {/* School Winner 3 */}
@@ -486,7 +486,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Neha Singirikonda</h5>
                             <p className="text-sm text-gray-600">Chirec International School</p>
-                            <p className="text-xs text-gray-500">11th Gradern</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
 
                            {/* School Winner 3 */}
@@ -496,7 +496,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Hiya Chandrakar</h5>
                             <p className="text-sm text-gray-600">Krishna Public School, Raipur</p>
-                            <p className="text-xs text-gray-500">11th Gradern</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
 
                            {/* School Winner 3 */}
@@ -506,7 +506,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Lakshmi Siri Appalaneni</h5>
                             <p className="text-sm text-gray-600">R.H. King Academy</p>
-                            <p className="text-xs text-gray-500">10th Gradern</p>
+                            <p className="text-xs text-gray-500">10th Grade</p>
 
 
                           </div>
@@ -517,7 +517,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Kritika Naagar</h5>
                             <p className="text-sm text-gray-600">Aster Public School, Greater Noida</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
 
                           </div>
                            {/* School Winner 3 */}
@@ -527,7 +527,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Kazi Maimuna Akther</h5>
                             <p className="text-sm text-gray-600">Victoria Government College</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
 
 
                           </div>
@@ -538,7 +538,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Aatira Menon</h5>
                             <p className="text-sm text-gray-600">St.Patricks Academy Bengaluru</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
@@ -547,7 +547,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Shahe Noor Akhter Noor</h5>
                             <p className="text-sm text-gray-600">BURICHANG ANANDA PILOT GOVT. HIGH SCHOOL</p>
-                            <p className="text-xs text-gray-500">9th Gradern</p>
+                            <p className="text-xs text-gray-500">9th Grade</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
@@ -556,7 +556,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Gayatri Taneja</h5>
                             <p className="text-sm text-gray-600">Greater Noida World School</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
@@ -565,7 +565,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">S.E.Harsha</h5>
                             <p className="text-sm text-gray-600">Amrita vidyalayam</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
@@ -574,7 +574,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Nazeefa Labiba</h5>
                             <p className="text-sm text-gray-600">Savar Cantonment Public School and College</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -583,7 +583,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Tanisha Choudhary</h5>
                             <p className="text-sm text-gray-600">Krishna Public School</p>
-                            <p className="text-xs text-gray-500">10th Gradern</p>
+                            <p className="text-xs text-gray-500">10th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -592,7 +592,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Anusha Singh</h5>
                             <p className="text-sm text-gray-600">Sunbeam School Ballia</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -601,7 +601,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Kamakshi Bali</h5>
                             <p className="text-sm text-gray-600">Presidium School, Raj Nagar</p>
-                            <p className="text-xs text-gray-500">12th Gradern</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                               </div>
                             </div>
@@ -619,31 +619,24 @@ const TrainingMaterials = () => {
                               <h4 className="font-medium text-lg mb-4 mt-2">College Category</h4>
                               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                 {/* College Winners */}
-                                <div className="flex flex-col items-center text-center">
-                                  <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/profile-13.jpg" alt="Winner" />
-                                  </Avatar>
-                                  <h5 className="font-semibold">Smita Agarwal</h5>
-                                  <p className="text-sm text-gray-600">IIT Delhi</p>
-                                  <p className="text-xs text-gray-500">2nd Year</p>
-                                </div>
+                              
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-14.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Divya Thakur</h5>
-                                  <p className="text-sm text-gray-600">NIT Trichy</p>
-                                  <p className="text-xs text-gray-500">3rd Year</p>
+                                  <h5 className="font-semibold"></h5>
+                                  <p className="text-sm text-gray-600">MES BRS PU College Vidyaranyapura, Bengaluru</p>
+              
                                 </div>
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
                                     <img src="/profile-15.jpg" alt="Winner" />
                                   </Avatar>
-                                  <h5 className="font-semibold">Leela Kapoor</h5>
-                                  <p className="text-sm text-gray-600">IIIT Hyderabad</p>
-                                  <p className="text-xs text-gray-500">1st Year</p>
+                                  <h5 className="font-semibold">Charvi Nagaraja</h5>
+                                  <p className="text-sm text-gray-600">MES BRS PU College Vidyaranyapura, Bengaluru</p>
+
                                 </div>
                               </div>
                             </div>
@@ -653,12 +646,22 @@ const TrainingMaterials = () => {
                               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                 {/* School Winners */}
                                  {/* School Winner 1 */}
+                                 <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/profile-13.jpg" alt="Winner" />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Jinisha Tejura</h5>
+                                  <p className="text-sm text-gray-600">NISSS Pune</p>
+                                  <p className="text-xs text-gray-500">11th Grade</p>
+
+                                </div>
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-16.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Tanya Reddy</h5>
-                            <p className="text-sm text-gray-600">Ryan International School</p>
+                            <h5 className="font-semibold">Kopal saxena</h5>
+                            <p className="text-sm text-gray-600">LA Martiniere Girl’s College, Lucknow</p>
+                            <p className="text-xs text-gray-500">9th Grade</p>
                           </div>
                           
                           {/* School Winner 2 */}
@@ -666,8 +669,9 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="\profile-s-17.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Sara Iyer</h5>
-                            <p className="text-sm text-gray-600">The Bishop's School</p>
+                            <h5 className="font-semibold">Dishita Bhatia</h5>
+                            <p className="text-sm text-gray-600">LA Martiniere Girl’s College, Lucknow</p>
+                            <p className="text-xs text-gray-500">9th Grade</p>
                           </div>
                           
                           {/* School Winner 3 */}
@@ -675,88 +679,99 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-18.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Tanisha Choudhary</h5>
+                            <p className="text-sm text-gray-600">Krishna Public School</p>
+                            <p className="text-xs text-gray-500">8th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-19.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Khooshi Asmi</h5>
+                            <p className="text-sm text-gray-600">Surendranath Centenary School</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-20.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Gopika</h5>
+                            <p className="text-sm text-gray-600">Bharatiya Vidya Bhavan's Vidya Mandir</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-21.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Sreenandhana</h5>
+                            <p className="text-sm text-gray-600">Bharatiya Vidya Bhavan's Vidya Mandir</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-22.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Jyothika</h5>
+                            <p className="text-sm text-gray-600">Bharatiya Vidya Bhavan's Vidya Mandir</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-23.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Waghulkar Kashmira Pankaj</h5>
+                            <p className="text-sm text-gray-600">M.E.S Bal Shikshan School Mandir English Medium School</p>
+                            <p className="text-xs text-gray-500">8th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-24.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Arundhati Kartik</h5>
+                            <p className="text-sm text-gray-600">Mallya Aditi International School</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-25.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Mridu Prashanth</h5>
+                            <p className="text-sm text-gray-600">Mallya Aditi International School</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-26.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Tanisha Singh Dhami</h5>
+                            <p className="text-sm text-gray-600">Mallya Aditi International School</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-27.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Bhargavi Tejura</h5>
+                            <p className="text-sm text-gray-600">NISSS Pune</p>
+                            <p className="text-xs text-gray-500">5th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-28.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
+                            <h5 className="font-semibold">Vani Sharma</h5>
+                            <p className="text-sm text-gray-600">Delhi Public School, Bangalore – East</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -765,6 +780,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Ananya Khanna</h5>
                             <p className="text-sm text-gray-600">Modern School</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -773,6 +789,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Ananya Khanna</h5>
                             <p className="text-sm text-gray-600">Modern School</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -781,6 +798,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Ananya Khanna</h5>
                             <p className="text-sm text-gray-600">Modern School</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -789,6 +807,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Ananya Khanna</h5>
                             <p className="text-sm text-gray-600">Modern School</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -797,6 +816,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Ananya Khanna</h5>
                             <p className="text-sm text-gray-600">Modern School</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
@@ -805,6 +825,7 @@ const TrainingMaterials = () => {
                             </Avatar>
                             <h5 className="font-semibold">Ananya Khanna</h5>
                             <p className="text-sm text-gray-600">Modern School</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
                               </div>
                             </div>
