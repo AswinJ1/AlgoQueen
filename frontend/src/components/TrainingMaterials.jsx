@@ -828,10 +828,10 @@ const TrainingMaterials = () => {
             {/* </div> */}
            
   {/* Sponsors Card Section */}
-  <Card className="bg-gradient-to-r from-white to-purple-100 border-none shadow-none">
+  <Card className="bg-transparent border-none shadow-none">
    
     <CardContent>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-r from-white to-purple-100">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
         <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/jetbrains.png" className="h-20" alt="jetbrainslogo" />
@@ -879,7 +879,7 @@ const TrainingMaterials = () => {
               {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
             {/* </div> */}
 {/* Sponsors Card Section */}
-<Card className="bg-gradient-to-r from-white to-purple-100 border-none shadow-none ">
+<Card className="bg-transparent border-none shadow-none ">
     <CardContent>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col items-center justify-center p-6 ">
