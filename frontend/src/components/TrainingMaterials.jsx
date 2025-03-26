@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video } from 'lucide-react';
+import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video, Book, Building2Icon, Building2, BuildingIcon, LucideBuilding2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Avatar } from '@/components/ui/avatar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -15,7 +15,7 @@ const TrainingMaterials = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-5xl mx-auto">
               <div className="flex items-center gap-2 mb-8 justify-center">
-                                  <Trophy size={24} className="text-indigo-600" />
+                                  <Book size={24} className="text-indigo-600" />
                                   <h2 className="text-2xl font-bold ">Training Materials</h2>
                                 </div>
             {/* <div className="text-center mb-12">
@@ -204,7 +204,7 @@ const TrainingMaterials = () => {
                             </AccordionContent>
                           </AccordionItem>
 
-                          <AccordionItem value="video-6" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                          {/* <AccordionItem value="video-6" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -227,7 +227,7 @@ const TrainingMaterials = () => {
                                 <span className="text-gray-600">Duration: 52 minutes</span>
                               </div>
                             </AccordionContent>
-                          </AccordionItem>
+                          </AccordionItem> */}
 
                           <AccordionItem value="video-7" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
@@ -638,6 +638,14 @@ const TrainingMaterials = () => {
                                   <p className="text-sm text-gray-600">MES BRS PU College Vidyaranyapura, Bengaluru</p>
 
                                 </div>
+                                <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="profile-s-34.jpg" alt="Winner" />
+                            </Avatar>
+                            <h5 className="font-semibold">Supriya Gouda</h5>
+                            <p className="text-sm text-gray-600"> MES BRS PU College Vidyaranyapura, Bengaluru</p>
+                        
+                          </div>
                               </div>
                             </div>
                             
@@ -778,55 +786,48 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-29.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
-                            <p className="text-xs text-gray-500">11th Grade</p>
+                            <h5 className="font-semibold">Avni Jain</h5>
+                            <p className="text-sm text-gray-600">Delhi Public School, Bangalore – East</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-30.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
-                            <p className="text-xs text-gray-500">11th Grade</p>
+                            <h5 className="font-semibold">Pallavi Biswas</h5>
+                            <p className="text-sm text-gray-600">Delhi Public School, Bangalore – East</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-31.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
-                            <p className="text-xs text-gray-500">11th Grade</p>
+                            <h5 className="font-semibold">Kavya K R</h5>
+                            <p className="text-sm text-gray-600">Chinmaya Vidyalaya</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-32.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
-                            <p className="text-xs text-gray-500">11th Grade</p>
+                            <h5 className="font-semibold">Gayathri K S</h5>
+                            <p className="text-sm text-gray-600">Chinmaya Vidyalaya</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="profile-s-33.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
-                            <p className="text-xs text-gray-500">11th Grade</p>
+                            <h5 className="font-semibold">Malavika Unnikrishnan</h5>
+                            <p className="text-sm text-gray-600">Chinmaya Vidyalaya</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
                           </div>
                           {/* School Winner 3 */}
-                          <div className="flex flex-col items-center text-center">
-                            <Avatar className="h-24 w-24 mb-3">
-                              <img src="profile-s-34.jpg" alt="Winner" />
-                            </Avatar>
-                            <h5 className="font-semibold">Ananya Khanna</h5>
-                            <p className="text-sm text-gray-600">Modern School</p>
-                            <p className="text-xs text-gray-500">11th Grade</p>
-                          </div>
+                        
                               </div>
                             </div>
                           </div>
@@ -839,7 +840,7 @@ const TrainingMaterials = () => {
               </div>
               <div className="space-y-6 ">
               <div className="flex items-center gap-2 mb-8 justify-center">
-                                  <Trophy size={24} className="text-indigo-600" />
+                                  <Building2Icon size={24} className="text-indigo-600" />
                                   <h2 className="text-2xl font-bold ">Sponsored By</h2>
                                 </div>
               {/* <div className="text-center mb-12">
@@ -891,7 +892,7 @@ const TrainingMaterials = () => {
     </CardContent>
   </Card>
   <div className="flex items-center gap-2 mb-8 justify-center">
-                                  <Trophy size={24} className="text-indigo-600" />
+                                  <Building2Icon size={24} className="text-indigo-600" />
                                   <h2 className="text-2xl font-bold ">Organized By</h2>
                                 </div>
   {/* <div className="text-center mb-12">

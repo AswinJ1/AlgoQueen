@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal} from "lucide-react";
+import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal, Brain, Quote, SwordIcon, Swords, Lightbulb, TargetIcon, RocketIcon, LightbulbIcon} from "lucide-react";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -109,7 +109,7 @@ const AboutSection = () => {
       {/* Why Participate Section */}
       <div className="mb-20">
         <div className="flex items-center gap-2 mb-8 justify-center">
-          <Trophy size={24} className="text-indigo-600" />
+          <RocketIcon size={24} className="text-indigo-600" />
           <h2 className="text-2xl font-bold ">Why Participate?</h2>
         </div>
 
@@ -158,7 +158,7 @@ const AboutSection = () => {
         </Tilt>
       </div>
         <div className="flex items-center gap-2 mb-8 justify-center">
-          <Trophy size={24} className="text-indigo-600" />
+          <LightbulbIcon size={24} className="text-indigo-600" />
           <h2 className="text-2xl font-bold ">How does it work?</h2>
         </div>
 

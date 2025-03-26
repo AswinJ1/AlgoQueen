@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap } from 'lucide-react';
+import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Button = ({ children, onClick, className }) => (
@@ -24,7 +24,7 @@ const RegisterSection = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
              <div className="flex items-center gap-2 mb-8 justify-center">
-                      <Trophy size={24} className="text-indigo-600" />
+                      <Swords size={24} className="text-indigo-600" />
                       <h2 className="text-2xl font-bold ">Competition Information</h2>
                     </div>
             {/* <div className="text-center mb-12">
