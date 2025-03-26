@@ -68,7 +68,7 @@ const TrainingMaterials = () => {
                             A collection of past problems with solutions and explanations.
                           </p>
                           <div className="mt-4">
-                            <a href="https://codedrills.io/problems" className="text-sm font-medium text-indigo-600 hover:underline">
+                            <a href="https://codedrills.io/problems" target='blank' className="text-sm font-medium text-indigo-600 hover:underline">
                               Start practicing →
                             </a>
                           </div>
