@@ -111,7 +111,7 @@ export default function HeroComponent() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20">
           <div>
             <h1 className="text-5xl font-bold text-gray-900 leading-tight">
-            ICPC Algo Queen: Empowering the Next Generation of Women in Tech
+            ICPC Algo Queen Empowering the Next Generation of Women in Tech
 
 
             </h1>

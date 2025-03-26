@@ -48,8 +48,8 @@ const AboutSection = () => {
         </div>
 
         <div className="md:w-1/2">
-          <div className="text-indigo-600 font-medium mb-2 flex items-center gap-2">
-            <BookOpen size={18} />
+          <div className="text-black font-medium mb-2 flex items-center gap-2">
+            <BookOpen size={18}  className="text-indigo-600"/>
             <span>About  ICPC Algo Queen</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Empowering Women in Competitive Programming</h2>
@@ -59,7 +59,7 @@ const AboutSection = () => {
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
   {/* Mission Section */}
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow justify-normal">
       {/* Icon */}
       <div className="flex justify-center mb-4 text-indigo-600">
         <Target size={40} />
@@ -76,7 +76,7 @@ const AboutSection = () => {
     </div>
 
   {/* Vision Section */}
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow justify-normal">
       {/* Icon */}
       <div className="flex justify-center mb-4 text-indigo-600">
         <Rocket size={40} />
@@ -86,7 +86,7 @@ const AboutSection = () => {
       <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
 
       {/* Description */}
-      <p className="text-gray-600">
+      <p className="text-gray-600 ">
         To create an inclusive ecosystem where women lead in technology, innovation, and competitive 
         programming, breaking barriers and gaining global recognition.
       </p>
@@ -128,7 +128,7 @@ const AboutSection = () => {
         </div>
         <div className="flex items-center gap-2 mb-8 justify-center">
           <Trophy size={24} className="text-indigo-600" />
-          <h2 className="text-2xl font-bold mt-4">How Does It Work?</h2>
+          <h2 className="text-2xl font-bold ">How does it work?</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

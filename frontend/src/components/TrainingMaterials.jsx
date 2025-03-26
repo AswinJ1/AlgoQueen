@@ -14,10 +14,14 @@ const TrainingMaterials = () => {
       <div className="flex-grow">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+              <div className="flex items-center gap-2 mb-8 justify-center">
+                                  <Trophy size={24} className="text-indigo-600" />
+                                  <h2 className="text-2xl font-bold ">Training Materials</h2>
+                                </div>
+            {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Training Materials</h1>
               <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p>
-            </div>
+            </div> */}
             
           
               <div  className="space-y-6 mb-16">
@@ -94,8 +98,8 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Anuradha Sharma</span>
-                                <span className="text-gray-600">Duration: 45 minutes</span>
+                                <span className="text-gray-600">Instructor: Vani R</span>
+                                <span className="text-gray-600">Duration: 32 minutes</span>
                               </div>
                             </AccordionContent>
                           </AccordionItem>
@@ -119,8 +123,8 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Prof. Rajesh Kumar</span>
-                                <span className="text-gray-600">Duration: 38 minutes</span>
+                                <span className="text-gray-600">Instructor: Vishaal</span>
+                                <span className="text-gray-600">Duration: 36 minutes</span>
                               </div>
                             </AccordionContent>
                           </AccordionItem>
@@ -144,8 +148,8 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
-                                <span className="text-gray-600">Duration: 52 minutes</span>
+                                <span className="text-gray-600">Instructor: Prabath Kini</span>
+                                <span className="text-gray-600">Duration: 35 minutes</span>
                               </div>
                             </AccordionContent>
                           </AccordionItem>
@@ -168,8 +172,8 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
-                                <span className="text-gray-600">Duration: 52 minutes</span>
+                                <span className="text-gray-600">Instructor: Karthika</span>
+                                <span className="text-gray-600">Duration: 50 minutes</span>
                               </div>
                             </AccordionContent>
                           </AccordionItem>
@@ -192,7 +196,7 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                                <span className="text-gray-600">Instructor: Siddharth Maurya</span>
                                 <span className="text-gray-600">Duration: 52 minutes</span>
                               </div>
                             </AccordionContent>
@@ -241,8 +245,8 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
-                                <span className="text-gray-600">Duration: 52 minutes</span>
+                                <span className="text-gray-600">Instructor: Amrita Varshini</span>
+                                <span className="text-gray-600">Duration: 42 minutes</span>
                               </div>
                             </AccordionContent>
                           </AccordionItem>
@@ -265,8 +269,8 @@ const TrainingMaterials = () => {
                                 ></iframe>
                               </div>
                               <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
-                                <span className="text-gray-600">Duration: 52 minutes</span>
+                                <span className="text-gray-600">Instructor: Vani R</span>
+                                <span className="text-gray-600">Duration: 1 hour 5 minutes</span>
                               </div>
                             </AccordionContent>
                           </AccordionItem>
@@ -278,10 +282,14 @@ const TrainingMaterials = () => {
               </div>
               
               <div className="space-y-6 mb-16 ">
-              <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-indigo-600 mb-4">ICPC Algo Queen Winners</h1>
+              <div className="flex items-center gap-2 mb-8 justify-center">
+                                  <Trophy size={24} className="text-indigo-600" />
+                                  <h2 className="text-2xl font-bold ">ICPC Algo Queen Winners</h2>
+                                </div>
+              {/* <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-indigo-600 mb-4">ICPC Algo Queen Winners</h1> */}
               {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
-            </div>
+            {/* </div> */}
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
@@ -787,11 +795,15 @@ const TrainingMaterials = () => {
               
               </div>
               <div className="space-y-6 ">
-              <div className="text-center mb-12">
+              <div className="flex items-center gap-2 mb-8 justify-center">
+                                  <Trophy size={24} className="text-indigo-600" />
+                                  <h2 className="text-2xl font-bold ">Sponsored By</h2>
+                                </div>
+              {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Sponsored By
-              </h1>
+              </h1> */}
               {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
-            </div>
+            {/* </div> */}
            
   {/* Sponsors Card Section */}
   <Card>
@@ -810,7 +822,7 @@ const TrainingMaterials = () => {
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/jetbrains.png" className="h-20" alt="jetbrainslogo" />
           </div>
-          <p className="text-center text-sm text-gray-600">
+          <p className="justify-normal text-sm text-gray-600">
           JetBrains is a leading developer of intelligent coding tools and IDEs,
           empowering programmers to write clean, efficient code. With a strong commitment to education and innovation, 
           JetBrains supports coding competitions and learning initiatives worldwide.
@@ -822,7 +834,7 @@ const TrainingMaterials = () => {
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/jane1.png" className="h-20" alt="" />
           </div>
-          <p className="text-center text-sm text-gray-600">
+          <p className="justify-normal text-sm text-gray-600">
           Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
           and innovative thinking to financial markets. With a deep-rooted history in competitive programming, 
           Jane Street actively supports coding communities and offers exciting career opportunities in technology
@@ -843,11 +855,15 @@ const TrainingMaterials = () => {
       </div>
     </CardContent>
   </Card>
-  <div className="text-center mb-12">
+  <div className="flex items-center gap-2 mb-8 justify-center">
+                                  <Trophy size={24} className="text-indigo-600" />
+                                  <h2 className="text-2xl font-bold ">Organized By</h2>
+                                </div>
+  {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Organized By
-              </h1>
+              </h1> */}
               {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
-            </div>
+            {/* </div> */}
 {/* Sponsors Card Section */}
 <Card>
     <CardHeader>
@@ -858,16 +874,16 @@ const TrainingMaterials = () => {
     </CardHeader>
     <CardContent>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+        <div className="flex flex-col items-center justify-center p-6  rounded-lg">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/amrita.png" className="h-20" alt="jetbrainslogo" />
           </div>
           
         </div>
         
-        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+        <div className="flex flex-col items-center justify-center p-6  rounded-lg">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/icpc2.png" className="h-20" alt="" />
+            <img src="/icpc2.png" className="h-25" alt="" />
           </div>
         </div>
       </div>

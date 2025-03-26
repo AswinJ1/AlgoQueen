@@ -1,5 +1,5 @@
 import React from "react";
-import { Trophy, Calendar, Users } from "lucide-react";
+import { Trophy, Calendar, Users, Backpack } from "lucide-react";
 import { motion } from "framer-motion";
 
 const InfoCard = ({ icon, title, description, delay }) => {
@@ -23,7 +23,7 @@ const InfoSection = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
      
       <InfoCard
-        icon={<Users className="h-18 text-indigo-600" />} 
+        icon={<Trophy className="h-18 text-indigo-600" />} 
         title="WHAT?" 
         description="A global coding competition with mentorship, recognition, and career-ready skills." 
         delay={500} 
@@ -35,7 +35,7 @@ const InfoSection = () => {
         delay={300} 
       />
        <InfoCard 
-        icon={<Trophy className="h-18  text-indigo-600" />} 
+        icon={<Backpack className="h-18  text-indigo-600" />} 
         title="FOR WHOM?" 
         description="Female school (Grades 8-12) and college students passionate about coding." 
         delay={100} 

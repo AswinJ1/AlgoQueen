@@ -23,10 +23,14 @@ const RegisterSection = () => {
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-algo-dark mb-4 text-indigo-600">How to Register?</h1>
+             <div className="flex items-center gap-2 mb-8 justify-center">
+                      <Trophy size={24} className="text-indigo-600" />
+                      <h2 className="text-2xl font-bold ">Competition Information</h2>
+                    </div>
+            {/* <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-algo-dark mb-4 text-indigo-600">Competition Information</h1>
               <p className="text-xl text-gray-600">Join the ICPC AlgoQueen Competition</p>
-            </div>
+            </div> */}
             
             {/* <Card className="border-algo-accent border-l-4">
               <h2 className="text-2xl text-algo-primary font-semibold">Registration Information</h2>

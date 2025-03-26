@@ -76,7 +76,7 @@ const FAQSection = () => {
         <SectionHeading 
           title="Frequently Asked Questions" 
           subtitle="Find answers to common questions about our products and services"
-          className={"text-indigo-600"}
+          className={"text-black"}
         />
         
         <Accordion type="single" collapsible className="w-full">
