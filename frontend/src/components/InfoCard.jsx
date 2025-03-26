@@ -21,23 +21,24 @@ const InfoSection = () => {
   return (
     <div className="  py-10 rounded-md shadow-md bg-gradient-to-r from-white to-purple-100">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-      <InfoCard 
-        icon={<Trophy className="h-18  text-indigo-600" />} 
-        title="FOR WHOM?" 
-        description="Female school (Grades 8-12) and college students passionate about coding." 
-        delay={100} 
-      />
-      <InfoCard
-        icon={<Calendar className="h-18 text-indigo-600" />} 
-        title="WHEN?" 
-        description="Registrations for ICPC Algo Queen 2025 open soon! Stay tuned for key dates." 
-        delay={300} 
-      />
+     
       <InfoCard
         icon={<Users className="h-18 text-indigo-600" />} 
         title="WHAT?" 
         description="A global coding competition with mentorship, recognition, and career-ready skills." 
         delay={500} 
+      />
+       <InfoCard
+        icon={<Calendar className="h-18 text-indigo-600" />} 
+        title="WHEN?" 
+        description="Registrations for ICPC Algo Queen 2025 open soon! Stay tuned for key dates." 
+        delay={300} 
+      />
+       <InfoCard 
+        icon={<Trophy className="h-18  text-indigo-600" />} 
+        title="FOR WHOM?" 
+        description="Female school (Grades 8-12) and college students passionate about coding." 
+        delay={100} 
       />
     </div>
     </div>
