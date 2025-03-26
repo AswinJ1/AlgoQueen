@@ -5,14 +5,15 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import gsap from 'gsap';
 import Tilt from 'react-parallax-tilt';
+import { Link } from 'react-scroll';
+
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'About', href: '#' },
-  { name: 'participate', href: '#' },
-  { name: 'learn', href: '#' },
-  {name: 'FAQ', href: '#'},
-  {name: 'Contact', href: '#'}
+  { name: 'Home', to: 'home' },
+  { name: 'About', to: 'about' },
+  { name: 'Learn', to: 'learn' },
+  {name: 'FAQ', to: 'faq'},
+  {name: 'Contact', to: 'contact'}
 ];
 
 export default function HeroComponent() {
@@ -53,22 +54,22 @@ export default function HeroComponent() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+              <Link key={item.name} to={item.to} className="text-sm/6 font-semibold text-gray-900 cursor-pointer smooth={true} duration={500}">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
          
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 cursor-pointer">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Algo Queen</span>
                 <img
                   alt=""
-                  src="/logo.png"
+                  src="/5.png"
                   className="h-8 w-auto"
                 />
               </a>
@@ -85,13 +86,13 @@ export default function HeroComponent() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.to}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">

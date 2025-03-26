@@ -20,7 +20,7 @@ const InfoCard = ({ icon, title, description, delay }) => {
 const InfoSection = () => {
   return (
     <div className="  py-10 rounded-md shadow-md bg-gradient-to-r from-white to-purple-100">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
      
       <InfoCard
         icon={<Trophy className="h-18 text-indigo-600" />} 

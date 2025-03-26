@@ -104,6 +104,7 @@ const AboutSection = () => {
 
        
       </div>
+     
 
       {/* Why Participate Section */}
       <div className="mb-20">
@@ -126,34 +127,8 @@ const AboutSection = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center gap-2 mb-8 justify-center">
-          <Trophy size={24} className="text-indigo-600" />
-          <h2 className="text-2xl font-bold ">How does it work?</h2>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[
-            { icon: <BookOpen size={32} />, title: "Learn", text: "Gain access to expert mentorship, structured training sessions, and problem-solving resources to sharpen your coding skills." },
-            { icon: <Target size={32} />, title: "Compete", text: " Participate in two exciting rounds of competition, solving challenging problems and testing your abilities against top female coders worldwide." },
-            { icon: <Medal size={32} />, title: "Win", text: "Earn recognition, exciting prizes, career opportunities, and a chance to connect with top tech companies and institutions." }
-          ].map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-indigo-600 mb-4">{item.icon}</div>
-              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.text}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <Button onClick={() => window.open("https://t.me/algoqueen2023", "_blank")}>
-            <MessageSquare size={16} />
-            Join Our Telegram Channel
-          </Button>
-        </div>
-      </div>
-         {/* Visual Showcase */}
-      <div className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Visual Showcase */}
+            <div className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
         <Tilt
           tiltMaxAngleX={8}
           tiltMaxAngleY={8}
@@ -182,6 +157,34 @@ const AboutSection = () => {
           />
         </Tilt>
       </div>
+        <div className="flex items-center gap-2 mb-8 justify-center">
+          <Trophy size={24} className="text-indigo-600" />
+          <h2 className="text-2xl font-bold ">How does it work?</h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { icon: <BookOpen size={32} />, title: "Learn", text: "Gain access to expert mentorship, structured training sessions, and problem-solving resources to sharpen your coding skills." },
+            { icon: <Target size={32} />, title: "Compete", text: " Participate in two exciting rounds of competition, solving challenging problems and testing your abilities against top female coders worldwide." },
+            { icon: <Medal size={32} />, title: "Win", text: "Earn recognition, exciting prizes, career opportunities, and a chance to connect with top tech companies and institutions." }
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-indigo-600 mb-4">{item.icon}</div>
+              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+              <p className="text-gray-600">{item.text}</p>
+            </div>
+          ))}
+        </div>
+        
+
+        <div className="mt-10 flex justify-center">
+          <Button onClick={() => window.open("https://t.me/algoqueen2023", "_blank")}>
+            <MessageSquare size={16} />
+            Join Our Telegram Channel
+          </Button>
+        </div>
+      </div>
+      
 
     
       

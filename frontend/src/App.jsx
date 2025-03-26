@@ -7,32 +7,34 @@ import FAQSection from './components/FAQSection'
 import ContactInfo from './components/ContactInfo'
 import Footer from './components/Footer'
 import InfoSection from './components/InfoCard';
+import { Element } from 'react-scroll'
+
 
 const App = () => {
   return (
     
     <div>
-      <div>
+      <Element name="home">
       <HeroComponent></HeroComponent>
-    </div>
+    </Element>
     <div>
      <InfoSection></InfoSection>
     </div> 
-    <div>
+    <Element name="about">
       <About></About>
-    </div>
+    </Element>
     <div>
       <RegisterSection></RegisterSection>
     </div>
-    <div>
+    <Element name='learn'>
       <TrainingMaterials></TrainingMaterials>
-    </div>
-    <div>
+    </Element>
+    <Element name='faq'>
       <FAQSection></FAQSection>
-    </div>
-    <div>
+    </Element>
+    <Element name='contact'>
       <Footer></Footer>
-    </div>
+    </Element>
     </div>
   )
 }

@@ -129,7 +129,7 @@ const TrainingMaterials = () => {
                             </AccordionContent>
                           </AccordionItem>
                           
-                          <AccordionItem value="video-3" className="border border-gray-200 rounded-lg overflow-hidden">
+                          <AccordionItem value="video-3" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -153,7 +153,8 @@ const TrainingMaterials = () => {
                               </div>
                             </AccordionContent>
                           </AccordionItem>
-                          <AccordionItem value="video-4" className="border border-gray-200 rounded-lg overflow-hidden">
+
+                          <AccordionItem value="video-4" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -177,7 +178,8 @@ const TrainingMaterials = () => {
                               </div>
                             </AccordionContent>
                           </AccordionItem>
-                          <AccordionItem value="video-5" className="border border-gray-200 rounded-lg overflow-hidden">
+
+                          <AccordionItem value="video-5" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -201,7 +203,8 @@ const TrainingMaterials = () => {
                               </div>
                             </AccordionContent>
                           </AccordionItem>
-                          <AccordionItem value="video-6" className="border border-gray-200 rounded-lg overflow-hidden">
+
+                          <AccordionItem value="video-6" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -226,7 +229,7 @@ const TrainingMaterials = () => {
                             </AccordionContent>
                           </AccordionItem>
 
-                          <AccordionItem value="video-7" className="border border-gray-200 rounded-lg overflow-hidden">
+                          <AccordionItem value="video-7" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -471,8 +474,9 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-2.jpeg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Neha Gupta</h5>
-                            <p className="text-sm text-gray-600">Kendriya Vidyalaya</p>
+                            <h5 className="font-semibold">Snikitha Siddavatam</h5>
+                            <p className="text-sm text-gray-600">Oakridge International School, Bachupally</p>
+                            <p className="text-xs text-gray-500">11th Gradern</p>
                           </div>
                           
                           {/* School Winner 3 */}
@@ -480,8 +484,9 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-3.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Neha Singirikonda</h5>
+                            <p className="text-sm text-gray-600">Chirec International School</p>
+                            <p className="text-xs text-gray-500">11th Gradern</p>
                           </div>
 
                            {/* School Winner 3 */}
@@ -489,8 +494,9 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-4.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Hiya Chandrakar</h5>
+                            <p className="text-sm text-gray-600">Krishna Public School, Raipur</p>
+                            <p className="text-xs text-gray-500">11th Gradern</p>
                           </div>
 
                            {/* School Winner 3 */}
@@ -498,31 +504,39 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-5.jpeg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Lakshmi Siri Appalaneni</h5>
+                            <p className="text-sm text-gray-600">R.H. King Academy</p>
+                            <p className="text-xs text-gray-500">10th Gradern</p>
+
+
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-6.jpeg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Kritika Naagar</h5>
+                            <p className="text-sm text-gray-600">Aster Public School, Greater Noida</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
+
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-7.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
+                            <h5 className="font-semibold">Kazi Maimuna Akther</h5>
                             <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
+
+
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-8.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
+                            <h5 className="font-semibold">Aatira Menon</h5>
                             <p className="text-sm text-gray-600">St. Mary's School</p>
                           </div>
                            {/* School Winner 3 */}
@@ -806,19 +820,11 @@ const TrainingMaterials = () => {
             {/* </div> */}
            
   {/* Sponsors Card Section */}
-  <Card>
-    <CardHeader>
-      <CardTitle className="flex items-center">
-        <Building className="h-6 w-6 text-indigo-600 mr-2" />
-        Sponsors
-      </CardTitle>
-      <CardDescription>
-        Organizations supporting the ICPC AlgoQueen Competition
-      </CardDescription>
-    </CardHeader>
+  <Card className="bg-gradient-to-r from-white to-purple-100 border-none shadow-none">
+   
     <CardContent>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-r from-white to-purple-100">
+        <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/jetbrains.png" className="h-20" alt="jetbrainslogo" />
           </div>
@@ -830,9 +836,9 @@ const TrainingMaterials = () => {
           </p>
         </div>
         
-        <div className="flex flex-col items-center justify-center p-6 border rounded-lg">
+        <div className="flex flex-col items-center justify-center p-6">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/jane1.png" className="h-20" alt="" />
+            <img src="/jane2.png" className="h-20" alt="" />
           </div>
           <p className="justify-normal text-sm text-gray-600">
           Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
@@ -865,23 +871,17 @@ const TrainingMaterials = () => {
               {/* <p className="text-xl text-gray-600">Resources to help you prepare for the ICPC AlgoQueen Competition</p> */}
             {/* </div> */}
 {/* Sponsors Card Section */}
-<Card>
-    <CardHeader>
-      <CardTitle className="flex items-center">
-        <Building className="h-6 w-6 text-indigo-600 mr-2" />
-        Organizers
-      </CardTitle>
-    </CardHeader>
+<Card className="bg-gradient-to-r from-white to-purple-100 border-none shadow-none ">
     <CardContent>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="flex flex-col items-center justify-center p-6  rounded-lg">
+        <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/amrita.png" className="h-20" alt="jetbrainslogo" />
           </div>
           
         </div>
         
-        <div className="flex flex-col items-center justify-center p-6  rounded-lg">
+        <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/icpc2.png" className="h-25" alt="" />
           </div>
