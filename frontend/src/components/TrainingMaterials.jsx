@@ -526,7 +526,7 @@ const TrainingMaterials = () => {
                               <img src="/profile-s-7.jpg" alt="Winner" />
                             </Avatar>
                             <h5 className="font-semibold">Kazi Maimuna Akther</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <p className="text-sm text-gray-600">Victoria Government College</p>
                             <p className="text-xs text-gray-500">12th Gradern</p>
 
 
@@ -537,63 +537,71 @@ const TrainingMaterials = () => {
                               <img src="/profile-s-8.jpg" alt="Winner" />
                             </Avatar>
                             <h5 className="font-semibold">Aatira Menon</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <p className="text-sm text-gray-600">St.Patricks Academy Bengaluru</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-9.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Shahe Noor Akhter Noor</h5>
+                            <p className="text-sm text-gray-600">BURICHANG ANANDA PILOT GOVT. HIGH SCHOOL</p>
+                            <p className="text-xs text-gray-500">9th Gradern</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-10.png" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Gayatri Taneja</h5>
+                            <p className="text-sm text-gray-600">Greater Noida World School</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-11.jpeg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">S.E.Harsha</h5>
+                            <p className="text-sm text-gray-600">Amrita vidyalayam</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
                           </div>
                            {/* School Winner 3 */}
                            <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-12.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Nazeefa Labiba</h5>
+                            <p className="text-sm text-gray-600">Savar Cantonment Public School and College</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-13.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Tanisha Choudhary</h5>
+                            <p className="text-sm text-gray-600">Krishna Public School</p>
+                            <p className="text-xs text-gray-500">10th Gradern</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-14.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Anusha Singh</h5>
+                            <p className="text-sm text-gray-600">Sunbeam School Ballia</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
                           </div>
                           {/* School Winner 3 */}
                           <div className="flex flex-col items-center text-center">
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/profile-s-15.jpg" alt="Winner" />
                             </Avatar>
-                            <h5 className="font-semibold">Riya Singh</h5>
-                            <p className="text-sm text-gray-600">St. Mary's School</p>
+                            <h5 className="font-semibold">Kamakshi Bali</h5>
+                            <p className="text-sm text-gray-600">Presidium School, Raj Nagar</p>
+                            <p className="text-xs text-gray-500">12th Gradern</p>
                           </div>
                               </div>
                             </div>
