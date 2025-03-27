@@ -8,11 +8,11 @@ import ContactInfo from './components/ContactInfo'
 import Footer from './components/Footer'
 import InfoSection from './components/InfoCard';
 import { Element } from 'react-scroll'
-
+import TrendingBanner from './components/TrendingBanner'
 
 const App = () => {
   return (
-    
+    <div>
     <div>
       <Element name="home">
       <HeroComponent></HeroComponent>
@@ -35,6 +35,7 @@ const App = () => {
     <Element name='contact'>
       <Footer></Footer>
     </Element>
+    </div>
     </div>
   )
 }

@@ -63,7 +63,7 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs p-1 text-pink-800 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-          <p>© {new Date().getFullYear()} AlgoQueen
+          <p>© {new Date().getFullYear()} AlgoQueen. All rights reserved.
           </p>
           <p >Email:<a href="mailto:algoqueen@cb.amrita.edu" className="text-algoqueen hover:underline"> algoqueen@cb.amrita.edu</a></p>
         </div>
