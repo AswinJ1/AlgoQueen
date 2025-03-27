@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Button = ({ children, onClick }) => (
   <button
     onClick={onClick}
-    className="px-4 py-2 bg-gray-50 opacity-60 text-black rounded-md border flex items-center gap-2 hover:bg-white transition"
+    className="px-4 py-2 bg-white opacity-80 text-black rounded-md border flex items-center gap-2 hover:bg-gray-50 transition"
   >
     {children}
   </button>
@@ -34,7 +34,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-r from-white to-purple-100">
+    <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-r from-white to-purple-100">
       {/* About Section */}
       <div className="mb-16 flex flex-col md:flex-row gap-10 items-center">
       <div className="md:w-1/2">
@@ -107,7 +107,7 @@ const AboutSection = () => {
      
 
       {/* Why Participate Section */}
-      <div className="mb-20">
+      <div className="mb-0">
         <div className="flex items-center gap-2 mb-8 justify-center">
           <RocketIcon size={24} className="text-indigo-600" />
           <h2 className="text-2xl font-bold ">Why Participate?</h2>

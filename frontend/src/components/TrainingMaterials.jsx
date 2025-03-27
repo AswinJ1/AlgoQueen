@@ -854,7 +854,7 @@ const TrainingMaterials = () => {
    
     <CardContent>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-        <div className="flex flex-col items-center justify-center p-6 ">
+        <div className="flex flex-col items-center justify-center p-6 text-justify ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/jetbrains.png" className="h-20" alt="jetbrainslogo" />
           </div>
@@ -866,18 +866,16 @@ const TrainingMaterials = () => {
           </p>
         </div>
         
-        <div className="flex flex-col items-center justify-center p-6">
-          <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/jane2.png" className="h-20" alt="" />
-          </div>
-          <p className="justify-normal text-sm text-gray-600">
-          Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
-          and innovative thinking to financial markets. With a deep-rooted history in competitive programming, 
-          Jane Street actively supports coding communities and offers exciting career opportunities in technology
-          and finance.
+        <div className="flex flex-col items-center justify-center p-6 text-justify">
+  <img src="/jane2.png" className="h-20 mb-4" alt="" />
+  <p className="text-sm text-gray-600">
+    Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
+    and innovative thinking to financial markets. With a deep-rooted history in competitive programming, 
+    Jane Street actively supports coding communities and offers exciting career opportunities in technology
+    and finance.
+  </p>
+</div>
 
-          </p>
-        </div>
       </div>
       
       <div className="text-center mt-12">
