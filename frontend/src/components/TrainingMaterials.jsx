@@ -853,8 +853,8 @@ const TrainingMaterials = () => {
   <Card className="bg-transparent border-none shadow-none">
    
     <CardContent>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-        <div className="flex flex-col items-center justify-center p-6 text-justify ">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-6 place-items-center">
+        {/* <div className="flex flex-col items-center justify-center p-6 text-justify ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
             <img src="/jetbrains.png" className="h-20" alt="jetbrainslogo" />
           </div>
@@ -864,11 +864,11 @@ const TrainingMaterials = () => {
           JetBrains supports coding competitions and learning initiatives worldwide.
 
           </p>
-        </div>
+        </div> */}
         
         <div className="flex flex-col items-center justify-center p-6 text-justify">
   <img src="/jane2.png" className="h-20 mb-4" alt="" />
-  <p className="text-sm text-gray-600">
+  <p className="text-sm text-gray-600 max-w-lg text-justify mx-auto ">
     Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
     and innovative thinking to financial markets. With a deep-rooted history in competitive programming, 
     Jane Street actively supports coding communities and offers exciting career opportunities in technology
