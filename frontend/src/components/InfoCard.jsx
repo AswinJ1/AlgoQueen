@@ -7,7 +7,7 @@ const InfoCard = ({ iconSrc, title, description, delay }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay / 1000, duration: 0.5 }}
-      className="flex items-start space-x-4 rounded-md p-6 bg-white shadow-md"
+      className="flex items-start space-x-4 rounded-md p-6 bg-white shadow-md "
     >
       {/* Image Icon on the Left */}
       <img src={iconSrc} alt={title} className="w-12 h-12 object-contain flex-shrink-0" />
