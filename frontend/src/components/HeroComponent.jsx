@@ -39,7 +39,7 @@ export default function HeroComponent() {
               <img
                 alt=""
                 src="/5.png"
-                className="h-14 w-auto"
+                className="h-[70px] w-auto"
               />
             </a>
           </div>
