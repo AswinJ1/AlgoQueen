@@ -3,7 +3,7 @@ import { TrendingUp, X } from "lucide-react";
 import clsx from "clsx"; // Install using: npm install clsx
 
 const TrendingBanner = ({
-  message = " Join our telegram channel , ask your doubts & get support from our experts.",
+  message = " Join our telegram channel",
   link = "https://t.me/algoqueen2023",
   className,
   autoDismiss = false,
@@ -49,11 +49,11 @@ const TrendingBanner = ({
   )}
 >
 
-      <div className="bg-white mx-auto max-w-screen-xl px-4 py-3 shadow-md border border-gray-200">
+      <div className="bg-indigo-600 ml-auto max-w-fit px-9 py-2 shadow-md border text-white border-indigo-600">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-1">
             <span className="flex items-center">
-              <TrendingUp className="h-4 w-4 mr-2 text-primary animate-pulse-subtle" />
+              <TrendingUp className="h-4 w-4 mr-2 text-primary animate-pulse-subtle text-white" />
               <span className="text-xs sm:text-sm font-medium">Need Help?</span>
             </span>
             <div className="ml-3 h-4 w-px bg-gray-300" aria-hidden="true" />
