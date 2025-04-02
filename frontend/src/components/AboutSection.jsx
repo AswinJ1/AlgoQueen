@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal, Brain, Quote, SwordIcon, Swords, Lightbulb, TargetIcon, RocketIcon, LightbulbIcon} from "lucide-react";
+import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal, Brain, Quote, SwordIcon, Swords, Lightbulb, TargetIcon, RocketIcon, LightbulbIcon, StarIcon, StarsIcon, StarOffIcon, StarHalf, MoonStarIcon, ListStartIcon, Star, LucideStars} from "lucide-react";
+import { Stars } from "@react-three/drei";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -54,7 +55,11 @@ const AboutSection = () => {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Empowering Women in Competitive Programming</h2>
 <p className="text-gray-600 mb-6">
-  ICPC Algo Queen is a premier international coding competition that challenges young women to excel in problem-solving and competitive programming. It provides a dynamic platform to learn, innovate, and compete at a global level, opening doors to career opportunities and industry recognition.
+ICPC AlgoQueen 2025 is a premier global competitive programming competition designed to 
+empower young women in tech. With participants from schools and universities worldwide, 
+the competition offers a challenging yet supportive environment where competitors can 
+showcase their talents and grow as problem solvers. 
+
 </p>
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -94,7 +99,7 @@ const AboutSection = () => {
 </div>
 
  <br />
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center gap-2 hover:bg-indigo-500 transition">
+          <button className="px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center gap-2 hover:bg-indigo-500 transition" onClick={() => window.open("https://codedrills.io/contests/icpc-algo-queen-2025/", "_blank")}>
             <span>Register Now</span>
           
             <Zap size={16} />
@@ -115,10 +120,16 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
           {[
-            { icon: <Award size={32} />, title: "ICPC World Finals Opportunity", text: "Top performers get a chance to attend the global stage." },
-            { icon: <Zap size={32} />, title: "Global Recognition", text: "Showcase your coding talent to top universities and industry leaders." },
-            { icon: <School size={32} />, title: "Expert Mentorship", text: "Learn from professionals through training and problem-solving sessions." },
-            {icon: <Briefcase size={32} />, title: "Career Growth", text: "Connect with leading tech companies for internships and job opportunities." },
+            { icon: <Award size={32} />, title: "Enhance Your Skills", text: "Enhance your coding and algorithmic skills" },
+            { icon: <Zap size={32} />, title: " Compete Globally", text: "Compete with top female programmers globally" },
+            { icon: <School size={32} />, title: "Expert Mentorship", text: "Gain mentorship and access to learning resources" },
+            {icon: <LucideStars size={32} />, title: "Compete & Win Amazing Prizes!", text:<>
+            Win exciting rewards, including a sponsored trip to ICPC World Finals
+            2025 in Baku, Azerbaijan.{" "} <br />
+            <span className="text-sm text-gray-500 italic ">
+              *Terms and conditions apply
+            </span>
+          </> },
           ].map((item, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-indigo-600 mb-4">{item.icon}</div>
@@ -134,10 +145,10 @@ const AboutSection = () => {
           tiltMaxAngleY={8}
           glareEnable={true}
           glareMaxOpacity={0.2}
-          className="h-64 rounded-xl overflow-hidden"
+          className="h-64 rounded-xl overflow-hidden xl:h-96"
         >
           <img 
-            src="/algo-hero2.jpg" 
+            src="/group.jpg" 
             alt="Students collaborating" 
             className="w-full h-full object-cover "
           />
@@ -148,10 +159,10 @@ const AboutSection = () => {
           tiltMaxAngleY={8}
           glareEnable={true}
           glareMaxOpacity={0.2}
-          className="h-64 rounded-xl overflow-hidden"
+          className="h-64 rounded-xl overflow-hidden xl:h-96"
         >
           <img 
-            src="/algo-hero.jpg" 
+            src="/icpc_algoQ.jpeg" 
             alt="Programming competition" 
             className="w-full h-full object-cover"
           />
@@ -166,7 +177,7 @@ const AboutSection = () => {
           {[
             { icon: <BookOpen size={32} />, title: "Learn", text: "Gain access to expert mentorship, structured training sessions, and problem-solving resources to sharpen your coding skills." },
             { icon: <Target size={32} />, title: "Compete", text: " Participate in two exciting rounds of competition, solving challenging problems and testing your abilities against top female coders worldwide." },
-            { icon: <Medal size={32} />, title: "Win", text: "Earn recognition, exciting prizes, career opportunities, and a chance to connect with top tech companies and institutions." }
+            { icon: <Medal size={32} />, title: "Win", text: "Gain recognition and win exciting rewards, including a sponsored trip to the ICPC World Finals 2025 in Baku, Azerbaijan" }
           ].map((item, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-indigo-600 mb-4">{item.icon}</div>

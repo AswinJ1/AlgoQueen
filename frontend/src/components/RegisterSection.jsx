@@ -142,6 +142,10 @@ const RegisterSection = () => {
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
+                  <span> Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
                   <span>Exciting gifts and Goodie Bags.</span>
                 </li>
               </ul>

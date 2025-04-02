@@ -911,7 +911,7 @@ const TrainingMaterials = () => {
         
         <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/icpc2.png" className="h-25" alt="" />
+            <img src="/icpclogo2024.png" className="h-[100px]" alt="" />
           </div>
         </div>
       </div>

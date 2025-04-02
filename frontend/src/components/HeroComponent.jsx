@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import Tilt from 'react-parallax-tilt';
 import { Link } from 'react-scroll';
 import TrendingBanner from './TrendingBanner';
-
+import { ArrowRight } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', to: 'home' },
@@ -16,7 +16,6 @@ const navigation = [
   {name: 'FAQ', to: 'faq'},
   {name: 'Contact', to: 'contact'}
 ];
-
 export default function HeroComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const imageRef = useRef(null);
@@ -99,7 +98,7 @@ export default function HeroComponent() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="https://codedrills.io/contests/icpc-algo-queen-2025/" 
                     className="block w-full rounded-lg px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
                   >
                     Register now
@@ -115,29 +114,33 @@ export default function HeroComponent() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20">
           <div>
             <h1 className="text-5xl font-bold text-gray-900 leading-tight">
-            ICPC Algo Queen Empowering the Next Generation of Women in Tech
+            ICPC Algo Queen - The Girl’s Programming Cup 2025
 
 
             </h1>
-            <p className="mt-6 text-lg text-gray-600">
-            ICPC Algo Queen, an initiative by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation, empowers young women with problem-solving skills and fosters innovation and global recognition in tech.
+            <p className="mt-6 text-lg text-gray-600 text-justify">
+            ICPC Algo Queen, an initiative by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation and sponsored by Jane Street. It aims to empower young women by 
+enhancing their problem-solving skills while fostering innovation and global recognition in 
+technology.
             
 
             </p>
             <div className="mt-6 flex gap-x-4">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-4 py-2 text-white text-lg font-semibold shadow-sm hover:bg-indigo-500"
-              >
-                Register now
-              </a>
-              <a href="https://u.icpc.global/events/algo-queen/" className="text-lg font-semibold text-gray-900 hover:underline flex items-center">
+            <a
+  href="https://codedrills.io/contests/icpc-algo-queen-2025/" target="_blank"
+  className="flex items-center gap-2 rounded-md bg-indigo-600 px-6 py-3 text-white text-lg font-semibold shadow-md hover:bg-indigo-500 transition duration-300 group"
+>
+  Register Now
+  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+</a>
+
+              {/* <a href="https://u.icpc.global/events/algo-queen/" className="text-lg font-semibold text-gray-900 hover:underline flex items-center">
                 Know more  &rarr;
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-12" ref={imageRef}>
-            {["algo-hero.jpg", "algo-hero2.jpg", "algo-hero3.jpg", "algo-hero4.jpg"].map((img, index) => (
+            {["winner-2.jpg", "algo-hero2.jpg", "algo-hero3.jpg", "winner.jpg"].map((img, index) => (
               <Tilt key={index} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
                 <img src={`/${img}`} alt="Visual" className="rounded-xl shadow-lg object-cover w-full h-40 backdrop-blur-lg bg-opacity-50" />
               </Tilt>
