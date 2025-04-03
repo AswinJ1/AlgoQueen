@@ -16,7 +16,7 @@ const TrainingMaterials = () => {
           <div className="max-w-5xl mx-auto">
               <div className="flex items-center gap-2 mb-8 justify-center">
                                   <Book size={24} className="text-indigo-600" />
-                                  <h2 className="text-2xl font-bold ">Training Materials</h2>
+                                  <h2 className="text-2xl font-bold ">Learning Resources</h2>
                                 </div>
             {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Training Materials</h1>
@@ -25,8 +25,8 @@ const TrainingMaterials = () => {
             
           
               <div  className="space-y-6 mb-16">
-                <Card>
-                  <CardHeader>
+                <Card className="pt-5">
+                  {/* <CardHeader>
                     <CardTitle className="flex items-center">
                       <BookOpen className="h-6 w-6 text-indigo-600 mr-2" />
                       Training Sessions
@@ -34,7 +34,7 @@ const TrainingMaterials = () => {
                     <CardDescription>
                       Prepare for the competition with these resources
                     </CardDescription>
-                  </CardHeader>
+                  </CardHeader> */}
                   <CardContent className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <Card className="border-l-4 border-indigo-600">
@@ -49,9 +49,9 @@ const TrainingMaterials = () => {
                           <p className="text-sm text-gray-600">
                           We’re introducing structured training tracks for Beginners and Intermediates.
                           </p>
-                          <p className="text-xs text-gray-500 italic mt-1">
+                          {/* <p className="text-xs text-gray-500 italic mt-1">
                        *Disclaimer: Features are coming soon. Stay tuned!
-                         </p>
+                         </p> */}
                            {/* List with Lucide Icons */}
                           {/* <ul className="mt-3 space-y-2 text-sm text-gray-600">
                             <li className="flex items-center">
