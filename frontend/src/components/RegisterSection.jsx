@@ -127,28 +127,29 @@ const RegisterSection = () => {
               <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
                 <Award className="h-6 w-6 mr-2  text-indigo-600" /> Awards & Prizes
               </h2>
-              <ul className="space-y-3 mt-4 text-left">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-yellow-500 mt-0.5 mr-2" />
-                  <span>Gold Medals for top 5 students (Rank 1 to 5).</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-gray-400 mt-0.5 mr-2" />
-                  <span>Silver Medals for the next 5 students (Rank 6 to 10).</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-amber-700 mt-0.5 mr-2" />
-                  <span>Bronze Medals for the next 5 students (Rank 11 to 15).</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                  <span> Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                  <span>Exciting gifts and Goodie Bags.</span>
-                </li>
-              </ul>
+            <ul className="space-y-3 mt-4 text-left">
+            <li className="flex items-start">
+              <Check className="h-5 w-5 flex-shrink-0 text-yellow-500 mr-2" />
+              <span>Gold Medals for top 5 students (Rank 1 to 5).</span>
+            </li>
+            <li className="flex items-start">
+              <Check className="h-5 w-5 flex-shrink-0 text-gray-400 mr-2" />
+              <span>Silver Medals for the next 5 students (Rank 6 to 10).</span>
+            </li>
+            <li className="flex items-start">
+              <Check className="h-5 w-5 flex-shrink-0 text-amber-700 mr-2" />
+              <span>Bronze Medals for the next 5 students (Rank 11 to 15).</span>
+            </li>
+            <li className="flex items-start">
+              <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
+              <span>Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan</span>
+            </li>
+            <li className="flex items-start">
+              <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
+              <span>Exciting gifts and Goodie Bags.</span>
+            </li>
+          </ul>
+
               <p className="mt-4 text-sm text-gray-600">*Further prize details will be announced later.</p>
             </Card>
           </div>
