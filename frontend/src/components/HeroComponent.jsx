@@ -14,7 +14,7 @@ const navigation = [
   { name: 'About', to: 'about' },
   { name: 'Learn', to: 'learn' },
   {name: 'FAQ', to: 'faq'},
-  {name: 'Contact', to: 'contact'}
+  {name: 'Join Telegram', to: 'link'}
 ];
 export default function HeroComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function HeroComponent() {
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
-      <TrendingBanner className="px-6"></TrendingBanner>
+      {/* <TrendingBanner className="px-6"></TrendingBanner> */}
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -54,11 +54,31 @@ export default function HeroComponent() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
+            {/* {navigation.map((item) => (
               <Link key={item.name} to={item.to} className="text-sm/6 font-semibold text-gray-900 cursor-pointer smooth={true} duration={500}">
                 {item.name}
               </Link>
-            ))}
+            ))} */}
+            {navigation.map((item) =>
+  item.name === "Join Telegram" ? (
+    <button
+      key={item.name}
+      onClick={() => window.open("https://t.me/YOUR_TELEGRAM_LINK", "_blank")}
+      className="px-2 py-1  bg-blue-500 text-white rounded-md font-semibold hover:bg-blue-600 transition"
+    >
+      {item.name}
+    </button>
+  ) : (
+    <Link
+      key={item.name}
+      to={item.to}
+      className="text-sm font-semibold text-gray-900 cursor-pointer smooth={true} duration-500"
+    >
+      {item.name}
+    </Link>
+  )
+)}
+
           </div>
          
         </nav>
@@ -100,6 +120,7 @@ export default function HeroComponent() {
                   <a
                     href="https://codedrills.io/contests/icpc-algo-queen-2025/" 
                     className="block w-full rounded-lg px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
+                    id='register-button'
                   >
                     Register now
                   </a>
@@ -129,6 +150,7 @@ technology.
             <a
   href="https://codedrills.io/contests/icpc-algo-queen-2025/" target="_blank"
   className="flex items-center gap-2 rounded-md bg-indigo-600 px-6 py-3 text-white text-lg font-semibold shadow-md hover:bg-indigo-500 transition duration-300 group"
+  id="register-button"
 >
   Register Now
   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

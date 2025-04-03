@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Button = ({ children, onClick }) => (
   <button
     onClick={onClick}
+    id="register-button"
     className="px-4 py-2 bg-white opacity-80 text-black rounded-md border flex items-center gap-2 hover:bg-gray-50 transition"
   >
     {children}
