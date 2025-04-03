@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video, Book, Building2Icon, Building2, BuildingIcon, LucideBuilding2 } from 'lucide-react';
+import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video, Book, Building2Icon, Building2, BuildingIcon, LucideBuilding2, VideoOffIcon, Videotape, Rocket, RocketIcon, StarsIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Avatar } from '@/components/ui/avatar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -41,18 +41,35 @@ const TrainingMaterials = () => {
                         <CardHeader className="pb-2">
                           <CardTitle className="text-lg flex items-center">
                             <Code className="h-5 w-5 text-indigo-600 mr-2" />
-                            Algorithmic Problem Solving
+                            Enhanced Training & Resources
+
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
                           <p className="text-sm text-gray-600">
-                            Learn essential algorithms and data structures used in competitive programming.
+                          We’re introducing structured training tracks for Beginners and Intermediates.
                           </p>
+                          <p className="text-xs text-gray-500 italic mt-1">
+                       *Disclaimer: Features are coming soon. Stay tuned!
+                         </p>
+                           {/* List with Lucide Icons */}
+                          {/* <ul className="mt-3 space-y-2 text-sm text-gray-600">
+                            <li className="flex items-center">
+                              <RocketIcon className="h-3 w-3 text-indigo-600 mr-2" />
+                              <span>Beginners – New to programming? Get step-by-step guidance!</span>
+                            </li>
+                            <li className="flex items-center">
+                              <Rocket className="h-3 w-3 text-indigo-600 mr-2" />
+                              <span>Intermediate & Advanced – Improve your problem-solving with expert-curated content!</span>
+                            </li>
+                          </ul> */}
                           <div className="mt-4">
-                            <a href="" className="text-sm font-medium text-indigo-600 hover:underline">
-                              Access materials →
-                            </a>
-                          </div>
+                          <a href="#" className="text-sm font-medium text-indigo-600 flex items-center pointer-events-none">
+                            <span className="pointer-events-none">Coming Soon</span>
+                            <StarsIcon size={18} className="ml-1 text-indigo-600" />
+                          </a>
+                        </div>
+
                         </CardContent>
                       </Card>
                       
@@ -74,7 +91,17 @@ const TrainingMaterials = () => {
                           </div>
                         </CardContent>
                       </Card>
+                      
                     </div>
+                    
+                    <CardTitle className="flex items-center">
+                      <Videotape className="h-6 w-6 text-indigo-600 mr-2 " />
+                      Recorded Sessions
+                    </CardTitle>
+                    <CardDescription>
+                      Prepare for the competition with these resources
+                    </CardDescription>
+                  
                     
                     <div className="mt-6 mb-16">
                     <Accordion type="single" collapsible className="w-full">
