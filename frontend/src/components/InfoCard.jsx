@@ -8,7 +8,7 @@ const InfoCard = ({ iconSrc, title, description, delay }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay / 1000, duration: 0.5 }}
-      className="flex items-start space-x-4 rounded-md p-6 bg-white shadow-md xl:max-w-lg mx-auto"
+      className="flex items-start space-x-4 rounded-md p-6 bg-white shadow-md xl:max-w-lg mx-auto  "
     >
       {/* Image Icon on the Left */}
       <img src={iconSrc} alt={title} className="w-12 h-12 object-contain flex-shrink-0" />
@@ -35,7 +35,8 @@ const InfoCard = ({ iconSrc, title, description, delay }) => {
 
 const InfoSection = () => {
   return (
-    <div className="py-10 rounded-md shadow-md bg-gradient-to-r from-white to-purple-100">
+
+    <div className="py-10 rounded-md shadow-md bg-gradient-to-r from-white to-purple-100 ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-5">
         <InfoCard
           iconSrc="/trophy1.png"

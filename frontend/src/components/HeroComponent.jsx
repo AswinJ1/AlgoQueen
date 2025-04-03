@@ -32,9 +32,9 @@ export default function HeroComponent() {
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
       {/* <TrendingBanner className="px-6"></TrendingBanner> */}
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto w-full">
+          <div className="flex lg:flex-1 ml-[-54px] ">
+            <a href="#" className="-m-1.5 p-1.5 ">
               <span className="sr-only">Algo Queen</span>
               <img
                 alt=""
@@ -53,7 +53,7 @@ export default function HeroComponent() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12 items-center">
+          <div className="hidden lg:flex lg:gap-x-12 items-center mr-[-46px]">
             {/* {navigation.map((item) => (
               <Link key={item.name} to={item.to} className="text-sm/6 font-semibold text-gray-900 cursor-pointer smooth={true} duration={500}">
                 {item.name}
@@ -63,7 +63,7 @@ export default function HeroComponent() {
   item.name === "Join Telegram" ? (
     <button
       key={item.name}
-      onClick={() => window.open("https://t.me/YOUR_TELEGRAM_LINK", "_blank")}
+      onClick={() => window.open("https://t.me/algoqueen2023", "_blank")}
       className="px-3 py-1 text-sm  bg-transparent text-black font-semibold hover:opacity-80  flex items-center"
     > <img src="/telegram2.png" alt="" />
       {item.name}

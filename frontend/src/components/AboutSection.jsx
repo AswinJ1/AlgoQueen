@@ -36,7 +36,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-r from-white to-purple-100">
+    <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-r from-white to-purple-100 ">
       {/* About Section */}
       <div className="mb-16 flex flex-col md:flex-row gap-10 items-center">
       <div className="md:w-1/2">
