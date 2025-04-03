@@ -33,7 +33,7 @@ export default function HeroComponent() {
       <header className="absolute inset-x-0 top-0 z-50">
       {/* <TrendingBanner className="px-6"></TrendingBanner> */}
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto w-full">
-          <div className="flex lg:flex-1 ml-[-54px] ">
+          <div className="flex lg:flex-1 lg:ml-[-54px] ml-[-10px] md:ml-[-5px] sm:ml-0">
             <a href="#" className="-m-1.5 p-1.5 ">
               <span className="sr-only">Algo Queen</span>
               <img
@@ -151,12 +151,12 @@ export default function HeroComponent() {
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20">
           <div>
-            <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             ICPC Algo Queen - The Girl’s Programming Cup 2025
 
 
             </h1>
-            <p className="mt-6 text-lg text-gray-600 text-justify">
+            <p className="mt-6 text-base sm:text-lg text-gray-600 text-justify">
             ICPC Algo Queen, an initiative by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation and sponsored by Jane Street. It aims to empower young women by 
 enhancing their problem-solving skills while fostering innovation and global recognition in 
 technology.
