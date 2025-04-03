@@ -99,7 +99,7 @@ const TrainingMaterials = () => {
                       Recorded Sessions
                     </CardTitle>
                     <CardDescription>
-                    Access past session recordings to enhance your preparation and improve your problem-solving skills.
+                    Prepare for the competition with these resources
                     </CardDescription>
                   
                     
