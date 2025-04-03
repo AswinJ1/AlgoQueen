@@ -53,7 +53,7 @@ export default function HeroComponent() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-12 items-center">
             {/* {navigation.map((item) => (
               <Link key={item.name} to={item.to} className="text-sm/6 font-semibold text-gray-900 cursor-pointer smooth={true} duration={500}">
                 {item.name}
@@ -64,11 +64,12 @@ export default function HeroComponent() {
     <button
       key={item.name}
       onClick={() => window.open("https://t.me/YOUR_TELEGRAM_LINK", "_blank")}
-      className="px-2 py-1  bg-blue-500 text-white rounded-md font-semibold hover:bg-blue-600 transition"
-    >
+      className="px-3 py-1 text-sm  bg-transparent text-black font-semibold hover:opacity-80  flex items-center"
+    > <img src="/telegram2.png" alt="" />
       {item.name}
     </button>
   ) : (
+    
     <Link
       key={item.name}
       to={item.to}
