@@ -49,14 +49,14 @@ const TrendingBanner = ({
   )}
 >
 
-      <div className="bg-indigo-600 ml-auto max-w-fit px-9 py-2 shadow-md border text-white border-indigo-600">
+      <div className="bg-indigo-600 ml-auto max-w-fit px-5 py-2 mt-[3px] shadow-md border text-white border-indigo-600">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-1">
-            <span className="flex items-center">
+            {/* <span className="flex items-center">
               <TrendingUp className="h-4 w-4 mr-2 text-primary animate-pulse-subtle text-white" />
               <span className="text-xs sm:text-sm font-medium">Need Help?</span>
-            </span>
-            <div className="ml-3 h-4 w-px bg-gray-300" aria-hidden="true" />
+            </span> */}
+            {/* <div className="ml-3 h-4 w-px bg-gray-300" aria-hidden="true" /> */}
             <p className="ml-3 truncate text-xs sm:text-sm font-medium">
               <a href={link} target="blank" className="hover:underline transition-all duration-200 ease-in-out">
                 {message}
