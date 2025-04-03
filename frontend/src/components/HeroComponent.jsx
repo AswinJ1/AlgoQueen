@@ -14,7 +14,7 @@ const navigation = [
   { name: 'About', to: 'about' },
   { name: 'Learn', to: 'learn' },
   {name: 'FAQ', to: 'faq'},
-  {name: 'Join Telegram', to: 'link'}
+  {name: 'Join Telegram', to: 'https://t.me/algoqueen2023'}
 ];
 export default function HeroComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -107,15 +107,31 @@ export default function HeroComponent() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.to}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                {navigation.map((item) =>
+  item.name === "Join Telegram" ? (
+    <a
+      key={item.name}
+      href={item.to} // Use `href` instead of `to`
+      target="_blank"
+      rel="noopener noreferrer"
+      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+    >
+      {item.name}
+    </a>
+  ) : (
+    <Link
+      key={item.name}
+      to={item.to}
+      smooth={true}
+      duration={500}
+      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      {item.name}
+    </Link>
+  )
+)}
+
                 </div>
                 <div className="py-6">
                   <a
