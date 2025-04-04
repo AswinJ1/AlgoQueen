@@ -179,7 +179,7 @@ technology.
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-12" ref={imageRef}>
-            {["winner-2.jpg", "algo-hero2.jpg", "algo-hero3.jpg", "winner.jpg"].map((img, index) => (
+            {["pc-hero.jpeg", "algo-hero2.jpg", "algo-hero3.jpg", "winner.jpg"].map((img, index) => (
               <Tilt key={index} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
                 <img src={`/${img}`} alt="Visual" className="rounded-xl shadow-lg object-cover w-full h-40 backdrop-blur-lg bg-opacity-50" />
               </Tilt>
