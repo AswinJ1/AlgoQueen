@@ -1149,14 +1149,14 @@ const TrainingMaterials = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/amrita.png" className="h-20" alt="jetbrainslogo" />
+            <img src="/amrita.png" className="h-[120px]" alt="jetbrainslogo" />
           </div>
           
         </div>
         
         <div className="flex flex-col items-center justify-center p-6 ">
-          <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/icpclogo2024.png" className="h-[100px]" alt="" />
+          <div className="text-3xl font-bold text-indigo-600 mb-9">
+            <img src="/icpclogo2024.png" className="h-[150px] " alt="" />
           </div>
         </div>
       </div>
