@@ -60,7 +60,7 @@ const faqs = [
   ,
   {
     question:"Who can I contact for further inquiries?",
-    answer:"If you have more questions, feel free to reach out to our support team at <a href='mailto:algoqueen@cb.amrita.edu'>algoqueen@cb.amrita.edu</a> / +91 9072100134"
+    answer:"If you have more questions, feel free to reach out to our support team at <a href='mailto:algoqueen@cb.amrita.edu'>algoqueen@cb.amrita.edu</a>"
   },
   {
     question:"How can I get involved as a sponsor or mentor?",
