@@ -156,7 +156,7 @@ export default function HeroComponent() {
 
 
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-600 text-justify">
+            <p className="mt-6 text-base sm:text-lg text-gray-600 text-justify ">
             ICPC Algo Queen, an initiative by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation and sponsored by Jane Street. It aims to empower young women by 
 enhancing their problem-solving skills while fostering innovation and global recognition in 
 technology.
