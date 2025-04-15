@@ -1,12 +1,28 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video, Book, Building2Icon, Building2, BuildingIcon, LucideBuilding2, VideoOffIcon, Videotape, Rocket, RocketIcon, StarsIcon } from 'lucide-react';
+import { BookOpen, Code, Laptop, Trophy, Building, ChevronDown,Video, Book, Building2Icon, Building2, BuildingIcon, LucideBuilding2, VideoOffIcon, Videotape, Rocket, RocketIcon, StarsIcon, LucideTrain } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Avatar } from '@/components/ui/avatar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import SessionAccordion from './SessionAccordion';
+import SessionCalendar from './SessionCalender';
+import { sessionData } from '@/data/sessionData';
+import SessionCard from './SessionCard';
+import { useState } from 'react';
+
 
 const TrainingMaterials = () => {
+  const [openSessionIds, setOpenSessionIds] = useState([]);
+  
+  const handleDateSelect = (sessionIds) => {
+    setOpenSessionIds(sessionIds);
+  };
+
+  const handleAccordionToggle = (openIds) => {
+    setOpenSessionIds(openIds);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-white to-purple-100">
     
@@ -41,13 +57,13 @@ const TrainingMaterials = () => {
                         <CardHeader className="pb-2">
                           <CardTitle className="text-lg flex items-center">
                             <Code className="h-5 w-5 text-indigo-600 mr-2" />
-                            Enhanced Training & Resources
+                            Explore  Resources
 
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
                           <p className="text-sm text-gray-600">
-                          We’re introducing structured training tracks for Beginners and Intermediates.
+                          Explore resources to help you with your preparation.
                           </p>
                           {/* <p className="text-xs text-gray-500 italic mt-1">
                        *Disclaimer: Features are coming soon. Stay tuned!
@@ -64,9 +80,10 @@ const TrainingMaterials = () => {
                             </li>
                           </ul> */}
                           <div className="mt-4">
-                          <a href="#" className="text-sm font-medium text-indigo-600 flex items-center pointer-events-none">
-                            <span className="pointer-events-none">Coming Soon</span>
-                            <StarsIcon size={18} className="ml-1 text-indigo-600" />
+                          <a href="https://usaco.guide/general/resources-cp?lang=cpp" className="text-sm font-medium text-indigo-600 flex items-center   " target='_blank' rel="noopener noreferrer">
+                            <span className="">Start learning →</span>
+                            
+                            {/* <StarsIcon size={18} className="ml-1 text-indigo-600" /> */}
                           </a>
                         </div>
 
@@ -85,7 +102,7 @@ const TrainingMaterials = () => {
                             A collection of past problems with solutions and explanations.
                           </p>
                           <div className="mt-4">
-                            <a href="https://codedrills.io/problems" target='blank' className="text-sm font-medium text-indigo-600 hover:underline">
+                            <a href="https://codedrills.io/problems" target='blank' className="text-sm font-medium text-indigo-600 ">
                               Start practicing →
                             </a>
                           </div>
@@ -93,6 +110,34 @@ const TrainingMaterials = () => {
                       </Card>
                       
                     </div>
+                          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          {/* Left side: Live Sessions */}
+                          <div className="md:col-span-1 lg:col-span-2">
+                            <CardTitle className="flex items-center mb-2 text-lg font-semibold text-gray-800">
+                              <Videotape className="h-6 w-6 text-indigo-600 mr-2" />
+                              Live Sessions
+                            </CardTitle>
+                            <CardDescription className="mb-4 text-sm text-gray-600">
+                              Click on any session to view details and join. Sessions are categorized by difficulty
+                              level to help you choose the right training for your skill level.
+                            </CardDescription>
+                            <SessionAccordion 
+                              sessions={sessionData} 
+                              openSessionIds={openSessionIds}
+                              onToggle={handleAccordionToggle} 
+                            />
+                             <CardDescription className="text-sm mt-2 text-gray-600 flex justify-normal">
+  More Live Sessions are coming soon! Stay tuned for updates.
+  <StarsIcon size={18} className="ml-1 text-indigo-600" />
+</CardDescription>
+                          </div>
+
+                          {/* Right side: Calendar */}
+                          <div className="md:col-span-1">
+                            <SessionCalendar onDateSelect={handleDateSelect} />
+                          </div>
+                        </div>
+
                     
                     <CardTitle className="flex items-center">
                       <Videotape className="h-6 w-6 text-indigo-600 mr-2 " />
@@ -1149,7 +1194,7 @@ const TrainingMaterials = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col items-center justify-center p-6 ">
           <div className="text-3xl font-bold text-indigo-600 mb-4">
-            <img src="/amrita.png" className="h-[120px]" alt="jetbrainslogo" />
+            <img src="/amrita.png" className="h-[100px]" alt="jetbrainslogo" />
           </div>
           
         </div>
