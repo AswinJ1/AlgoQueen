@@ -7,7 +7,6 @@ import { Avatar } from '@/components/ui/avatar';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SessionAccordion from './SessionAccordion';
 import SessionCalendar from './SessionCalender';
-import { sessionData } from '../data/SessionData';
 import SessionCard from './SessionCard';
 import { useState } from 'react';
 import { sessionData } from '../data/SessionData'
