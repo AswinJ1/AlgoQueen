@@ -94,6 +94,12 @@ const RegisterSection = () => {
                   <Calendar className="h-6 w-6 text-algo-primary mr-2 text-indigo-600" />
                   Competition Stages
               </h2> <br />
+
+              <div>
+                    <h3 className="text-lg font-semibold text-algo-dark mb-2">Practice Contest</h3>
+                    <p className="text-gray-600">TBD</p>
+                  </div>
+                  <Separator />
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">Round 1 - Prelims (Online)</h3>
                     <p className="text-gray-600 mb-2">TBD</p>
                     <p className="mb-2"><strong>Platform:</strong> codedrills</p>
@@ -102,25 +108,26 @@ const RegisterSection = () => {
                   
                   <Separator />
                   
-                  <div>
+                  {/* <div>
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">Round 2 - Finals (Online)</h3>
                     <p className="text-gray-600 mb-2">TBD</p>
                     <p>Online for both Indian Students and International Contestants</p>
-                  </div>
-                  
-                  <Separator />
-                  
-                  <div>
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">Practice Contest</h3>
-                    <p className="text-gray-600">TBD</p>
-                  </div>
-                  
-                  <Separator />
-                  
+                  </div> */}
                   <div>
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
                     <p className="text-gray-600">TBD</p>
                   </div>
+                  
+                  {/* <Separator /> */}
+                  
+              
+{/*                   
+                  <Separator /> */}
+                  
+                  {/* <div>
+                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
+                    <p className="text-gray-600">TBD</p>
+                  </div> */}
                 </div>
             </Card>
             <Card className="mt-8">
