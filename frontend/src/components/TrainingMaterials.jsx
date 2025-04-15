@@ -9,7 +9,7 @@ import SessionAccordion from './SessionAccordion';
 import SessionCalendar from './SessionCalender';
 import SessionCard from './SessionCard';
 import { useState } from 'react';
-import { sessionData } from '../data/SessionData.jsx';
+import { sessionData } from '@/data/SessionData';
 
 const TrainingMaterials = () => {
   const [openSessionIds, setOpenSessionIds] = useState([]);

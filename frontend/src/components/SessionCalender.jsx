@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar } from "@/components/ui/calendar";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { sessionData } from '@/data/sessionData';
+import { sessionData } from '@/data/SessionData';
 
 const SessionCalendar = ({ onDateSelect }) => {
   const [date, setDate] = useState(new Date());
