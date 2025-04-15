@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal, Brain, Quote, SwordIcon, Swords, Lightbulb, TargetIcon, RocketIcon, LightbulbIcon, StarIcon, StarsIcon, StarOffIcon, StarHalf, MoonStarIcon, ListStartIcon, Star, LucideStars} from "lucide-react";
-import { Stars } from "@react-three/drei";
+
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
