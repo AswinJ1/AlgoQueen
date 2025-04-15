@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "generate-sitemap": "node src/scripts/generate-sitemap.js",
-    "build": "vite build && npm run generate-sitemap",
+    "build": "npm install --legacy-peer-deps && vite build && npm run generate-sitemap",
     "lint": "eslint .",
     "preview": "vite preview"
   },
