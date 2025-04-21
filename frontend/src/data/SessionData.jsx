@@ -23,7 +23,7 @@ export const sessionData = [
       id: "session-3",
       title: "Introduction to STL for CP ",
       difficulty: "beginner",
-      description: "MIntroduction to C++ STL",
+      description: "Introduction to C++ STL",
       date: "April 25, 2025",
       time: "10:00 - 12:00 EST",
       trainer:"Sakshi Sahu, Priya Pahwa (IGDTUW, Delhi)",
