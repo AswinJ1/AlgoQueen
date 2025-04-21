@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { Calendar, StarOffIcon } from "lucide-react";
 
 const difficultyLabels = {
   beginner: 'Beginner',
@@ -33,10 +33,13 @@ const SessionCard = ({
         <span>{date} • {time}</span>
         <span className='p-2'>{trainer}</span>
       </div>
-      
+     {link ? (
       <Button className="w-full bg-indigo-600 hover:bg-indigo-800 transition-colors text-white " onClick={() => window.open(link, "_blank")}>
         Join Session
       </Button>
+     ) : (
+      <p className="text-gray-600 mb-3 text-sm flex items-center gap-1">Coming Soon...<StarOffIcon size={15} className="text-indigo-600"/></p>
+     )}
     </div>
   );
 };
