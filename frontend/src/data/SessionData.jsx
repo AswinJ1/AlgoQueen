@@ -9,23 +9,23 @@ export const sessionData = [
     //   trainer:"Ashwin Krish, Gayatri S Namputiri(Amrita University)",
     //   link:"https://amrita-edu.zoom.us/j/85429528324#success"
     // },
-    {
-      id: "session-2",
-      title: "Basic Problem Solving",
-      difficulty: "beginner",
-      description: "Demo of how to start problem solving and common tools.",
-      date: "April 22, 2025",
-      time: "14:00 - 16:00 pm EST",
-      trainer:"Ashwin Krish ",
+    // {
+    //   id: "session-2",
+    //   title: "Basic Problem Solving",
+    //   difficulty: "beginner",
+    //   description: "Demo of how to start problem solving and common tools.",
+    //   date: "April 22, 2025",
+    //   time: "14:00 - 16:00 pm EST",
+    //   trainer:"Ashwin Krish ",
       
-    },
+    // },
     {
       id: "session-3",
       title: "Introduction to STL for CP ",
       difficulty: "beginner",
       description: "Introduction to C++ STL",
-      date: "April 25, 2025",
-      time: "10:00 - 12:00 EST",
+      date: "April 26, 2025",
+      time: "6:00 - 7:00 IST",
       trainer:"Sakshi Sahu, Priya Pahwa (IGDTUW, Delhi)",
     
 
@@ -36,7 +36,7 @@ export const sessionData = [
       difficulty: "beginner",
       description: "Various CP Platforms, Contests, Learning resources ",
       date: "April 28, 2025",
-      time: "13:00 - 16:00 EST",
+      time: "6:00 - 7:00 IST",
       trainer:"Shivya Khandpur,Sneha Roychowdhury,IGDTUW Delhi",
     },
     {
@@ -45,6 +45,6 @@ export const sessionData = [
       difficulty: "beginner",
       description: "Learn effective teamwork strategies, time management during contests, and how to divide problems among team members for optimal performance.",
       date: "May 12, 2025",
-      time: "11:00 - 13:00 EST"
+      time: "6:00 - 7:00 IST"
     }
   ];
