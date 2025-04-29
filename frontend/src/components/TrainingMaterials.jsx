@@ -146,210 +146,296 @@ const TrainingMaterials = () => {
                     Prepare for the competition with these resources
                     </CardDescription>
                   
-                    
-                    <div className="mt-6 mb-16">
                     <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="video-0" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                              <div className="flex items-center">
+                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                                <span>Recorded Session 2025</span>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 pb-4 pt-2">
+                            <Accordion type="single" collapsible className="w-full">
                       
-                          <AccordionItem value="video-1" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Introduction to Problem Solving</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/7bj17348HredG8QK-eU0SlVL89tyyyO0kWYCg1tR8kt2ni8z3Sq7PoK4dg4UO0i-.NKvXMk-8yrfhv3Gk?startTime=1659183555000" 
-                                  title="Introduction to Competitive Programming"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Vani R</span>
-                                <span className="text-gray-600">Duration: 32 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                          
-                          <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Basic Problem Solving</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/FjV6zQ9RZMtv12FPDLZA7_bQX7-eb0_x7XBBL547qkmYmPm_gE-_demxdvKJuFe9.mE0bggmzbjR7DEpY" 
-                                  title="Time Complexity and Big O Notation"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Vishaal</span>
-                                <span className="text-gray-600">Duration: 36 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                          
-                          <AccordionItem value="video-3" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Array/List Problems</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/mgtl7u6Ot4nBWrIaeRSJWW-3i2wde4fljxzyivnaFAAFx78ibTPFfRnsz5I0K796.BFORs6FZdpXvaU35" 
-                                  title="Dynamic Programming Techniques"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Prabath Kini</span>
-                                <span className="text-gray-600">Duration: 35 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
+                      
+                      <AccordionItem value="video-1" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Introduction to Problem Solving</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://www.youtube.com/embed/9csxVu8oLRc" 
+                          title="Introduction to Competitive Programming"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
 
-                          <AccordionItem value="video-4" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Ashwin Krish, Gayatri S Namputiri</span>
+                            <span className="text-gray-600">Duration: 32 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                
+                      
+                      {/* <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Basic Problem Solving</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="" 
+                              title="Time Complexity and Big O Notation"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Vishaal</span>
+                            <span className="text-gray-600">Duration: 36 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem> */}
+                      
+                     
+                   
+                    </Accordion>
+                              
+                            </AccordionContent>
+                          </AccordionItem>
+                    </Accordion>
+                    <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="video-0" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Sorting & Divide-and-Conquer</span>
+                                <span>Recorded Session 2024</span>
                               </div>
                             </AccordionTrigger>
                             <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/hsRwt6m2rNl0OwBVBI8Nim6tT8eX2e90GuLuHOqmjRJfEN2bD2FIIKdjH1w_utDH.AvTxn9dBrC_BMC73?startTime=1661602632000" 
-                                  title="Dynamic Programming Techniques"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Karthika</span>
-                                <span className="text-gray-600">Duration: 50 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
+                            <Accordion type="single" collapsible className="w-full">
+                      
+                      
+                      <AccordionItem value="video-1" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Introduction to Problem Solving</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/7bj17348HredG8QK-eU0SlVL89tyyyO0kWYCg1tR8kt2ni8z3Sq7PoK4dg4UO0i-.NKvXMk-8yrfhv3Gk?startTime=1659183555000" 
+                              title="Introduction to Competitive Programming"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Vani R</span>
+                            <span className="text-gray-600">Duration: 32 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                
+                      
+                      <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Basic Problem Solving</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/FjV6zQ9RZMtv12FPDLZA7_bQX7-eb0_x7XBBL547qkmYmPm_gE-_demxdvKJuFe9.mE0bggmzbjR7DEpY" 
+                              title="Time Complexity and Big O Notation"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Vishaal</span>
+                            <span className="text-gray-600">Duration: 36 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                      
+                      <AccordionItem value="video-3" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Array/List Problems</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/mgtl7u6Ot4nBWrIaeRSJWW-3i2wde4fljxzyivnaFAAFx78ibTPFfRnsz5I0K796.BFORs6FZdpXvaU35" 
+                              title="Dynamic Programming Techniques"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Prabath Kini</span>
+                            <span className="text-gray-600">Duration: 35 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
 
-                          <AccordionItem value="video-5" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>String Problems</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/p4Aq1BCYOjrcWZlwbe2JKxUTZiWsUP4GcaDsqVsDW6lNG6ekJHcWlTMjVrVx08Ap.a4lsB9fuTMbY8qKz?startTime=1662812466000" 
-                                  title="Dynamic Programming Techniques"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Siddharth Maurya</span>
-                                <span className="text-gray-600">Duration: 52 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
+                      <AccordionItem value="video-4" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Sorting & Divide-and-Conquer</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/hsRwt6m2rNl0OwBVBI8Nim6tT8eX2e90GuLuHOqmjRJfEN2bD2FIIKdjH1w_utDH.AvTxn9dBrC_BMC73?startTime=1661602632000" 
+                              title="Dynamic Programming Techniques"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Karthika</span>
+                            <span className="text-gray-600">Duration: 50 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
 
-                          {/* <AccordionItem value="video-6" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Greedy</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/ZZKpiUIYmKj7DhQrUKGk9wM2AXYRYHOk51sT97ren6mdqDoR0ZDRMt8LWtYCCxNj.wFOakKt84EGhJuNz" 
-                                  title="Dynamic Programming Techniques"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
-                                <span className="text-gray-600">Duration: 52 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem> */}
+                      <AccordionItem value="video-5" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>String Problems</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/p4Aq1BCYOjrcWZlwbe2JKxUTZiWsUP4GcaDsqVsDW6lNG6ekJHcWlTMjVrVx08Ap.a4lsB9fuTMbY8qKz?startTime=1662812466000" 
+                              title="Dynamic Programming Techniques"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Siddharth Maurya</span>
+                            <span className="text-gray-600">Duration: 52 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
 
-                          <AccordionItem value="video-7" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Dynamic Programming</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/FhmUY3t6DZZ-xInYNSIdMOQ9UzIM3Z4Q2DmNWh_HKfm3rVcWl2m6kc-eJjD5C5Gd.vvAN63c6USMsGsSd?startTime=1664021653000" 
-                                  title="Dynamic Programming Techniques"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Amrita Varshini</span>
-                                <span className="text-gray-600">Duration: 42 minutes</span>
-                              </div>
+                      {/* <AccordionItem value="video-6" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Greedy</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/ZZKpiUIYmKj7DhQrUKGk9wM2AXYRYHOk51sT97ren6mdqDoR0ZDRMt8LWtYCCxNj.wFOakKt84EGhJuNz" 
+                              title="Dynamic Programming Techniques"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Dr. Meena Gupta</span>
+                            <span className="text-gray-600">Duration: 52 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem> */}
+
+                      <AccordionItem value="video-7" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Dynamic Programming</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/FhmUY3t6DZZ-xInYNSIdMOQ9UzIM3Z4Q2DmNWh_HKfm3rVcWl2m6kc-eJjD5C5Gd.vvAN63c6USMsGsSd?startTime=1664021653000" 
+                              title="Dynamic Programming Techniques"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Amrita Varshini</span>
+                            <span className="text-gray-600">Duration: 42 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="video-8" className="border border-gray-200 rounded-lg overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Graph Representation and Traversal</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                            <iframe 
+                              className="w-full h-full rounded-md"
+                              src="https://us06web.zoom.us/rec/share/pPJWzoFTKNOODhhYB4z6-QaS6ezahBkFdT2DP_Eaz1zzpmNIEkCreW_rOe_ywbg.TIMwy2vyXI4Ic8_8" 
+                              title="Dynamic Programming Techniques"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Vani R</span>
+                            <span className="text-gray-600">Duration: 1 hour 5 minutes</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                   
+                    </Accordion>
+                              
                             </AccordionContent>
                           </AccordionItem>
-                          <AccordionItem value="video-8" className="border border-gray-200 rounded-lg overflow-hidden">
-                            <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
-                              <div className="flex items-center">
-                                <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                                <span>Graph Representation and Traversal</span>
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-4 pt-2">
-                              <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
-                                <iframe 
-                                  className="w-full h-full rounded-md"
-                                  src="https://us06web.zoom.us/rec/share/pPJWzoFTKNOODhhYB4z6-QaS6ezahBkFdT2DP_Eaz1zzpmNIEkCreW_rOe_ywbg.TIMwy2vyXI4Ic8_8" 
-                                  title="Dynamic Programming Techniques"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
-                              </div>
-                              <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600">Instructor: Vani R</span>
-                                <span className="text-gray-600">Duration: 1 hour 5 minutes</span>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                       
-                        </Accordion>
+                    </Accordion>
+                    <div className="mt-6 mb-16">
+                   
                     </div>
                   </CardContent>
                 </Card>
