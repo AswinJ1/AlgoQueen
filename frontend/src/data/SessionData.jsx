@@ -1,31 +1,31 @@
 export const sessionData = [
-    // {
-    //   id: "session-1",
-    //   title: "Introduction to Competitive Programing and Algoqueen",
-    //   difficulty: "beginner",
-    //   description: "This session aims to give a general introduction about ALGOQUEEN and CP,it covers topics like what is AlgoQueen ,what is Competitive Programming,Why Competitive Programming and How to start",
-    //   date: "April 15, 2025",
-    //   time: "6:00 - 7:00 PM  IST",
-    //   trainer:"Ashwin Krish, Gayatri S Namputiri(Amrita University)",
-    //   link:"https://amrita-edu.zoom.us/j/85429528324#success"
-    // },
-    // {
-    //   id: "session-2",
-    //   title: "Basic Problem Solving",
-    //   difficulty: "beginner",
-    //   description: "Demo of how to start problem solving and common tools.",
-    //   date: "April 22, 2025",
-    //   time: "14:00 - 16:00 pm EST",
-    //   trainer:"Ashwin Krish ",
+    {
+      id: "session-1",
+      title: "Introduction to Competitive Programing and Algoqueen",
+      difficulty: "beginner",
+      description: "This session aims to give a general introduction about ALGOQUEEN and CP,it covers topics like what is AlgoQueen ,what is Competitive Programming,Why Competitive Programming and How to start",
+      date: "April 15, 2025",
+      time: "6:00 - 7:00 PM  IST",
+      trainer:"Ashwin Krish, Gayatri S Namputiri(Amrita University)",
+      link:"https://amrita-edu.zoom.us/j/85429528324#success"
+    },
+    {
+      id: "session-2",
+      title: "Basic Problem Solving",
+      difficulty: "beginner",
+      description: "Demo of how to start problem solving and common tools.",
+      date: "April 22, 2025",
+      time: "14:00 - 16:00 PM IST",
+      trainer:"Ashwin Krish ",
       
-    // },
+    },
     {
       id: "session-3",
       title: "Introduction to STL for CP ",
       difficulty: "beginner",
       description: "Introduction to C++ STL",
       date: "April 26, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"Sakshi Sahu, Priya Pahwa (IGDTUW, Delhi)",
     
 
@@ -36,7 +36,7 @@ export const sessionData = [
       difficulty: "beginner",
       description: "Various CP Platforms, Contests, Learning resources ",
       date: "April 28, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"Shivya Khandpur,Sneha Roychowdhury,IGDTUW Delhi",
     },
     {
@@ -45,7 +45,7 @@ export const sessionData = [
       difficulty: "beginner",
       description: "",
       date: "April 29, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "8:30 - 9:30 PM IST",
       trainer:"Nino Chkhaidze",
     },
     {
@@ -54,7 +54,7 @@ export const sessionData = [
       difficulty: "intermediate",
       description: "",
       date: "April 30, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"Nino Chkhaidze",
     }
     ,
@@ -64,7 +64,7 @@ export const sessionData = [
       difficulty: "intermediate",
       description: "",
       date: "May 5, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"",
     }
     ,
@@ -74,7 +74,7 @@ export const sessionData = [
       difficulty: "intermediate",
       description: "",
       date: "May 7, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"",
     }
     ,
@@ -84,7 +84,7 @@ export const sessionData = [
       difficulty: "expert",
       description: "",
       date: "May 12, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"",
     },
     {
@@ -93,7 +93,7 @@ export const sessionData = [
       difficulty: "expert",
       description: "",
       date: "May 14, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"Hetvi Bagdai (IIT Ropar)",
     },
     {
@@ -102,7 +102,7 @@ export const sessionData = [
       difficulty: "expert",
       description: "",
       date: "May 16, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"",
     },
     {
@@ -111,7 +111,7 @@ export const sessionData = [
       difficulty: "expert",
       description: "",
       date: "May 19, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"",
     },
     {
@@ -120,7 +120,7 @@ export const sessionData = [
       difficulty: "",
       description: "What to do from here ?",
       date: "May 21, 2025",
-      time: "6:00 - 7:00 IST",
+      time: "6:00 - 7:00 PM IST",
       trainer:"",
     }
  

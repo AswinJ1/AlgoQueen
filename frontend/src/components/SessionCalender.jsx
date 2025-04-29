@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { sessionData } from '@/data/SessionData';
 
 const SessionCalendar = ({ onDateSelect }) => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(null);
   
   // Get all dates that have sessions
   const datesWithSessions = sessionData.map(session => {
@@ -30,10 +30,21 @@ const SessionCalendar = ({ onDateSelect }) => {
 
   // Notify parent component when a date with sessions is selected
   useEffect(() => {
-    if (sessionsOnDate.length > 0 && onDateSelect) {
-      onDateSelect(sessionsOnDate.map(session => session.id));
+    if (date && onDateSelect) {
+      const matchedSessions = sessionData.filter(session => {
+        const sessionDate = new Date(session.date);
+        return (
+          sessionDate.getDate() === date.getDate() &&
+          sessionDate.getMonth() === date.getMonth() &&
+          sessionDate.getFullYear() === date.getFullYear()
+        );
+      });
+  
+      // Send session IDs to parent, even if empty (to clear accordion)
+      onDateSelect(matchedSessions.map(session => session.id));
     }
-  }, [date, onDateSelect, sessionsOnDate]);
+  }, [date]);
+  
 
   return (
     <Card className="shadow-md p-2">
