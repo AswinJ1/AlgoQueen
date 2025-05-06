@@ -38,7 +38,8 @@ const SessionCard = ({
         Join Session
       </Button>
      ) : (
-      <p className="text-gray-600 mb-3 text-sm flex items-center gap-1">Coming Soon...<StarOffIcon size={15} className="text-indigo-600"/></p>
+      // Coming Soon...<StarOffIcon size={15} className="text-indigo-600"/>
+      <p className="text-gray-600 mb-3 text-sm flex items-center gap-1"></p>
      )}
     </div>
   );

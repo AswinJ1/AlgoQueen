@@ -183,6 +183,57 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
+                   
+                      <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Intro to C++ STL for Competitive Programming</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://youtube.com/embed/LT2BzOr9GeU" 
+                          title="Intro to C++ STL for Competitive Programming"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructor: Priya Pahwa IGDTUW</span>
+                            <span className="text-gray-600">Duration: 1 hour 10 min</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="video-3" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>CP Platforms & Learning Resources</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://youtube.com/embed/nER7o2DG85o" 
+                          title="CP Platforms & Learning Resources"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructors: Shivya Khandpur & Sneha Roychowdhury</span>
+                            <span className="text-gray-600">Duration: 25 min</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
                 
                       
                       {/* <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">

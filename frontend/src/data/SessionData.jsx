@@ -7,7 +7,6 @@ export const sessionData = [
       date: "April 15, 2025",
       time: "6:00 - 7:00 PM  IST",
       trainer:"Ashwin Krish, Gayatri S Namputiri(Amrita University)",
-      link:"https://amrita-edu.zoom.us/j/85429528324#success"
     },
     {
       id: "session-2",
@@ -58,26 +57,26 @@ export const sessionData = [
       trainer:"Nino Chkhaidze",
     }
     ,
-    {
-      id: "session-8",
-      title: "Recursion ",
-      difficulty: "intermediate",
-      description: "",
-      date: "May 5, 2025",
-      time: "6:00 - 7:00 PM IST",
-      trainer:"",
-    }
-    ,
-    {
-      id: "session-9",
-      title: "String Problems",
-      difficulty: "intermediate",
-      description: "",
-      date: "May 7, 2025",
-      time: "6:00 - 7:00 PM IST",
-      trainer:"",
-    }
-    ,
+    // {
+    //   id: "session-8",
+    //   title: "Recursion ",
+    //   difficulty: "intermediate",
+    //   description: "",
+    //   date: "May 5, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // }
+    // ,
+    // {
+    //   id: "session-9",
+    //   title: "String Problems",
+    //   difficulty: "intermediate",
+    //   description: "",
+    //   date: "May 7, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // }
+    
     {
       id: "session-10",
       title: "Greedy Algorithms",
