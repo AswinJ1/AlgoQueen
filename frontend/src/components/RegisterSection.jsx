@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords } from 'lucide-react';
+import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Button = ({ children, onClick, className }) => (
@@ -96,13 +96,31 @@ const RegisterSection = () => {
               </h2> <br />
 
               <div>
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">Practice Contest</h3>
-                    <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
-                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p>
+                   <div className="flex items-center justify-start flex-wrap gap-2">
+  <h3 className="text-lg font-semibold text-algo-dark">
+    Practice Contest
+  </h3>
+  <div className="flex items-center gap-1 text-sm text-gray-700">
+    <CalendarDays className="w-5 h-5 text-indigo-600" />
+    <span>May 24, 2025 and  June 7, 2025</span>
+   
+  </div>
+</div>
+
+                    <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
+ 
+                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
+                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
                   </div>
                   <Separator />
+                  <div className="flex items-center justify-start flex-wrap gap-2">
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">Round 1 - Prelims (Online)</h3>
-                    <p className="text-gray-600 mb-2">June 14 Saturday</p>
+                     <div className="flex items-center gap-1 text-sm text-gray-700">
+    <CalendarDays className="w-5 h-5 text-indigo-600" />
+    <span>June 14 , 2025</span>
+  </div>
+  </div>
+                    {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
                     <p className="mb-2"><strong>Platform:</strong> codedrills</p>
                     <p>This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity.</p>
                   </div>
@@ -114,9 +132,13 @@ const RegisterSection = () => {
                     <p className="text-gray-600 mb-2">TBD</p>
                     <p>Online for both Indian Students and International Contestants</p>
                   </div> */}
-                  <div>
+                  <div className='flex items-center justify-start flex-wrap gap-2'>
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
-                    <p className="text-gray-600">June 28 Saturday </p>
+                    <div className="flex items-center gap-1 text-sm text-gray-700">
+    <CalendarDays className="w-5 h-5 text-indigo-600" />
+    <span>June 28 , 2025</span>
+  </div>
+                    {/* <p className="text-gray-600">June 28 Saturday </p> */}
                   </div>
                   
                   {/* <Separator /> */}
