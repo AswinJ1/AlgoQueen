@@ -97,11 +97,12 @@ const RegisterSection = () => {
 
               <div>
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">Practice Contest</h3>
-                    <p className="text-gray-600">TBD</p>
+                    <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
+                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p>
                   </div>
                   <Separator />
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">Round 1 - Prelims (Online)</h3>
-                    <p className="text-gray-600 mb-2">TBD</p>
+                    <p className="text-gray-600 mb-2">June 14 Saturday</p>
                     <p className="mb-2"><strong>Platform:</strong> codedrills</p>
                     <p>This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity.</p>
                   </div>
@@ -115,7 +116,7 @@ const RegisterSection = () => {
                   </div> */}
                   <div>
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
-                    <p className="text-gray-600">TBD</p>
+                    <p className="text-gray-600">June 28 Saturday </p>
                   </div>
                   
                   {/* <Separator /> */}
