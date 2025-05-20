@@ -289,7 +289,7 @@ const TrainingMaterials = () => {
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
-                            <span>Graph Representation and Traversal </span>
+                            <span>Graph Representation and Traversal</span>
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
@@ -297,7 +297,7 @@ const TrainingMaterials = () => {
                           <iframe 
                           className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/Oi51bKulR28" 
-                          title="CP Platforms & Learning Resources"
+                          title="Graph Representation and Traversal"
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
@@ -306,7 +306,7 @@ const TrainingMaterials = () => {
                           </div>
                           <div className="flex justify-between items-center text-sm">
                             <span className="text-gray-600">Instructors: Hetvi Bagdai (IIT Ropar)</span>
-                            <span className="text-gray-600">Duration: 1 hour </span>
+                            <span className="text-gray-600">Duration: 1 hour</span>
                           </div>
                         </AccordionContent>
                       </AccordionItem>
@@ -336,7 +336,6 @@ const TrainingMaterials = () => {
                         </AccordionContent>
                       </AccordionItem>
                     
-
                       
                       
                       {/* <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
