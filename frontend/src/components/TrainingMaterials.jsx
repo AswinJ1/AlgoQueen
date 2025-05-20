@@ -234,7 +234,110 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                
+                     
+                         <AccordionItem value="video-4" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Array/List Problems </span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://youtube.com/embed/hJOpbfXEaiI" 
+                          title="CP Platforms & Learning Resources"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructors: Nino Chkhaidze</span>
+                            <span className="text-gray-600">Duration: 1 hour 25 min</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                       <AccordionItem value="video-5" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Sorting </span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://youtube.com/embed/TJrRDkmf7C4" 
+                          title="CP Platforms & Learning Resources"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructors: Nino Chkhaidze</span>
+                            <span className="text-gray-600">Duration: 1 hour 20 min</span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                       <AccordionItem value="video-6" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Graph Representation and Traversal </span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://youtube.com/embed/Oi51bKulR28" 
+                          title="CP Platforms & Learning Resources"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructors: Hetvi Bagdai (IIT Ropar)</span>
+                            <span className="text-gray-600">Duration: 1 hour </span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="video-7" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
+                        <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
+                          <div className="flex items-center">
+                            <Video className="w-5 h-5 mr-2 text-indigo-600" />
+                            <span>Graph: Djikstra + Disjoint Set Union</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4 pt-2">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
+                          <iframe 
+                          className="w-full h-full rounded-md"
+                          src="https://youtube.com/embed/Yje8-eyuo1c" 
+                          title="CP Platforms & Learning Resources"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+
+                          </div>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-600">Instructors: Hetvi Bagdai (IIT Ropar)</span>
+                            <span className="text-gray-600">Duration: 54 min </span>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    
+
+                      
                       
                       {/* <AccordionItem value="video-2" className="border border-gray-200 rounded-lg mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays } from 'lucide-react';
+import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays, CodeIcon, CodeXmlIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Button = ({ children, onClick, className }) => (
@@ -108,7 +108,20 @@ const RegisterSection = () => {
 </div>
 
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
- 
+                  
+
+{/* <a
+  href="https://codedrills.io/contests/icpc-algoqueen-2025-practice-contest?tab=overview"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
+  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
+>
+  <CodeXmlIcon className="w-4 h-4" />
+  Practice Now
+</a> */}
+
+
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
                     <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
                   </div>
