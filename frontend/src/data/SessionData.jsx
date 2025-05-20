@@ -77,15 +77,15 @@ export const sessionData = [
     //   trainer:"",
     // }
     
-    {
-      id: "session-10",
-      title: "Greedy Algorithms",
-      difficulty: "expert",
-      description: "",
-      date: "May 12, 2025",
-      time: "6:00 - 7:00 PM IST",
-      trainer:"",
-    },
+    // {
+    //   id: "session-10",
+    //   title: "Greedy Algorithms",
+    //   difficulty: "expert",
+    //   description: "",
+    //   date: "May 12, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // },
     {
       id: "session-11",
       title: "Graph Representation and Traversal",
@@ -102,17 +102,17 @@ export const sessionData = [
       description: "",
       date: "May 16, 2025",
       time: "6:00 - 7:00 PM IST",
-      trainer:"",
+      trainer:"Hetvi Bagdai (IIT Ropar)",
     },
-    {
-      id: "session-13",
-      title: "Dynamic Programming", 
-      difficulty: "expert",
-      description: "",
-      date: "May 19, 2025",
-      time: "6:00 - 7:00 PM IST",
-      trainer:"",
-    },
+    // {
+    //   id: "session-13",
+    //   title: "Dynamic Programming", 
+    //   difficulty: "expert",
+    //   description: "",
+    //   date: "May 19, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // },
     {
       id: "session-14",
       title: "Road Map Ahead ",
