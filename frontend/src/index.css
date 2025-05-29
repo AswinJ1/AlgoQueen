@@ -93,3 +93,18 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-30deg);
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 2.5s infinite;
+  }
+}

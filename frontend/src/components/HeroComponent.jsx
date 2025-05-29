@@ -19,12 +19,24 @@ const navigation = [
 export default function HeroComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const imageRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
       imageRef.current,
       { scale: 0.9, opacity: 0 },
       { scale: 1, opacity: 1, duration: 1, ease: 'power2.out' }
+    );
+    // Create pulse effect for the register button
+    gsap.to(
+      buttonRef.current,
+      {
+        
+        repeat: -1,
+        yoyo: true,
+        duration: 1.5,
+        ease: 'sine.inOut'
+      }
     );
   }, []);
 
@@ -163,20 +175,41 @@ technology.
             
 
             </p>
-            <div className="mt-6 flex gap-x-4">
-            <a
-  href="https://codedrills.io/contests/icpc-algo-queen-2025/" target="_blank"
-  className="flex items-center gap-2 rounded-md bg-indigo-600 px-6 py-3 text-white text-lg font-semibold shadow-md hover:bg-indigo-500 transition duration-300 group"
+           <div className="mt-6 flex flex-wrap items-center gap-4">
+  {/* Register Now Button */}
+ <a
+  href="https://codedrills.io/contests/icpc-algo-queen-2025/"
+  target="_blank"
+  ref={buttonRef}
+  className="relative w-auto flex items-center gap-2 rounded-md bg-indigo-600 px-4 py-3 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white  hover:bg-indigo-500 transition duration-300 group overflow-hidden"
   id="register-button"
 >
-  Register Now
-  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+  <span className="relative z-10 flex items-center gap-2">
+    Register Now
+    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+  </span>
+  
+  <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
 </a>
+ {/* <p  className="text-lg font-semibold text-gray-900 hover:underline flex items-center">
+                Algo Queen practice contest 2 coming soon 
+              </p> */}
 
-              {/* <a href="https://u.icpc.global/events/algo-queen/" className="text-lg font-semibold text-gray-900 hover:underline flex items-center">
-                Know more  &rarr;
-              </a> */}
-            </div>
+  {/* Practice Contest Button */}
+  <a 
+    href="" 
+    className="w-auto relative inline-flex items-center justify-center px-3 py-2 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white bg-indigo-600 rounded-md overflow-hidden group transition-all duration-300 hover:bg-indigo-700 hover:scale-105"
+  >
+    <div className="absolute inset-0 w-3/12 bg-white/20 skew-x-[-30deg] transform -translate-x-full animate-shimmer"></div>
+    
+    <div className="relative flex items-center gap-2">
+      <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+      <span>Practice Contest 2 coming soon!</span>
+      <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
+    </div>
+  </a>
+</div>
+
           </div>
           <div className="grid grid-cols-2 gap-4 mt-12" ref={imageRef}>
             {["pc-hero.jpeg", "algo-hero2.jpg", "algo-hero3.jpg", "winner.jpg"].map((img, index) => (

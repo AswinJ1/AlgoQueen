@@ -3,8 +3,8 @@ import { TrendingUp, X } from "lucide-react";
 import clsx from "clsx"; // Install using: npm install clsx
 
 const TrendingBanner = ({
-  message = " Join our telegram channel",
-  link = "https://t.me/algoqueen2023",
+  message = " Practice contest is live now!",
+  link = "https://codedrills.io/contests/icpc-algo-queen-2025---practice-contest-1",
   className,
   autoDismiss = false,
   dismissTimeout = 5000,
