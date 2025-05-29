@@ -206,7 +206,7 @@ technology.
   <div 
    
     onClick={scrollToBottom}
-    className="w-auto relative inline-flex items-center justify-center px-3 py-2 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white bg-indigo-600 rounded-md overflow-hidden group transition-all duration-300 hover:bg-indigo-700 hover:scale-105"
+    className="w-auto relative inline-flex items-center justify-center px-3 py-2 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white bg-indigo-600 rounded-md overflow-hidden group transition-all duration-300 hover:bg-indigo-700 hover:scale-105 cursor-pointer"
   >
     <div className="absolute inset-0 w-3/12 bg-white/20 skew-x-[-30deg] transform -translate-x-full animate-shimmer"></div>
     
