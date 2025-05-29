@@ -40,6 +40,13 @@ export default function HeroComponent() {
     );
   }, []);
 
+  const scrollToBottom = () => {
+  window.scrollTo({
+    top: 2500,
+    behavior: 'smooth'
+  });
+};
+
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
@@ -196,8 +203,9 @@ technology.
               </p> */}
 
   {/* Practice Contest Button */}
-  <a 
-    href="" 
+  <div 
+   
+    onClick={scrollToBottom}
     className="w-auto relative inline-flex items-center justify-center px-3 py-2 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white bg-indigo-600 rounded-md overflow-hidden group transition-all duration-300 hover:bg-indigo-700 hover:scale-105"
   >
     <div className="absolute inset-0 w-3/12 bg-white/20 skew-x-[-30deg] transform -translate-x-full animate-shimmer"></div>
@@ -207,7 +215,7 @@ technology.
       <span>Practice Contest 2 coming soon!</span>
       <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
     </div>
-  </a>
+  </div>
 </div>
 
           </div>
