@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal, Brain, Quote, SwordIcon, Swords, Lightbulb, TargetIcon, RocketIcon, LightbulbIcon, StarIcon, StarsIcon, StarOffIcon, StarHalf, MoonStarIcon, ListStartIcon, Star, LucideStars} from "lucide-react";
+import { Award, BookOpen, MessageSquare, Users, School, Trophy, Zap, BarChart4 ,Target,Rocket,Briefcase,Medal, Brain, Quote, SwordIcon, Swords, Lightbulb, TargetIcon, RocketIcon, LightbulbIcon, StarIcon, StarsIcon, StarOffIcon, StarHalf, MoonStarIcon, ListStartIcon, Star, LucideStars, Clock1, Clock10} from "lucide-react";
 
 
 // Register ScrollTrigger plugin
@@ -18,6 +18,12 @@ const Button = ({ children, onClick }) => (
     {children}
   </button>
 );
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
 
 const AboutSection = () => {
   const statsRef = useRef(null);
@@ -100,10 +106,13 @@ showcase their talents and grow as problem solvers.
 </div>
 
  <br />
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center gap-2 hover:bg-indigo-500 transition" onClick={() => window.open("https://codedrills.io/contests/icpc-algo-queen-2025/", "_blank")}>
-            <span>Register Now</span>
+          <button className="px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center gap-2 hover:bg-indigo-500 transition" onClick={() => {
+   
+    scrollToTop();
+  }} >
+            <span>Registration closes Tomorrow </span>
           
-            <Zap size={16} />
+            <Clock1 size={16} />
        
           </button>
         </div>
