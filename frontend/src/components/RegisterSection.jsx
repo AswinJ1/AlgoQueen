@@ -98,11 +98,11 @@ const RegisterSection = () => {
               <div>
                    <div className="flex items-center justify-start flex-wrap gap-2">
   <h3 className="text-lg font-semibold text-algo-dark">
-    Practice Contest
+    Practice Contest 1
   </h3>
   <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>May 24, 2025 and  June 7, 2025</span>
+    <span>May 24, 2025 </span>
    
   </div>
 </div>
@@ -110,7 +110,7 @@ const RegisterSection = () => {
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
                   
 
-<a
+{/* <a
   href="https://codedrills.io/contests/icpc-algo-queen-2025---practice-contest-1"
   target="_blank"
   rel="noopener noreferrer"
@@ -119,7 +119,37 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Practice Now
-</a>
+</a> */}
+
+
+                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
+                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
+                  </div>
+                   <div>
+                   <div className="flex items-center justify-start flex-wrap gap-2">
+  <h3 className="text-lg font-semibold text-algo-dark">
+    Practice Contest 2
+  </h3>
+  <div className="flex items-center gap-1 text-sm text-gray-700">
+    <CalendarDays className="w-5 h-5 text-indigo-600" />
+    <span>June 7, 2025</span>
+   
+  </div>
+</div>
+
+                    <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
+                  
+
+{/* <a
+  href="https://codedrills.io/contests/icpc-algo-queen-2025---practice-contest-1"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
+  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
+>
+  <CodeXmlIcon className="w-4 h-4" />
+  Practice Now
+</a> */}
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
@@ -192,8 +222,9 @@ const RegisterSection = () => {
               <span>Exciting gifts and Goodie Bags.</span>
             </li>
           </ul>
-
-              <p className="mt-4 text-sm text-gray-600">*Further prize details will be announced later.</p>
+           
+               <p className="mt-4 text-sm text-gray-600">*Only Applicable for School Students.</p>
+              <p className="mt- text-sm text-gray-600">*Further prize details will be announced later.</p>
             </Card>
           </div>
           
