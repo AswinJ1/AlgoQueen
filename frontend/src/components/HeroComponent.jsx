@@ -40,9 +40,11 @@ export default function HeroComponent() {
     );
   }, []);
 
-  const scrollToBottom = () => {
+const scrollToBottom = () => {
+  const scrollPosition = window.innerWidth < 768 ? 5500 : 2500;
+  
   window.scrollTo({
-    top: 2500,
+    top: scrollPosition,
     behavior: 'smooth'
   });
 };
