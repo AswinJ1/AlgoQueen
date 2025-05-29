@@ -215,7 +215,7 @@ const RegisterSection = () => {
             </li>
             <li className="flex items-start">
               <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
-              <span>Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan *</span>
+              <span>Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan. *</span>
             </li>
             <li className="flex items-start">
               <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
