@@ -5,21 +5,26 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import gsap from 'gsap';
 import Tilt from 'react-parallax-tilt';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import TrendingBanner from './TrendingBanner';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, DoorClosed, MessageCircleWarning } from 'lucide-react';
 
 const navigation = [
-  { name: 'Home', to: 'home' },
-  { name: 'About', to: 'about' },
-  { name: 'Learn', to: 'learn' },
-  {name: 'FAQ', to: 'faq'},
-  {name: 'Join Telegram', to: 'https://t.me/algoqueen2023'}
+  { name: 'Home', to: 'home', type: 'section' },
+  { name: 'About', to: 'about', type: 'section' },
+  { name: 'Learn', to: 'learn', type: 'section' },
+  { name: 'Selection Criteria', to: '/selectioncriteria', type: 'page' },
+  { name: 'FAQ', to: 'faq', type: 'section' },
+  { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
-export default function HeroComponent() {
+
+const HeroComponent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     gsap.fromTo(
@@ -39,6 +44,21 @@ export default function HeroComponent() {
       }
     );
   }, []);
+
+  const handleNavigation = (item) => {
+    if (item.type === 'section') {
+      if (location.pathname !== '/') {
+        navigate('/', { state: { scrollTo: item.to } });
+      } else {
+        const element = document.getElementById(item.to);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (item.type === 'page') {
+      navigate(item.to);
+    } else if (item.type === 'external') {
+      window.open(item.to, '_blank');
+    }
+  };
 
 const scrollToBottom = () => {
   const scrollPosition = window.innerWidth < 768 ? 5500 : 2500;
@@ -80,26 +100,43 @@ const scrollToBottom = () => {
                 {item.name}
               </Link>
             ))} */}
-            {navigation.map((item) =>
-  item.name === "Join Telegram" ? (
-    <button
-      key={item.name}
-      onClick={() => window.open("https://t.me/algoqueen2023", "_blank")}
-      className="px-3 py-1 text-sm  bg-transparent text-black font-semibold hover:opacity-80  flex items-center"
-    > <img src="/telegram2.png" alt="" />
-      {item.name}
-    </button>
-  ) : (
-    
-    <Link
-      key={item.name}
-      to={item.to}
-      className="text-sm font-semibold text-gray-900 cursor-pointer smooth={true} duration-500"
-    >
-      {item.name}
-    </Link>
-  )
-)}
+{navigation.map((item) => {
+  if (item.name === "Join Telegram") {
+    return (
+      <button
+        key={item.name}
+        onClick={() => window.open(item.to, "_blank")}
+        className="px-3 py-1 text-sm bg-transparent text-black font-semibold hover:opacity-80 flex items-center"
+      >
+        <img src="/telegram2.png" alt="" />
+        {item.name}
+      </button>
+    );
+  } else if (item.type === 'page') {
+    return (
+      <RouterLink
+        key={item.name}
+        to={item.to}
+        className="text-sm font-semibold text-gray-900 cursor-pointer"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        {item.name}
+      </RouterLink>
+    );
+  } else if (item.type === 'section') {
+    return (
+      <ScrollLink
+        key={item.name}
+        to={item.to}
+        className="text-sm font-semibold text-gray-900 cursor-pointer"
+        smooth={true}
+        duration={500}
+      >
+        {item.name}
+      </ScrollLink>
+    );
+  }
+})}
 
           </div>
          
@@ -140,7 +177,7 @@ const scrollToBottom = () => {
       {item.name}
     </a>
   ) : (
-    <Link
+    <RouterLink
       key={item.name}
       to={item.to}
       smooth={true}
@@ -149,7 +186,7 @@ const scrollToBottom = () => {
       onClick={() => setMobileMenuOpen(false)}
     >
       {item.name}
-    </Link>
+    </RouterLink>
   )
 )}
 
@@ -187,15 +224,16 @@ technology.
            <div className="mt-6 flex flex-wrap items-center gap-4">
   {/* Register Now Button */}
  <a
-  href="https://codedrills.io/contests/icpc-algo-queen-2025/"
-  target="_blank"
+  href=""
+ 
   ref={buttonRef}
   className="relative w-auto flex items-center gap-2 rounded-md bg-indigo-600 px-4 py-3 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white  hover:bg-indigo-500 transition duration-300 group overflow-hidden"
   id="register-button"
 >
+   {/* target="_blank" */}
   <span className="relative z-10 flex items-center gap-2">
-    Register Now
-    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+    Registration Closed
+    <MessageCircleWarning className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
   </span>
   
   <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
@@ -235,3 +273,5 @@ technology.
     </div>
   );
 }
+
+export default HeroComponent;

@@ -106,7 +106,7 @@ showcase their talents and grow as problem solvers.
 </div>
 
  <br />
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center gap-2 hover:bg-indigo-500 transition" onClick={() => {
+          {/* <button className="px-4 py-2 bg-indigo-600 text-white rounded-md flex items-center gap-2 hover:bg-indigo-500 transition" onClick={() => {
    
     scrollToTop();
   }} >
@@ -114,7 +114,7 @@ showcase their talents and grow as problem solvers.
           
             <Clock1 size={16} />
        
-          </button>
+          </button> */}
         </div>
 
        
