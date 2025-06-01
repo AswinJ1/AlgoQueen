@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Home', to: 'home', type: 'section' },
   { name: 'About', to: 'about', type: 'section' },
   { name: 'Learn', to: 'learn', type: 'section' },
-  { name: 'Selection Criteria', to: '/selectioncriteria', type: 'page' },
+  // { name: 'Selection Criteria', to: '/selectioncriteria', type: 'page' },
   { name: 'FAQ', to: 'faq', type: 'section' },
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
