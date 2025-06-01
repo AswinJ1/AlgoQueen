@@ -169,19 +169,28 @@ const scrollToBottom = () => {
   item.name === "Join Telegram" ? (
     <a
       key={item.name}
-      href={item.to} // Use `href` instead of `to`
+      href={item.to}
       target="_blank"
       rel="noopener noreferrer"
       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
     >
       {item.name}
     </a>
+  ) : item.type === 'section' ? (
+    <ScrollLink
+      key={item.name}
+      to={item.to} // Matches the `name` in HomePage
+      smooth={true}
+      duration={500}
+      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+      onClick={() => setMobileMenuOpen(false)} // Close mobile menu after navigation
+    >
+      {item.name}
+    </ScrollLink>
   ) : (
     <RouterLink
       key={item.name}
       to={item.to}
-      smooth={true}
-      duration={500}
       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
       onClick={() => setMobileMenuOpen(false)}
     >
