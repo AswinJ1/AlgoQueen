@@ -202,11 +202,11 @@ const scrollToBottom = () => {
                 </div>
                 <div className="py-6">
                   <a
-                    href="https://codedrills.io/contests/icpc-algo-queen-2025/" 
+                    href="" 
                     className="block w-full rounded-lg px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
                     id='register-button'
                   >
-                    Register now
+                    Registration closed
                   </a>
                 </div>
               </div>
