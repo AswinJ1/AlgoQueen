@@ -26,8 +26,8 @@ const [isDownloading, setIsDownloading] = useState(false);
     setTimeout(() => {
       // Create a mock PDF download
       const link = document.createElement('a');
-      link.href = '/selection-criteria.pdf'; // You'll need to add this PDF to your public folder
-      link.download = 'ICPC-Algo-Queen-Selection-Criteria.pdf';
+      link.href = '/Preliminary Round_ Qualification & Rules.pdf'; // You'll need to add this PDF to your public folder
+      link.download = 'ICPC-Algo-Queen-Preliminary Round_ Qualification & Rules.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -161,11 +161,11 @@ const [isDownloading, setIsDownloading] = useState(false);
                        </div>
                        <div className="py-6">
                          <a
-                           href="https://codedrills.io/contests/icpc-algo-queen-2025/" 
+                           href="" 
                            className="block w-full rounded-lg px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
                            id='register-button'
                          >
-                           Register now
+                           Registration Closed
                          </a>
                        </div>
                      </div>
@@ -185,7 +185,7 @@ const [isDownloading, setIsDownloading] = useState(false);
             Selection Criteria
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Learn about the eligibility requirements and selection process for ICPC Algo Queen
+            Learn about the eligibility requirements and selection process for the ICPC AlgoQueen Preliminary Round 
           </p>
         </div>
 
@@ -199,7 +199,7 @@ const [isDownloading, setIsDownloading] = useState(false);
               </div>
               <CardTitle>Complete Selection Criteria</CardTitle>
               <CardDescription>
-                Download the detailed PDF with all eligibility requirements, selection process, and important dates
+                Download the detailed PDF with all eligibility requirements, selection process
               </CardDescription>
             </CardHeader>
             <CardContent>

@@ -139,7 +139,7 @@ const RegisterSection = () => {
 
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
                   
-
+{/* 
 <a
   href="https://codedrills.io/contests/icpc-algo-queen-2025---practice-contest-2"
   target="_blank"
@@ -149,7 +149,7 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Practice Now
-</a>
+</a> */}
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
