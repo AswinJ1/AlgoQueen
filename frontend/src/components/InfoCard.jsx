@@ -51,7 +51,7 @@ const InfoSection = () => {
           iconSrc="/calender2.jpg"
           title="WHEN?"
           description={[
-            "Algo Queen Finals will be held on June 28th !",
+            "Algo Queen Finals will be held on July 5th !",
            ,
           ]}
           delay={300}
