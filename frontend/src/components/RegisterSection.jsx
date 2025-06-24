@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays, CodeIcon, CodeXmlIcon } from 'lucide-react';
+import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays, CodeIcon, CodeXmlIcon, Timer } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Button = ({ children, onClick, className }) => (
@@ -102,8 +102,12 @@ const RegisterSection = () => {
   </h3>
   <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>May 24, 2025 </span>
+    <span>June 25, 2025 </span>
    
+  </div>
+   <div className="flex items-center gap-1 text-sm text-gray-700">
+    <Timer className="w-5 h-5 text-indigo-600" />
+    <span>7:00 to 9:00 PM </span>
   </div>
 </div>
 
@@ -132,8 +136,12 @@ const RegisterSection = () => {
   </h3>
   <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>June 7, 2025</span>
+    <span>June 28, 2025</span>
    
+  </div>
+   <div className="flex items-center gap-1 text-sm text-gray-700">
+    <Timer className="w-5 h-5 text-indigo-600" />
+    <span>3:00 to 5:00 PM </span>
   </div>
 </div>
 
@@ -157,14 +165,19 @@ const RegisterSection = () => {
                   </div>
                   <Separator />
                   <div className="flex items-center justify-start flex-wrap gap-2">
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">Round 1 - Prelims (Online)</h3>
+                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
                      <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>June 14 , 2025</span>
+    <span>July 5 , 2025 </span>
+  </div>
+         <div className="flex items-center gap-1 text-sm text-gray-700">
+    <Timer className="w-5 h-5 text-indigo-600" />
+    <span>3:00 to 6:00 PM </span>
   </div>
   </div>
                     {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
-                    <p className="mb-2"><strong>Platform:</strong> codedrills</p>
+                    <p className="mb-2"><strong>Platform:</strong> CodeChef</p>
+                    
                     <p>This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity.</p>
                   </div>
                   
@@ -175,14 +188,14 @@ const RegisterSection = () => {
                     <p className="text-gray-600 mb-2">TBD</p>
                     <p>Online for both Indian Students and International Contestants</p>
                   </div> */}
-                  <div className='flex items-center justify-start flex-wrap gap-2'>
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
-                    <div className="flex items-center gap-1 text-sm text-gray-700">
+                  {/* <div className='flex items-center justify-start flex-wrap gap-2'>
+                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3> */}
+                    {/* <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
     <span>June 28 , 2025</span>
-  </div>
+  </div> */}
                     {/* <p className="text-gray-600">June 28 Saturday </p> */}
-                  </div>
+                  {/* </div> */}
                   
                   {/* <Separator /> */}
                   

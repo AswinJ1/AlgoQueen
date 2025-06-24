@@ -261,7 +261,7 @@ technology.
     
     <div className="relative flex items-center gap-2">
       <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-      <span>Preliminary Round Coming Soon!</span>
+      <span>Practice Contest 1 Starts Tomorrow !</span>
       <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
     </div>
   </div>
