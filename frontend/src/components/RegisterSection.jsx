@@ -107,7 +107,7 @@ const RegisterSection = () => {
   </div>
    <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
-    <span>7:00 to 9:00 PM </span>
+    <span>7:00 to 9:00 PM IST</span>
   </div>
 </div>
 
@@ -141,7 +141,7 @@ const RegisterSection = () => {
   </div>
    <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 to 5:00 PM </span>
+    <span>3:00 to 5:00 PM IST</span>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ const RegisterSection = () => {
   </div>
          <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 to 6:00 PM </span>
+    <span>3:00 to 6:00 PM IST</span>
   </div>
   </div>
                     {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
