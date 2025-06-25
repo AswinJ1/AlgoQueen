@@ -107,15 +107,15 @@ const RegisterSection = () => {
   </div>
    <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
-    <span>7:00 to 9:00 PM IST</span>
+    <span>7:00 PM to 9:00 PM IST</span>
   </div>
 </div>
 
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
                   
 
-{/* <a
-  href="https://codedrills.io/contests/icpc-algo-queen-2025---practice-contest-1"
+<a
+  href="https://www.codechef.com/skill-test/ALGOQPR2501"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
@@ -123,7 +123,7 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Practice Now
-</a> */}
+</a>
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
@@ -141,7 +141,7 @@ const RegisterSection = () => {
   </div>
    <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 to 5:00 PM IST</span>
+    <span>3:00 PM to 5:00 PM IST</span>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ const RegisterSection = () => {
   </div>
          <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 to 6:00 PM IST</span>
+    <span>3:00 PM to 6:00 PM IST</span>
   </div>
   </div>
                     {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
