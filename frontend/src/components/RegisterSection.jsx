@@ -114,7 +114,7 @@ const RegisterSection = () => {
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
                   
 
-<a
+{/* <a
   href="https://www.codechef.com/skill-test/ALGOQPR2501"
   target="_blank"
   rel="noopener noreferrer"
@@ -123,7 +123,7 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Practice Now
-</a>
+</a> */}
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
@@ -147,9 +147,9 @@ const RegisterSection = () => {
 
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
                   
-{/* 
+
 <a
-  href="https://codedrills.io/contests/icpc-algo-queen-2025---practice-contest-2"
+  href="https://www.codechef.com/skill-test/ALGOQPR2502"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
@@ -157,7 +157,7 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Practice Now
-</a> */}
+</a>
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
