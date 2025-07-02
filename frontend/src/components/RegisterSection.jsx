@@ -148,7 +148,7 @@ const RegisterSection = () => {
                     <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
                   
 
-<a
+{/* <a
   href="https://www.codechef.com/skill-test/ALGOQPR2502"
   target="_blank"
   rel="noopener noreferrer"
@@ -157,7 +157,7 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Practice Now
-</a>
+</a> */}
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
