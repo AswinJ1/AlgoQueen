@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Home', to: 'home', type: 'section' },
   { name: 'About', to: 'about', type: 'section' },
   { name: 'Learn', to: 'learn', type: 'section' },
-  { name: 'Selection Criteria', to: '/selectioncriteria', type: 'page' },
+  // { name: 'Selection Criteria', to: '/selectioncriteria', type: 'page' },
   { name: 'FAQ', to: 'faq', type: 'section' },
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
@@ -232,21 +232,21 @@ technology.
             </p>
            <div className="mt-6 flex flex-wrap items-center gap-4">
   {/* Register Now Button */}
- <RouterLink
+ {/* <RouterLink
   to="/selectioncriteria"
  
   ref={buttonRef}
   className="relative w-auto flex items-center gap-2 rounded-md bg-indigo-600 px-4 py-3 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white  hover:bg-indigo-500 transition duration-300 group overflow-hidden"
   id="register-button"
->
+> */}
    {/* target="_blank" */}
-  <span className="relative z-10 flex items-center gap-2">
+  {/* <span className="relative z-10 flex items-center gap-2">
     Selection Criteria
     <PenLine className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-  </span>
+  </span> */}
   
-  <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
-</RouterLink>
+  {/* <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div> */}
+{/* </RouterLink> */}
  {/* <p  className="text-lg font-semibold text-gray-900 hover:underline flex items-center">
                 Algo Queen practice contest 2 coming soon 
               </p> */}
@@ -261,7 +261,7 @@ technology.
     
     <div className="relative flex items-center gap-2">
       <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-      <span>Finals Coming Soon! </span>
+      <span>Finals Live Now! </span>
       <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
     </div>
   </div>
