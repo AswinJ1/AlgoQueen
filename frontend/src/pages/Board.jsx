@@ -11,7 +11,7 @@ const Board = () => {
     { name: 'Home', to: '/', type: 'page' },
     { name: 'About', to: '/#about', type: 'section' },
     { name: 'Learn', to: '/#learn', type: 'section' },
-    { name: 'Ranklist', to: '/ranklist', type: 'page' },
+    // { name: 'Ranklist', to: '/ranklist', type: 'page' },
     { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
     { name: 'FAQ', to: '/#faq', type: 'section'},
     { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
