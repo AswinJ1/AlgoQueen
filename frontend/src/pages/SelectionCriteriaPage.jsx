@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Footer from '../components/Footer'
 import { Link as RouterLink } from 'react-router-dom'
+import LeaderBoard from '@/components/LeaderBoard'
 import { Link } from 'react-scroll'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -14,7 +15,8 @@ const SelectionCriteriaPage = () => {
         { name: 'Home', to: '/', type: 'page' },
         { name: 'About', to: '/#about', type: 'section' },
         { name: 'Learn', to: '/#learn', type: 'section' },
-        { name: 'Selection Criteria', to: '/selectioncriteria', type: 'page' },
+        { name: 'Ranklist', to: '/selectioncriteria', type: 'page' },
+        { name: 'Leaderboard', to: '/Leaderboard', type: 'page' },
         { name: 'FAQ', to: '/#faq', type: 'section'},
         { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
     ];
