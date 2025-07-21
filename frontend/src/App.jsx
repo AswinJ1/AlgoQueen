@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/ranklist" element={<SelectionCriteriaPage />} />
+        {/* <Route path="/ranklist" element={<SelectionCriteriaPage />} /> */}
          <Route path="/leaderboard" element={<Board />} />
         {/* Redirect hash routes to home page */}
         <Route path="/:section" element={<Navigate to="/" />} />
