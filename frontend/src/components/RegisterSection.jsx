@@ -177,7 +177,7 @@ const RegisterSection = () => {
   </div>
                     {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
                     <p className="mb-2"><strong>Platform:</strong> CodeChef</p>
-                    <a
+                    {/* <a
   href="https://www.codechef.com/skill-test/ALGOQ25OL"
   target="_blank"
   rel="noopener noreferrer"
@@ -186,7 +186,7 @@ const RegisterSection = () => {
 >
   <CodeXmlIcon className="w-4 h-4" />
   Attempt Finals
-</a>
+</a> */}
                     
                     <p>This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity.</p>
                   </div>
