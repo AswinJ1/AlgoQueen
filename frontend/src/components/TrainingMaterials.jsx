@@ -615,6 +615,226 @@ const TrainingMaterials = () => {
                   </CardHeader>
                   <CardContent>
                     <Accordion type="single" collapsible className="space-y-4">
+
+                      <AccordionItem value="2025" className="border rounded-lg p-2 overflow-hidden">
+                        <AccordionTrigger className="text-xl font-semibold text-indigo-600 px-4">
+                          2025 Winners
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-4">
+                          <div className="space-y-8">
+                            <div>
+                              <h4 className="font-medium text-lg mb-4 mt-2">College Category</h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                {/* College Winner 1 */}
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-1.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Shraddha Srivastava</h5>
+                                  <p className="text-sm text-gray-600">Indian Institute of Information Technology Allahabad</p>
+                                  {/* <p className="text-xs text-gray-500">4th Year </p> */}
+                                </div>
+                                
+                                {/* College Winner 2 */}
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-2.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Kanika</h5>
+                                  <p className="text-sm text-gray-600"> National Institute of Technology, Silchar</p>
+                                  {/* <p className="text-xs text-gray-500">1st Year</p> */}
+                                </div>
+                                
+                                {/* College Winner 3 */}
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-3.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Anvesha Chauhan</h5>
+                                  <p className="text-sm text-gray-600">indian institute of information technology lucknow</p>
+                                  {/* <p className="text-xs text-gray-500">4th Year</p> */}
+                                </div>
+                                
+                                {/* Additional College Winners */}
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-4.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">
+                                    Khushbu Khemchandani
+                                  </h5>
+                                  <p className="text-sm text-gray-600">Indian Institute of Technology (Indian School of Mines) Dhanbad</p>
+                                  {/* <p className="text-xs text-gray-500">4th Year</p> */}
+                                </div>
+                                
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-5.jpg" alt="Winner"  className='h-full w-full object-cover ' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Nandini</h5>
+                                  <p className="text-sm text-gray-600">Jaypee Institute of Information Technology, Noida</p>
+                                  {/* <p className="text-xs text-gray-500">4th Year</p> */}
+                                </div>
+                                
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-6.png" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Joceline Araki</h5>
+                                  <p className="text-sm text-gray-600">Binus University</p>
+                                  {/* <p className="text-xs text-gray-500">3rd Year</p> */}
+                                </div>
+                                
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-7.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Shinjan Chaturvedi
+                                  </h5>
+                                  <p className="text-sm text-gray-600">IIT Roorkee</p>
+                                  {/* <p className="text-xs text-gray-500">4th Year</p> */}
+                                </div>
+                                
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-8.jpg" alt="Winner"  className='h-full w-full object-cover object-[center_20%] ' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Drishti</h5>
+                                  <p className="text-sm text-gray-600">G B Pant DSEU Okhla 1</p>
+                                  {/* <p className="text-xs text-gray-500">4th Year</p> */}
+                                </div>
+                                
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/profile-no.jpg" alt="Winner" />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Ayuna Takashi</h5>
+                                  <p className="text-sm text-gray-600">Keio University Graduate School</p>
+                                  <p className="text-xs text-gray-500"></p>
+                                </div>
+                                
+                                <div className="flex flex-col items-center text-center">
+                                  <Avatar className="h-24 w-24 mb-3">
+                                    <img src="/winner25c-10.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                  </Avatar>
+                                  <h5 className="font-semibold">Ritu Kumari Singh</h5>
+                                  <p className="text-sm text-gray-600">Indian Institute of Technology,Patna</p>
+                                  {/* <p className="text-xs text-gray-500">3rd Year</p> */}
+                                </div>
+                                
+                                
+                              </div>
+                            </div>
+                            
+                            <div>
+                              <h4 className="font-medium text-lg mb-4 mt-8">School Category</h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                {/* School Winners */}
+                                {/* School Winner 1 */}
+                          <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-1.jpg" alt="Winner"  className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">gvantsa khvedelidze</h5>
+                            <p className="text-sm text-gray-600">Vladimir Komarov Tbilisi School of Physics and Mathematics N199</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
+                          </div>
+                          
+                          {/* School Winner 2 */}
+                          <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-2.jpg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Viktoriia</h5>
+                            <p className="text-sm text-gray-600">Liceum "Polit"</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
+                          </div>
+                          
+                          {/* School Winner 3 */}
+                          <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-3.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Victoria</h5>
+                            <p className="text-sm text-gray-600">Uzhhorod Scientific Lyceum</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
+                          </div>
+
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-4.jpg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Diya Sathishdev</h5>
+                            <p className="text-sm text-gray-600">Home School</p>
+                            <p className="text-xs text-gray-500">9th Grade</p>
+                          </div>
+
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-5.jpg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Swasti Patil</h5>
+                            <p className="text-sm text-gray-600">Home School</p>
+                            <p className="text-xs text-gray-500">9th Grade</p>
+
+
+                          </div>
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-6.jpg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Rosangel Bullon</h5>
+                            <p className="text-sm text-gray-600">Saco oliveros</p>
+                            <p className="text-xs text-gray-500">12th Grade</p>
+
+                          </div>
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/profile-no.jpg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Rahidil Bayramli</h5>
+                            <p className="text-sm text-gray-600">Physics, mathematics and informatics biased lyceum</p>
+                            <p className="text-xs text-gray-500">10th Grade</p>
+
+
+                          </div>
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/winner25s-8.jpg" alt="Winner" className='h-full w-full object-cover' />
+                            </Avatar>
+                            <h5 className="font-semibold">Mrunmai Suryawanshi</h5>
+                            <p className="text-sm text-gray-600">Sanskar English School</p>
+                            <p className="text-xs text-gray-500">10th Grade</p>
+                          </div>
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/profile-no.jpg" alt="Winner" className='h-full w-full object-cover object-[center_20%]' />
+                            </Avatar>
+                            <h5 className="font-semibold">UnKnown</h5>
+                            <p className="text-sm text-gray-600">Scientific Lyceum "Polit" of the Kremenchuk Humanitarian and Technological Academy</p>
+                            <p className="text-xs text-gray-500">10th Grade</p>
+                          </div>
+                           {/* School Winner 3 */}
+                           <div className="flex flex-col items-center text-center">
+                            <Avatar className="h-24 w-24 mb-3">
+                              <img src="/profile-no.jpg" alt="Winner"  className='h-full w-full object-cover object-[center_10%]' />
+                            </Avatar>
+                            <h5 className="font-semibold">Rana Azka</h5>
+                            <p className="text-sm text-gray-600">SMAS Al-Kautsar</p>
+                            <p className="text-xs text-gray-500">11th Grade</p>
+                          </div>
+                           
+                              </div>
+                            </div>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
                     <AccordionItem value="2024" className="border rounded-lg p-2 overflow-hidden">
                         <AccordionTrigger className="text-xl font-semibold text-indigo-600 px-4">
                           2024 Winners
@@ -627,7 +847,7 @@ const TrainingMaterials = () => {
                                 {/* College Winner 1 */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-1.jpeg" alt="Winner" />
+                                    <img src="/winner25c-1.jpeg" alt="Winner" />
                                   </Avatar>
                                   <h5 className="font-semibold">Sofiia Melnyk</h5>
                                   <p className="text-sm text-gray-600">TSNU Kyiv</p>
@@ -637,7 +857,7 @@ const TrainingMaterials = () => {
                                 {/* College Winner 2 */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-2.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner25c-2.jpg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anastasiia Tovtyn</h5>
                                   <p className="text-sm text-gray-600"> Uzhhorod National University</p>
@@ -647,7 +867,7 @@ const TrainingMaterials = () => {
                                 {/* College Winner 3 */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-3.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner25c-3.jpg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Rania Ahmed Mohamed Heragy</h5>
                                   <p className="text-sm text-gray-600">FCIS,Ain Shams University</p>
@@ -657,7 +877,7 @@ const TrainingMaterials = () => {
                                 {/* Additional College Winners */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-4.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner25c-4.jpeg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anushka Goyal
                                   </h5>
@@ -667,7 +887,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-5.jpg" alt="Winner"  className='h-full w-full object-cover ' />
+                                    <img src="/winner25c-5.jpg" alt="Winner"  className='h-full w-full object-cover ' />
                                   </Avatar>
                                   <h5 className="font-semibold">Nourhan Hanna Louiz</h5>
                                   <p className="text-sm text-gray-600">Assiut University</p>
@@ -676,7 +896,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-6.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner25c-6.jpeg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anjali Raj</h5>
                                   <p className="text-sm text-gray-600">Indian Institute of Technology, Kharagpur</p>
@@ -685,7 +905,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-7.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner25c-7.jpg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Samia Preity
                                   </h5>
@@ -695,7 +915,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-8.jpg" alt="Winner"  className='h-full w-full object-cover object-[center_20%] ' />
+                                    <img src="/winner25c-8.jpg" alt="Winner"  className='h-full w-full object-cover object-[center_20%] ' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anshita Singh</h5>
                                   <p className="text-sm text-gray-600">Harcourt butler technical university</p>
@@ -713,7 +933,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner24c-9.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner25c-9.jpeg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Sanskriti Malviya</h5>
                                   <p className="text-sm text-gray-600">IIIT, Bhagalpur</p>
