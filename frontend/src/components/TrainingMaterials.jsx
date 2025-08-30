@@ -706,7 +706,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/profile-no.jpg" alt="Winner" />
+                                    <img src="/winner25c-9.png" alt="Winner" />
                                   </Avatar>
                                   <h5 className="font-semibold">Ayuna Takashi</h5>
                                   <p className="text-sm text-gray-600">Keio University Graduate School</p>
