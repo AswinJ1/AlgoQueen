@@ -755,7 +755,7 @@ const TrainingMaterials = () => {
                             <Avatar className="h-24 w-24 mb-3">
                               <img src="/winner25s-3.jpeg" alt="Winner" className='h-full w-full object-cover' />
                             </Avatar>
-                            <h5 className="font-semibold">Victoria</h5>
+                            <h5 className="font-semibold">Viktoriia Yurchenko</h5>
                             <p className="text-sm text-gray-600">Uzhhorod Scientific Lyceum</p>
                             <p className="text-xs text-gray-500">11th Grade</p>
                           </div>
@@ -847,7 +847,7 @@ const TrainingMaterials = () => {
                                 {/* College Winner 1 */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-1.jpeg" alt="Winner" />
+                                    <img src="/winner24c-1.jpeg" alt="Winner" />
                                   </Avatar>
                                   <h5 className="font-semibold">Sofiia Melnyk</h5>
                                   <p className="text-sm text-gray-600">TSNU Kyiv</p>
@@ -857,7 +857,7 @@ const TrainingMaterials = () => {
                                 {/* College Winner 2 */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-2.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner24c-2.jpg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anastasiia Tovtyn</h5>
                                   <p className="text-sm text-gray-600"> Uzhhorod National University</p>
@@ -867,7 +867,7 @@ const TrainingMaterials = () => {
                                 {/* College Winner 3 */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-3.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner24c-3.jpg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Rania Ahmed Mohamed Heragy</h5>
                                   <p className="text-sm text-gray-600">FCIS,Ain Shams University</p>
@@ -877,7 +877,7 @@ const TrainingMaterials = () => {
                                 {/* Additional College Winners */}
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-4.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner24c-4.jpeg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anushka Goyal
                                   </h5>
@@ -887,7 +887,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-5.jpg" alt="Winner"  className='h-full w-full object-cover ' />
+                                    <img src="/winner24c-5.jpg" alt="Winner"  className='h-full w-full object-cover ' />
                                   </Avatar>
                                   <h5 className="font-semibold">Nourhan Hanna Louiz</h5>
                                   <p className="text-sm text-gray-600">Assiut University</p>
@@ -896,7 +896,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-6.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner24c-6.jpeg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anjali Raj</h5>
                                   <p className="text-sm text-gray-600">Indian Institute of Technology, Kharagpur</p>
@@ -905,7 +905,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-7.jpg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner24c-7.jpg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Samia Preity
                                   </h5>
@@ -915,7 +915,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-8.jpg" alt="Winner"  className='h-full w-full object-cover object-[center_20%] ' />
+                                    <img src="/winner24c-8.jpg" alt="Winner"  className='h-full w-full object-cover object-[center_20%] ' />
                                   </Avatar>
                                   <h5 className="font-semibold">Anshita Singh</h5>
                                   <p className="text-sm text-gray-600">Harcourt butler technical university</p>
@@ -933,7 +933,7 @@ const TrainingMaterials = () => {
                                 
                                 <div className="flex flex-col items-center text-center">
                                   <Avatar className="h-24 w-24 mb-3">
-                                    <img src="/winner25c-9.jpeg" alt="Winner" className='h-full w-full object-cover' />
+                                    <img src="/winner24c-9.jpeg" alt="Winner" className='h-full w-full object-cover' />
                                   </Avatar>
                                   <h5 className="font-semibold">Sanskriti Malviya</h5>
                                   <p className="text-sm text-gray-600">IIIT, Bhagalpur</p>
