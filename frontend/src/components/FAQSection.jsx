@@ -9,8 +9,8 @@ import SectionHeading from './SectionHeading';
 
 const faqs = [
   {
-    question: "What is ICPC Algo Queen 2025?",
-    answer: "ICPC Algo Queen 2025 is a competitive programming competition organized by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation. It aims to empower students, inspire coding excellence, and promote diversity in the tech community."
+    question: "What is ICPC Algo Queen 2026?",
+    answer: "ICPC Algo Queen 2026 is a competitive programming competition organized by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation. It aims to empower students, inspire coding excellence, and promote diversity in the tech community."
   },
   {
     question: "Who can participate in ICPC Algo Queen?",

@@ -62,7 +62,7 @@ const AboutSection = () => {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Empowering Women in Competitive Programming</h2>
 <p className="text-gray-600 mb-6">
-ICPC AlgoQueen 2025 is a premier global competitive programming competition designed to 
+ICPC AlgoQueen 2026 is a premier global competitive programming competition designed to 
 empower young women in tech. With participants from schools and universities worldwide, 
 the competition offers a challenging yet supportive environment where competitors can 
 showcase their talents and grow as problem solvers. 
