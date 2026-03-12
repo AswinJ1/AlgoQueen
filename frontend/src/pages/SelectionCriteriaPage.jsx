@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import LeaderBoard from '@/components/LeaderBoard'
 import { Link } from 'react-scroll'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, FileText} from "lucide-react";
@@ -18,6 +18,9 @@ const SelectionCriteriaPage = () => {
         { name: 'Ranklist', to: '/selectioncriteria', type: 'page' },
         { name: 'Leaderboard', to: '/Leaderboard', type: 'page' },
         { name: 'FAQ', to: '/#faq', type: 'section'},
+        { name: 'Archive', type: 'dropdown', children: [
+            { name: 'AlgoQueen 2025', to: '/archive/2025', type: 'page' }
+        ]},
         { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
     ];
 const [isDownloading, setIsDownloading] = useState(false);
@@ -77,6 +80,29 @@ const [isDownloading, setIsDownloading] = useState(false);
                                     <img src="/telegram2.png" alt="" className="" />
                                     {item.name}
                                 </button>
+                            );
+                        }
+                        if (item.type === 'dropdown') {
+                            return (
+                                <div key={item.name} className="relative group">
+                                    <button className="text-sm font-semibold text-gray-900 cursor-pointer flex items-center gap-1">
+                                        {item.name}
+                                        <ChevronDownIcon className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                                    </button>
+                                    <div className="absolute left-0 top-full pt-2 hidden group-hover:block">
+                                        <div className="bg-white rounded-md shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[160px]">
+                                            {item.children.map((child) => (
+                                                <RouterLink
+                                                    key={child.name}
+                                                    to={child.to}
+                                                    className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                                                >
+                                                    {child.name}
+                                                </RouterLink>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
                             );
                         }
                         if (item.type === 'section') {
@@ -148,6 +174,22 @@ const [isDownloading, setIsDownloading] = useState(false);
     >
       {item.name}
     </a>
+  ) : item.type === 'dropdown' ? (
+    <div key={item.name}>
+      <span className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900">
+        {item.name}
+      </span>
+      {item.children.map((child) => (
+        <RouterLink
+          key={child.name}
+          to={child.to}
+          className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {child.name}
+        </RouterLink>
+      ))}
+    </div>
   ) : (
     <RouterLink
       key={item.name}

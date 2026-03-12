@@ -100,7 +100,7 @@ const RegisterSection = () => {
   <h3 className="text-lg font-semibold text-algo-dark">
     Practice Contest 1
   </h3>
-  <div className="flex items-center gap-1 text-sm text-gray-700">
+  {/* <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
     <span>June 25, 2025 </span>
    
@@ -108,10 +108,13 @@ const RegisterSection = () => {
    <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
     <span>7:00 PM to 9:00 PM IST</span>
-  </div>
+  </div> */}
 </div>
 
-                    <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
+                    <p className="text-gray-600 mb-2">
+                      {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
+                     TBD                      
+                      </p>
                   
 
 {/* <a
@@ -134,7 +137,7 @@ const RegisterSection = () => {
   <h3 className="text-lg font-semibold text-algo-dark">
     Practice Contest 2
   </h3>
-  <div className="flex items-center gap-1 text-sm text-gray-700">
+  {/* <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
     <span>June 28, 2025</span>
    
@@ -142,10 +145,13 @@ const RegisterSection = () => {
    <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
     <span>3:00 PM to 5:00 PM IST</span>
-  </div>
+  </div> */}
 </div>
 
-                    <p className="text-gray-600 mb-2">This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest.</p>
+                    <p className="text-gray-600 mb-2">
+                            {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
+                      TBD
+                      </p>
                   
 
 {/* <a
@@ -165,15 +171,15 @@ const RegisterSection = () => {
                   </div>
                   <Separator />
                   <div className="flex items-center justify-start flex-wrap gap-2">
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
-                     <div className="flex items-center gap-1 text-sm text-gray-700">
+                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2026 – Finals</h3>
+                     {/* <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
     <span>July 5 , 2025 </span>
   </div>
          <div className="flex items-center gap-1 text-sm text-gray-700">
     <Timer className="w-5 h-5 text-indigo-600" />
     <span>3:00 PM to 6:00 PM IST</span>
-  </div>
+  </div> */}
   </div>
                     {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
                     <p className="mb-2"><strong>Platform:</strong> CodeChef</p>
@@ -188,7 +194,10 @@ const RegisterSection = () => {
   Attempt Finals
 </a> */}
                     
-                    <p>This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity.</p>
+                    <p>
+                          {/* This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity. */}
+                      TBD
+                      </p>
                   </div>
                   
                   <Separator />
@@ -236,10 +245,10 @@ const RegisterSection = () => {
               <Check className="h-5 w-5 flex-shrink-0 text-amber-700 mr-2" />
               <span>Bronze Medals for the next 5 students (Rank 11 to 15).</span>
             </li>
-            <li className="flex items-start">
+            {/* <li className="flex items-start">
               <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
               <span>Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan. *</span>
-            </li>
+            </li> */}
             <li className="flex items-start">
               <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
               <span>Exciting gifts and Goodie Bags. **</span>

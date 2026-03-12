@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            <img alt="AlgoQueen Logo" src="/5.png" className="h-20 w-auto" />
+            <img alt="AlgoQueen Logo" src="/2026.png" className="h-20 w-auto" />
           </div>
 
           {/* Navigation Links */}

@@ -5,13 +5,19 @@ import HomePage from './pages/HomePage';
 import SelectionCriteriaPage from './pages/SelectionCriteriaPage.jsx';
 import Board from './pages/Board';
 
+import ArchiveHomePage2025 from './archive/2025/pages/HomePage';
+import ArchiveBoard2025 from './archive/2025/pages/Board';
+
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/ranklist" element={<SelectionCriteriaPage />} /> */}
-         <Route path="/leaderboard" element={<Board />} />
+         {/* <Route path="/leaderboard" element={<Board />} /> */}
+        {/* Archive routes */}
+        <Route path="/archive/2025" element={<ArchiveHomePage2025 />} />
+        <Route path="/archive/2025/leaderboard" element={<ArchiveBoard2025 />} />
         {/* Redirect hash routes to home page */}
         <Route path="/:section" element={<Navigate to="/" />} />
       </Routes>

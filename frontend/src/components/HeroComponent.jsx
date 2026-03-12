@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import gsap from 'gsap';
 import Tilt from 'react-parallax-tilt';
 import { Link as ScrollLink } from 'react-scroll';
@@ -15,8 +15,11 @@ const navigation = [
   { name: 'About', to: 'about', type: 'section' },
   { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
-  { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
+  // { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
   { name: 'FAQ', to: 'faq', type: 'section' },
+  { name: 'Archive', type: 'dropdown', children: [
+    { name: 'AlgoQueen 2025', to: '/archive/2025', type: 'page' }
+  ]},
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
 
@@ -80,7 +83,7 @@ const scrollToBottom = () => {
               <span className="sr-only">Algo Queen</span>
               <img
                 alt=""
-                src="/5.png"
+                src="/2026.png"
                 className="h-[80px] w-auto"
               />
             </a>
@@ -112,6 +115,28 @@ const scrollToBottom = () => {
         <img src="/telegram2.png" alt="" />
         {item.name}
       </button>
+    );
+  } else if (item.type === 'dropdown') {
+    return (
+      <div key={item.name} className="relative group">
+        <button className="text-sm font-semibold text-gray-900 cursor-pointer flex items-center gap-1">
+          {item.name}
+          <ChevronDownIcon className="h-4 w-4 transition-transform group-hover:rotate-180" />
+        </button>
+        <div className="absolute left-0 top-full pt-2 hidden group-hover:block">
+          <div className="bg-white rounded-md shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[160px]">
+            {item.children.map((child) => (
+              <RouterLink
+                key={child.name}
+                to={child.to}
+                className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+              >
+                {child.name}
+              </RouterLink>
+            ))}
+          </div>
+        </div>
+      </div>
     );
   } else if (item.type === 'page') {
     return (
@@ -150,7 +175,7 @@ const scrollToBottom = () => {
                 <span className="sr-only">Algo Queen</span>
                 <img
                   alt=""
-                  src="/5.png"
+                  src="/2026.png"
                   className="h-8 w-auto"
                 />
               </a>
@@ -177,6 +202,22 @@ const scrollToBottom = () => {
     >
       {item.name}
     </a>
+  ) : item.type === 'dropdown' ? (
+    <div key={item.name}>
+      <span className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900">
+        {item.name}
+      </span>
+      {item.children.map((child) => (
+        <RouterLink
+          key={child.name}
+          to={child.to}
+          className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {child.name}
+        </RouterLink>
+      ))}
+    </div>
   ) : item.type === 'section' ? (
     <ScrollLink
       key={item.name}
@@ -204,10 +245,10 @@ const scrollToBottom = () => {
                 <div className="py-6">
                   <a
                     href="" 
-                    className="block w-full rounded-lg px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
+                    className="block w-full  px-3 py-2 text-center bg-indigo-600 text-white font-semibold"
                     id='register-button'
                   >
-                    Registration closed
+                  Coming Soon
                   </a>
                 </div>
               </div>
@@ -215,66 +256,68 @@ const scrollToBottom = () => {
           </DialogPanel>
         </Dialog>
       </header>
-      <section className="relative bg-gradient-to-r from-white to-purple-100 px-6 pt-16 lg:px-8">
+      <section className="relative bg-gradient-to-br from-white via-purple-50 to-indigo-100 px-6 pt-16 lg:px-8 overflow-hidden">
+        {/* Decorative background blobs */}
+        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-200/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-pink-100/20 rounded-full blur-3xl pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20">
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-24 lg:mt-32 pb-16 lg:pb-24">
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            ICPC Algo Queen - The Girl’s Programming Cup 2025
+            <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 px-4 py-1.5 mb-6">
+              {/* <span className="h-2 w-2 rounded-full bg-indigo-500 animate-pulse" /> */}
+              <span className="text-sm font-medium text-indigo-700 tracking-wide">ICPC Foundation Endorsed</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-pink-800 leading-[1.1] tracking-tight">
+            ICPC Algo Queen 2026
 
 
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-600 text-justify ">
-            ICPC Algo Queen, an initiative by Amrita Vishwa Vidyapeetham and endorsed by the ICPC Foundation and sponsored by Jane Street. It aims to empower young women by 
-enhancing their problem-solving skills while fostering innovation and global recognition in 
-technology.
-            
-
+            <p className="mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
+              An initiative by Amrita Vishwa Vidyapeetham, endorsed by the ICPC Foundation and sponsored by Jane Street. Empowering young women by enhancing their problem-solving skills while fostering innovation and global recognition in technology.
             </p>
-           <div className="mt-6 flex flex-wrap items-center gap-4">
-  {/* Register Now Button */}
- <RouterLink
-  to="/leaderboard"
-  ref={buttonRef}
-  className="relative w-auto flex items-center gap-2 rounded-md bg-indigo-600 px-4 py-3 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white  hover:bg-indigo-500 transition duration-300 group overflow-hidden"
-  id="register-button"
->
-  <span className="relative z-10 flex items-center gap-2">
-    Ranklist Published
-    <LucideTrophy className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-  </span>
-  
-  <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
-</RouterLink>
- {/* <p  className="text-lg font-semibold text-gray-900 hover:underline flex items-center">
-                Algo Queen practice contest 2 coming soon 
-              </p>
-
-  {/* Practice Contest Button */}
-  {/* <div 
-   
-    onClick={scrollToBottom}
-    className="w-auto relative inline-flex items-center justify-center px-3 py-2 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white bg-indigo-600 rounded-md overflow-hidden group transition-all duration-300 hover:bg-indigo-700 hover:scale-105 cursor-pointer"
-  >
-    <div className="absolute inset-0 w-3/12 bg-white/20 skew-x-[-30deg] transform -translate-x-full animate-shimmer"></div>
-    
-    <div className="relative flex items-center gap-2">
-      <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-      <span>Finals Live Now! </span>
-      <ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
-    </div>
-  </div> */}
-</div>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <RouterLink
+                to="/leaderboard"
+                ref={buttonRef}
+                className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden"
+                id="register-button"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                 Coming Soon
+                  {/* <LucideTrophy className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" /> */}
+                </span>
+                <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
+              </RouterLink>
+            </div>
 
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-12" ref={imageRef}>
-            {["pc-hero.jpeg", "algo-hero2.jpg", "algo-hero3.jpg", "winner.jpg"].map((img, index) => (
-              <Tilt key={index} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={400}>
-                <img src={`/${img}`} alt="Visual" className="rounded-xl shadow-lg object-cover w-full h-40 backdrop-blur-lg bg-opacity-50" />
-              </Tilt>
-            ))}
+          {/* Image Grid */}
+          <div className="relative" ref={imageRef}>
+            {/* Glow behind images */}
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/30 via-purple-200/20 to-transparent rounded-3xl blur-2xl scale-105 pointer-events-none" />
+            <div className="relative grid grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
+              {[
+                { src: "pc-hero.jpeg", offset: "" },
+                { src: "algo-hero2.jpg", offset: "mt-10" },
+                { src: "algo-hero3.jpg", offset: "-mt-4" },
+                { src: "winner.jpg", offset: "mt-6" },
+              ].map((item, index) => (
+                <Tilt key={index} tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02} transitionSpeed={400}>
+                  <div
+                    className={`overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-1 ${item.offset}`}
+                  >
+                    <img
+                      src={`/${item.src}`}
+                      alt="AlgoQueen event"
+                      className="object-cover w-full h-44 sm:h-52 lg:h-56 transition-transform duration-700 hover:scale-110"
+                      loading="lazy"
+                    />
+                  </div>
+                </Tilt>
+              ))}
+            </div>
           </div>
-          
         </div>
         
       </section>

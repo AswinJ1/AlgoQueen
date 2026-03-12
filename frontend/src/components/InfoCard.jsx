@@ -51,7 +51,7 @@ const InfoSection = () => {
           iconSrc="/calender2.jpg"
           title="WHEN?"
           description={[
-            "Algo Queen Finals will be held on July 5th !",
+            "Registrations for ICPC Algo Queen 2026 will be open soon! Stay tuned for keydates",
            ,
           ]}
           delay={300}

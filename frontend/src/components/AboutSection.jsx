@@ -134,8 +134,8 @@ showcase their talents and grow as problem solvers.
             { icon: <Zap size={32} />, title: " Compete Globally", text: "Compete with top female programmers globally" },
             { icon: <School size={32} />, title: "Expert Mentorship", text: "Gain mentorship and access to learning resources" },
             {icon: <LucideStars size={32} />, title: "Compete & Win Amazing Prizes!", text:<>
-            Win exciting rewards, including a sponsored trip to ICPC World Finals
-            2025 in Baku, Azerbaijan.{" "} <br />
+            {/* Win exciting rewards, including a sponsored trip to ICPC World Finals
+            2025 in Baku, Azerbaijan.{" "} <br /> */}
             <span className="text-sm text-gray-500 italic ">
               *Terms and conditions apply
             </span>

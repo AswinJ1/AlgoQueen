@@ -1,22 +1,20 @@
 import React, { useState } from 'react'
-import LeaderBoard from '@/components/LeaderBoard'
+import LeaderBoard from '../components/LeaderBoard'
 import Footer from '../components/Footer'
 import { Link as RouterLink } from 'react-router-dom'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+
+const ARCHIVE_BASE = '/archive/2025';
 
 const Board = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const navigation = [
-    { name: 'Home', to: '/', type: 'page' },
-    { name: 'About', to: '/#about', type: 'section' },
-    { name: 'Learn', to: '/#learn', type: 'section' },
-    // { name: 'Ranklist', to: '/ranklist', type: 'page' },
-    // { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
-    { name: 'FAQ', to: '/#faq', type: 'section'},
-    { name: 'Archive', type: 'dropdown', children: [
-      { name: 'AlgoQueen 2025', to: '/archive/2025', type: 'page' }
-    ]},
+    { name: 'Home', to: ARCHIVE_BASE, type: 'page' },
+    { name: 'About', to: `${ARCHIVE_BASE}/#about`, type: 'section' },
+    { name: 'Learn', to: `${ARCHIVE_BASE}/#learn`, type: 'section' },
+    { name: 'Leaderboard', to: `${ARCHIVE_BASE}/leaderboard`, type: 'page' },
+    { name: 'FAQ', to: `${ARCHIVE_BASE}/#faq`, type: 'section'},
     { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
   ];
 
@@ -26,7 +24,7 @@ const Board = () => {
         <header className="absolute inset-x-0 top-0 z-50">
           <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto w-full">
             <div className="flex lg:flex-1 lg:ml-[-54px] ml-[-10px] md:ml-[-5px] sm:ml-0">
-              <RouterLink to="/" className="-m-1.5 p-1.5">
+              <RouterLink to={ARCHIVE_BASE} className="-m-1.5 p-1.5">
                 <span className="sr-only">Algo Queen</span>
                 <img
                   alt="Algo Queen Logo"
@@ -63,29 +61,6 @@ const Board = () => {
                     </button>
                   );
                 }
-                if (item.type === 'dropdown') {
-                  return (
-                    <div key={item.name} className="relative group">
-                      <button className="text-sm font-semibold text-gray-900 cursor-pointer flex items-center gap-1">
-                        {item.name}
-                        <ChevronDownIcon className="h-4 w-4 transition-transform group-hover:rotate-180" />
-                      </button>
-                      <div className="absolute left-0 top-full pt-2 hidden group-hover:block">
-                        <div className="bg-white rounded-md shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[160px]">
-                          {item.children.map((child) => (
-                            <RouterLink
-                              key={child.name}
-                              to={child.to}
-                              className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                            >
-                              {child.name}
-                            </RouterLink>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
                 if (item.type === 'section') {
                   return (
                     <RouterLink
@@ -94,7 +69,6 @@ const Board = () => {
                       className="text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors"
                       onClick={() => {
                         setMobileMenuOpen(false);
-                        // Add slight delay to allow navigation to complete before scrolling
                         setTimeout(() => {
                           const element = document.getElementById(item.to.split('#')[1]);
                           element?.scrollIntoView({ behavior: 'smooth' });
@@ -155,22 +129,6 @@ const Board = () => {
                         >
                           {item.name}
                         </a>
-                      ) : item.type === 'dropdown' ? (
-                        <div key={item.name}>
-                          <span className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900">
-                            {item.name}
-                          </span>
-                          {item.children.map((child) => (
-                            <RouterLink
-                              key={child.name}
-                              to={child.to}
-                              className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {child.name}
-                            </RouterLink>
-                          ))}
-                        </div>
                       ) : (
                         <RouterLink
                           key={item.name}

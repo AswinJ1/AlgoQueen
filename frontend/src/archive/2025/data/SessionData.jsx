@@ -1,0 +1,126 @@
+export const sessionData = [
+    {
+      id: "session-1",
+      title: "Introduction to Competitive Programing and Algoqueen",
+      difficulty: "beginner",
+      description: "This session aims to give a general introduction about ALGOQUEEN and CP,it covers topics like what is AlgoQueen ,what is Competitive Programming,Why Competitive Programming and How to start",
+      date: "April 15, 2025",
+      time: "6:00 - 7:00 PM  IST",
+      trainer:"Ashwin Krish, Gayatri S Namputiri(Amrita University)",
+    },
+    {
+      id: "session-2",
+      title: "Basic Problem Solving",
+      difficulty: "beginner",
+      description: "Demo of how to start problem solving and common tools.",
+      date: "April 22, 2025",
+      time: "14:00 - 16:00 PM IST",
+      trainer:"Ashwin Krish ",
+      
+    },
+    {
+      id: "session-3",
+      title: "Introduction to STL for CP ",
+      difficulty: "beginner",
+      description: "Introduction to C++ STL",
+      date: "April 26, 2025",
+      time: "6:00 - 7:00 PM IST",
+      trainer:"Sakshi Sahu, Priya Pahwa (IGDTUW, Delhi)",
+    
+
+    },
+    {
+      id: "session-4",
+      title: "CP Platforms and learning resources",
+      difficulty: "beginner",
+      description: "Various CP Platforms, Contests, Learning resources ",
+      date: "April 28, 2025",
+      time: "6:00 - 7:00 PM IST",
+      trainer:"Shivya Khandpur,Sneha Roychowdhury,IGDTUW Delhi",
+    },
+    {
+      id: "session-6",
+      title: "Array/List Problems",
+      difficulty: "beginner",
+      description: "",
+      date: "April 29, 2025",
+      time: "8:30 - 9:30 PM IST",
+      trainer:"Nino Chkhaidze",
+    },
+    {
+      id: "session-7",
+      title: "Sorting",
+      difficulty: "intermediate",
+      description: "",
+      date: "April 30, 2025",
+      time: "6:00 - 7:00 PM IST",
+      trainer:"Nino Chkhaidze",
+    }
+    ,
+    // {
+    //   id: "session-8",
+    //   title: "Recursion ",
+    //   difficulty: "intermediate",
+    //   description: "",
+    //   date: "May 5, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // }
+    // ,
+    // {
+    //   id: "session-9",
+    //   title: "String Problems",
+    //   difficulty: "intermediate",
+    //   description: "",
+    //   date: "May 7, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // }
+    
+    // {
+    //   id: "session-10",
+    //   title: "Greedy Algorithms",
+    //   difficulty: "expert",
+    //   description: "",
+    //   date: "May 12, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // },
+    {
+      id: "session-11",
+      title: "Graph Representation and Traversal",
+      difficulty: "expert",
+      description: "",
+      date: "May 14, 2025",
+      time: "6:00 - 7:00 PM IST",
+      trainer:"Hetvi Bagdai (IIT Ropar)",
+    },
+    {
+      id: "session-12",
+      title: "Graph: Djikstra + Disjoint Set Union",
+      difficulty: "expert",
+      description: "",
+      date: "May 16, 2025",
+      time: "6:00 - 7:00 PM IST",
+      trainer:"Hetvi Bagdai (IIT Ropar)",
+    },
+    // {
+    //   id: "session-13",
+    //   title: "Dynamic Programming", 
+    //   difficulty: "expert",
+    //   description: "",
+    //   date: "May 19, 2025",
+    //   time: "6:00 - 7:00 PM IST",
+    //   trainer:"",
+    // },
+    {
+      id: "session-14",
+      title: "Road Map Ahead ",
+      difficulty: "",
+      description: "What to do from here ?",
+      date: "May 21, 2025",
+      time: "6:00 - 7:00 PM IST",
+      trainer:"",
+    }
+ 
+  ];
