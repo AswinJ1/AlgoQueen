@@ -25,7 +25,7 @@ const RegisterSection = () => {
           <div className="max-w-4xl mx-auto">
              <div className="flex items-center gap-2 mb-8 justify-center">
                       <Swords size={24} className="text-indigo-600" />
-                      <h2 className="text-2xl font-bold ">Competition Information</h2>
+                      <h2 className="text-2xl font-bold ">Competition Timeline</h2>
                     </div>
             {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-algo-dark mb-4 text-indigo-600">Competition Information</h1>
@@ -91,49 +91,135 @@ const RegisterSection = () => {
                   <div>
                  
                   <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
-                  <Calendar className="h-6 w-6 text-algo-primary mr-2 text-indigo-600" />
-                  Competition Stages
+                  {/* <Calendar className="h-6 w-6 text-algo-primary mr-2 text-indigo-600" /> */}
+                  {/* Competition Stages */}
               </h2> <br />
 
-              <div>
-                   <div className="flex items-center justify-start flex-wrap gap-2">
-  <h3 className="text-lg font-semibold text-algo-dark">
-    Practice Contest 1
-  </h3>
-  {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-    <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>June 25, 2025 </span>
-   
-  </div>
-   <div className="flex items-center gap-1 text-sm text-gray-700">
-    <Timer className="w-5 h-5 text-indigo-600" />
-    <span>7:00 PM to 9:00 PM IST</span>
-  </div> */}
-</div>
+  <div>
+   <div className="flex items-center justify-start flex-wrap gap-2">
+          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
+          <h3 className="text-lg font-semibold text-algo-dark">
+          Open Registration 
+        </h3>
+        <div className="flex items-center gap-1 text-sm text-gray-700">
+          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
+          {/* <span>April 27, 2026 </span> to <span>June 27, 2026</span> */}
+        
+        </div>
+        {/* <div className="flex items-center gap-1 text-sm text-gray-700">
+          <Timer className="w-5 h-5 text-indigo-600" />
+          <span>7:00 PM to 9:00 PM IST</span>
+        </div> */}
+    </div>
 
                     <p className="text-gray-600 mb-2">
                       {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
-                     TBD                      
+                     {/* TBD         */}
+                        <span>From April 29, 2026 </span> to <span>June 27, 2026</span>              
                       </p>
                   
 
-{/* <a
-  href="https://www.codechef.com/skill-test/ALGOQPR2501"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
->
-  <CodeXmlIcon className="w-4 h-4" />
-  Practice Now
-</a> */}
+              {/* <a
+                href="https://www.codechef.com/skill-test/ALGOQPR2501"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
+                aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
+              >
+                <CodeXmlIcon className="w-4 h-4" />
+                Practice Now
+              </a> */}
 
 
                     {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
                     <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
-                  </div>
+     </div>
+    <Separator />
+      <div>
+   <div className="flex items-center justify-start flex-wrap gap-2">
+          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
+          <h3 className="text-lg font-semibold text-algo-dark">
+          Online Training 
+        </h3>
+        <div className="flex items-center gap-1 text-sm text-gray-700">
+          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
+          {/* <span>April 27, 2026 </span> to <span>June 27, 2026</span> */}
+        
+        </div>
+        {/* <div className="flex items-center gap-1 text-sm text-gray-700">
+          <Timer className="w-5 h-5 text-indigo-600" />
+          <span>7:00 PM to 9:00 PM IST</span>
+        </div> */}
+    </div>
+
+                    <p className="text-gray-600 mb-2">
+                      {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
+                     {/* TBD         */}
+                        <span>From May 7, 2026 </span> to <span>June 19, 2026</span>              
+                      </p>
+                  
+
+              {/* <a
+                href="https://www.codechef.com/skill-test/ALGOQPR2501"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
+                aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
+              >
+                <CodeXmlIcon className="w-4 h-4" />
+                Practice Now
+              </a> */}
+
+
+                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
+                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
+     </div>
+    <Separator />
+    
+     
+     <div>
+   <div className="flex items-center justify-start flex-wrap gap-2">
+        {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
+        <h3 className="text-lg font-semibold text-algo-dark">
+          Practice Contest 1
+        </h3>
+        <div className="flex items-center gap-1 text-sm text-gray-700">
+          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
+          {/* <span>June 25, 2025 </span> */}
+        
+        </div>
+        {/* <div className="flex items-center gap-1 text-sm text-gray-700">
+          <Timer className="w-5 h-5 text-indigo-600" />
+          <span>7:00 PM to 9:00 PM IST</span>
+        </div> */}
+    </div>
+
+                    <p className="text-gray-600 mb-2">
+                      {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
+                     {/* TBD       */}
+                       <span>July 4, 2026 </span>                
+                      </p>
+                  
+
+              {/* <a
+                href="https://www.codechef.com/skill-test/ALGOQPR2501"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
+                aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
+              >
+                <CodeXmlIcon className="w-4 h-4" />
+                Practice Now
+              </a> */}
+
+
+                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
+                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
+     </div>
+     
                    <div>
                    <div className="flex items-center justify-start flex-wrap gap-2">
+  {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
   <h3 className="text-lg font-semibold text-algo-dark">
     Practice Contest 2
   </h3>
@@ -150,7 +236,8 @@ const RegisterSection = () => {
 
                     <p className="text-gray-600 mb-2">
                             {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
-                      TBD
+                      {/* TBD */}
+                          <span>July 11, 2026</span>
                       </p>
                   
 
@@ -171,6 +258,36 @@ const RegisterSection = () => {
                   </div>
                   <Separator />
                   <div className="flex items-center justify-start flex-wrap gap-2">
+                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2026 – Online Prelims </h3>
+                     {/* <div className="flex items-center gap-1 text-sm text-gray-700">
+    <CalendarDays className="w-5 h-5 text-indigo-600" />
+    <span>July 5 , 2025 </span>
+  </div>
+         <div className="flex items-center gap-1 text-sm text-gray-700">
+    <Timer className="w-5 h-5 text-indigo-600" />
+    <span>3:00 PM to 6:00 PM IST</span>
+  </div> */}
+  </div>
+                    {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
+                    <p className="mb-2"><strong>Platform:</strong> CodeChef</p>
+                    {/* <a
+  href="https://www.codechef.com/skill-test/ALGOQ25OL"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
+  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
+>
+  <CodeXmlIcon className="w-4 h-4" />
+  Attempt Finals
+</a> */}
+                    
+                    <p>
+                          {/* This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity. */}
+                      <span>July 18, 2026</span>
+                      </p>
+                                        <Separator />
+
+                      <div className="flex items-center justify-start flex-wrap gap-2">
                     <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2026 – Finals</h3>
                      {/* <div className="flex items-center gap-1 text-sm text-gray-700">
     <CalendarDays className="w-5 h-5 text-indigo-600" />
@@ -196,7 +313,7 @@ const RegisterSection = () => {
                     
                     <p>
                           {/* This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity. */}
-                      TBD
+                      <span>August 2, 2026</span>
                       </p>
                   </div>
                   
