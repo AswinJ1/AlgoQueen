@@ -274,8 +274,9 @@ const scrollToBottom = () => {
 
             </h1>
             <p className="mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
-              An initiative by Amrita Vishwa Vidyapeetham, endorsed by the ICPC Foundation and sponsored by Jane Street. Empowering young women by enhancing their problem-solving skills while fostering innovation and global recognition in technology.
-            </p>
+              An initiative by Amrita Vishwa Vidyapeetham, endorsed by the ICPC Foundation. Empowering young women by enhancing their problem-solving skills while fostering innovation and global recognition in technology.
+            </p> 
+            {/* and sponsored by Jane Street */}
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <RouterLink
                 to="/leaderboard"

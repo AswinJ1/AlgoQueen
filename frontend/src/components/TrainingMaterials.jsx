@@ -79,11 +79,11 @@ const TrainingMaterials = () => {
                             </li>
                           </ul> */}
                           <div className="mt-4">
-                          <a href="https://usaco.guide/general/resources-cp?lang=cpp" className="text-sm font-medium text-indigo-600 flex items-center   " target='_blank' rel="noopener noreferrer">
-                            <span className="">Start learning →</span>
+                          <button className="text-sm font-medium text-indigo-600 flex items-center   "  rel="noopener noreferrer">
+                            <span className="">Start learning </span>
                             
                             {/* <StarsIcon size={18} className="ml-1 text-indigo-600" /> */}
-                          </a>
+                          </button>
                         </div>
 
                         </CardContent>
@@ -101,9 +101,10 @@ const TrainingMaterials = () => {
                             A collection of past problems with solutions and explanations.
                           </p>
                           <div className="mt-4">
-                            <a href="" target='blank' className="text-sm font-medium text-indigo-600 ">
-                              Start practicing →
-                            </a>
+                            <button className="text-sm font-medium text-indigo-600 ">
+                              Start practicing 
+                            </button>
+                            {/* href="#" target='blank'  */}
                           </div>
                         </CardContent>
                       </Card>
@@ -1371,10 +1372,10 @@ const TrainingMaterials = () => {
               
               </div>
               <div className="space-y-6 ">
-              <div className="flex items-center gap-2 mb-8 justify-center">
+              {/* <div className="flex items-center gap-2 mb-8 justify-center">
                                   <Building2Icon size={24} className="text-indigo-600" />
                                   <h2 className="text-2xl font-bold ">Sponsored By</h2>
-                                </div>
+                                </div> */}
               {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Sponsored By
               </h1> */}
@@ -1398,7 +1399,7 @@ const TrainingMaterials = () => {
           </p>
         </div> */}
         
-        <div className="flex flex-col items-center justify-center p-6 text-justify">
+        {/* <div className="flex flex-col items-center justify-center p-6 text-justify">
   <img src="/jane2.png" className="h-20 mb-4" alt="" />
   <p className="text-sm text-gray-600 max-w-lg text-justify mx-auto ">
     Jane Street is a global quantitative trading firm that applies mathematics, computer science, 
@@ -1406,7 +1407,7 @@ const TrainingMaterials = () => {
     Jane Street actively supports coding communities and offers exciting career opportunities in technology
     and finance.
   </p>
-</div>
+</div> */}
 
       </div>
       
