@@ -15,7 +15,7 @@ const SectionHeading = ({ title, subtitle, alignment = 'center', className }) =>
           {title.split(' ')[0]}
         </span>
       </div>
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">{title}</h2>
+      <h2 className="text-4xl md:text-4xl  tracking-tight">{title}</h2>
       {subtitle && (
         <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
           {subtitle}

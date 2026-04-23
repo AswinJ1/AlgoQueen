@@ -7,12 +7,16 @@ import Board from './pages/Board';
 
 import ArchiveHomePage2025 from './archive/2025/pages/HomePage';
 import ArchiveBoard2025 from './archive/2025/pages/Board';
+import WinnersPage from './pages/Winners';
+import ResourcesPage from './pages/Resources';
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/winners" element={<WinnersPage />} />
+        <Route path="/learning-resources" element={<ResourcesPage />} />
         {/* <Route path="/ranklist" element={<SelectionCriteriaPage />} /> */}
          {/* <Route path="/leaderboard" element={<Board />} /> */}
         {/* Archive routes */}
