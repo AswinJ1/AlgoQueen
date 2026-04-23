@@ -30,8 +30,8 @@ const TrainingMaterials = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-5xl mx-auto">
               <div className="flex items-center gap-2 mb-8 justify-center">
-                                  <Book size={24} className="text-indigo-600" />
-                                  <h2 className="text-2xl font-bold ">Learning Resources</h2>
+                                  {/* <Book size={24} className="text-indigo-600" /> */}
+                                  <h2 className="text-4xl  ">Learning Resources</h2>
                                 </div>
             {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Training Materials</h1>
@@ -148,7 +148,7 @@ const TrainingMaterials = () => {
                     </CardDescription>
                   
                     <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="video-0" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                    <AccordionItem value="video-0" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                             <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                               <div className="flex items-center">
                                 <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -159,7 +159,7 @@ const TrainingMaterials = () => {
                             <Accordion type="single" collapsible className="w-full">
                       
                       
-                      <AccordionItem value="video-1" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                      <AccordionItem value="video-1" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -167,9 +167,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://www.youtube.com/embed/9csxVu8oLRc" 
                           title="Introduction to Competitive Programming"
                           frameBorder="0"
@@ -185,7 +185,7 @@ const TrainingMaterials = () => {
                         </AccordionContent>
                       </AccordionItem>
                    
-                      <AccordionItem value="video-2" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                      <AccordionItem value="video-2" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -193,9 +193,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/LT2BzOr9GeU" 
                           title="Intro to C++ STL for Competitive Programming"
                           frameBorder="0"
@@ -210,7 +210,7 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                      <AccordionItem value="video-3" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                      <AccordionItem value="video-3" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -218,9 +218,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/nER7o2DG85o" 
                           title="CP Platforms & Learning Resources"
                           frameBorder="0"
@@ -236,7 +236,7 @@ const TrainingMaterials = () => {
                         </AccordionContent>
                       </AccordionItem>
                      
-                         <AccordionItem value="video-4" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                         <AccordionItem value="video-4" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -244,9 +244,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/hJOpbfXEaiI" 
                           title="CP Platforms & Learning Resources"
                           frameBorder="0"
@@ -261,7 +261,7 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                       <AccordionItem value="video-5" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                       <AccordionItem value="video-5" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -269,9 +269,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/TJrRDkmf7C4" 
                           title="CP Platforms & Learning Resources"
                           frameBorder="0"
@@ -286,7 +286,7 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                       <AccordionItem value="video-6" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                       <AccordionItem value="video-6" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -294,9 +294,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/Oi51bKulR28" 
                           title="Graph Representation and Traversal"
                           frameBorder="0"
@@ -311,7 +311,7 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                      <AccordionItem value="video-7" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                      <AccordionItem value="video-7" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -319,9 +319,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                           <iframe 
-                          className="w-full h-full rounded-none"
+                          className="w-full h-full rounded-md"
                           src="https://youtube.com/embed/Yje8-eyuo1c" 
                           title="CP Platforms & Learning Resources"
                           frameBorder="0"
@@ -339,7 +339,7 @@ const TrainingMaterials = () => {
                     
                       
                       
-                      {/* <AccordionItem value="video-2" className="border border-gray-200 rounded-none mb-3 overflow-hidden">
+                      {/* <AccordionItem value="video-2" className="border border-gray-200 rounded-md mb-3 overflow-hidden">
                         <AccordionTrigger className="px-4 py-3 hover:bg-gray-50 transition-colors">
                           <div className="flex items-center">
                             <Video className="w-5 h-5 mr-2 text-indigo-600" />
@@ -347,9 +347,9 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-4 pt-2">
-                          <div className="aspect-video bg-gray-100 rounded-none flex items-center justify-center mb-3">
+                          <div className="aspect-video bg-gray-100 rounded-md flex items-center justify-center mb-3">
                             <iframe 
-                              className="w-full h-full rounded-none"
+                              className="w-full h-full rounded-md"
                               src="" 
                               title="Time Complexity and Big O Notation"
                               frameBorder="0"
@@ -381,8 +381,8 @@ const TrainingMaterials = () => {
               
               <div className="space-y-6 mb-16 ">
               <div className="flex items-center gap-2 mb-8 justify-center">
-                                  <Trophy size={24} className="text-indigo-600" />
-                                  <h2 className="text-2xl font-bold ">ICPC Algo Queen Winners</h2>
+                                  {/* <Trophy size={24} className="text-indigo-600" /> */}
+                                  <h2 className="text-4xl  ">ICPC Algo Queen Winners</h2>
                                 </div>
               {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">ICPC Algo Queen Winners</h1> */}
@@ -399,9 +399,9 @@ const TrainingMaterials = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Accordion type="single" collapsible className="space-y-4">
+                    <Accordion type="single" collapsible className="space-y-4 ">
 
-                      <AccordionItem value="2025" className="border rounded-none p-2 overflow-hidden">
+                      <AccordionItem value="2025" className="border p-2 overflow-hidden rounded-md">
                         <AccordionTrigger className="text-xl font-semibold text-indigo-600 px-4">
                           2025 Winners
                         </AccordionTrigger>
@@ -620,7 +620,7 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                    <AccordionItem value="2024" className="border rounded-none p-2 overflow-hidden">
+                    <AccordionItem value="2024" className="border rounded-md p-2 overflow-hidden">
                         <AccordionTrigger className="text-xl font-semibold text-indigo-600 px-4">
                           2024 Winners
                         </AccordionTrigger>
@@ -838,7 +838,7 @@ const TrainingMaterials = () => {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
-                      <AccordionItem value="2023" className="border rounded-none p-2 overflow-hidden">
+                      <AccordionItem value="2023" className="border rounded-md p-2 overflow-hidden">
                         <AccordionTrigger className="text-xl font-semibold text-indigo-600 px-4">
                           2023 Winners
                         </AccordionTrigger>
@@ -1142,7 +1142,7 @@ const TrainingMaterials = () => {
                         </AccordionContent>
                       </AccordionItem>
 
-                      <AccordionItem value="2022" className="border rounded-none p-2 overflow-hidden">
+                      <AccordionItem value="2022" className="border rounded-md p-2 overflow-hidden">
                         <AccordionTrigger className="text-xl font-semibold text-indigo-600 px-4">
                           2022 Winners
                         </AccordionTrigger>
@@ -1412,7 +1412,7 @@ const TrainingMaterials = () => {
       </div>
       
       <div className="text-center mt-12">
-        <h3 className="text-lg font-medium mb-2">Interested in Sponsoring?</h3>
+        <h3 className="text-xl font-medium mb-2">Interested in Sponsoring?</h3>
         <p className="text-sm text-gray-600 mb-4">
           Join our mission to promote competitive programming among students.
         </p>
@@ -1423,8 +1423,8 @@ const TrainingMaterials = () => {
     </CardContent>
   </Card>
   <div className="flex items-center gap-2 mb-8 justify-center">
-                                  <Building2Icon size={24} className="text-indigo-600" />
-                                  <h2 className="text-2xl font-bold ">Organized By</h2>
+                                  {/* <Building2Icon size={24} className="text-indigo-600" /> */}
+                                  <h2 className="text-4xl ">Organized By</h2>
                                 </div>
   {/* <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-indigo-600 mb-4">Organized By

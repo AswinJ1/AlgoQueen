@@ -13,9 +13,11 @@ import { ArrowRight, Book, BookImage, DoorClosed, LucideTrophy, MessageCircleWar
 const navigation = [
   { name: 'Home', to: 'home', type: 'section' },
   { name: 'About', to: 'about', type: 'section' },
-  { name: 'Learn', to: 'learn', type: 'section' },
+  // { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
   // { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
+  { name: 'Winners', to: '/winners', type: 'page' },
+  { name: 'Learn', to: '/learning-resources', type: 'page' },
   { name: 'FAQ', to: 'faq', type: 'section' },
   { name: 'Archive', type: 'dropdown', children: [
     { name: 'AlgoQueen 2025', to: '/archive/2025', type: 'page' }
@@ -23,7 +25,7 @@ const navigation = [
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
 
-const HeroComponent = () => {
+const HeroComponent = ({ hideHeroContent = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
@@ -150,6 +152,17 @@ const scrollToBottom = () => {
       </RouterLink>
     );
   } else if (item.type === 'section') {
+    if (location.pathname !== '/') {
+      return (
+        <button
+          key={item.name}
+          onClick={() => handleNavigation(item)}
+          className="text-sm font-semibold text-gray-900 cursor-pointer"
+        >
+          {item.name}
+        </button>
+      );
+    }
     return (
       <ScrollLink
         key={item.name}
@@ -162,6 +175,7 @@ const scrollToBottom = () => {
       </ScrollLink>
     );
   }
+
 })}
 
           </div>
@@ -219,16 +233,29 @@ const scrollToBottom = () => {
       ))}
     </div>
   ) : item.type === 'section' ? (
-    <ScrollLink
-      key={item.name}
-      to={item.to} // Matches the `name` in HomePage
-      smooth={true}
-      duration={500}
-      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-      onClick={() => setMobileMenuOpen(false)} // Close mobile menu after navigation
-    >
-      {item.name}
-    </ScrollLink>
+    location.pathname !== '/' ? (
+      <button
+        key={item.name}
+        onClick={() => {
+          setMobileMenuOpen(false);
+          handleNavigation(item);
+        }}
+        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 w-full text-left"
+      >
+        {item.name}
+      </button>
+    ) : (
+      <ScrollLink
+        key={item.name}
+        to={item.to} // Matches the `name` in HomePage
+        smooth={true}
+        duration={500}
+        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+        onClick={() => setMobileMenuOpen(false)} // Close mobile menu after navigation
+      >
+        {item.name}
+      </ScrollLink>
+    )
   ) : (
     <RouterLink
       key={item.name}
@@ -256,7 +283,9 @@ const scrollToBottom = () => {
           </DialogPanel>
         </Dialog>
       </header>
-      <section className="relative bg-gradient-to-br from-white via-purple-50 to-indigo-100 px-6 pt-16 lg:px-8 overflow-hidden">
+
+      {!hideHeroContent && (
+      <section className="relative bg-gradient-to-r from-white to-purple-100 px-6 pt-16 lg:px-8 overflow-hidden ">
         {/* Decorative background blobs */}
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-200/20 rounded-full blur-3xl pointer-events-none" />
@@ -264,11 +293,11 @@ const scrollToBottom = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-24 lg:mt-32 pb-16 lg:pb-24">
           <div>
-            <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6">
               {/* <span className="h-2 w-2 rounded-full bg-indigo-500 animate-pulse" /> */}
-              <span className="text-sm font-medium text-indigo-700 tracking-wide">ICPC Foundation Endorsed</span>
+              {/* <span className="text-sm font-medium text-indigo-700 tracking-wide ">ICPC Foundation Endorsed</span> */}
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-pink-800 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  text-pink-800 leading-[1.1] tracking-tight font-bold">
             ICPC Algo Queen 2026
 
 
@@ -278,20 +307,32 @@ const scrollToBottom = () => {
             </p> 
             {/* and sponsored by Jane Street */}
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <RouterLink
-                to="/leaderboard"
+            <RouterLink 
+                to="#"
                 ref={buttonRef}
-                className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden"
+                className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
                 id="register-button"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2 ">
                  Coming Soon
-                  {/* <LucideTrophy className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" /> */}
                 </span>
                 <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
               </RouterLink>
             </div>
-
+             {/* <button className="px-6 py-2  bg-indigo-700 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+        Coming Soon 
+      </button> */}
+     {/* <RouterLink
+                to="/leaderboard"
+                ref={buttonRef}
+                className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden rounded-md"
+                id="register-button"
+              >
+                <span className="relative z-10 flex items-center gap-2 ">
+                 Coming Soon
+                </span>
+                <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
+              </RouterLink> */}
           </div>
           {/* Image Grid */}
           <div className="relative" ref={imageRef}>
@@ -299,10 +340,10 @@ const scrollToBottom = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-200/30 via-purple-200/20 to-transparent rounded-3xl blur-2xl scale-105 pointer-events-none" />
             <div className="relative grid grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
               {[
-                { src: "pc-hero.jpeg", offset: "" },
-                { src: "algo-hero2.jpg", offset: "mt-10" },
-                { src: "algo-hero3.jpg", offset: "-mt-4" },
-                { src: "winner.jpg", offset: "mt-6" },
+                { src: "photo-1.jpeg", offset: "" },
+                { src: "photo.jpeg", offset: "mt-10" },
+                { src: "veronica.jpeg", offset: "-mt-4" },
+                { src: "photo-4.jpeg", offset: "mt-6" },
               ].map((item, index) => (
                 <Tilt key={index} tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02} transitionSpeed={400}>
                   <div
@@ -320,8 +361,8 @@ const scrollToBottom = () => {
             </div>
           </div>
         </div>
-        
       </section>
+      )}
     </div>
   );
 }

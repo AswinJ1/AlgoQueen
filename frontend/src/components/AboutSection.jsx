@@ -60,7 +60,7 @@ const AboutSection = () => {
             <BookOpen size={18}  className="text-indigo-600"/>
             <span>About  ICPC Algo Queen</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Empowering Women in Competitive Programming</h2>
+          <h2 className="text-4xl md:text-3xl font-medium mb-6">Empowering Women in Competitive Programming</h2>
 <p className="text-gray-600 mb-6">
 ICPC AlgoQueen 2026 is a premier global competitive programming competition designed to 
 empower young women in tech. With participants from schools and universities worldwide, 
@@ -124,8 +124,8 @@ showcase their talents and grow as problem solvers.
       {/* Why Participate Section */}
       <div className="mb-0">
         <div className="flex items-center gap-2 mb-8 justify-center">
-          <RocketIcon size={24} className="text-indigo-600" />
-          <h2 className="text-2xl font-bold ">Why Participate?</h2>
+          {/* <RocketIcon size={24} className="text-indigo-600" /> */}
+          <h2 className="text-4xl  ">Why Participate?</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
@@ -179,8 +179,8 @@ showcase their talents and grow as problem solvers.
         </Tilt>
       </div>
         <div className="flex items-center gap-2 mb-8 justify-center">
-          <LightbulbIcon size={24} className="text-indigo-600" />
-          <h2 className="text-2xl font-bold ">How does it work?</h2>
+          {/* <LightbulbIcon size={24} className="text-indigo-600" /> */}
+          <h2 className="text-4xl  ">How does it work?</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

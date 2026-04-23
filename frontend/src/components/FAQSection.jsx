@@ -34,7 +34,7 @@ const faqs = [
 
   },{
     question: "How will the competition be conducted?",
-    answer:"Round 1 will be online for all the participants and Round 2 will be On-Site for Indian participants and Online (remotely proctored) for International Participants. Registered participants will receive detailed instructions about the competition format and rules closer to the event date."
+    answer:"All rounds of the competition will be conducted online. Registered participants will receive detailed instructions regarding the format, platform, and rules closer to the event date."
   },
   {
     question:"Will there be any training provided before the competition?",
@@ -76,7 +76,7 @@ const FAQSection = () => {
         <SectionHeading 
           title="Frequently Asked Questions" 
           subtitle="Find answers to common questions about our products and services"
-          className={"text-black"}
+          className={"text-black "}
         />
         
         <Accordion type="single" collapsible className="w-full">

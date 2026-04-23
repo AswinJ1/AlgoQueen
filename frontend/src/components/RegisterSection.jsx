@@ -1,5 +1,5 @@
-import React from 'react';
-import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays, CodeIcon, CodeXmlIcon, Timer } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Calendar, Award, Info, Check, ArrowRight, Trophy, Zap, AwardIcon, Swords, Calendar1Icon, CalendarDays, CodeIcon, CodeXmlIcon, Timer, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Button = ({ children, onClick, className }) => (
@@ -17,368 +17,203 @@ const Card = ({ children, className }) => (
 
 const Separator = () => <hr className="border-gray-300 my-4" />;
 
+const testimonials = [
+
+    {
+    name: "Shraddha Srivastava",
+    role: "Rank 1, ICPC AlgoQueen 2025",
+    company: "School Category",
+    content: "I secured Global Rank 1 in the AlgoQueen competition, and it was an amazing learning experience. The problems were challenging and really tested my concepts, speed, and thinking under pressure.What helped me the most was consistent practice, focusing on problem-solving patterns, and solving questions in a timed environment. This competition improved my confidence and made me better at handling tough questions during contests.I would definitely recommend AlgoQueen to students who want to improve their DSA skills and prepare for competitive programming seriously.",
+    avatar: "/winner25c-1.jpg",
+   
+  },
+  {
+    name: "Aram odeh",
+    role: "Manager & Programming Trainer",
+    company: "Merge Code Academy",
+    content: "My name is Aram Odeh, and I was proud to be one of the best students in the school category at ICPC AlgoQueen.The experience was truly inspiring. It was well-organised, and the problems were creative and hard, which made you think more deeply and grow. The organising team was also very helpful and kind, which made the event even more special. They made sure that everyone was motivated and happy during the whole competition.AlgoQueen is more than just a contest; it's a way to build confidence and passion. I can't wait to take part again, and I think every aspiring coder should do the same.",
+    avatar: "/Aram odeh.jpg",
+  },
+
+
+];
+
+const TestimonialSlider = () => {
+  const [currentIndex, setCurrentPage] = useState(0);
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentPage((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    }, 6000); // slightly longer reading time
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentPage((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentPage((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
+  return (
+    <section className='py-12 sm:py-20'>
+      <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative'>
+        
+        {/* Title for the section */}
+        <div className="text-center mb-10">
+          <h2 className='text-4xl  text-gray-900 tracking-tight'>
+            Testimonials 
+          </h2>
+          <p className="text-gray-600 mt-2">Hear from our amazing competitors</p>
+        </div>
+
+        {/* Carousel Container */}
+        <div className='relative overflow-hidden'>
+          <div 
+            className='flex transition-transform duration-500 ease-out'
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className='w-full flex-shrink-0 px-2 sm:px-12'>
+                
+                {/* The Blue Card matching your reference */}
+                <div className='bg-[#4070f4] rounded-2xl p-8 sm:p-12 shadow-lg mx-auto relative text-white'>
+                  
+                  {/* Decorative Top Line */}
+                  <div className="w-4/5 max-w-md mx-auto h-[2px] bg-white/40 mb-8 rounded-full"></div>
+
+                  {/* Testimonial Text with large quotes */}
+                  <div className="relative px-4 sm:px-10 text-center mb-8">
+                    {/* Left Quote */}
+                    <span className="text-5xl sm:text-7xl font-serif text-white/30 absolute -left-2 sm:-left-4 -top-4 leading-none">
+                      "
+                    </span>
+                    
+                    <p className="text-[17px] sm:text-[19px] leading-relaxed text-white/95 font-medium relative z-10">
+                      {testimonial.content}
+                    </p>
+
+                    {/* Right Quote */}
+                    <span className="text-5xl sm:text-7xl font-serif text-white/30 absolute -right-2 sm:-right-4 bottom-0 translate-y-4 leading-none">
+                      "
+                    </span>
+                  </div>
+
+                  {/* Profile Block */}
+                  <div className='flex items-center justify-center gap-5'>
+                    {testimonial.avatar ? (
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name} 
+                        className='w-20 h-20 rounded-full object-cover object-top border-2 border-white/30 shadow-md'
+                      />
+                    ) : (
+                      <div className='w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-2xl border-2 border-white/30 shadow-md'>
+                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                    )}
+
+                    <div className='text-left'>
+                      <h4 className='font-bold text-white text-lg leading-tight'>{testimonial.name}</h4>
+                      <p className='text-sm text-blue-100 font-medium'>
+                        {testimonial.role}
+                      </p>
+                          <p className='text-sm text-blue-100 '>
+                        {testimonial.company}
+                      </p>
+                    </div>
+
+                    
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation Controls (Arrows & Dots) */}
+        <div className="flex items-center justify-center gap-6 mt-8">
+          <button 
+            onClick={prevSlide}
+            aria-label="Previous testimonial"
+            className="p-2 rounded-full text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <div className="flex gap-2">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentPage(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  currentIndex === idx ? 'w-8 bg-[#4070f4]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+
+          <button 
+            onClick={nextSlide}
+            aria-label="Next testimonial"
+            className="p-2 rounded-full text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
 const RegisterSection = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-white to-purple-100">
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
-             <div className="flex items-center gap-2 mb-8 justify-center">
-                      <Swords size={24} className="text-indigo-600" />
-                      <h2 className="text-2xl font-bold ">Competition Timeline</h2>
-                    </div>
-            {/* <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-algo-dark mb-4 text-indigo-600">Competition Information</h1>
-              <p className="text-xl text-gray-600">Join the ICPC AlgoQueen Competition</p>
-            </div> */}
-            
-            {/* <Card className="border-algo-accent border-l-4">
-              <h2 className="text-2xl text-algo-primary font-semibold">Registration Information</h2>
-              <p className="text-gray-600">Everything you need to know before registering</p>
-              <ul className="space-y-3 mt-4">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                  <span>Registration is <strong>completely free</strong>.</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                  <span>This competition allows <strong>only individual participation</strong>.</span>
-                </li>
-                <li className="flex items-start">
-                  <Info className="h-5 w-5 text-blue-500 mt-0.5 mr-2" />
-                  <span>Having one of your teachers registered as a mentor or guide is advised. There is no key role for the mentor other than to motivate you throughout the contest.</span>
-                </li>
-              </ul>
-              
-              <div className="mt-6">
-                <Button className={`flex items-center justify-center`} onClick={() => alert('Register Now')}>
-                  Register Now     <Zap size={16} />
-                </Button>
-              </div>
-            </Card> */}
-{/*             
+             {/* <div className="flex items-center gap-2 mb-8 justify-center">
+                <Swords size={24} className="text-indigo-600" />
+                <h2 className="text-2xl font-bold">Competition Timeline</h2>
+             </div> */}
+  
             <Card className="mt-8">
               <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
-                <Trophy className="h-6 w-6 mr-2 text-indigo-600 " /> Why Participate?
+                <Award className="h-6 w-6 mr-2 text-indigo-600" /> Awards & Prizes
               </h2>
-              <ul className="space-y-3 mt-4">
+              <ul className="space-y-3 mt-4 text-left">
                 <li className="flex items-start">
-                  <Award className="h-5 w-5 text-yellow-500 mt-0.5 mr-2" />
-                  <span>Win amazing prizes and get recognition for your coding skills.</span>
+                  <Check className="h-5 w-5 flex-shrink-0 text-yellow-500 mr-2" />
+                  <span>Gold Medals for top 5 students (Rank 1 to 5).</span>
                 </li>
                 <li className="flex items-start">
-                  <Zap className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                  <span>Take on coding challenges and improve your programming abilities.</span>
+                  <Check className="h-5 w-5 flex-shrink-0 text-gray-400 mr-2" />
+                  <span>Silver Medals for the next 5 students (Rank 6 to 10).</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 flex-shrink-0 text-amber-700 mr-2" />
+                  <span>Bronze Medals for the next 5 students (Rank 11 to 15).</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
+                  <span>Exciting gifts and Goodie Bags. **</span>
                 </li>
               </ul>
-            </Card>
-            
-            <Separator />
-                <Card className="mt-8">
-                <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
-                <Info className="h-6 w-6 text-algo-primary mr-2 text-indigo-600" />
-                Eligibility
-              </h2> <br />
-                <p className="mb-4">Any School/College student who has knowledge of at least one programming language (C++/JAVA/Python/Kotlin) can participate.</p>
-                <p className="flex items-center text-algo-secondary font-medium">
-                  <Award className="h-5 w-5 mr-2 text-indigo-600" />
-                  Special prizes exclusively for girl students.
-                </p>
-                    </Card> */}
-            
-            <Card className="mt-8">
-            <div className="space-y-6">
-                  <div>
-                 
-                  <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
-                  {/* <Calendar className="h-6 w-6 text-algo-primary mr-2 text-indigo-600" /> */}
-                  {/* Competition Stages */}
-              </h2> <br />
-
-  <div>
-   <div className="flex items-center justify-start flex-wrap gap-2">
-          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-          <h3 className="text-lg font-semibold text-algo-dark">
-          Open Registration 
-        </h3>
-        <div className="flex items-center gap-1 text-sm text-gray-700">
-          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-          {/* <span>April 27, 2026 </span> to <span>June 27, 2026</span> */}
-        
-        </div>
-        {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-          <Timer className="w-5 h-5 text-indigo-600" />
-          <span>7:00 PM to 9:00 PM IST</span>
-        </div> */}
-    </div>
-
-                    <p className="text-gray-600 mb-2">
-                      {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
-                     {/* TBD         */}
-                        <span>From April 29, 2026 </span> to <span>June 27, 2026</span>              
-                      </p>
-                  
-
-              {/* <a
-                href="https://www.codechef.com/skill-test/ALGOQPR2501"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-                aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
-              >
-                <CodeXmlIcon className="w-4 h-4" />
-                Practice Now
-              </a> */}
-
-
-                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
-                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
-     </div>
-    <Separator />
-      <div>
-   <div className="flex items-center justify-start flex-wrap gap-2">
-          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-          <h3 className="text-lg font-semibold text-algo-dark">
-          Online Training 
-        </h3>
-        <div className="flex items-center gap-1 text-sm text-gray-700">
-          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-          {/* <span>April 27, 2026 </span> to <span>June 27, 2026</span> */}
-        
-        </div>
-        {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-          <Timer className="w-5 h-5 text-indigo-600" />
-          <span>7:00 PM to 9:00 PM IST</span>
-        </div> */}
-    </div>
-
-                    <p className="text-gray-600 mb-2">
-                      {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
-                     {/* TBD         */}
-                        <span>From May 7, 2026 </span> to <span>June 19, 2026</span>              
-                      </p>
-                  
-
-              {/* <a
-                href="https://www.codechef.com/skill-test/ALGOQPR2501"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-                aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
-              >
-                <CodeXmlIcon className="w-4 h-4" />
-                Practice Now
-              </a> */}
-
-
-                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
-                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
-     </div>
-    <Separator />
-    
-     
-     <div>
-   <div className="flex items-center justify-start flex-wrap gap-2">
-        {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-        <h3 className="text-lg font-semibold text-algo-dark">
-          Practice Contest 1
-        </h3>
-        <div className="flex items-center gap-1 text-sm text-gray-700">
-          {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-          {/* <span>June 25, 2025 </span> */}
-        
-        </div>
-        {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-          <Timer className="w-5 h-5 text-indigo-600" />
-          <span>7:00 PM to 9:00 PM IST</span>
-        </div> */}
-    </div>
-
-                    <p className="text-gray-600 mb-2">
-                      {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
-                     {/* TBD       */}
-                       <span>July 4, 2026 </span>                
-                      </p>
-                  
-
-              {/* <a
-                href="https://www.codechef.com/skill-test/ALGOQPR2501"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-                aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
-              >
-                <CodeXmlIcon className="w-4 h-4" />
-                Practice Now
-              </a> */}
-
-
-                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
-                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
-     </div>
-     
-                   <div>
-                   <div className="flex items-center justify-start flex-wrap gap-2">
-  {/* <CalendarDays className="w-5 h-5 text-indigo-600" /> */}
-  <h3 className="text-lg font-semibold text-algo-dark">
-    Practice Contest 2
-  </h3>
-  {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-    <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>June 28, 2025</span>
-   
-  </div>
-   <div className="flex items-center gap-1 text-sm text-gray-700">
-    <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 PM to 5:00 PM IST</span>
-  </div> */}
-</div>
-
-                    <p className="text-gray-600 mb-2">
-                            {/* This is a practice contest for the participants to get familiar with the platform and the types of problems that will be asked in the main contest. */}
-                      {/* TBD */}
-                          <span>July 11, 2026</span>
-                      </p>
-                  
-
-{/* <a
-  href="https://www.codechef.com/skill-test/ALGOQPR2502"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
->
-  <CodeXmlIcon className="w-4 h-4" />
-  Practice Now
-</a> */}
-
-
-                    {/* <p className="text-gray-600 mb-2"><strong>Practice Contest 1: </strong>May 24 Saturday</p>
-                    <p className="text-gray-600"><strong>Practice Contest 2: </strong>June 7 Saturday</p> */}
-                  </div>
-                  <Separator />
-                  <div className="flex items-center justify-start flex-wrap gap-2">
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2026 – Online Prelims </h3>
-                     {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-    <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>July 5 , 2025 </span>
-  </div>
-         <div className="flex items-center gap-1 text-sm text-gray-700">
-    <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 PM to 6:00 PM IST</span>
-  </div> */}
-  </div>
-                    {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
-                    <p className="mb-2"><strong>Platform:</strong> CodeChef</p>
-                    {/* <a
-  href="https://www.codechef.com/skill-test/ALGOQ25OL"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
->
-  <CodeXmlIcon className="w-4 h-4" />
-  Attempt Finals
-</a> */}
-                    
-                    <p>
-                          {/* This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity. */}
-                      <span>July 18, 2026</span>
-                      </p>
-                                        <Separator />
-
-                      <div className="flex items-center justify-start flex-wrap gap-2">
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2026 – Finals</h3>
-                     {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-    <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>July 5 , 2025 </span>
-  </div>
-         <div className="flex items-center gap-1 text-sm text-gray-700">
-    <Timer className="w-5 h-5 text-indigo-600" />
-    <span>3:00 PM to 6:00 PM IST</span>
-  </div> */}
-  </div>
-                    {/* <p className="text-gray-600 mb-2">June 14 Saturday</p> */}
-                    <p className="mb-2"><strong>Platform:</strong> CodeChef</p>
-                    {/* <a
-  href="https://www.codechef.com/skill-test/ALGOQ25OL"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all"
-  aria-label="Open ICPC AlgoQueen 2025 Practice Contest in new tab"
->
-  <CodeXmlIcon className="w-4 h-4" />
-  Attempt Finals
-</a> */}
-                    
-                    <p>
-                          {/* This is an elimination round. This round will test the participants on their problem-solving skills using algorithms and data structures. The competition will consist of a set of challenging problems that the participant must solve within a limited time frame. Any eligible student can participate in this round. The contest is fully online. Participants only need to have a PC or a Laptop and stable internet connectivity. */}
-                      <span>August 2, 2026</span>
-                      </p>
-                  </div>
-                  
-                  <Separator />
-                  
-                  {/* <div>
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">Round 2 - Finals (Online)</h3>
-                    <p className="text-gray-600 mb-2">TBD</p>
-                    <p>Online for both Indian Students and International Contestants</p>
-                  </div> */}
-                  {/* <div className='flex items-center justify-start flex-wrap gap-2'>
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3> */}
-                    {/* <div className="flex items-center gap-1 text-sm text-gray-700">
-    <CalendarDays className="w-5 h-5 text-indigo-600" />
-    <span>June 28 , 2025</span>
-  </div> */}
-                    {/* <p className="text-gray-600">June 28 Saturday </p> */}
-                  {/* </div> */}
-                  
-                  {/* <Separator /> */}
-                  
-              
-{/*                   
-                  <Separator /> */}
-                  
-                  {/* <div>
-                    <h3 className="text-lg font-semibold text-algo-dark mb-2">ICPC Algo Queen 2025 – Finals</h3>
-                    <p className="text-gray-600">TBD</p>
-                  </div> */}
-                </div>
-            </Card>
-            <Card className="mt-8">
-              <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
-                <Award className="h-6 w-6 mr-2  text-indigo-600" /> Awards & Prizes
-              </h2>
-            <ul className="space-y-3 mt-4 text-left">
-            <li className="flex items-start">
-              <Check className="h-5 w-5 flex-shrink-0 text-yellow-500 mr-2" />
-              <span>Gold Medals for top 5 students (Rank 1 to 5).</span>
-            </li>
-            <li className="flex items-start">
-              <Check className="h-5 w-5 flex-shrink-0 text-gray-400 mr-2" />
-              <span>Silver Medals for the next 5 students (Rank 6 to 10).</span>
-            </li>
-            <li className="flex items-start">
-              <Check className="h-5 w-5 flex-shrink-0 text-amber-700 mr-2" />
-              <span>Bronze Medals for the next 5 students (Rank 11 to 15).</span>
-            </li>
-            {/* <li className="flex items-start">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
-              <span>Sponsored Trip to Baku – A chance to attend the ICPC World Finals 2025 in Baku, Azerbaijan. *</span>
-            </li> */}
-            <li className="flex items-start">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500 mr-2" />
-              <span>Exciting gifts and Goodie Bags. **</span>
-            </li>
-          </ul>
            
-               <p className="mt-4 text-sm text-gray-600">*Only Applicable for School Students.</p>
-              <p className="mt- text-sm text-gray-600">**Further prize details will be announced later.</p>
+              <p className="mt-4 text-sm text-gray-600">*Only Applicable for School Students.</p>
+              <p className="mt-2 text-sm text-gray-600">**Further prize details will be announced later.</p>
             </Card>
           </div>
-          
-         
         </div>
+        
+        {/* Custom Testimonial Slider inserted here */}
+        <TestimonialSlider />
+
       </main>
     </div>
   );
