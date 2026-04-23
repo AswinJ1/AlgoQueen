@@ -187,7 +187,7 @@ showcase their talents and grow as problem solvers.
           {[
             { icon: <BookOpen size={32} />, title: "Learn", text: "Gain access to expert mentorship, structured training sessions, and problem-solving resources to sharpen your coding skills." },
             { icon: <Target size={32} />, title: "Compete", text: " Participate in two exciting rounds of competition, solving challenging problems and testing your abilities against top female coders worldwide." },
-            { icon: <Medal size={32} />, title: "Win", text: "Gain recognition and win exciting rewards, including a sponsored trip to the ICPC World Finals 2025 in Baku, Azerbaijan" }
+            { icon: <Medal size={32} />, title: "Win", text: "Gain recognition and win exciting rewards, including a sponsored trip to the ICPC World Finals " }
           ].map((item, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-indigo-600 mb-4">{item.icon}</div>
