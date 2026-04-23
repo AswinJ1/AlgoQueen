@@ -6,12 +6,12 @@ const timeline = [
     label: "Registration Ends",
   },
   {
-    date: "18 July",
+    date: "July 18",
     label: "Online Prelims",
   },
   {
-    date: "2 August",
-    label: "Onsite Regionals",
+    date: "August 2",
+    label: "Online Finals",
   },
 ];
 

@@ -40,7 +40,7 @@ const speakers = [
   },
   {
     name: "Hetvi Bagdai",
-    role: "Sofrtware Engineer Intern",
+    role: "Software Engineer Intern",
     company:"Google",
     logo: <FcGoogle size={20} />,
     image:
