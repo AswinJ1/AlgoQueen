@@ -11,7 +11,7 @@ const timeline = [
   },
   {
     date: "August 2",
-    label: "Onsite Regionals",
+    label: "Online Finals",
   },
 ];
 
