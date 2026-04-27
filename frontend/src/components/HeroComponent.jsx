@@ -297,8 +297,8 @@ const scrollToBottom = () => {
               {/* <span className="h-2 w-2 rounded-full bg-indigo-500 animate-pulse" /> */}
               {/* <span className="text-sm font-medium text-indigo-700 tracking-wide ">ICPC Foundation Endorsed</span> */}
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  text-pink-800 leading-[1.1] tracking-tight font-bold">
-            ICPC Algo Queen 2026
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  text-black leading-[1.1] tracking-tight font-bold ">
+            ICPC Algo Queen <span className='text-pink-700'>2026</span>
 
 
             </h1>

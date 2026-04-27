@@ -22,18 +22,46 @@ const testimonials = [
     {
     name: "Shraddha Srivastava",
     role: "Rank 1, ICPC AlgoQueen 2025",
-    company: "School Category",
+    company: "College Category",
     content: "I secured Global Rank 1 in the AlgoQueen competition, and it was an amazing learning experience. The problems were challenging and really tested my concepts, speed, and thinking under pressure.What helped me the most was consistent practice, focusing on problem-solving patterns, and solving questions in a timed environment. This competition improved my confidence and made me better at handling tough questions during contests.I would definitely recommend AlgoQueen to students who want to improve their DSA skills and prepare for competitive programming seriously.",
     avatar: "/winner25c-1.jpg",
    
   },
   {
-    name: "Aram odeh",
-    role: "Manager & Programming Trainer",
-    company: "Merge Code Academy",
-    content: "My name is Aram Odeh, and I was proud to be one of the best students in the school category at ICPC AlgoQueen.The experience was truly inspiring. It was well-organised, and the problems were creative and hard, which made you think more deeply and grow. The organising team was also very helpful and kind, which made the event even more special. They made sure that everyone was motivated and happy during the whole competition.AlgoQueen is more than just a contest; it's a way to build confidence and passion. I can't wait to take part again, and I think every aspiring coder should do the same.",
-    avatar: "/Aram odeh.jpg",
+    name:"Anvesha Chauhan",
+    role: "Rank 3, ICPC AlgoQueen 2025",
+    company: "College Category",
+    content: "Hi! AlgoQueen was honestly such a great experience for me. It was both challenging and really fun, and I learned a lot while solving problems and competing alongside so many talented women coders. What I loved most was how encouraging and inspiring the whole community felt. It pushed me to challenge myself and gave me more confidence in my coding journey. Really grateful to have been a part of it!",
+    avatar: "/winner25c-3.jpeg",
   },
+  {
+    name: "Nandini",
+    role: "Rank 5, ICPC AlgoQueen 2025",
+    company: "College Category",
+    content: "Participating in AlgoQueen ICPC was such a fun and rewarding experience! It really pushed me to think deeper, solve problems faster, and stay calm under pressure (which was not always easy). I loved competing alongside so many talented people, it made the whole journey even more exciting and motivating.",
+    avatar: "/winner25c-5.jpg",   
+  },
+  {
+    name:"Drishti",
+    role: "Rank 8, ICPC AlgoQueen 2025",
+    company: "College Category",
+    content: "I’m really grateful to be ranked among the top 10 in Algo Queen 2025.The experience was both challenging and fun. I especially appreciated how well the contest was organized and the quality of questions throughout.It was a great learning experience, and I’m glad I got the chance to be part of it.Thanks again for the opportunity!",
+    avatar: "/winner25c-8.jpeg",
+  },
+  {
+    name: "Aram odeh",
+    role: "Rank 15, ICPC AlgoQueen 2025",
+    company: "School Category",
+    content: "My name is Aram Odeh, and I was proud to be one of the best students in the school category at ICPC AlgoQueen.The experience was truly inspiring. It was well-organised, and the problems were creative and hard, which made you think more deeply and grow. The organising team was also very helpful and kind, which made the event even more special. They made sure that everyone was motivated and happy during the whole competition.AlgoQueen is more than just a contest; it's a way to build confidence and passion. I can't wait to take part again, and I think every aspiring coder should do the same.",
+    avatar: "/winner25s-15.jpg",
+  },
+  {
+    name: "Yogita Singh",
+    role: "Rank 20, ICPC AlgoQueen 2025",
+    company: "College Category",
+    content: "My experience with ICPC Algoqueen 2026 was nothing short of amazing. By putting me under a time limit and a proctored environment, it provided me with a platform to test my skills. This made me aware of my strengths and weaknesses, and hence enabled me to improve myself. The competition itself made me reflect on where I stand, and encouraged me to push myself further. I would recommend  all the female coders to take this test. It's an experience that helps you grow, no matter the outcome.",
+  }
+
 
 
 ];
@@ -45,7 +73,7 @@ const TestimonialSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentPage((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-    }, 6000); // slightly longer reading time
+    }, 10000); // slightly longer reading time
     return () => clearInterval(timer);
   }, []);
 
@@ -107,7 +135,7 @@ const TestimonialSlider = () => {
                       <img 
                         src={testimonial.avatar} 
                         alt={testimonial.name} 
-                        className='w-20 h-20 rounded-full object-cover object-top border-2 border-white/30 shadow-md'
+                        className='w-20 h-20 rounded-full   object-cover object-center border-2 border-white/30 shadow-md'
                       />
                     ) : (
                       <div className='w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-2xl border-2 border-white/30 shadow-md'>
