@@ -60,6 +60,7 @@ const testimonials = [
     role: "Rank 20, ICPC AlgoQueen 2025",
     company: "College Category",
     content: "My experience with ICPC Algoqueen 2026 was nothing short of amazing. By putting me under a time limit and a proctored environment, it provided me with a platform to test my skills. This made me aware of my strengths and weaknesses, and hence enabled me to improve myself. The competition itself made me reflect on where I stand, and encouraged me to push myself further. I would recommend  all the female coders to take this test. It's an experience that helps you grow, no matter the outcome.",
+    avatar: "/yogitasingh.jpg",
   }
 
 
