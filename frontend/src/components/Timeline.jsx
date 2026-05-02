@@ -2,7 +2,7 @@
 
 const timeline = [
   {
-    date: " June 27",
+    date: " July 10",
     label: "Registration Ends",
   },
   {

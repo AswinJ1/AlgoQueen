@@ -43,9 +43,9 @@ const HomePage = () => {
         <About />
       </Element>
 
-      <Element name="speakers" id="speakers">
+      {/* <Element name="speakers" id="speakers">
       <SpeakersSection/>
-      </Element>
+      </Element> */}
       
       <Element name="register" id="register">
         <RegisterSection />

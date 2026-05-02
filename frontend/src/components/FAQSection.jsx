@@ -51,7 +51,7 @@ const faqs = [
 
   {
     question:"Will certificates be provided for participation?",
-    answer:"Yes, participants will receive certificates acknowledging their participation in ICPC Algo Queen 2025. "
+    answer:"Yes, participants will receive certificates acknowledging their participation in ICPC Algo Queen 2026. "
   },
   {
     question: "How can I stay updated about the competition?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question:"How can I get involved as a sponsor or mentor?",
-    answer:"If you’re interested in sponsoring or mentoring participants, please contact us at algoqueen@cb.amrita.ed For any additional questions, don’t hesitate to get in touch with us. We’re here to help you have the best experience in ICPC Algo Queen 2024!"
+    answer:"If you’re interested in sponsoring or mentoring participants, please contact us at algoqueen@cb.amrita.edu For any additional questions, don’t hesitate to get in touch with us. We’re here to help you have the best experience in ICPC Algo Queen 2026!"
   }
 
 ];

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SpeakerIcon } from "lucide-react";
 import { FcGoogle } from 'react-icons/fc'; // <-- Import the colored version
+import { image } from "framer-motion/client";
 
 const speakers = [
   {
@@ -46,6 +47,23 @@ const speakers = [
     image:
       "Hetvi Bagdai.jpeg?q=80&w=687&auto=format&fit=crop",
   },
+  {
+    name:"Yogita Singh",
+    role:"Final Year, M.Tech (M&C)",
+    company:" IIT(ISM)",
+    logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
+    image:
+      "yogitasingh.jpg?q=80&w=687&auto=format&fit=crop",
+  }
+  ,
+  {
+    name:"Sidrah Aaishah ",
+    role:"3rd year CSE",
+    company:"IIIT Nagpur",
+    logo: <img src="/iiitnagpur.png" width={20} height={20} />,
+    image:
+      "Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop",
+  }
    
 
 ];
@@ -63,7 +81,7 @@ export default function SpeakersSection() {
   );
 
   return (
-    <section className="bg-gradient-to-r from-white to-purple-100 py-16 px-6">
+    <section className="bg-gradient-to-r from-white to-purple-100 pt-36 pb-16 px-6">
       
       {/* Heading */}
       <div className="flex items-center gap-2 mb-10 justify-center">
