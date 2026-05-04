@@ -45,7 +45,7 @@ const RegisterSection = () => {
                   <span>This competition allows <strong>only individual participation</strong>.</span>
                 </li>
                 <li className="flex items-start">
-                  <Info className="h-5 w-5 text-blue-500 mt-0.5 mr-2" />
+                  <Info className="h-5 w-5 text-pink-500 mt-0.5 mr-2" />
                   <span>Having one of your teachers registered as a mentor or guide is advised. There is no key role for the mentor other than to motivate you throughout the contest.</span>
                 </li>
               </ul>

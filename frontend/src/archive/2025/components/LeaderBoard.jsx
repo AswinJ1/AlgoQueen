@@ -185,7 +185,7 @@ export default function LeaderBoard() {
               onClick={() => handleFilterChange('all')}
               className={`px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-sm text-center ${
                 selectedFilter === 'all'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-pink-500 text-white'
                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
               }`}
             >
@@ -195,7 +195,7 @@ export default function LeaderBoard() {
               onClick={() => handleFilterChange('college')}
               className={`px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-sm text-center ${
                 selectedFilter === 'college'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-pink-500 text-white'
                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
               }`}
             >
@@ -205,7 +205,7 @@ export default function LeaderBoard() {
               onClick={() => handleFilterChange('school')}
               className={`px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-sm text-center ${
                 selectedFilter === 'school'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-pink-500 text-white'
                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
               }`}
             >
@@ -257,7 +257,7 @@ export default function LeaderBoard() {
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   user.category === 'college' 
                     ? 'bg-green-100 text-green-800' 
-                    : 'bg-blue-100 text-blue-800'
+                    : 'bg-pink-100 text-pink-800'
                 }`}>
                   {user.category}
                 </span>
@@ -265,7 +265,7 @@ export default function LeaderBoard() {
               
               <div className="text-center">{user.attempted}</div>
               <div className="text-center text-xs">{user.totalTime}</div>
-              <div className="text-center font-semibold text-blue-600">{user.points}</div>
+              <div className="text-center font-semibold text-pink-600">{user.points}</div>
             </div>
 
             {/* Mobile/Tablet Layout */}
@@ -281,7 +281,7 @@ export default function LeaderBoard() {
                     <div className="text-xs text-gray-500">@{user.userHandle}</div>
                   </div>
                 </div>
-                <div className="text-right font-semibold text-blue-600 text-lg">
+                <div className="text-right font-semibold text-pink-600 text-lg">
                   {user.points}
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function LeaderBoard() {
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   user.category === 'college' 
                     ? 'bg-green-100 text-green-800' 
-                    : 'bg-blue-100 text-blue-800'
+                    : 'bg-pink-100 text-pink-800'
                 }`}>
                   {user.category}
                 </span>
@@ -376,7 +376,7 @@ export default function LeaderBoard() {
                     key={pageNum}
                     onClick={() => changePage(pageNum)}
                     className={`px-3 py-1 border rounded text-sm text-center ${
-                      currentPage === pageNum ? 'bg-blue-500 text-white' : 'hover:bg-gray-100'
+                      currentPage === pageNum ? 'bg-pink-500 text-white' : 'hover:bg-gray-100'
                     }`}
                   >
                     {pageNum}
@@ -411,10 +411,10 @@ export default function LeaderBoard() {
     </p>
 
     <div className="flex items-center gap-2 mt-2">
-      <Mail className="w-4 h-4 text-blue-600" />
+      <Mail className="w-4 h-4 text-pink-600" />
       <a
         href="mailto:algoqueen@cb.amrita.edu"
-        className="text-blue-700 hover:text-blue-900 font-medium underline underline-offset-2"
+        className="text-pink-700 hover:text-pink-900 font-medium underline underline-offset-2"
       >
         algoqueen@cb.amrita.edu
       </a>

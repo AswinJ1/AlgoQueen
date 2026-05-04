@@ -3,7 +3,7 @@ const TestimonialCard = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
       
-      <div className="bg-blue-700 text-white rounded-2xl p-8 max-w-3xl w-full flex items-center justify-between gap-6 shadow-lg">
+      <div className="bg-pink-700 text-white rounded-2xl p-8 max-w-3xl w-full flex items-center justify-between gap-6 shadow-lg">
         
         {/* Left Content */}
         <div className="flex-1">
