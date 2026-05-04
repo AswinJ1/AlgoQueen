@@ -107,7 +107,7 @@ const TestimonialSlider = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className='w-full flex-shrink-0 px-2 sm:px-12'>
                 
-                {/* The Blue Card matching your reference */}
+                {/* The pink Card matching your reference */}
                 <div className='bg-[#4070f4] rounded-2xl p-8 sm:p-12 shadow-lg mx-auto relative text-white'>
                   
                   {/* Decorative Top Line */}
@@ -146,10 +146,10 @@ const TestimonialSlider = () => {
 
                     <div className='text-left'>
                       <h4 className='font-bold text-white text-lg leading-tight'>{testimonial.name}</h4>
-                      <p className='text-sm text-blue-100 font-medium'>
+                      <p className='text-sm text-pink-100 font-medium'>
                         {testimonial.role}
                       </p>
-                          <p className='text-sm text-blue-100 '>
+                          <p className='text-sm text-pink-100 '>
                         {testimonial.company}
                       </p>
                     </div>

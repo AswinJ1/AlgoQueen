@@ -10,6 +10,7 @@ const speakers = [
     name: "Jaskaran Singh",
     role: "Software Engineer",
     logo: <FcGoogle size={20} />,
+    rank:"",
     company: "Google",
     description: [
       "Former co-founder of Opendoor.",
@@ -47,23 +48,35 @@ const speakers = [
     image:
       "Hetvi Bagdai.jpeg?q=80&w=687&auto=format&fit=crop",
   },
-  {
+    {
+    name:"Shinjan Chaturvedi",
+    role:"Software Engineer",
+    rank:"7th Rank AlgoQueen 2025 ",
+    company:"Rubrik",
+    logo: <img src="/company-icons/rubrik.jpg" width={20} height={20} />,
+    image:
+      "Shinjana_chaturvedi.webp?q=80&w=687&auto=format&fit=crop",
+  },
+
+   {
     name:"Yogita Singh",
     role:"Final Year, M.Tech (M&C)",
     company:" IIT(ISM)",
+    rank:"20th Rank AlgoQueen 2025",
     logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
     image:
       "yogitasingh.jpg?q=80&w=687&auto=format&fit=crop",
-  }
-  ,
+  },
   {
     name:"Sidrah Aaishah ",
     role:"3rd year CSE",
     company:"IIIT Nagpur",
+    rank:"21st Rank AlgoQueen 2025",
     logo: <img src="/iiitnagpur.png" width={20} height={20} />,
     image:
       "Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop",
-  }
+  },
+
    
 
 ];
@@ -125,8 +138,10 @@ export default function SpeakersSection() {
                 {member.company && (
                   <p>{member.company}</p>
                 )}
-              </div>
+              </div> 
             </div>
+                          {member.rank && <p className="text-pink-600">{member.rank}</p>}
+
 
             {/* Description */}
             {/* <p className="text-sm font-medium text-gray-600 mt-1">
