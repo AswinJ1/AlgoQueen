@@ -51,13 +51,19 @@ const speakers = [
     {
     name:"Shinjan Chaturvedi",
     role:"Software Engineer",
-    rank:"7th Rank AlgoQueen 2025 ",
     company:"Rubrik",
     logo: <img src="/company-icons/rubrik.jpg" width={20} height={20} />,
     image:
       "Shinjana_chaturvedi.webp?q=80&w=687&auto=format&fit=crop",
   },
-
+ {
+    name:"Shraddha Gulati",
+    role:"Software Engineer",
+    company:"Google",
+    logo: <FcGoogle size={20} />,
+    image:
+      "Shraddha_Gulati.jpg?q=80&w=687&auto=format&fit=crop",
+  },
    {
     name:"Yogita Singh",
     role:"Final Year, M.Tech (M&C)",
@@ -76,6 +82,7 @@ const speakers = [
     image:
       "Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop",
   },
+ 
 
    
 
