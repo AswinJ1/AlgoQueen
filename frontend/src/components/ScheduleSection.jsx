@@ -8,7 +8,7 @@ const scheduleData = [
   { date: "May 28", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
   { date: "May 29", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
   { date: "May 30", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Trilasha Mazumder", role: "Software Engineer II", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Trilasha Mazumder.jpg?q=80&w=687&auto=format&fit=crop" },
-  { date: "June 1", time: "6:00 pm - 7:00 pm  IST", title: "Graphs (basic traversal, shortest path some practice problems)", speaker: "Hetvi Bagdai", role: "Software Engineer Intern", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Hetvi Bagdai.jpeg?q=80&w=687&auto=format&fit=crop" },
+  { date: "June 1", time: "6:00 pm - 7:00 pm  IST", title: "Graphs: Basic Traversal, Shortest Path & Practice Problems", speaker: "Hetvi Bagdai", role: "Software Engineer Intern", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Hetvi Bagdai.jpeg?q=80&w=687&auto=format&fit=crop" },
   { date: "June 4", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
   { date: "June 6", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Yogita Singh", role: "Final Year, M.Tech (M&C)", company: "IIT(ISM)", logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />, avatar: "/yogitasingh.jpg?q=80&w=687&auto=format&fit=crop" },
   { date: "June 8", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
