@@ -10,6 +10,7 @@ import Footer from '../components/Footer'
 import InfoSection from '../components/InfoCard'
 import TimelineSection from '@/components/Timeline'
 import SpeakersSection from '@/components/SpeakersSection'
+import CommunityPartners from '@/components/Partners'
 import { Element } from 'react-scroll'
 
 const HomePage = () => {
@@ -46,7 +47,11 @@ const HomePage = () => {
       <Element name="speakers" id="speakers">
       <SpeakersSection/>
       </Element>
-      
+
+      <Element name="partners" id="partners">
+        <CommunityPartners />
+      </Element>
+
       <Element name="register" id="register">
         <RegisterSection />
       </Element>
