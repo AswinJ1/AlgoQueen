@@ -58,13 +58,20 @@ const ResourcesPage = () => {
                               <span>Intermediate & Advanced – Improve your problem-solving with expert-curated content!</span>
                             </li>
                           </ul> */}
-                          <div className="mt-4">
-                          <button className="text-sm font-medium text-indigo-600 flex items-center   "  rel="noopener noreferrer">
-                            <span className="">Start learning </span>
-                            
-                            {/* <StarsIcon size={18} className="ml-1 text-indigo-600" /> */}
-                          </button>
-                        </div>
+                          <div className="mt-8 flex flex-wrap gap-8 items-center">
+                            <a href="https://cses.fi/problemset/" target="_blank" rel="noopener noreferrer" className="overflow-visible" title="CSES Problem Set">
+                              <img src="https://cses.fi/logo.png" alt="CSES" className="h-12 sm:h-14 object-contain hover:scale-125 transition-transform duration-300" onError={(e) => { e.target.src = "https://via.placeholder.com/150x50?text=CSES"; }} />
+                            </a>
+                            <a href="https://atcoder.jp/" target="_blank" rel="noopener noreferrer" className="overflow-visible" title="AtCoder">
+                              <img src="/company-icons/atcoder.png" alt="AtCoder" className="h-12 sm:h-14 object-contain hover:scale-125 transition-transform duration-300" onError={(e) => { e.target.src = "https://via.placeholder.com/150x50?text=AtCoder"; }} />
+                            </a>
+                            <a href="https://usaco.guide/" target="_blank" rel="noopener noreferrer" className="overflow-visible" title="USACO Guide">
+                              <img src="/company-icons/usaco_guide.png" alt="USACO Guide" className="h-12 sm:h-14 object-contain hover:scale-125 transition-transform duration-300" onError={(e) => { e.target.src = "https://via.placeholder.com/150x50?text=USACO"; }} />
+                            </a>
+                            <a href="https://www.youtube.com/@OMath" target="_blank" rel="noopener noreferrer" className="overflow-visible" title="OMath YouTube">
+                              <img src="/company-icons/channels4_profile.jpg" alt="OMath YouTube" className="h-12 sm:h-14 object-contain hover:scale-125 transition-transform duration-300" onError={(e) => { e.target.src = "https://via.placeholder.com/150x50?text=OMath"; }} />
+                            </a>
+                          </div>
 
                         </CardContent>
                       </Card>
