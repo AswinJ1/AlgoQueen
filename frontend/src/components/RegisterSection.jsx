@@ -56,6 +56,14 @@ const testimonials = [
     avatar: "/winner25s-15.jpg",
   },
   {
+    name:"Violeta Kastreva",
+    role:"Quantitative Trader Intern",
+    company:"IMC Trading",
+    content:"ICPC AlgoQueen was a truly valuable experience for me. I enjoyed the challenge of the competition, but what stood out most was the sense of community and encouragement it created. Initiatives like this are important because they give more women the confidence to engage deeply with algorithms, problem-solving, and competitive programming, and to see themselves succeeding in this field. I’d strongly encourage future participants to take part.",
+    avatar:"/Violeta Kastreva.jpg",
+
+  },
+  {
     name: "Yogita Singh",
     role: "Rank 20, ICPC AlgoQueen 2025",
     company: "College Category",
