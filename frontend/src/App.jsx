@@ -11,6 +11,7 @@ import WinnersPage from './pages/Winners';
 import ResourcesPage from './pages/Resources';
 import Speakerpage from './pages/Speakerpage';
 import Schedule from './pages/Schedule';
+import PricePage from './pages/PricePage';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/winners" element={<WinnersPage />} />
         <Route path="/learning-resources" element={<ResourcesPage />} />
+        <Route path="/price" element={<PricePage />} />
         {/* <Route path="/speakers" element={<Speakerpage />} /> */}
         <Route path="/schedule" element={<Schedule />} />
         {/* <Route path="/ranklist" element={<SelectionCriteriaPage />} /> */}

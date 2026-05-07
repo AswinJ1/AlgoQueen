@@ -91,11 +91,11 @@ const ResourcesPage = () => {
                             <button className="text-sm font-medium text-indigo-600 ">
                               Start practicing 
                             </button>
-                            {/* href="#" target='blank'  */}
                           </div>
                         </CardContent>
                       </Card>
-                      
+                                                  {/* href="#" target='blank'  */}
+
                     </div>
                           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                           {/* Left side: Live Sessions */}
