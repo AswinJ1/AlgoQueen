@@ -16,7 +16,7 @@ const navigation = [
   // { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
   // { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
-  // {name:"Speakers", to:"/speakers", type:'page'},
+  {name:"Prizes", to:"/prizes", type:'page'},
   {name:"Schedule", to:"/schedule", type:'page'},
   { name: 'Winners', to: '/winners', type: 'page' },
   { name: 'Resources', to: '/learning-resources', type: 'page' },
