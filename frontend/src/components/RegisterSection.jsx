@@ -219,7 +219,7 @@ const RegisterSection = () => {
                 <h2 className="text-2xl font-bold">Competition Timeline</h2>
              </div> */}
   
-            <Card className="mt-8">
+            {/* <Card className="mt-8">
               <h2 className="text-2xl flex items-center text-algo-primary font-semibold">
                 <Award className="h-6 w-6 mr-2 text-indigo-600" /> Awards & Prizes
               </h2>
@@ -244,7 +244,7 @@ const RegisterSection = () => {
            
               <p className="mt-4 text-sm text-gray-600">*Only Applicable for School Students.</p>
               <p className="mt-2 text-sm text-gray-600">**Further prize details will be announced later.</p>
-            </Card>
+            </Card> */}
           </div>
         </div>
         
