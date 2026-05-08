@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaCrown, FaTabletAlt, FaKeyboard, FaHeadphones, FaAmazon, FaTrophy, FaShieldAlt, FaMedal, FaSchool, FaGraduationCap, FaGift } from 'react-icons/fa'
-import { Code, Trophy, Lightbulb } from 'lucide-react'
+import { Code, Trophy, Lightbulb, Plane, PlaneTakeoff } from 'lucide-react'
 
 const Sparkle = ({ className, delay = 0 }) => (
-  <motion.svg 
-    viewBox="0 0 24 24" 
-    fill="currentColor" 
+  <motion.svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
     className={className}
-    animate={{ 
+    animate={{
       scale: [1, 1.4, 1],
       opacity: [0.5, 1, 0.5],
       filter: ["drop-shadow(0px 0px 0px rgba(255,255,255,0))", "drop-shadow(0px 0px 8px currentColor)", "drop-shadow(0px 0px 0px rgba(255,255,255,0))"]
@@ -26,7 +26,7 @@ const Sparkle = ({ className, delay = 0 }) => (
 
 const TypewriterText = ({ text, className, delay = 0 }) => {
   const characters = Array.from(text);
-  
+
   return (
     <motion.span
       initial="hidden"
@@ -84,6 +84,25 @@ const RotatingText = ({ words, className }) => {
   );
 };
 
+const PrizeCell = ({ value, subtext }) => (
+  <td className="p-5 align-middle">
+    <div className="flex flex-col items-center justify-center text-center gap-1.5 w-full">
+      <div className="flex items-center justify-center gap-2">
+        <img src="/trophyicons.png" alt="Trophy" className="w-4 h-4 object-contain" />
+        <span className="text-sm font-semibold text-slate-600">Prizes Worth</span>
+      </div>
+      <div className="bg-[#fff0f5] text-[#e31e5f] font-bold text-xl py-1.5 px-5 rounded-xl w-max shadow-sm mt-1 mb-1">
+        {value}
+      </div>
+      {subtext && (
+        <div className="text-sm text-slate-600 font-semibold whitespace-nowrap mt-1">
+          {subtext}
+        </div>
+      )}
+    </div>
+  </td>
+);
+
 const PriceSection = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center font-sans text-slate-800  overflow-hidden pb-0">
@@ -111,10 +130,10 @@ const PriceSection = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6"
           >
-            Big Rewards for <br /> 
-            <RotatingText 
-              words={["Exceptional Minds", "Brilliant Coders", "Future Leaders", "Tech Innovators"]} 
-              className="text-pink-600 font-medium" 
+            Big Rewards for <br />
+            <RotatingText
+              words={["Exceptional Minds", "Brilliant Coders", "Future Leaders", "Tech Innovators"]}
+              className="text-pink-600 font-medium"
             />
           </motion.h2>
           <motion.div
@@ -180,163 +199,169 @@ const PriceSection = () => {
       </div>
 
       {/* Tables Section (Animated Cards) */}
-      <div className="w-full max-w-6xl px-4 py-16 flex flex-col gap-16 z-20 relative">
+      <div className="w-full max-w-7xl px-4 py-16 flex flex-col gap-16 z-20 relative rounded-md">
         <div className="flex flex-col items-center w-full mb-8">
           <h2 className="text-4xl md:text-5xl text-slate-800  mb-4">Prizes & Gadgets</h2>
           <div className="w-24 h-1 bg-red-500 mb-2"></div>
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full relative z-20">
-          
-          {/* Box 1: Overall School (Wide) */}
-          <motion.div 
+        {/* Attractive Table Area */}
+        <div className="w-full relative z-20">
+
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="md:col-span-2 bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl relative overflow-hidden flex flex-col md:flex-row shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
+            className="w-full overflow-x-auto shadow-lg bg-white border border-slate-200 [&::-webkit-scrollbar]:hidden"
+            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
           >
-             <div className="absolute top-0 right-0 w-64 h-64 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-x-1/3 -translate-y-1/3"></div>
-             <div className="md:w-1/2 z-10 flex flex-col justify-center">
-               <h3 className="text-3xl lg:text-4xl  text-purple-900 mb-2">Overall Champions</h3>
-               <h4 className="text-xl font-light text-pink-600 mb-6 uppercase tracking-widest">School</h4>
-               <div className="flex flex-col gap-3">
-                 <div className="flex justify-between items-center group cursor-default">
-                   <span className="text-lg font-light text-slate-400 group-hover:text-pink-500 transition-colors">1st Prize</span>
-                   <span className="text-xl font-light text-slate-700 text-right">Trip to Int. Finals</span>
-                 </div>
-                 <div className="flex justify-between items-center group cursor-default">
-                   <span className="text-lg font-light text-slate-400 group-hover:text-pink-500 transition-colors">2nd Prize</span>
-                   <span className="text-xl font-light text-slate-700 text-right">300 USD <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)</span></span>
-                 </div>
-                 <div className="flex justify-between items-center group cursor-default">
-                   <span className="text-lg font-light text-slate-400 group-hover:text-pink-500 transition-colors">3rd Prize</span>
-                   <span className="text-xl font-light text-slate-700 text-right">200 USD <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)</span></span>
-                 </div>
-               </div>
-             </div>
-             <div className="md:w-1/2 flex justify-center items-center mt-6 md:mt-0 z-10">
-               <motion.img whileHover={{ scale: 1.05 }} src="/girlclimbs.png" alt="Overall School" className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain drop-shadow-xl" />
-             </div>
+            <table className="w-full text-left border-collapse min-w-[900px]">
+              <thead>
+                <tr className="bg-[#e31e5f] text-white">
+                  <th className="p-5 text-xl font-normal whitespace-nowrap">Award Category</th>
+                  <th className="p-5 text-xl font-normal whitespace-nowrap">Level</th>
+                  <th className="p-5 text-xl font-normal whitespace-nowrap text-center">1st Prize</th>
+                  <th className="p-5 text-xl font-normal whitespace-nowrap text-center">2nd Prize</th>
+                  <th className="p-5 text-xl font-normal whitespace-nowrap text-center">3rd Prize</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-700">
+                {/* Row 1 */}
+                <motion.tr
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className="border-b border-slate-200 hover:bg-slate-50 transition-colors"
+                >
+                  <td className="p-5 align-middle border-r border-slate-100" rowSpan={2}>
+                    <div className="flex flex-col items-center text-center gap-2">
+                      <div className="relative inline-block">
+                        <img src="/4959279.png" alt="Overall Champions" className="w-16 h-16 object-contain drop-shadow-md relative z-10" />
+                        <Sparkle delay={0} className="absolute -top-1 -right-2 w-4 h-4 text-pink-400 z-0" />
+                        <Sparkle delay={0.5} className="absolute bottom-0 -left-2 w-5 h-5 text-yellow-400 z-0" />
+                      </div>
+                      <div>
+                        <span className="block text-2xl text-slate-900 font-normal whitespace-nowrap">Overall Champions</span>
+                        <span className="block text-base text-slate-500 mt-1 font-normal">Top performers across all regions</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="p-5 align-middle text-[#e31e5f]">
+                    <div className="flex items-center gap-3">
+                      <img src="/school.webp" alt="School" className="w-12 h-12 object-contain" />
+                      <span className="text-xl font-normal">School</span>
+                    </div>
+                  </td>
+                  <PrizeCell value="Trip to International Finals"/>
+                  <PrizeCell value="300 USD" />
+                  <PrizeCell value="200 USD" />
+                </motion.tr>
+                {/* Row 2 */}
+                <motion.tr
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  className="border-b border-slate-200 bg-slate-50 hover:bg-slate-100 transition-colors"
+                >
+                  <td className="p-5 align-middle text-purple-600">
+                    <div className="flex items-center gap-3">
+                      <img src="/collegeicon.webp" alt="College" className="w-10 h-10 object-contain" />
+                      <span className="text-xl font-normal">College</span>
+                    </div>
+                  </td>
+                  <PrizeCell value="100 USD" subtext="+ Medal & Certificate" />
+                  <PrizeCell value="80 USD" subtext="+ Medal & Certificate" />
+                  <PrizeCell value="50 USD" subtext="+ Medal & Certificate" />
+                </motion.tr>
+                {/* Row 3 */}
+                <motion.tr
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                  className="border-b border-slate-200 hover:bg-slate-50 transition-colors"
+                >
+                  <td className="p-5 align-middle border-r border-slate-100" rowSpan={2}>
+                    <div className="flex flex-col items-center text-center gap-2">
+                      <div className="relative inline-block">
+                        <img src="/trophy_861506.png" alt="National" className="w-16 h-16 object-contain drop-shadow-md relative z-10" />
+                        <Sparkle delay={0.2} className="absolute -top-2 left-0 w-4 h-4 text-blue-400 z-0" />
+                        <Sparkle delay={0.8} className="absolute -bottom-1 -right-1 w-5 h-5 text-yellow-400 z-0" />
+                      </div>
+                      <div>
+                        <span className="block text-2xl text-slate-900 font-normal whitespace-nowrap">National Champions</span>
+                        <span className="block text-base text-slate-500 mt-1 font-normal">Top performers nationwide</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="p-5 align-middle text-[#e31e5f]">
+                    <div className="flex items-center gap-3">
+                      <img src="/school.webp" alt="School" className="w-10 h-10 object-contain" />
+                      <span className="text-xl font-normal">School</span>
+                    </div>
+                  </td>
+                  <PrizeCell value="₹25,000" subtext="+ Medal & Certificate" />
+                  <PrizeCell value="₹15,000" subtext="+ Medal & Certificate" />
+                  <PrizeCell value="₹10,000" subtext="+ Medal & Certificate" />
+                </motion.tr>
+                {/* Row 4 */}
+                <motion.tr
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                  className="border-b border-slate-200 bg-slate-50 hover:bg-slate-100 transition-colors"
+                >
+                  <td className="p-5 align-middle text-purple-600">
+                    <div className="flex items-center gap-3">
+                      <img src="/collegeicon.webp" alt="College" className="w-10 h-10 object-contain" />
+                      <span className="text-xl font-normal">College</span>
+                    </div>
+                  </td>
+                  <PrizeCell value="₹10,000" subtext="+ Medal & Certificate" />
+                  <PrizeCell value="₹8,000" subtext="+ Medal & Certificate" />
+                  <PrizeCell value="₹5,000" subtext="+ Medal & Certificate" />
+                </motion.tr>
+                {/* Row 5 */}
+                <motion.tr
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                  className="hover:bg-slate-50 transition-colors"
+                >
+                  <td className="p-5 align-middle border-r border-slate-100">
+                    <div className="flex flex-col items-center text-center gap-2">
+                      <div className="relative inline-block">
+                        <img src="/trophy_1661851.png" alt="State Champions" className="w-16 h-16 object-contain drop-shadow-md relative z-10" />
+                        <Sparkle delay={0.4} className="absolute top-1 -right-3 w-5 h-5 text-purple-400 z-0" />
+                        <Sparkle delay={1.1} className="absolute -bottom-2 left-1 w-4 h-4 text-yellow-400 z-0" />
+                      </div>
+                      <div>
+                        <span className="block text-2xl text-slate-900 font-normal whitespace-nowrap">State Champions</span>
+                        <span className="block text-base text-slate-500 mt-1 font-normal">Statewise top 3 performers</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="p-5 align-middle text-[#e31e5f]">
+                    <div className="flex items-center gap-3">
+                   
+                      <span className="text-xl font-normal whitespace-nowrap">School & College</span>
+                    </div>
+                  </td>
+                  <td colSpan={3} className="p-5 align-middle">
+                    <div>
+                      <span className="block text-xl text-slate-900 font-normal">Medals & Certificates</span>
+                      <span className="block text-base text-slate-500 mt-1 font-normal">Awarded to the top 3 performers in each category per state</span>
+                    </div>
+                  </td>
+                </motion.tr>
+              </tbody>
+            </table>
           </motion.div>
-
-          {/* Box 2: Overall College (Tall) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="md:col-span-1 md:row-span-2 bg-gradient-to-b from-slate-50 to-purple-50 p-8 rounded-3xl relative overflow-hidden flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
-          >
-             <div className="absolute top-1/2 left-1/2 w-full h-full bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-             <h3 className="text-3xl  text-purple-900 mb-2 z-10">Overall Champions</h3>
-             <h4 className="text-xl font-light text-purple-600 mb-8 uppercase tracking-widest z-10">College</h4>
-             
-             <div className="flex flex-col gap-6 z-10 mt-auto">
-                 <div className="flex flex-col group cursor-default">
-                   <span className="text-lg font-light text-slate-400 group-hover:text-purple-500 transition-colors mb-1">1st Prize</span>
-                   <span className="text-2xl font-light text-slate-700">100 USD</span>
-                   <span className="text-xs md:text-sm text-slate-400 leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span>
-                 </div>
-                 <div className="flex flex-col group cursor-default">
-                   <span className="text-lg font-light text-slate-400 group-hover:text-purple-500 transition-colors mb-1">2nd Prize</span>
-                   <span className="text-2xl font-light text-slate-700">80 USD</span>
-                   <span className="text-xs md:text-sm text-slate-400 leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span>
-                 </div>
-                 <div className="flex flex-col group cursor-default">
-                   <span className="text-lg font-light text-slate-400 group-hover:text-purple-500 transition-colors mb-1">3rd Prize</span>
-                   <span className="text-2xl font-light text-slate-700">50 USD</span>
-                   <span className="text-xs md:text-sm text-slate-400 leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span>
-                 </div>
-             </div>
-             <div className="w-full flex justify-end mt-8 z-10 opacity-70">
-                <img src="/handsraising.png" alt="Decor" className="w-32 h-32 md:w-48 md:h-48 object-contain mix-blend-multiply" />
-             </div>
-          </motion.div>
-
-          {/* Box 3: National School (Square) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="md:col-span-1 bg-gradient-to-tr from-rose-50 to-orange-50 p-8 rounded-3xl relative overflow-hidden flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
-          >
-             <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 translate-x-1/4 translate-y-1/4"></div>
-             <h3 className="text-2xl  text-rose-900 mb-1 z-10">National</h3>
-             <h4 className="text-lg font-light text-orange-600 mb-6 uppercase tracking-widest z-10">School</h4>
-             <div className="flex flex-col gap-3 z-10 mt-auto">
-                 <div className="flex justify-between items-center group cursor-default border-b border-rose-100/50 pb-2">
-                   <span className="text-base font-light text-slate-400 group-hover:text-rose-500 transition-colors">1st</span>
-                   <span className="text-xl font-light text-slate-700 text-right">₹25K <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span></span>
-                 </div>
-                 <div className="flex justify-between items-center group cursor-default border-b border-rose-100/50 pb-2">
-                   <span className="text-base font-light text-slate-400 group-hover:text-rose-500 transition-colors">2nd</span>
-                   <span className="text-xl font-light text-slate-700 text-right">₹15K <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span></span>
-                 </div>
-                 <div className="flex justify-between items-center group cursor-default">
-                   <span className="text-base font-light text-slate-400 group-hover:text-rose-500 transition-colors">3rd</span>
-                   <span className="text-xl font-light text-slate-700 text-right">₹10K <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span></span>
-                 </div>
-             </div>
-          </motion.div>
-
-          {/* Box 4: National College (Square) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="md:col-span-1 bg-gradient-to-bl from-rose-50 to-orange-50 p-8 rounded-3xl relative overflow-hidden flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
-          >
-             <div className="absolute top-0 left-0 w-32 h-32 bg-rose-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 -translate-x-1/4 -translate-y-1/4"></div>
-             <h3 className="text-2xl  text-rose-900 mb-1 z-10">National</h3>
-             <h4 className="text-lg font-light text-orange-600 mb-6 uppercase tracking-widest z-10">College</h4>
-             <div className="flex flex-col gap-3 z-10 mt-auto">
-                 <div className="flex justify-between items-center group cursor-default border-b border-rose-100/50 pb-2">
-                   <span className="text-base font-light text-slate-400 group-hover:text-rose-500 transition-colors">1st</span>
-                   <span className="text-xl font-light text-slate-700 text-right">₹10K <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span></span>
-                 </div>
-                 <div className="flex justify-between items-center group cursor-default border-b border-rose-100/50 pb-2">
-                   <span className="text-base font-light text-slate-400 group-hover:text-rose-500 transition-colors">2nd</span>
-                   <span className="text-xl font-light text-slate-700 text-right">₹8K <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span></span>
-                 </div>
-                 <div className="flex justify-between items-center group cursor-default">
-                   <span className="text-base font-light text-slate-400 group-hover:text-rose-500 transition-colors">3rd</span>
-                   <span className="text-xl font-light text-slate-700 text-right">₹5K <span className="text-[10px] sm:text-xs text-slate-400 block leading-tight mt-1">(worth of gadgets/vouchers)<br/>+ Medal & Certificate</span></span>
-                 </div>
-             </div>
-          </motion.div>
-
-          {/* Box 5: State Champions (Wide) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="md:col-span-3 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
-          >
-             <div className="absolute top-1/2 left-1/2 w-[200%] h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
-             
-             <div className="relative z-10 flex flex-col text-center md:text-left mb-8 md:mb-0 w-full md:w-auto">
-               <h3 className="text-3xl lg:text-4xl  text-blue-900 mb-2">State Champions</h3>
-               <h4 className="text-xl font-light text-blue-600 uppercase tracking-widest mb-2">School & College</h4>
-               <p className="text-slate-500 font-light">3 Prizes per category</p>
-             </div>
-             
-             <div className="relative z-10 flex flex-col items-center md:items-end w-full md:w-auto">
-               <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group cursor-default bg-white/60 p-6 rounded-2xl backdrop-blur-md border border-white w-full md:w-auto">
-                  <span className="text-2xl md:text-3xl font-light text-slate-700 mb-1 text-center">Medals & Certificates</span>
-                  <span className="text-base md:text-lg font-light text-slate-500 group-hover:text-blue-500 transition-colors text-center">for top performers</span>
-               </motion.div>
-             </div>
-             
-             <div className="absolute right-0 bottom-0 opacity-30 pointer-events-none translate-x-1/4 translate-y-0 z-0">
-               <img src="/cheering.avif" alt="State" className="w-80 h-80 md:w-96 md:h-96 object-contain mix-blend-multiply" />
-             </div>
-          </motion.div>
-
         </div>
       </div>
 
@@ -372,7 +397,7 @@ const PriceSection = () => {
       </div>
 
       {/* Banner Strip */}
-      {/* <div className="w-full bg-[#e31e5f] text-white py-4 md:py-6 flex flex-wrap items-center justify-center gap-4 md:gap-12 font-bold tracking-widest text-xs md:text-sm lg:text-base mt-8">
+      {/* <div className="w-full bg-[#e31e5f] text-white py-4 md:py-6 flex flex-wrap items-center justify-center gap-4 md:gap-12 font-bold tracking-widest text-md md:text-sm lg:text-base mt-8">
         <span className="flex items-center gap-2"><Code size={20} className="md:w-6 md:h-6" /> CODE</span>
         <span className="hidden md:inline text-white/50">|</span>
         <span className="flex items-center gap-2"><Trophy size={20} className="md:w-6 md:h-6" /> COMPETE</span>
