@@ -1,17 +1,34 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-scroll"; // For smooth scrolling
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
-const FooterLink = ({ to, children }) => (
-  <Link
-    to={to}
-    smooth={true}
-    duration={500}
-    className="cursor-pointer text-pink-800 hover:text-algoqueen transition-colors duration-300"
-  >
-    {children}
-  </Link>
-);
+const FooterLink = ({ to, children }) => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  if (!isHomePage) {
+    return (
+      <RouterLink
+        to={to === "home" ? "/" : `/#${to}`}
+        className="cursor-pointer text-pink-800 hover:text-algoqueen transition-colors duration-300"
+      >
+        {children}
+      </RouterLink>
+    );
+  }
+
+  return (
+    <Link
+      to={to}
+      smooth={true}
+      duration={500}
+      className="cursor-pointer text-pink-800 hover:text-algoqueen transition-colors duration-300"
+    >
+      {children}
+    </Link>
+  );
+};
 
 const Footer = () => {
   return (
@@ -20,7 +37,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            <img alt="AlgoQueen Logo" src="/2026.png" className="h-20 w-auto" />
+            <RouterLink to="/">
+              <img alt="AlgoQueen Logo" src="/2026.png" className="h-20 w-auto" />
+            </RouterLink>
           </div>
 
           {/* Navigation Links */}

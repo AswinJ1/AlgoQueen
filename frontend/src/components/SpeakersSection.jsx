@@ -64,11 +64,29 @@ const speakers = [
     image:
       "Shraddha_Gulati.jpg?q=80&w=687&auto=format&fit=crop",
   },
+    {
+    name:"Khushbu khemchandani",
+    role:" CSE Student",
+    company:" IIT(ISM)",
+    rank:"Rank 4 College | AlgoQueen 2025",
+    logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
+    image:
+      "Khushbu Khemchandani.png?q=80&w=687&auto=format&fit=crop",
+  },
+  {
+    name:"Aatira Menon",
+    role:"High School Student",
+    // company:"IIIT Nagpur",
+    rank:"14th Rank School | AlgoQueen 2025",
+    // logo: <img src="/iiitnagpur.png" width={20} height={20} />,
+    image:
+      "Aatira Menon.jpg?q=80&w=687&auto=format&fit=crop",
+  },
    {
     name:"Yogita Singh",
     role:"Final Year, M.Tech (M&C)",
-    company:" IIT(ISM)",
-    rank:"20th Rank AlgoQueen 2025",
+    company:" IIT(ISM) ",
+    rank:"20th Rank College | AlgoQueen 2025",
     logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
     image:
       "yogitasingh.jpg?q=80&w=687&auto=format&fit=crop",
@@ -77,17 +95,14 @@ const speakers = [
     name:"Sidrah Aaishah ",
     role:"3rd year CSE",
     company:"IIIT Nagpur",
-    rank:"21st Rank AlgoQueen 2025",
+    rank:"21st Rank College | AlgoQueen 2025",
     logo: <img src="/iiitnagpur.png" width={20} height={20} />,
     image:
       "Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop",
   },
- 
-
-   
-
+  
 ];
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = 12;
 
 export default function SpeakersSection() {
   const [currentPage, setCurrentPage] = useState(1);
