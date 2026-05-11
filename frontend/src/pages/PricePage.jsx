@@ -12,6 +12,7 @@ const PricePage = () => {
           <h2 className="text-4xl text-slate-800 ">Prizes & Gadgets</h2>
         </div> */}
         <PriceSection/>
+        
       </div>
       <div className="mt-auto z-10 relative">
         <Footer />

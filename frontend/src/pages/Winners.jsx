@@ -8,7 +8,7 @@ import { Trophy } from 'lucide-react'
 
 const WinnersPage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col  bg-gradient-to-r from-white to-purple-100">
       <HeroComponent hideHeroContent={true} />
       <div className="space-y-6 mb-16 pt-28 px-4 max-w-7xl mx-auto w-full">
         <div className="flex items-center gap-2 mb-8 justify-center">

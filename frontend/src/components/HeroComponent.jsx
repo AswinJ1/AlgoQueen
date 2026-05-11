@@ -83,14 +83,14 @@ const scrollToBottom = () => {
       {/* <TrendingBanner className="px-6"></TrendingBanner> */}
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto w-full">
           <div className="flex lg:flex-1 lg:ml-[-54px] ml-[-10px] md:ml-[-5px] sm:ml-0">
-            <a href="#" className="-m-1.5 p-1.5 ">
+            <RouterLink to="/" className="-m-1.5 p-1.5 ">
               <span className="sr-only">Algo Queen</span>
               <img
                 alt=""
                 src="/2026.png"
                 className="h-[80px] w-auto"
               />
-            </a>
+            </RouterLink>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -310,13 +310,24 @@ const scrollToBottom = () => {
             {/* and sponsored by Jane Street */}
             <div className="mt-10 flex flex-wrap items-center gap-4">
             <RouterLink 
-                to="#"
+                to="https://www.codechef.com/register/algoqueen-2026"
                 ref={buttonRef}
                 className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
                 id="register-button"
               >
                 <span className="relative z-10 flex items-center gap-2 ">
-                 Coming Soon
+                 REGISTER NOW
+                </span>
+                <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
+              </RouterLink>
+                <RouterLink 
+                to="/prizes"
+                ref={buttonRef}
+                className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
+                id="register-button"
+              >
+                <span className="relative z-10 flex items-center gap-2 ">
+                 REWARDS
                 </span>
                 <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
               </RouterLink>

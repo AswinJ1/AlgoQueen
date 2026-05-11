@@ -8,10 +8,10 @@ import { Code, Laptop, Videotape, Video, StarsIcon, BookOpen, RocketIcon, Rocket
 
 const ResourcesPage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col  bg-gradient-to-r from-white to-purple-100">
       <HeroComponent hideHeroContent={true} />
-      <div className="space-y-6 mb-16 pt-28 px-4 max-w-7xl mx-auto w-full">
-        <div className="flex items-center gap-2 mb-8 justify-center">
+      <div className="space-y-6 mb-16 pt-28 px-4 max-w-7xl mx-auto w-full  ">
+        <div className="flex items-center gap-2 mb-8 justify-center ">
                                   {/* <Trophy size={24} className="text-indigo-600" /> */}
                                   <h2 className="text-4xl  ">Learning Resources</h2>
                                 </div>
@@ -31,7 +31,7 @@ const ResourcesPage = () => {
                     </CardDescription>
                   </CardHeader> */}
                   <CardContent className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="gap-6">
                       <Card className="border-l-4 border-indigo-600">
                         <CardHeader className="pb-2">
                           <CardTitle className="text-lg flex items-center">
@@ -76,7 +76,7 @@ const ResourcesPage = () => {
                         </CardContent>
                       </Card>
                       
-                      <Card className="border-l-4 border-indigo-600">
+                      {/* <Card className="border-l-4 border-indigo-600">
                         <CardHeader className="pb-2">
                           <CardTitle className="text-lg flex items-center">
                             <Laptop className="h-5 w-5 text-indigo-600 mr-2" />
@@ -93,7 +93,7 @@ const ResourcesPage = () => {
                             </button>
                           </div>
                         </CardContent>
-                      </Card>
+                      </Card> */}
                                                   {/* href="#" target='blank'  */}
 
                     </div>
