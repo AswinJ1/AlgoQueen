@@ -12,20 +12,19 @@ const speakers = [
     logo: <FcGoogle size={20} />,
     rank:"",
     company: "Google",
-    description: [
-      "Former co-founder of Opendoor.",
-      "Early staff at Spotify and Clearbit.",
-    ],
+    // description: [
+    //   "Former co-founder of Opendoor.",
+    //   "Early staff at Spotify and Clearbit.",
+    // ],
     image:
       "/Jaskaran Singh.jpg?q=80&w=880&auto=format&fit=crop",
   },
   {
     name: "Sneha Roychowdhury",
-    role: "President and Curator",
-    company: "TEDxIGDTU",
-    logo: <img src="/company-icons/tedx-logo.png" width={20} height={20} />,
+    role: "ICPC Regionalist 2024 & 2025, IGDTUW",
+    // logo: <img src="/company-icons/tedx-logo.png" width={20} height={20} />,
     description: [
-      "Lead engineering teams at Figma,",
+      "ICPC Regionalist 2024 & 2025, IGDTUW ",
       "Pitch, and Protocol Labs.",
     ],
     image:
