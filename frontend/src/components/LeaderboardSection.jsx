@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import * as XLSX from "xlsx";
+// import * as XLSX from "xlsx";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import "flag-icons/css/flag-icons.min.css";
+import Lottie from "lottie-react";
 
 const COUNTRY_CODE = {
   India: "in", USA: "us", China: "cn", Egypt: "eg", Australia: "au",
@@ -124,12 +125,19 @@ export default function LeaderboardSection() {
   const [countryFilter, setCountryFilter] = useState("");
   const [stateFilter, setStateFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [lottieData, setLottieData] = useState(null);
   const tableRef = useRef(null);
 
   /* ── Load Excel on mount ── */
   useEffect(() => {
     (async () => {
       try {
+        // Fetch Lottie JSON in parallel
+        fetch("/json/Error 404.json")
+          .then(res => res.json())
+          .then(data => setLottieData(data))
+          .catch(e => console.error("Error loading Lottie:", e));
+
         const res = await fetch("");
         const buf = await res.arrayBuffer();
         const wb = XLSX.read(buf, { type: "array" });
@@ -207,7 +215,13 @@ export default function LeaderboardSection() {
   if (error || !data) {
     return (
       <div className="w-full flex flex-col items-center justify-center py-32">
-        <img src="/404.svg" alt="No data available" className="mb-4 object-contain opacity-80" />
+        {lottieData ? (
+          <div className="w-64 h-64 mb-4 opacity-80">
+            <Lottie animationData={lottieData} loop={true} />
+          </div>
+        ) : (
+          <img src="/404.svg" alt="No data available" className="mb-4 object-contain opacity-80" />
+        )}
         <p className="text-slate-400 text-lg font-light">{error || "No data available."}</p>
       </div>
     );
@@ -445,7 +459,13 @@ export default function LeaderboardSection() {
                     <tr key="empty">
                       <td colSpan={5}>
                         <div className="flex flex-col items-center justify-center py-20 text-slate-500 font-light tracking-wide">
-                          <img src="/404.svg" alt="No results found" className="mb-4 object-contain opacity-80" />
+                          {lottieData ? (
+                            <div className="w-64 h-64 mb-4 opacity-80">
+                              <Lottie animationData={lottieData} loop={true} />
+                            </div>
+                          ) : (
+                            <img src="/404.svg" alt="No results found" className="mb-4 object-contain opacity-80" />
+                          )}
                           <p>No results match your filters.</p>
                         </div>
                       </td>
