@@ -8,6 +8,7 @@ import Board from './pages/Board';
 import ArchiveHomePage2025 from './archive/2025/pages/HomePage';
 import ArchiveBoard2025 from './archive/2025/pages/Board';
 import WinnersPage from './pages/Winners';
+import RegisterLeaderPage from './pages/RegisterLeaderPage';
 import ResourcesPage from './pages/Resources';
 import Speakerpage from './pages/Speakerpage';
 import Schedule from './pages/Schedule';
@@ -24,7 +25,7 @@ const App = () => {
         {/* <Route path="/speakers" element={<Speakerpage />} /> */}
         <Route path="/schedule" element={<Schedule />} />
         {/* <Route path="/ranklist" element={<SelectionCriteriaPage />} /> */}
-         {/* <Route path="/leaderboard" element={<Board />} /> */}
+        <Route path="/leaderboard" element={<RegisterLeaderPage />} />
         {/* Archive routes */}
         <Route path="/archive/2025" element={<ArchiveHomePage2025 />} />
         <Route path="/archive/2025/leaderboard" element={<ArchiveBoard2025 />} />
