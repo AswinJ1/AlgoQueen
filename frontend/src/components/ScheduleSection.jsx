@@ -3,7 +3,7 @@ import { FcGoogle } from 'react-icons/fc';
 
 const scheduleData = [
   { date: "May 23", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Jaskaran Singh", role: "Software Engineer", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Jaskaran Singh.jpg?q=80&w=880&auto=format&fit=crop" },
-  { date: "May 25", time: "6:00 pm - 7:00 pm  IST", title: "Competitive Programming for ICPC Roadmap, STL & Arrays Fundamentals", speaker: "Sneha Roychowdhury", role: "President and Curator", company: "TEDxIGDTU", logo: <img src="/company-icons/tedx-logo.png" width={20} height={20} />, avatar: "/Sneha Roychowdhury.jpg?q=80&w=1025&auto=format&fit=crop" },
+  { date: "May 25", time: "6:00 pm - 7:00 pm  IST", title: "Competitive Programming for ICPC Roadmap, STL & Arrays Fundamentals", speaker: "Sneha Roychowdhury", role: "ICPC Regionalist 2024 & 2025, IGDTUW", avatar: "/Sneha Roychowdhury.jpg?q=80&w=1025&auto=format&fit=crop" },
   { date: "May 26", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Sidrah Aaishah", role: "3rd year CSE", company: "IIIT Nagpur", logo: <img src="/iiitnagpur.png" width={20} height={20} />, avatar: "/Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop" },
   // { date: "May 28", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
   // { date: "May 29", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
