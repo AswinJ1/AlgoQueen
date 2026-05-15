@@ -1,19 +1,34 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-// import * as XLSX from "xlsx";
+import * as XLSX from "xlsx";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import "flag-icons/css/flag-icons.min.css";
 import Lottie from "lottie-react";
 
 const COUNTRY_CODE = {
-  India: "in", USA: "us", China: "cn", Egypt: "eg", Australia: "au",
-  Argentina: "ar", Nigeria: "ng", Japan: "jp", Singapore: "sg",
-  Pakistan: "pk", "Saudi Arabia": "sa", France: "fr", UK: "gb",
+  india: "in", usa: "us", "united states": "us", "united states of america": "us",
+  china: "cn", egypt: "eg", australia: "au", argentina: "ar", nigeria: "ng",
+  japan: "jp", singapore: "sg", pakistan: "pk", "saudi arabia": "sa",
+  france: "fr", uk: "gb", "united kingdom": "gb", uae: "ae",
+  "united arab emirates": "ae", oman: "om", kuwait: "kw", qatar: "qa",
+  bahrain: "bh", nepal: "np", bangladesh: "bd", "sri lanka": "lk",
+  malaysia: "my", canada: "ca", germany: "de", indonesia: "id",
+  russia: "ru", brazil: "br", "south africa": "za", italy: "it",
+  georgia: "ge", mexico: "mx", spain: "es", "south korea": "kr",
+  netherlands: "nl", sweden: "se", switzerland: "ch", "new zealand": "nz",
+  philippines: "ph", vietnam: "vn", thailand: "th", turkey: "tr",
+  kenya: "ke", ghana: "gh", ukraine: "ua", poland: "pl",
+  syria: "sy", angola: "ao", jordan: "jo", kyrgyzstan: "kg", uzbekistan: "uz",
+  aleppo: "sy", tunisia: "tn", "costa rica": "cr", kirgisistan: "kg",
+  chile: "cl", peru: "pe", algeria: "dz"
+  // add any other mappings as needed
 };
 
 function CountryFlag({ country, className = "" }) {
-  const code = COUNTRY_CODE[country];
-  if (!code) return <span className={className}>🌐</span>;
-  return <span className={`fi fi-${code} ${className}`} />;
+  const normalizedCountry = (country || "").trim().toLowerCase();
+  const code = COUNTRY_CODE[normalizedCountry];
+  
+  if (!code) return <span className={className} title={country}>🌐</span>;
+  return <span className={`fi fi-${code} ${className}`} title={country} />;
 }
 
 /* ── Animated counter ── */
@@ -87,7 +102,7 @@ function PodiumCard({ entry, place, delay }) {
             {entry.name}
           </h3>
           <p className="text-[11px] text-slate-500 tracking-wider mb-5 font-light">
-            <CountryFlag country={entry.country} className="mr-1 opacity-80" /> {entry.state}, {entry.country}
+            <CountryFlag country={entry.country} className="mr-1 opacity-80" /> {entry.country}
           </p>
           <p className="text-3xl md:text-4xl font-light text-slate-900 tracking-tight">
             <AnimatedNumber value={entry.registrations} delay={delay * 1000 + 400} />
@@ -123,9 +138,10 @@ export default function LeaderboardSection() {
   const [error, setError] = useState("");
   const [typeFilter, setTypeFilter] = useState("College");
   const [countryFilter, setCountryFilter] = useState("");
-  const [stateFilter, setStateFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [lottieData, setLottieData] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
   const tableRef = useRef(null);
 
   /* ── Load Excel on mount ── */
@@ -138,7 +154,7 @@ export default function LeaderboardSection() {
           .then(data => setLottieData(data))
           .catch(e => console.error("Error loading Lottie:", e));
 
-        const res = await fetch("");
+        const res = await fetch("/data/Leaderboard Data.xlsx");
         const buf = await res.arrayBuffer();
         const wb = XLSX.read(buf, { type: "array" });
         const ws = wb.Sheets[wb.SheetNames[0]];
@@ -176,24 +192,43 @@ export default function LeaderboardSection() {
   /* ── Derived data ── */
   const types = useMemo(() => (data ? [...new Set(data.map(d => d.type).filter(Boolean))].sort() : []), [data]);
   const countries = useMemo(() => (data ? [...new Set(data.map(d => d.country))].sort() : []), [data]);
-  const statesForCountry = useMemo(() => {
-    if (!data || !countryFilter) return [];
-    return [...new Set(data.filter(d => d.country === countryFilter).map(d => d.state))].sort();
-  }, [data, countryFilter]);
 
   const filtered = useMemo(() => {
     if (!data) return [];
     return data.filter(d => {
       if (typeFilter && d.type !== typeFilter) return false;
       if (countryFilter && d.country !== countryFilter) return false;
-      if (stateFilter && d.state !== stateFilter) return false;
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
-        if (!d.name.toLowerCase().includes(q) && !d.country.toLowerCase().includes(q) && !d.state.toLowerCase().includes(q)) return false;
+        if (!d.name.toLowerCase().includes(q) && !d.country.toLowerCase().includes(q)) return false;
       }
       return true;
     });
-  }, [data, typeFilter, countryFilter, stateFilter, searchQuery]);
+  }, [data, typeFilter, countryFilter, searchQuery]);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [typeFilter, countryFilter, searchQuery]);
+
+  const totalPages = Math.ceil(filtered.length / itemsPerPage);
+  const paginatedData = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const getPageNumbers = () => {
+    const pages = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      if (currentPage <= 4) {
+        pages.push(1, 2, 3, 4, 5, '...', totalPages);
+      } else if (currentPage >= totalPages - 3) {
+        pages.push(1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+      }
+    }
+    return pages;
+  };
 
   const maxReg = Math.max(...(filtered.length ? filtered.map(d => d.registrations) : [1]));
   const totalReg = filtered.reduce((s, d) => s + d.registrations, 0);
@@ -233,43 +268,18 @@ export default function LeaderboardSection() {
     <div className="w-full flex flex-col items-center" style={{ fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
 
       {/* ════════ Header ════════ */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-        className="text-center mb-16 md:mb-20"
-      >
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-[11px] md:text-xs tracking-[0.3em] uppercase text-[#e31e5f] mb-5 font-medium"
-        >
+      <div className="text-center mb-16 md:mb-20">
+        <p className="text-[11px] md:text-xs tracking-[0.3em] uppercase text-[#e31e5f] mb-5 font-medium">
           Registration Leaderboard
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-light text-slate-900 tracking-tight leading-[1.05] mb-5"
-        >
+        </p>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-slate-900 tracking-tight leading-[1.05] mb-5">
           Top Institutions
-        </motion.h1>
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: 48 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="h-[1px] bg-[#e31e5f] mx-auto mb-5"
-        />
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-sm md:text-base text-slate-600 font-light tracking-wide max-w-lg mx-auto"
-        >
+        </h1>
+        <div className="w-12 h-[1px] bg-[#e31e5f] mx-auto mb-5" />
+        <p className="text-sm md:text-base text-slate-600 font-light tracking-wide max-w-lg mx-auto">
           Ranked by total registrations across the globe
-        </motion.p>
-      </motion.div>
+        </p>
+      </div>
         {/* ════════ Filters ════════ */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
@@ -330,27 +340,11 @@ export default function LeaderboardSection() {
               </label>
               <select
                 value={countryFilter}
-                onChange={e => { setCountryFilter(e.target.value); setStateFilter(""); }}
+                onChange={e => { setCountryFilter(e.target.value); }}
                 className="bg-transparent border-b border-slate-200 text-slate-800 text-sm px-0 py-2 outline-none focus:border-[#e31e5f] transition-colors cursor-pointer appearance-none font-light tracking-wide w-full"
               >
                 <option value="">All Countries</option>
                 {countries.map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
-            </div>
-
-            {/* State */}
-            <div className="flex flex-col gap-1.5 flex-1 min-w-[140px]">
-              <label className="text-[10px] tracking-[0.2em] uppercase text-slate-500 font-light">
-                State
-              </label>
-              <select
-                value={stateFilter}
-                onChange={e => setStateFilter(e.target.value)}
-                disabled={!countryFilter}
-                className="bg-transparent border-b border-slate-200 text-slate-800 text-sm px-0 py-2 outline-none focus:border-[#e31e5f] transition-colors cursor-pointer appearance-none font-light tracking-wide disabled:opacity-30 disabled:cursor-not-allowed w-full"
-              >
-                <option value="">All States</option>
-                {statesForCountry.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
             </div>
           </div>
@@ -455,7 +449,7 @@ export default function LeaderboardSection() {
 
               <tbody>
                 {/* <AnimatePresence mode="popLayout"> */}
-                  {filtered.length === 0 ? (
+                  {paginatedData.length === 0 ? (
                     <tr key="empty">
                       <td colSpan={5}>
                         <div className="flex flex-col items-center justify-center py-20 text-slate-500 font-light tracking-wide">
@@ -471,8 +465,8 @@ export default function LeaderboardSection() {
                       </td>
                     </tr>
                   ) : (
-                    filtered.map((d, i) => {
-                      const currentRank = i + 1;
+                    paginatedData.map((d, i) => {
+                      const currentRank = (currentPage - 1) * itemsPerPage + i + 1;
                       const pct = Math.round((d.registrations / maxReg) * 100);
                       const isTop3 = currentRank <= 3;
 
@@ -550,7 +544,7 @@ export default function LeaderboardSection() {
                           <td className="py-5 px-6">
                             <span className="text-sm text-slate-600 font-light tracking-wide flex items-center gap-1.5">
                               <CountryFlag country={d.country} className="opacity-80" />
-                              <span>{d.state ? `${d.state}, ` : ""}{d.country}</span>
+                              <span>{d.country}</span>
                             </span>
                           </td>
                         </motion.tr>
@@ -561,6 +555,47 @@ export default function LeaderboardSection() {
               </tbody>
             </table>
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex flex-col sm:flex-row gap-4 justify-between items-center px-6 py-4 bg-slate-50/50 border-t border-slate-100">
+              <button
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 text-sm font-light tracking-wide rounded-md border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Previous
+              </button>
+              
+              <div className="flex gap-1.5 items-center">
+                {getPageNumbers().map((pageNum, idx) => (
+                  pageNum === '...' ? (
+                    <span key={`ellipsis-${idx}`} className="px-2 py-1 text-slate-400 font-light">...</span>
+                  ) : (
+                    <button
+                      key={pageNum}
+                      onClick={() => setCurrentPage(pageNum)}
+                      className={`w-8 h-8 flex items-center justify-center rounded-md text-sm transition-colors ${
+                        currentPage === pageNum
+                          ? "bg-[#e31e5f] text-white font-medium shadow-sm"
+                          : "bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 font-light"
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  )
+                ))}
+              </div>
+
+              <button
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 text-sm font-light tracking-wide rounded-md border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </motion.div>
     </div>
