@@ -11,11 +11,11 @@ import TrendingBanner from './TrendingBanner';
 import { ArrowRight, Book, BookImage, DoorClosed, LucideTrophy, MessageCircleWarning, Pen, PenLine } from 'lucide-react';
 
 const navigation = [
-  { name: 'Home', to: 'home', type: 'section' },
+  // { name: 'Home', to: 'home', type: 'section' },
   { name: 'About', to: 'about', type: 'section' },
   // { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
-  // { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
+  { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
   {name:"Prizes", to:"/prizes", type:'page'},
   {name:"Schedule", to:"/schedule", type:'page'},
   { name: 'Winners', to: '/winners', type: 'page' },
