@@ -6,6 +6,9 @@ const platform_sponsor =[
    {id:2, name:"Codechef" , logo:"/company-icons/cc-logo.svg", link:"https://codechef.com"}
 ];
 
+const student_chapters = [
+  { id: 1, name: "Sliet Software development club", logo: "/company-icons/SSDC.jpg", link: "https://www.linkedin.com/company/sliet-software-developement-club/" }, // Replace "#" with the actual link
+];
 export default function CommunityPartners() {
   return (
     <section className="w-full py-16 bg-gradient-to-r from-white to-purple-100">
@@ -44,6 +47,31 @@ export default function CommunityPartners() {
       <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-0">
         
         {community_sponsors.map((partner) => (
+          <a
+            key={partner.id}
+            href={partner.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-52 sm:w-64 md:w-72 flex items-center justify-center px-0 py-2 cursor-pointer"
+          >
+            <img
+              src={partner.logo}
+              alt={partner.name}
+              className="h-32 sm:h-40 md:h-48 object-contain   hover:scale-110 transition-all duration-300"
+            />
+          </a>
+        ))}
+
+      </div>
+       {/* Heading */}
+      <h2 className="text-4xl font-thin text-center mb-4 mt-16 tracking-wide">
+        Student Chapter
+      </h2>
+
+      {/* Logos Grid */}
+      <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-0">
+        
+        {student_chapters.map((partner) => (
           <a
             key={partner.id}
             href={partner.link}
