@@ -79,11 +79,10 @@ const TrainingMaterials = () => {
                             </li>
                           </ul> */}
                           <div className="mt-4">
-                          <a href="https://usaco.guide/general/resources-cp?lang=cpp" className="text-sm font-medium text-indigo-600 flex items-center   " target='_blank' rel="noopener noreferrer">
-                            <span className="">Start learning →</span>
+                          <p  className="text-sm font-medium text-indigo-600 flex items-center ">
+                            <span className="">Start learning </span>
                             
-                            {/* <StarsIcon size={18} className="ml-1 text-indigo-600" /> */}
-                          </a>
+                          </p>
                         </div>
 
                         </CardContent>
@@ -101,9 +100,9 @@ const TrainingMaterials = () => {
                             A collection of past problems with solutions and explanations.
                           </p>
                           <div className="mt-4">
-                            <a href="" target='blank' className="text-sm font-medium text-indigo-600 ">
-                              Start practicing →
-                            </a>
+                            <p  className="text-sm font-medium text-indigo-600 ">
+                              Start practicing 
+                            </p>
                           </div>
                         </CardContent>
                       </Card>
