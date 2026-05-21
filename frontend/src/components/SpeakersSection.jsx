@@ -81,15 +81,15 @@ const speakers = [
     image:
       "Aatira Menon.jpg?q=80&w=687&auto=format&fit=crop",
   },
-   {
-    name:"Yogita Singh",
-    role:"Final Year, M.Tech (M&C)",
-    company:" IIT(ISM) ",
-    rank:"20th Rank College | AlgoQueen 2025",
-    logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
-    image:
-      "yogitasingh.jpg?q=80&w=687&auto=format&fit=crop",
-  },
+  //  {
+  //   name:"Yogita Singh",
+  //   role:"Final Year, M.Tech (M&C)",
+  //   company:" IIT(ISM) ",
+  //   rank:"20th Rank College | AlgoQueen 2025",
+  //   logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
+  //   image:
+  //     "yogitasingh.jpg?q=80&w=687&auto=format&fit=crop",
+  // },
   {
     name:"Sidrah Aaishah ",
     role:"3rd year CSE",

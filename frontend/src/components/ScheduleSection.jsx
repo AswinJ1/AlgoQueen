@@ -2,7 +2,7 @@ import { useState, useMemo } from "react"
 import { FcGoogle } from 'react-icons/fc';
 
 const scheduleData = [
-  { date: "May 23", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Jaskaran Singh", role: "Software Engineer", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Jaskaran Singh.jpg?q=80&w=880&auto=format&fit=crop" },
+  { date: "May 23", time: "6:00 pm - 7:00 pm  IST", title: "Mastering CP", speaker: "Jaskaran Singh", role: "Software Engineer", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Jaskaran Singh.jpg?q=80&w=880&auto=format&fit=crop" },
   { date: "May 25", time: "6:00 pm - 7:00 pm  IST", title: "Competitive Programming for ICPC Roadmap, STL & Arrays Fundamentals", speaker: "Sneha Roychowdhury", role: "ICPC Regionalist 2024 & 2025, IGDTUW", avatar: "/Sneha Roychowdhury.jpg?q=80&w=1025&auto=format&fit=crop" },
   { date: "May 26", time: "6:00 pm - 7:00 pm  IST", title: "How to Get Started with DSA and Level Up to Advanced Topics like DP and Daily Contests", speaker: "Sidrah Aaishah", role: "3rd year CSE", company: "IIIT Nagpur", logo: <img src="/iiitnagpur.png" width={20} height={20} />, avatar: "/Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop" },
   // { date: "May 28", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
@@ -10,8 +10,8 @@ const scheduleData = [
   { date: "May 30", time: "6:00 pm - 7:00 pm  IST", title: "Breaking the CP Myth, like a practical roadmap for girls to start, stay, and succeed", speaker: "Trilasha Mazumder", role: "Software Engineer II", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Trilasha Mazumder.jpg?q=80&w=687&auto=format&fit=crop" },
   { date: "June 1", time: "6:00 pm - 7:00 pm  IST", title: "Graphs: Basic Traversal & Shortest Path", speaker: "Hetvi Bagdai", role: "Software Engineer Intern", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Hetvi Bagdai.jpeg?q=80&w=687&auto=format&fit=crop" },
   // { date: "June 4", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
-  { date: "June 6", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Yogita Singh", role: "Final Year, M.Tech (M&C)", company: "IIT(ISM) Dhanbad", logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />, avatar: "/yogitasingh.jpg?q=80&w=687&auto=format&fit=crop" },
-  { date: "June 8", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Aatira Menon", role: "High School Student", company: "", logo: null, avatar: "/Aatira Menon.jpg" },
+  // { date: "June 6", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Yogita Singh", role: "Final Year, M.Tech (M&C)", company: "IIT(ISM) Dhanbad", logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />, avatar: "/yogitasingh.jpg?q=80&w=687&auto=format&fit=crop" },
+  { date: "June 8", time: "6:00 pm - 7:00 pm  IST", title: "Range Queries and Segment Trees", speaker: "Aatira Menon", role: "High School Student", company: "", logo: null, avatar: "/Aatira Menon.jpg" },
   // { date: "June 9", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
   { date: "June 11", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Khushbu Khemchandani", role: "CSE Student ", company: "IIT (ISM) Dhanbad", logo:<img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />, avatar: "/Khushbu Khemchandani.png" },
   { date: "June 13", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Shinjan Chaturvedi", role: "Software Engineer", company: "Rubrik", logo: <img src="/company-icons/rubrik.jpg" width={20} height={20} />, avatar: "/Shinjana_chaturvedi.webp?q=80&w=687&auto=format&fit=crop" },
