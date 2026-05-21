@@ -52,8 +52,9 @@ const testimonials = [
     name: "Aram odeh",
     role: "Rank 15, ICPC AlgoQueen 2025",
     company: "School Category",
-    content: "My name is Aram Odeh, and I was proud to be one of the best students in the school category at ICPC AlgoQueen.The experience was truly inspiring. It was well-organised, and the problems were creative and hard, which made you think more deeply and grow. The organising team was also very helpful and kind, which made the event even more special. They made sure that everyone was motivated and happy during the whole competition.AlgoQueen is more than just a contest; it's a way to build confidence and passion. I can't wait to take part again, and I think every aspiring coder should do the same.",
+    content: "I am proud to be one of the best students in the school category at ICPC AlgoQueen.The experience was truly inspiring. It was well-organised, and the problems were creative and hard, which made you think more deeply and grow. The organising team was also very helpful and kind, which made the event even more special. They made sure that everyone was motivated and happy during the whole competition.AlgoQueen is more than just a contest; it's a way to build confidence and passion. I can't wait to take part again, and I think every aspiring coder should do the same.",
     avatar: "/winner25s-15.jpg",
+    imgPosition: "top",
   },
   {
     name:"Violeta Kastreva",
@@ -144,10 +145,11 @@ const TestimonialSlider = () => {
                       <img 
                         src={testimonial.avatar} 
                         alt={testimonial.name} 
-                        className='w-20 h-20 rounded-full   object-cover object-center border-2 border-white/30 shadow-md'
+                        style={{ objectPosition: testimonial.imgPosition || 'center' }}
+                        className='w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-white/30 shadow-md'
                       />
                     ) : (
-                      <div className='w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-2xl border-2 border-white/30 shadow-md'>
+                      <div className='w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-3xl border-2 border-white/30 shadow-md'>
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
