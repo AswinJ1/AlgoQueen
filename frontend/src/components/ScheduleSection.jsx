@@ -17,7 +17,7 @@ const scheduleData = [
   { date: "June 13", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Shinjan Chaturvedi", role: "Software Engineer", company: "Rubrik", logo: <img src="/company-icons/rubrik.jpg" width={20} height={20} />, avatar: "/Shinjana_chaturvedi.webp?q=80&w=687&auto=format&fit=crop" },
   { date: "June 15", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Jyotsna Telgote", role: "", company: "", logo: null, avatar: "" },
   { date: "June 18", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "Shraddha Gulati", role: "Software Engineer", company: "Google", logo: <FcGoogle size={20} />, avatar: "/Shraddha_Gulati.jpg?q=80&w=687&auto=format&fit=crop" },
-  // { date: "June 20", time: "6:00 pm - 7:00 pm  IST", title: "TBA", speaker: "TBA", role: "", company: "", logo: null, avatar: "" },
+  { date: "June 20", time: "6:00 pm - 7:00 pm  IST", title: "Binary Search", speaker: "Vaishnavi Gautam", role: "B.Tech CSE Student", company: "Manav Rachna University", logo: <img src="/company-icons/manav.png" width={20} height={20} />, avatar: "/Vaishnavi.webp?q=80&w=687&auto=format&fit=crop" },
 ];
 
 export default function ScheduleSection() {

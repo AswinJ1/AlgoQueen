@@ -15,7 +15,7 @@ const navigation = [
   { name: 'About', to: 'about', type: 'section' },
   { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
-  { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
+  { name: 'Leaderboard', to: '/archive/2025/leaderboard', type: 'page' },
   { name: 'FAQ', to: 'faq', type: 'section' },
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
@@ -234,7 +234,7 @@ technology.
            <div className="mt-6 flex flex-wrap items-center gap-4">
   {/* Register Now Button */}
  <RouterLink
-  to="/leaderboard"
+  to="/archive/2025/leaderboard"
   ref={buttonRef}
   className="relative w-auto flex items-center gap-2 rounded-md bg-indigo-600 px-4 py-3 text-sm sm:px-4 sm:py-3 sm:text-md font-semibold text-white  hover:bg-indigo-500 transition duration-300 group overflow-hidden"
   id="register-button"

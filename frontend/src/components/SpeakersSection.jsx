@@ -99,7 +99,14 @@ const speakers = [
     image:
       "Sidrah_Aaishah.webp?q=80&w=687&auto=format&fit=crop",
   },
-  
+  {
+    name:"Vaishnavi Gautam",
+    role:"B.Tech CSE",
+    company:"Manav Rachna University",
+    // logo: <img src="/company-icons/manav.png" width={20} height={20} />,
+    image:
+      "Vaishnavi.webp?q=80&w=687&auto=format&fit=crop",
+  }
 ];
 const ITEMS_PER_PAGE = 12;
 
