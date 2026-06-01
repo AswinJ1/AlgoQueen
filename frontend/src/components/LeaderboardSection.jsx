@@ -12,15 +12,20 @@ const COUNTRY_CODE = {
   "united arab emirates": "ae", oman: "om", kuwait: "kw", qatar: "qa",
   bahrain: "bh", nepal: "np", bangladesh: "bd", "sri lanka": "lk",
   malaysia: "my", canada: "ca", germany: "de", indonesia: "id",
-  russia: "ru", brazil: "br", "south africa": "za", italy: "it",
-  georgia: "ge", mexico: "mx", spain: "es", "south korea": "kr",
+  russia: "ru", brazil: "br", "brasil": "br", "south africa": "za", italy: "it",
+  georgia: "ge", mexico: "mx", "méxico": "mx", "mÃ©xico": "mx", spain: "es", "south korea": "kr",
   netherlands: "nl", sweden: "se", switzerland: "ch", "new zealand": "nz",
   philippines: "ph", vietnam: "vn", thailand: "th", turkey: "tr",
   kenya: "ke", ghana: "gh", ukraine: "ua", poland: "pl",
   syria: "sy", angola: "ao", jordan: "jo", kyrgyzstan: "kg", uzbekistan: "uz",
   aleppo: "sy", tunisia: "tn", "costa rica": "cr", kirgisistan: "kg",
-  chile: "cl", peru: "pe", algeria: "dz"
-  // add any other mappings as needed
+  chile: "cl", peru: "pe", algeria: "dz", taiwan: "tw", kazakhstan: "kz",
+  palestine: "ps", "فلسطين": "ps", "Ù Ù„Ø³Ø·ÙŠÙ†": "ps", colombia: "co", cuba: "cu",
+  albania: "al", azerbaijan: "az", azerbaycan: "az", "azərbaycan": "az",
+  "azÉ™rbaycan": "az", ethiopia: "et", "el salvador": "sv",
+  "república dominicana": "do", "repÃºblica dominicana": "do", "trinidad & tobago": "tt",
+  "مصر": "eg", "Ù…ØµØ±": "eg", chennai: "in", noida: "in", hazaribag: "in", damascus: "sy",
+  "el mahala elkobra": "eg", "port said": "eg", dhaka: "bd", bangle: "bd"
 };
 
 function CountryFlag({ country, className = "" }) {
@@ -154,33 +159,49 @@ export default function LeaderboardSection() {
           .then(data => setLottieData(data))
           .catch(e => console.error("Error loading Lottie:", e));
 
-        const res = await fetch("/data/Leaderboard Data.xlsx");
-        const buf = await res.arrayBuffer();
-        const wb = XLSX.read(buf, { type: "array" });
-        const ws = wb.Sheets[wb.SheetNames[0]];
-        const rows = XLSX.utils.sheet_to_json(ws, { defval: "" });
+        const fetchAndParse = async (url, defaultType) => {
+          try {
+            const res = await fetch(url);
+            if (!res.ok) return [];
+            const buf = await res.arrayBuffer();
+            const wb = XLSX.read(buf, { type: "array" });
+            const ws = wb.Sheets[wb.SheetNames[0]];
+            const rows = XLSX.utils.sheet_to_json(ws, { defval: "" });
 
-        const get = (row, ...keys) => {
-          for (const k of keys) {
-            const m = Object.keys(row).find(rk => rk.trim().toLowerCase() === k.toLowerCase());
-            if (m !== undefined) return String(row[m]).trim();
+            const get = (row, ...keys) => {
+              for (const k of keys) {
+                const m = Object.keys(row).find(rk => rk.trim().toLowerCase() === k.toLowerCase());
+                if (m !== undefined) return String(row[m]).trim();
+              }
+              return "";
+            };
+
+            return rows
+              .map((row) => ({
+                name: get(row, "institution name", "institution", "name"),
+                type: get(row, "type") || defaultType,
+                registrations: parseInt(get(row, "total registrations", "registrations")) || 0,
+                country: get(row, "country"),
+                state: get(row, "state"),
+              }))
+              .filter(d => d.name);
+          } catch (e) {
+            console.error("Error fetching " + url, e);
+            return [];
           }
-          return "";
         };
 
-        const parsed = rows
-          .map((row, i) => ({
-            rank: parseInt(get(row, "rank")) || i + 1,
-            name: get(row, "institution name", "institution", "name"),
-            type: get(row, "type"),
-            registrations: parseInt(get(row, "total registrations", "registrations")) || 0,
-            country: get(row, "country"),
-            state: get(row, "state"),
-          }))
-          .filter(d => d.name);
+        const [collegeData, schoolData] = await Promise.all([
+          fetchAndParse("/data/College.xlsx", "College"),
+          fetchAndParse("/data/School.xlsx", "School")
+        ]);
 
-        if (!parsed.length) setError("No data found.");
-        else setData(parsed);
+        const combined = [...collegeData, ...schoolData];
+        combined.sort((a, b) => b.registrations - a.registrations);
+        combined.forEach((d, i) => d.rank = i + 1);
+
+        if (!combined.length) setError("No data found.");
+        else setData(combined);
       } catch {
         setError("Failed to load leaderboard data.");
       } finally {
