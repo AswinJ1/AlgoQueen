@@ -63,15 +63,15 @@ const speakers = [
     image:
       "Shraddha_Gulati.jpg?q=80&w=687&auto=format&fit=crop",
   },
-    {
-    name:"Khushbu khemchandani",
-    role:" CSE Student",
-    company:" IIT(ISM)",
-    rank:"Rank 4 College | AlgoQueen 2025",
-    logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
-    image:
-      "Khushbu Khemchandani.png?q=80&w=687&auto=format&fit=crop",
-  },
+  //   {
+  //   name:"Khushbu khemchandani",
+  //   role:" CSE Student",
+  //   company:" IIT(ISM)",
+  //   rank:"Rank 4 College | AlgoQueen 2025",
+  //   logo: <img src="/IIT_(ISM)_Dhanbad_Logo.svg" width={20} height={20} />,
+  //   image:
+  //     "Khushbu Khemchandani.png?q=80&w=687&auto=format&fit=crop",
+  // },
   {
     name:"Aatira Menon",
     role:"High School Student",
