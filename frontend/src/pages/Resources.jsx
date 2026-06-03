@@ -193,7 +193,7 @@ const ResourcesPage = () => {
         {
           category: "Session Materials",
           items: [
-            { title: "Google Drive Folder (Slides & Notes)", url: "https://drive.google.com/drive/u/4/folders/1TWz6t2I-8GEMnu7Ckw004Pm9KFtpGDvm" },
+            { title: "Google Drive Folder (Slides & Notes)", url: "https://drive.google.com/drive/folders/14HOrpzcq_G8pzXPAdhpP7QW_QG0F5TCR" },
           ],
         },
       ],
