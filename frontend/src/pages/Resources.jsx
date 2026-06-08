@@ -244,6 +244,22 @@ const ResourcesPage = () => {
         },
       ],
     },
+    {
+      id: 5,
+      title: "Graphs: Basic Traversal & Shortest Path",
+      url: "https://www.youtube.com/embed/RMjGRrg5_Lo",
+      instructor: "Hetvi Bagdai",
+      duration: "1hr ",
+      resources: [
+       {
+          category: "Resources",
+          items: [
+            { title: "Dijkstra's shortest path algorithm", url: "https://www.geeksforgeeks.org/dsa/dijkstras-shortest-path-algorithm-greedy-algo-7/" },
+            { title:"Breadth-First-Search (BFS)", url:"https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/"}
+          ],
+        },
+      ],
+    }
   ];
 
   const recordedSessions2025 = [
