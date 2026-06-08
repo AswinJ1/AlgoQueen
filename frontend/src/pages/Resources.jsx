@@ -259,6 +259,22 @@ const ResourcesPage = () => {
           ],
         },
       ],
+    },
+    {
+      id: 6,
+      title:"Range Queries and Segment Trees",
+      url:"https://www.youtube.com/embed/g8o2--B_fpU",
+      instructor:"Aatira Menon",
+      duration:"1hr",
+      resources:[{
+        category:"Resources",
+        items:[
+          {title:"Problem Sets", url:"https://cses.fi/problemset/"},
+          {title:"Static Range Sum Queries", url:"https://cses.fi/problemset/task/1646"},
+          {title:"Dynamic Range Sum Queries", url:"https://cses.fi/problemset/task/1648"},
+
+        ]
+      }]
     }
   ];
 
