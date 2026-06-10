@@ -161,7 +161,8 @@ export default function LeaderboardSection() {
 
         const fetchAndParse = async (url, defaultType) => {
           try {
-            const res = await fetch(url);
+            // Add a timestamp to prevent the browser from caching the file
+            const res = await fetch(`${url}?t=${new Date().getTime()}`);
             if (!res.ok) return [];
             const buf = await res.arrayBuffer();
             const wb = XLSX.read(buf, { type: "array" });
@@ -192,8 +193,8 @@ export default function LeaderboardSection() {
         };
 
         const [collegeData, schoolData] = await Promise.all([
-          fetchAndParse("/data/College.xlsx", "College"),
-          fetchAndParse("/data/School.xlsx", "School")
+          fetchAndParse("/data/Collegel.xlsx", "College"),
+          fetchAndParse("/data/schoollist.xlsx", "School")
         ]);
 
         const combined = [...collegeData, ...schoolData];
