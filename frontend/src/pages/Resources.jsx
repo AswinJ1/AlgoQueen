@@ -53,7 +53,7 @@ const SessionFlipCard = ({ session, isFlipped, onToggleFlip, compact = false }) 
           <button
             type="button"
             onClick={asSizer ? undefined : onToggleFlip}
-            className="mt-3 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-medium px-3 py-2 rounded-lg transition-colors"
+            className="mt-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-medium px-3 py-2 rounded-lg transition-colors"
           >
             <BookMarked className="h-4 w-4" />
             View Resources
@@ -275,7 +275,21 @@ const ResourcesPage = () => {
 
         ]
       }]
-    }
+    },
+    {
+      id: 7,
+      title:"Understanding Basic & Advanced Tree Concepts for Problem Solving",
+      url:"https://www.youtube.com/embed/Rg10eBaM4nc",
+      instructor:"Shinjan Chaturvedi, Software Engineer | Rubrik",
+      duration:"1hr",
+      resources:[{
+        category:"Resources",
+        items:[
+          {title:"Presentation PPT", url:"https://docs.google.com/presentation/d/1VbCN_7QMYK8Bmd7_BduxQl0phpiK1BmR/"},
+
+        ]
+      }]
+    },
   ];
 
   const recordedSessions2025 = [
