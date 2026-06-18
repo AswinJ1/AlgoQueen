@@ -12,9 +12,10 @@ import { ArrowRight, Book, BookImage, DoorClosed, LucideTrophy, MessageCircleWar
 
 const navigation = [
   // { name: 'Home', to: 'home', type: 'section' },
-  { name: 'About', to: 'about', type: 'section' },
+  // { name: 'About', to: 'about', type: 'section' },
   // { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
+  { name:'Join the Quest', to:'/quest', type:'page'},
   { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
   {name:"Prizes", to:"/prizes", type:'page'},
   {name:"Schedule", to:"/schedule", type:'page'},
