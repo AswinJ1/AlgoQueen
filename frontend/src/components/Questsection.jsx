@@ -52,7 +52,7 @@ const Questsection = () => {
 
                         <motion.div variants={fadeInUp}>
                             <StyledButton to="https://www.codechef.com/register/algoqueen-2026">
-                                Register for ICPC
+                                Register Now
                             </StyledButton>
                         </motion.div>
                     </motion.div>
