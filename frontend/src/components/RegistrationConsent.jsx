@@ -46,7 +46,7 @@ const RegistrationConsent = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 border-b border-gray-200 pb-6 sm:pb-8 last:border-0"
+                className="flex items-start gap-4 sm:gap-6 border-b border-gray-200 pb-6 sm:pb-8 last:border-0"
               >
                 <div className="shrink-0 pt-1">
                   {item.icon}
@@ -63,14 +63,19 @@ const RegistrationConsent = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="mt-4 p-6 sm:p-8 bg-indigo-50/40 rounded-2xl border border-indigo-100/50"
+            className="mt-2 sm:mt-4 p-5 sm:p-8 bg-indigo-50/40 rounded-2xl border border-indigo-100/50"
           >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6">
-              <div className="shrink-0 pt-1">
-                <CheckCircle className="w-6 h-6 text-indigo-600 md:w-8 md:h-8" />
+            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+              <div className="shrink-0 pt-1 hidden sm:block">
+                <CheckCircle className="w-8 h-8 text-indigo-600" />
               </div>
-              <div className="text-center md:text-left w-full overflow-hidden">
-                <h3 className="text-lg sm:text-xl text-gray-900 mb-2 sm:mb-3">ICPC Global Registration</h3>
+              <div className="w-full">
+                <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                  <div className="shrink-0 sm:hidden">
+                    <CheckCircle className="w-6 h-6 text-indigo-600" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-medium text-gray-900 m-0">ICPC Global Registration</h3>
+                </div>
                 <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                   I understand that to be eligible to receive prizes and/or participation certificate, I must also complete my registration on the ICPC Global platform using the following link:
                 </p>
@@ -78,12 +83,12 @@ const RegistrationConsent = () => {
                   href="https://icpc.global/regionals/finder/AlgoQueen-2026" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition-colors py-2 text-sm sm:text-base break-words w-full sm:w-auto"
+                  className="inline-flex items-center sm:items-center items-start flex-wrap gap-2 text-indigo-600 hover:text-indigo-800 transition-colors py-2 text-sm sm:text-base"
                 >
-                  <span className="border-b border-indigo-200 hover:border-indigo-800 transition-colors truncate sm:whitespace-normal">
+                  <span className="border-b border-indigo-200 hover:border-indigo-800 transition-colors break-all">
                     https://icpc.global/regionals/finder/AlgoQueen-2026
                   </span>
-                  <ExternalLink className="w-4 h-4 shrink-0" />
+                  <ExternalLink className="w-4 h-4 shrink-0 mt-0.5 sm:mt-0" />
                 </a>
               </div>
             </div>
