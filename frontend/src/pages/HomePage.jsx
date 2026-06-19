@@ -11,6 +11,7 @@ import InfoSection from '../components/InfoCard'
 import TimelineSection from '@/components/Timeline'
 import SpeakersSection from '@/components/SpeakersSection'
 import CommunityPartners from '@/components/Partners'
+import RegistrationConsent from '../components/RegistrationConsent'
 import { Element } from 'react-scroll'
 
 const HomePage = () => {
@@ -59,6 +60,10 @@ const HomePage = () => {
       {/* <Element name="learn" id="learn">
         <TrainingMaterials />
       </Element> */}
+
+      <Element name="consent" id="consent">
+        <RegistrationConsent />
+      </Element>
       
       <Element name="faq" id="faq">
         <FAQSection />

@@ -22,6 +22,7 @@ const navigation = [
   { name: 'Winners', to: '/winners', type: 'page' },
   { name: 'Resources', to: '/learning-resources', type: 'page' },
   { name: 'FAQ', to: 'faq', type: 'section' },
+  { name: 'Consent', to: 'consent', type: 'section' },
   { name: 'Archive', type: 'dropdown', children: [
     { name: 'AlgoQueen 2025', to: '/archive/2025', type: 'page' }
   ]},
