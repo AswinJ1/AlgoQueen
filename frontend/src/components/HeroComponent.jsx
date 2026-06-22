@@ -15,7 +15,10 @@ const navigation = [
   // { name: 'About', to: 'about', type: 'section' },
   // { name: 'Learn', to: 'learn', type: 'section' },
   // { name: 'Ranklist', to: '/ranklist', type: 'page' },
-  { name:'Join the Quest', to:'/quest', type:'page'},
+  { name: 'Join Quest', type: 'dropdown', children: [
+    { name: 'About', to: '/quest-about', type: 'page' },
+    { name: 'Leaderboard', to: '/quest-leaderboard', type: 'page' }
+  ]},
   { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
   {name:"Prizes", to:"/prizes", type:'page'},
   {name:"Schedule", to:"/schedule", type:'page'},
@@ -103,7 +106,7 @@ const scrollToBottom = () => {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12 items-center mr-[-46px]">
+          <div className="hidden lg:flex lg:gap-x-8 items-center">
             {/* {navigation.map((item) => (
               <Link key={item.name} to={item.to} className="text-sm/6 font-semibold text-gray-900 cursor-pointer smooth={true} duration={500}">
                 {item.name}
@@ -129,7 +132,7 @@ const scrollToBottom = () => {
           <ChevronDownIcon className="h-4 w-4 transition-transform group-hover:rotate-180" />
         </button>
         <div className="absolute left-0 top-full pt-2 hidden group-hover:block">
-          <div className="bg-white rounded-md shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[160px]">
+          <div className="bg-white rounded-none shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[160px]">
             {item.children.map((child) => (
               <RouterLink
                 key={child.name}
