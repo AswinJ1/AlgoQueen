@@ -13,6 +13,8 @@ export default function QuestLeaderboard() {
   const [dataByWeek, setDataByWeek] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 50;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +24,7 @@ export default function QuestLeaderboard() {
         
         const fetchWeek = async (week, fileIndex) => {
           try {
-            const res = await fetch(`/data/quest_week${fileIndex}.xlsx?t=${new Date().getTime()}`);
+            const res = await fetch(`/data/week${fileIndex}.xlsx?t=${new Date().getTime()}`);
             if (!res.ok) return; // File might not exist yet, leave empty (TBA)
             
             const buf = await res.arrayBuffer();
@@ -41,13 +43,14 @@ export default function QuestLeaderboard() {
               };
               
               return {
+                rank: get("rank", "#"),
                 questId: get("quest id", "questid", "id"),
                 name: get("name", "participant name"),
-                c1: get("challenge 1", "c1", "1"),
-                c2: get("challenge 2", "c2", "2"),
-                c3: get("challenge 3", "c3", "3"),
-                c4: get("challenge 4", "c4", "4"),
-                c5: get("challenge 5", "c5", "5"),
+                c1: get("challenge 1", "challenge1_score", "c1", "1"),
+                c2: get("challenge 2", "challenge2_score", "c2", "2"),
+                c3: get("challenge 3", "challenge3_score", "c3", "3"),
+                c4: get("challenge 4", "challenge4_score", "c4", "4"),
+                c5: get("challenge 5", "challenge5_score", "c5", "5"),
                 total: get("total", "score", "total score")
               };
             }).filter(d => d.questId || d.name); // Filter empty rows
@@ -81,13 +84,35 @@ export default function QuestLeaderboard() {
 
   const filteredData = useMemo(() => {
     if (!searchQuery) {
-      return [...currentData].sort((a, b) => (parseFloat(b.total) || 0) - (parseFloat(a.total) || 0));
+      return currentData;
     }
-    const q = searchQuery.toLowerCase();
-    return currentData
-      .filter(row => row.questId.toLowerCase().includes(q) || row.name.toLowerCase().includes(q))
-      .sort((a, b) => (parseFloat(b.total) || 0) - (parseFloat(a.total) || 0));
+    const q = searchQuery.toLowerCase().trim();
+    
+    // If the search perfectly matches a Quest ID, only show that exact student
+    const exactMatches = currentData.filter(row => row.questId.toLowerCase() === q);
+    if (exactMatches.length > 0) {
+      return exactMatches;
+    }
+
+    // Otherwise, allow partial matches for both Quest ID and Name
+    return currentData.filter(row => row.questId.toLowerCase().includes(q) || row.name.toLowerCase().includes(q));
   }, [currentData, searchQuery]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedWeek]);
+
+  const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+  const paginatedData = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredData, currentPage]);
+
+  const hasC1 = currentData.some(row => row.c1);
+  const hasC2 = currentData.some(row => row.c2);
+  const hasC3 = currentData.some(row => row.c3);
+  const hasC4 = currentData.some(row => row.c4);
+  const hasC5 = currentData.some(row => row.c5);
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8 w-full py-8 font-sans">
@@ -164,34 +189,87 @@ export default function QuestLeaderboard() {
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Rank</th>
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Quest ID</th>
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Name</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 1</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 2</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 3</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 4</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 5</th>
-                  <th className="py-4 px-6 text-xs font-medium text-pink-600 uppercase tracking-wider text-center">Total</th>
+                  {hasC1 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 1 Score</th>}
+                  {hasC2 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 2 Score</th>}
+                  {hasC3 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 3 Score</th>}
+                  {hasC4 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 4 Score</th>}
+                  {hasC5 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 5 Score</th>}
+                  <th className="py-4 px-6 text-xs font-medium text-pink-600 uppercase tracking-wider text-center">Total Score</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {filteredData.map((row, index) => (
-                  <tr key={row.questId} className="hover:bg-slate-50/50 transition-colors">
+                {paginatedData.map((row, index) => (
+                  <tr key={`${row.questId}-${index}`} className="hover:bg-slate-50/50 transition-colors">
                     <td className="py-4 px-6">
                       <div className="flex items-center justify-center w-8 h-8 text-sm font-normal text-slate-700">
-                        {index + 1}
+                        {row.rank || ((currentPage - 1) * ITEMS_PER_PAGE + index + 1)}
                       </div>
                     </td>
                     <td className="py-4 px-6 text-sm font-normal text-slate-900">{row.questId}</td>
                     <td className="py-4 px-6 text-sm text-slate-700 font-light">{row.name}</td>
-                    <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c1}</td>
-                    <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c2}</td>
-                    <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c3}</td>
-                    <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c4}</td>
-                    <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c5}</td>
+                    {hasC1 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c1}</td>}
+                    {hasC2 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c2}</td>}
+                    {hasC3 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c3}</td>}
+                    {hasC4 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c4}</td>}
+                    {hasC5 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c5}</td>}
                     <td className="py-4 px-6 text-sm text-center font-medium text-pink-600 bg-pink-50/30 rounded-none">{row.total}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-between border-t border-slate-200 bg-white px-4 py-3 sm:px-6">
+                <div className="flex flex-1 justify-between sm:hidden">
+                  <button
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="relative inline-flex items-center rounded-none border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+                  >
+                    Previous
+                  </button>
+                  <button
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="relative ml-3 inline-flex items-center rounded-none border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+                  >
+                    Next
+                  </button>
+                </div>
+                <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                  <div>
+                    <p className="text-sm text-slate-700 font-light">
+                      Showing <span className="font-medium">{(currentPage - 1) * ITEMS_PER_PAGE + 1}</span> to <span className="font-medium">{Math.min(currentPage * ITEMS_PER_PAGE, filteredData.length)}</span> of{' '}
+                      <span className="font-medium">{filteredData.length}</span> participants
+                    </p>
+                  </div>
+                  <div>
+                    <nav className="isolate inline-flex -space-x-px rounded-none shadow-sm" aria-label="Pagination">
+                      <button
+                        onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                        disabled={currentPage === 1}
+                        className="relative inline-flex items-center rounded-l-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 border-r-0"
+                      >
+                        <span className="sr-only">Previous</span>
+                        &larr; Prev
+                      </button>
+                      <span className="relative inline-flex items-center px-4 py-2 text-sm font-medium text-slate-700 ring-1 ring-inset ring-slate-300 focus:outline-offset-0 bg-slate-50">
+                        Page {currentPage} of {totalPages}
+                      </span>
+                      <button
+                        onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                        disabled={currentPage === totalPages}
+                        className="relative inline-flex items-center rounded-r-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 border-l-0"
+                      >
+                        Next &rarr;
+                        <span className="sr-only">Next</span>
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
