@@ -51,8 +51,8 @@ const Questsection = () => {
                         </motion.p>
 
                         <motion.div variants={fadeInUp}>
-                            <StyledButton to="https://www.codechef.com/register/algoqueen-2026">
-                                Register Now
+                            <StyledButton to="/quest-leaderboard">
+                                View Quest Leaderboard
                             </StyledButton>
                         </motion.div>
                     </motion.div>
