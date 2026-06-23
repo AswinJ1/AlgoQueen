@@ -14,6 +14,7 @@ import Speakerpage from './pages/Speakerpage';
 import Schedule from './pages/Schedule';
 import PricePage from './pages/PricePage';
 import QuestPage from './pages/QuestPage';
+import QuestLeaderboardPage from './pages/QuestLeaderboardPage';
 const App = () => {
   return (
     <Router>
@@ -21,7 +22,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/winners" element={<WinnersPage />} />
         <Route path="/learning-resources" element={<ResourcesPage />} />
-        <Route path="/quest" element={<QuestPage />} />
+        <Route path="/quest-about" element={<QuestPage />} />
+        <Route path="/quest-leaderboard" element={<QuestLeaderboardPage />} />
         <Route path="/prizes" element={<PricePage />} />
         {/* <Route path="/speakers" element={<Speakerpage />} /> */}
         <Route path="/schedule" element={<Schedule />} />
