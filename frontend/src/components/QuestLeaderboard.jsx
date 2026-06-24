@@ -24,7 +24,7 @@ export default function QuestLeaderboard() {
         
         const fetchWeek = async (week, fileIndex) => {
           try {
-            const res = await fetch(`/data/week${fileIndex}.xlsx?t=${new Date().getTime()}`);
+            const res = await fetch(`/data/week${fileIndex}_updated.xlsx?t=${new Date().getTime()}`);
             if (!res.ok) return; // File might not exist yet, leave empty (TBA)
             
             const buf = await res.arrayBuffer();
@@ -53,7 +53,7 @@ export default function QuestLeaderboard() {
                 c5: get("challenge 5", "challenge5_score", "c5", "5"),
                 total: get("total", "score", "total score")
               };
-            }).filter(d => d.questId || d.name); // Filter empty rows
+            }).filter(d => (d.questId || d.name) && Number(d.total) > 0); // Filter empty rows and 0 scores
           } catch (e) {
             console.error(`Error processing ${week} file:`, e);
           }
