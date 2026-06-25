@@ -290,6 +290,21 @@ const ResourcesPage = () => {
         ]
       }]
     },
+
+    {
+      id: 8,
+      title: "Binary Search",
+      url: "https://www.youtube.com/embed/RMKkkYcaYtM",
+      instructor: "Vaishnavi Gautam",
+      duration: "1hr",
+      resources: [{
+        category: "Resources",
+        items: [
+          { title: "Binary Search", url: "https://drive.google.com/file/d/1qTSVFhap3t8tMfuhUkE7rh5JLkWSj2sd/view" },
+
+        ]
+      }]
+    },
   ];
 
   const recordedSessions2025 = [
