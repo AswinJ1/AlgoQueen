@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import * as XLSX from "xlsx";
 
 const WEEKS = ["Week 1", "Week 2", "Week 3", "Week 4"];
-const CURRENT_WEEK = "Week 1"; // Setting Week 2 as current
+const CURRENT_WEEK = "Week 2"; // Setting Week 2 as current
 
 // Use * for current week in the UI as requested
 const displayWeek = (week) => week === CURRENT_WEEK ? `${week} *` : week;
