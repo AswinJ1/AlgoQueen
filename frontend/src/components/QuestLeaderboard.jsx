@@ -42,16 +42,27 @@ export default function QuestLeaderboard() {
                 return "";
               };
               
+              const c1 = get("challenge 1", "challenge1_score", "c1", "1");
+              const c2 = get("challenge 2", "challenge2_score", "c2", "2");
+              const c3 = get("challenge 3", "challenge3_score", "c3", "3");
+              const c4 = get("challenge 4", "challenge4_score", "c4", "4");
+              const c5 = get("challenge 5", "challenge5_score", "c5", "5");
+              let total = get("total", "score", "total score");
+              
+              if (!total && (c1 || c2 || c3 || c4 || c5)) {
+                total = (Number(c1) || 0) + (Number(c2) || 0) + (Number(c3) || 0) + (Number(c4) || 0) + (Number(c5) || 0);
+              }
+
               return {
                 rank: get("rank", "#"),
                 questId: get("quest id", "questid", "id"),
                 name: get("name", "participant name"),
-                c1: get("challenge 1", "challenge1_score", "c1", "1"),
-                c2: get("challenge 2", "challenge2_score", "c2", "2"),
-                c3: get("challenge 3", "challenge3_score", "c3", "3"),
-                c4: get("challenge 4", "challenge4_score", "c4", "4"),
-                c5: get("challenge 5", "challenge5_score", "c5", "5"),
-                total: get("total", "score", "total score")
+                c1,
+                c2,
+                c3,
+                c4,
+                c5,
+                total
               };
             }).filter(d => (d.questId || d.name) && Number(d.total) > 0); // Filter empty rows and 0 scores
           } catch (e) {
