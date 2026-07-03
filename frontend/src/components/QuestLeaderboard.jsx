@@ -198,7 +198,7 @@ export default function QuestLeaderboard() {
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Rank</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Quest ID</th>
+                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Quest ID</th>
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Name</th>
                   {hasC1 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 1 Score</th>}
                   {hasC2 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 2 Score</th>}

@@ -4,6 +4,7 @@ import { scroller } from 'react-scroll'
 import HeroComponent from '../components/HeroComponent'
 import About from '../components/AboutSection'
 import RegisterSection from '../components/RegisterSection'
+import HowtoRegister from '../components/HowtoRegister'
 // import TrainingMaterials from '../components/TrainingMaterials'
 import FAQSection from '../components/FAQSection'
 import Footer from '../components/Footer'
@@ -51,6 +52,10 @@ const HomePage = () => {
 
       <Element name="partners" id="partners">
         <CommunityPartners />
+      </Element>
+
+      <Element name="how-to-register" id="how-to-register">
+        <HowtoRegister />
       </Element>
 
       <Element name="register" id="register">
