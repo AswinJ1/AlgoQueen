@@ -54,8 +54,7 @@ export default function QuestLeaderboard() {
               }
 
               return {
-                rank: get("rank", "#"),
-                questId: get("quest id", "questid", "id"),
+                rank: get("rank", "#")
                 name: get("name", "participant name"),
                 c1,
                 c2,
@@ -198,7 +197,6 @@ export default function QuestLeaderboard() {
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Rank</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Quest ID</th>
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Name</th>
                   {hasC1 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 1 Score</th>}
                   {hasC2 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 2 Score</th>}
@@ -216,7 +214,7 @@ export default function QuestLeaderboard() {
                         {row.rank || ((currentPage - 1) * ITEMS_PER_PAGE + index + 1)}
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-sm font-normal text-slate-900">{row.questId}</td>
+                    
                     <td className="py-4 px-6 text-sm text-slate-700 font-light">{row.name}</td>
                     {hasC1 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c1}</td>}
                     {hasC2 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c2}</td>}
