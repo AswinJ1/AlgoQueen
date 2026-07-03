@@ -10,34 +10,60 @@ import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import TrendingBanner from './TrendingBanner';
 import { ArrowRight, Book, BookImage, DoorClosed, LucideTrophy, MessageCircleWarning, Pen, PenLine } from 'lucide-react';
 
+// Prelims start: 3:00 PM IST, July 4, 2026
+const PRELIMS_START = new Date('2026-07-04T10:00:00+05:30').getTime();
+
 const navigation = [
-  // { name: 'Home', to: 'home', type: 'section' },
-  // { name: 'About', to: 'about', type: 'section' },
-  // { name: 'Learn', to: 'learn', type: 'section' },
-  // { name: 'Ranklist', to: '/ranklist', type: 'page' },
   { name: 'Join Quest', type: 'dropdown', children: [
     { name: 'About', to: '/quest-about', type: 'page' },
     { name: 'Leaderboard', to: '/quest-leaderboard', type: 'page' }
   ]},
+  { name: 'How to Register', to: 'how-to-register', type: 'section' },
   { name: 'Leaderboard', to: '/leaderboard', type: 'page' },
-  {name:"Prizes", to:"/prizes", type:'page'},
-  {name:"Schedule", to:"/schedule", type:'page'},
+  { name: 'Prizes', to: '/prizes', type: 'page' },
+  { name: 'Schedule', to: '/schedule', type: 'page' },
   { name: 'Winners', to: '/winners', type: 'page' },
-  { name: 'Resources', to: '/learning-resources', type: 'page' },
-  { name: 'FAQ', to: 'faq', type: 'section' },
-  { name: 'Consent', to: 'consent', type: 'section' },
-  { name: 'Archive', type: 'dropdown', children: [
-    { name: 'AlgoQueen 2025', to: '/archive/2025', type: 'page' }
+  { name: 'More', type: 'dropdown', children: [
+    { name: 'Resources', to: '/learning-resources', type: 'page' },
+    { name: 'FAQ', to: 'faq', type: 'section' },
+    // { name: 'Consent', to: 'consent', type: 'section' },
+    { name: 'AlgoQueen 2025 Archive', to: '/archive/2025', type: 'page' },
   ]},
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
 
 const HeroComponent = ({ hideHeroContent = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [countdown, setCountdown] = useState(null);
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const diff = PRELIMS_START - Date.now();
+      if (diff <= 0) {
+        setCountdown(null);
+        return;
+      }
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      setCountdown({ hours, minutes, seconds });
+    };
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     gsap.fromTo(
@@ -84,16 +110,27 @@ const scrollToBottom = () => {
 
   return (
     <div className="bg-white">
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-md'
+            : 'bg-transparent shadow-none'
+        }`}
+      >
       {/* <TrendingBanner className="px-6"></TrendingBanner> */}
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <nav
+          aria-label="Global"
+          className={`flex items-center justify-between max-w-7xl mx-auto w-full px-6 lg:px-8 transition-all duration-300 ${
+            scrolled ? 'py-3' : 'py-6'
+          }`}
+        >
           <div className="flex lg:flex-1 lg:ml-[-54px] ml-[-10px] md:ml-[-5px] sm:ml-0">
             <RouterLink to="/" className="-m-1.5 p-1.5 ">
               <span className="sr-only">Algo Queen</span>
               <img
                 alt=""
                 src="/2026.png"
-                className="h-[80px] w-auto"
+                className={`w-auto transition-all duration-300 ${scrolled ? 'h-[56px]' : 'h-[80px]'}`}
               />
             </RouterLink>
           </div>
@@ -107,7 +144,7 @@ const scrollToBottom = () => {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-8 items-center">
+          <div className="hidden lg:flex lg:gap-x-6 items-center">
             {/* {navigation.map((item) => (
               <Link key={item.name} to={item.to} className="text-sm/6 font-semibold text-gray-900 cursor-pointer smooth={true} duration={500}">
                 {item.name}
@@ -119,7 +156,7 @@ const scrollToBottom = () => {
       <button
         key={item.name}
         onClick={() => window.open(item.to, "_blank")}
-        className="px-3 py-1 text-sm bg-transparent text-black font-semibold hover:opacity-80 flex items-center"
+        className="pl-4 ml-2 py-1 text-sm bg-transparent text-black font-semibold hover:opacity-80 flex items-center border-l border-gray-200"
       >
         <img src="/telegram2.png" alt="" />
         {item.name}
@@ -128,21 +165,47 @@ const scrollToBottom = () => {
   } else if (item.type === 'dropdown') {
     return (
       <div key={item.name} className="relative group">
-        <button className="text-sm font-semibold text-gray-900 cursor-pointer flex items-center gap-1">
+        <button className="text-sm font-semibold text-gray-900 cursor-pointer flex items-center gap-1 py-2">
           {item.name}
           <ChevronDownIcon className="h-4 w-4 transition-transform group-hover:rotate-180" />
         </button>
         <div className="absolute left-0 top-full pt-2 hidden group-hover:block">
-          <div className="bg-white rounded-none shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[160px]">
-            {item.children.map((child) => (
-              <RouterLink
-                key={child.name}
-                to={child.to}
-                className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-              >
-                {child.name}
-              </RouterLink>
-            ))}
+          <div className="bg-white rounded-lg shadow-lg ring-1 ring-gray-900/10 py-1 min-w-[200px]">
+            {item.children.map((child) => {
+              if (child.type === 'section') {
+                if (location.pathname !== '/') {
+                  return (
+                    <button
+                      key={child.name}
+                      onClick={() => handleNavigation(child)}
+                      className="block w-full text-left px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      {child.name}
+                    </button>
+                  );
+                }
+                return (
+                  <ScrollLink
+                    key={child.name}
+                    to={child.to}
+                    smooth={true}
+                    duration={500}
+                    className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50 cursor-pointer"
+                  >
+                    {child.name}
+                  </ScrollLink>
+                );
+              }
+              return (
+                <RouterLink
+                  key={child.name}
+                  to={child.to}
+                  className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  {child.name}
+                </RouterLink>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -228,16 +291,42 @@ const scrollToBottom = () => {
       <span className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900">
         {item.name}
       </span>
-      {item.children.map((child) => (
-        <RouterLink
-          key={child.name}
-          to={child.to}
-          className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {child.name}
-        </RouterLink>
-      ))}
+      {item.children.map((child) =>
+        child.type === 'section' ? (
+          location.pathname !== '/' ? (
+            <button
+              key={child.name}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                handleNavigation(child);
+              }}
+              className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 w-full text-left"
+            >
+              {child.name}
+            </button>
+          ) : (
+            <ScrollLink
+              key={child.name}
+              to={child.to}
+              smooth={true}
+              duration={500}
+              className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 cursor-pointer"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {child.name}
+            </ScrollLink>
+          )
+        ) : (
+          <RouterLink
+            key={child.name}
+            to={child.to}
+            className="-mx-3 block rounded-lg px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {child.name}
+          </RouterLink>
+        )
+      )}
     </div>
   ) : item.type === 'section' ? (
     location.pathname !== '/' ? (
@@ -337,6 +426,31 @@ const scrollToBottom = () => {
                 <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
               </RouterLink>
             </div>
+
+            {countdown && (
+              <div className="mt-10 flex items-center flex-wrap gap-4">
+                <span className="text-xl text-gray-700">
+                  Practice Contest 1 starts in:
+                </span>
+                <div className="flex items-center gap-3">
+                  <div className="flex flex-col items-center bg-white shadow-md px-4 py-2 min-w-[72px]">
+                    <span className="text-3xl font-bold text-indigo-600 tabular-nums">{String(countdown.hours).padStart(2, '0')}</span>
+                    <span className="text-[10px] uppercase tracking-wide text-gray-500">Hrs</span>
+                  </div>
+                  <span className="text-2xl font-bold text-indigo-400">:</span>
+                  <div className="flex flex-col items-center bg-white shadow-md px-4 py-2 min-w-[72px]">
+                    <span className="text-3xl font-bold text-indigo-600 tabular-nums">{String(countdown.minutes).padStart(2, '0')}</span>
+                    <span className="text-[10px] uppercase tracking-wide text-gray-500">Mins</span>
+                  </div>
+                  <span className="text-2xl font-bold text-indigo-400">:</span>
+                  <div className="flex flex-col items-center bg-white shadow-md px-4 py-2 min-w-[72px]">
+                    <span className="text-3xl font-bold text-indigo-600 tabular-nums">{String(countdown.seconds).padStart(2, '0')}</span>
+                    <span className="text-[10px] uppercase tracking-wide text-gray-500">Secs</span>
+                  </div>
+                </div>
+                {/* <span className="text-xl  text-gray-500">10:00 AM IST, July 4</span> */}
+              </div>
+            )}
              {/* <button className="px-6 py-2  bg-indigo-700 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
         Coming Soon 
       </button> */}
