@@ -98,8 +98,8 @@ export default function QuestLeaderboard() {
       return currentData;
     }
     const q = searchQuery.toLowerCase().trim();
-    
-    // If the search perfectly matches a Quest ID, only show that exact student
+
+    // If the search perfectly matches a Quest ID, only show that exact participant
     const exactMatches = currentData.filter(row => row.questId.toLowerCase() === q);
     if (exactMatches.length > 0) {
       return exactMatches;
@@ -198,7 +198,7 @@ export default function QuestLeaderboard() {
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Rank</th>
-                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Quest ID</th>
+                  <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Quest ID</th>
                   <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider">Name</th>
                   {hasC1 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 1 Score</th>}
                   {hasC2 && <th className="py-4 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider text-center">Challenge 2 Score</th>}
@@ -260,7 +260,7 @@ export default function QuestLeaderboard() {
                       <button
                         onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                         disabled={currentPage === 1}
-                        className="relative inline-flex items-center rounded-l-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 border-r-0"
+                        className="relative inline-flex items-center rounded-l-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50"
                       >
                         <span className="sr-only">Previous</span>
                         &larr; Prev
@@ -271,7 +271,7 @@ export default function QuestLeaderboard() {
                       <button
                         onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                         disabled={currentPage === totalPages}
-                        className="relative inline-flex items-center rounded-r-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 border-l-0"
+                        className="relative inline-flex items-center rounded-r-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50"
                       >
                         Next &rarr;
                         <span className="sr-only">Next</span>
