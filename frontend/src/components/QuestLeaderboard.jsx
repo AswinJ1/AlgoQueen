@@ -55,7 +55,6 @@ export default function QuestLeaderboard() {
 
               return {
                 rank: get("rank", "#"),
-                questId: get("quest id", "questid", "id"),
                 name: get("name", "participant name"),
                 c1,
                 c2,
@@ -64,7 +63,7 @@ export default function QuestLeaderboard() {
                 c5,
                 total
               };
-            }).filter(d => (d.questId || d.name) && Number(d.total) > 0); // Filter empty rows and 0 scores
+            }).filter(d => (d.name) && Number(d.total) > 0); // Filter empty rows and 0 scores
           } catch (e) {
             console.error(`Error processing ${week} file:`, e);
           }
@@ -99,14 +98,8 @@ export default function QuestLeaderboard() {
     }
     const q = searchQuery.toLowerCase().trim();
     
-    // If the search perfectly matches a Quest ID, only show that exact student
-    const exactMatches = currentData.filter(row => row.questId.toLowerCase() === q);
-    if (exactMatches.length > 0) {
-      return exactMatches;
-    }
-
-    // Otherwise, allow partial matches for both Quest ID and Name
-    return currentData.filter(row => row.questId.toLowerCase().includes(q) || row.name.toLowerCase().includes(q));
+    // Allow partial matches for Name
+    return currentData.filter(row => row.name.toLowerCase().includes(q));
   }, [currentData, searchQuery]);
 
   useEffect(() => {
@@ -159,7 +152,7 @@ export default function QuestLeaderboard() {
           <div className="relative w-full md:w-80">
             <input
               type="text"
-              placeholder="Search by Quest ID or Name..."
+              placeholder="Search by Name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="px-4 py-2.5 w-full bg-slate-50 border border-slate-200 rounded-none focus:outline-none focus:ring-1 focus:ring-pink-500 focus:border-pink-500 transition-all text-slate-700 font-light"
@@ -210,13 +203,13 @@ export default function QuestLeaderboard() {
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {paginatedData.map((row, index) => (
-                  <tr key={`${row.questId}-${index}`} className="hover:bg-slate-50/50 transition-colors">
+                  <tr key={`${row.name}-${index}`} className="hover:bg-slate-50/50 transition-colors">
                     <td className="py-4 px-6">
                       <div className="flex items-center justify-center w-8 h-8 text-sm font-normal text-slate-700">
                         {row.rank || ((currentPage - 1) * ITEMS_PER_PAGE + index + 1)}
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-sm font-normal text-slate-900">{row.questId}</td>
+                    
                     <td className="py-4 px-6 text-sm text-slate-700 font-light">{row.name}</td>
                     {hasC1 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c1}</td>}
                     {hasC2 && <td className="py-4 px-6 text-sm text-center text-slate-600 font-light">{row.c2}</td>}
@@ -260,7 +253,7 @@ export default function QuestLeaderboard() {
                       <button
                         onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                         disabled={currentPage === 1}
-                        className="relative inline-flex items-center rounded-l-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 border-r-0"
+                        className="relative inline-flex items-center rounded-l-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50"
                       >
                         <span className="sr-only">Previous</span>
                         &larr; Prev
@@ -271,7 +264,7 @@ export default function QuestLeaderboard() {
                       <button
                         onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                         disabled={currentPage === totalPages}
-                        className="relative inline-flex items-center rounded-r-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 border-l-0"
+                        className="relative inline-flex items-center rounded-r-none px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50"
                       >
                         Next &rarr;
                         <span className="sr-only">Next</span>
