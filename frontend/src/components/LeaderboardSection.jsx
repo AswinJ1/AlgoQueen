@@ -193,8 +193,8 @@ export default function LeaderboardSection() {
         };
 
         const [collegeData, schoolData] = await Promise.all([
-          fetchAndParse("/data/Collegel.xlsx", "College"),
-          fetchAndParse("/data/schoollist.xlsx", "School")
+          fetchAndParse("/data/Collegeleaderboard.xlsx", "College"),
+          fetchAndParse("/data/Schoolleaderboard.xlsx", "School")
         ]);
 
         const combined = [...collegeData, ...schoolData];
