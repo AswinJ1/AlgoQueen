@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import * as XLSX from "xlsx";
 
-const WEEKS = ["Week 1", "Week 2", "Week 3", "Week 4"];
+const WEEKS = ["Week 1", "Week 2"];
 const CURRENT_WEEK = "Week 2"; // Setting Week 2 as current
 
 // Use * for current week in the UI as requested
@@ -20,7 +20,10 @@ export default function QuestLeaderboard() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const parsedData = { "Week 1": [], "Week 2": [], "Week 3": [], "Week 4": [] };
+        const parsedData = { "Week 1": [], "Week 2": [], 
+          // "Week 3": [], "Week 4": [] 
+
+        };
         
         const fetchWeek = async (week, fileIndex) => {
           try {
@@ -74,8 +77,8 @@ export default function QuestLeaderboard() {
         await Promise.all([
           fetchWeek("Week 1", 1),
           fetchWeek("Week 2", 2),
-          fetchWeek("Week 3", 3),
-          fetchWeek("Week 4", 4)
+          // fetchWeek("Week 3", 3),
+          // fetchWeek("Week 4", 4)
         ]);
         
         setDataByWeek(parsedData);
