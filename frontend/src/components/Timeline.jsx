@@ -6,9 +6,9 @@ const timeline = [
     label: "Registration Ends",
   },
   {
-    date: "July 4",
-    label: "Practice Contest 1",
-    time: "10:00 AM IST",
+    date: "July 11",
+    label: "Practice Contest 2",
+    // time: "10:00 AM IST",
   },
   {
     date: "July 18",

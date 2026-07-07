@@ -11,7 +11,7 @@ import TrendingBanner from './TrendingBanner';
 import { ArrowRight, Book, BookImage, DoorClosed, LucideTrophy, MessageCircleWarning, Pen, PenLine } from 'lucide-react';
 
 // Prelims start: 3:00 PM IST, July 4, 2026
-const PRELIMS_START = new Date('2026-07-04T10:00:00+05:30').getTime();
+const REGISTER_END = new Date('2026-07-10T12:00:00+05:30').getTime();
 
 const navigation = [
   { name: 'Join Quest', type: 'dropdown', children: [
@@ -43,7 +43,7 @@ const HeroComponent = ({ hideHeroContent = false }) => {
 
   useEffect(() => {
     const updateCountdown = () => {
-      const diff = PRELIMS_START - Date.now();
+      const diff = REGISTER_END - Date.now();
       if (diff <= 0) {
         setCountdown(null);
         return;
@@ -430,7 +430,8 @@ const scrollToBottom = () => {
             {countdown && (
               <div className="mt-10 flex items-center flex-wrap gap-4">
                 <span className="text-xl text-gray-700">
-                  Practice Contest 1 starts in:
+                  {/* Practice Contest 1 starts in: */}
+                  Registration ends in:
                 </span>
                 <div className="flex items-center gap-3">
                   <div className="flex flex-col items-center bg-white shadow-md px-4 py-2 min-w-[72px]">

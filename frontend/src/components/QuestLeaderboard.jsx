@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import * as XLSX from "xlsx";
+import TopThreeCard from './TopThreeCard';
 
 const WEEKS = ["Week 1", "Week 2"];
 const CURRENT_WEEK = "Week 2"; // Setting Week 2 as current
@@ -128,6 +129,20 @@ export default function QuestLeaderboard() {
   const hasC4 = currentData.some(row => row.c4);
   const hasC5 = currentData.some(row => row.c5);
 
+  // Build the top-3 podium data from the current week's leaderboard as plain config,
+  // then hand it off as props to the reusable TopThreeCard component.
+  const weekNumber = WEEKS.indexOf(selectedWeek) + 1;
+  const topThree = currentData.slice(0, 3).map((row, index) => {
+    const rank = index + 1;
+    return {
+      rank,
+      name: row.name || row.questId,
+      questId: row.questId,
+      total: row.total,
+      image: `/quest/assets/week${weekNumber}rank${rank}.jpeg`,
+    };
+  });
+
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8 w-full py-8 font-sans">
       <div className="text-center mb-10">
@@ -138,6 +153,22 @@ export default function QuestLeaderboard() {
           Track your progress across all challenges and weeks.
         </p>
       </div>
+
+      {/* Top 3 Podium */}
+      {!loading && !error && topThree.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-16 mb-4 pt-4 justify-items-center">
+          {topThree.map((entry) => (
+            <TopThreeCard
+              key={entry.questId || entry.rank}
+              rank={entry.rank}
+              name={entry.name}
+              questId={entry.questId}
+              total={entry.total}
+              image={entry.image}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Toggles & Search */}
       <div className="bg-white rounded-none shadow-sm border border-slate-200 p-4 mb-8">
