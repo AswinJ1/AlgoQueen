@@ -11,7 +11,7 @@ import TrendingBanner from './TrendingBanner';
 import { ArrowRight, Book, BookImage, DoorClosed, LucideTrophy, MessageCircleWarning, Pen, PenLine } from 'lucide-react';
 
 // Prelims start: 3:00 PM IST, July 4, 2026
-const REGISTER_END = new Date('2026-07-10T12:00:00+05:30').getTime();
+const REGISTER_END = new Date('2026-07-10T10:00:00+05:30').getTime();
 
 const navigation = [
   { name: 'Join Quest', type: 'dropdown', children: [
