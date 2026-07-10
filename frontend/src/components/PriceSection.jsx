@@ -151,16 +151,17 @@ const PriceSection = () => {
           >
             Compete, showcase your skills and win <span className="text-pink-600 font-bold">exciting prizes</span> and premium gadgets as the next <span className="text-pink-600 font-bold">AlgoQueen!</span>
           </motion.p>
-               <RouterLink 
-                to="https://www.codechef.com/register/algoqueen-2026"
+               <div 
+               
                 className="relative flex md:inline-flex items-center justify-center gap-2 mt-6 bg-indigo-600 w-full sm:w-auto px-4 py-3 sm:px-6 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
                 id="register-button"
               >
+                 {/* to="https://www.codechef.com/register/algoqueen-2026" */}
                 <span className="relative z-10 flex items-center gap-2 ">
                  REGISTER NOW
                 </span>
                 <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
-              </RouterLink>        </div>
+              </div>        </div>
 
         {/* Right image & floating box */}
         <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center mt-12 md:mt-0 z-20">
