@@ -403,17 +403,18 @@ const scrollToBottom = () => {
             </p> 
             {/* and sponsored by Jane Street */}
             <div className="mt-10 flex flex-wrap items-center gap-4">
-            <RouterLink 
-                to="https://www.codechef.com/register/algoqueen-2026"
-                ref={buttonRef}
+            <div 
+             
                 className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
                 id="register-button"
               >
+                   {/* to="https://www.codechef.com/register/algoqueen-2026"
+                ref={buttonRef} */}
                 <span className="relative z-10 flex items-center gap-2 ">
-                 REGISTER NOW
+                 REGISTRATION IS CLOSED
                 </span>
                 <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
-              </RouterLink>
+              </div>
                 <RouterLink 
                 to="/prizes"
                 ref={buttonRef}
