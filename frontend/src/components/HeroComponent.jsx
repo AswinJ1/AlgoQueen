@@ -21,7 +21,7 @@ const navigation = [
     ]
   },
   { name: 'How to Register', to: 'how-to-register', type: 'section' },
-  { name: 'leaderboard', to: '/leaderboard', type: 'page' },
+  // { name: 'leaderboard', to: '/leaderboard', type: 'page' },
   { name: 'Top Registered Institutes', to: '/institute_leaderboard', type: 'page' },
   { name: 'Prizes', to: '/prizes', type: 'page' },
   { name: 'Schedule', to: '/schedule', type: 'page' },
@@ -467,7 +467,7 @@ const HeroComponent = ({ hideHeroContent = false }) => {
               </div>
 
               {/* Question PDFs Row */}
-              <div className="mt-4 flex flex-wrap items-center gap-4">
+              {/* <div className="mt-4 flex flex-wrap items-center gap-4">
                 <a
                   href="/data/sample2.pdf"
                   download="Question1.pdf"
@@ -486,7 +486,7 @@ const HeroComponent = ({ hideHeroContent = false }) => {
                     Download Question 2
                   </span>
                 </a>
-              </div>
+              </div> */}
 
               {countdown && (
                 <div className="mt-10 flex items-center flex-wrap gap-4">
