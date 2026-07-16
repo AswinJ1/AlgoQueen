@@ -163,7 +163,7 @@ export default function LeaderBoard() {
         <div className="bg-white text-white px-4 md:px-6 py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-lg md:text-xl font-bold text-black text-center md:text-left">Algo Queen 2025 Ranklist</h2>
+              <h2 className="text-lg md:text-xl font-bold text-black text-center md:text-left">Algo Queen 2026 Ranklist</h2>
               <p className="text-gray-700 text-xs md:text-sm mt-1 text-center md:text-left">
                 Showing {paginatedData.length} of {filteredData.length} participants
               </p>
