@@ -27,8 +27,9 @@ const App = () => {
         <Route path="/prizes" element={<PricePage />} />
         {/* <Route path="/speakers" element={<Speakerpage />} /> */}
         <Route path="/schedule" element={<Schedule />} />
+        <Route path="/leaderboard" element={<Board />} />
         {/* <Route path="/ranklist" element={<SelectionCriteriaPage />} /> */}
-        <Route path="/leaderboard" element={<RegisterLeaderPage />} />
+        <Route path="/institute_leaderboard" element={<RegisterLeaderPage />} />
         {/* Archive routes */}
         <Route path="/archive/2025" element={<ArchiveHomePage2025 />} />
         <Route path="/archive/2025/leaderboard" element={<ArchiveBoard2025 />} />

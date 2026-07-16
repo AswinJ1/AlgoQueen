@@ -8,7 +8,11 @@
     "generate-sitemap": "node src/scripts/generate-sitemap.js",
     "build": "vite build && npm run generate-sitemap",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "convert:college": "node src/scripts/convert_ranklist.js public/data/College.xlsx public/data/College_ranklist.json College_ranklist",
+    "convert:school": "node src/scripts/convert_ranklist.js public/data/School.xlsx public/data/School_ranklist.json School_ranklist",
+    "generate-xlsx:college": "node src/scripts/json_to_xlsx.js public/data/College_ranklist.json public/data/Generated_College.xlsx College_ranklist",
+    "generate-xlsx:school": "node src/scripts/json_to_xlsx.js public/data/School_ranklist.json public/data/Generated_School.xlsx School_ranklist"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
