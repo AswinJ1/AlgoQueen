@@ -13,7 +13,45 @@ export default function LeaderBoard() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    // --- NEW API IMPLEMENTATION ---
+    // Replace 'API_URL_HERE' with your actual endpoint. 
+    // This assumes the API returns data in the same format as the JSON files.
+    const fetchApiData = async () => {
+      try {
+        setLoading(true);
+        // Example: If using two separate endpoints
+        const [schoolResponse, collegeResponse] = await Promise.all([
+          fetch('YOUR_SCHOOL_API_ENDPOINT_HERE'), 
+          fetch('YOUR_COLLEGE_API_ENDPOINT_HERE')
+        ]);
+
+        if (!schoolResponse.ok || !collegeResponse.ok) {
+          throw new Error('Failed to fetch data from API');
+        }
+
+        const schoolJson = await schoolResponse.json();
+        const collegeJson = await collegeResponse.json();
+
+        // Adjust based on actual API response structure (e.g., if it returns the array directly)
+        setSchoolData(schoolJson.School_ranklist || schoolJson || []);
+        setCollegeData(collegeJson.College_ranklist || collegeJson || []);
+        setError(null);
+      } catch (error) {
+        console.error('Error fetching API data:', error);
+        setError('Failed to load leaderboard data');
+        setSchoolData([]);
+        setCollegeData([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // To use the API, uncomment the line below and comment out the JSON fetch block:
+    // fetchApiData();
+
+    // --- FALLBACK ALTERNATIVE (JSON FILES) ---
+    // Currently active. Comment this block out when switching to the API above.
+    const fetchJsonData = async () => {
       try {
         setLoading(true);
         const [schoolResponse, collegeResponse] = await Promise.all([
@@ -33,7 +71,7 @@ export default function LeaderBoard() {
         setCollegeData(collegeJson.College_ranklist || []);
         setError(null);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching JSON data:', error);
         setError('Failed to load leaderboard data');
         setSchoolData([]);
         setCollegeData([]);
@@ -42,7 +80,7 @@ export default function LeaderBoard() {
       }
     };
 
-    fetchData();
+    fetchJsonData();
   }, []);
   
   // Combine and normalize data from both JSON files
