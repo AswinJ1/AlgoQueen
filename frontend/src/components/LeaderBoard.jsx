@@ -51,7 +51,6 @@ export default function LeaderBoard() {
       rank: user.rank,
       countryCode: user.countryCode,
       name: user.Name,
-      userHandle: user.user_handle,
       attempted: user.solved_count,
       totalTime: user.total_time,
       penalty: user.penalty,
@@ -65,7 +64,6 @@ export default function LeaderBoard() {
       rank: user.rank,
       countryCode: user.countryCode,
       name: user.Name,
-      userHandle: user.User_handle,
       attempted: user.Solved_count,
       totalTime: user.Total_time,
       penalty: user.Penalty,
@@ -242,7 +240,6 @@ export default function LeaderBoard() {
               <div className="col-span-2 text-center">
                 <div className='text-left'>
                 <div className="font-medium ">{user.name}</div>
-                <div className="text-xs text-gray-500">@{user.userHandle}</div>
                 {user.class && (
                   <div className="text-xs text-gray-500">Class {user.class}</div>
                 )}
@@ -278,7 +275,6 @@ export default function LeaderBoard() {
                   <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm flex-shrink-0`}></span>
                   <div className="min-w-0">
                     <div className="font-medium text-gray-900 truncate">{user.name}</div>
-                    <div className="text-xs text-gray-500">@{user.userHandle}</div>
                   </div>
                 </div>
                 <div className="text-right font-semibold text-pink-600 text-lg">

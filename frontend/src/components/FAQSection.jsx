@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Can I participate as a team or only as an individual?",
-    answer: "You can participate only individually. Check the competition guidelines for more details."
+    answer: "You can participate only individually. Check the <a href='https://www.codechef.com/seb-guidelines' target='_blank' class='text-indigo-600 underline'>competition guidelines</a> for more details."
   },
   {
     question: "What are the prizes for the winners?",
