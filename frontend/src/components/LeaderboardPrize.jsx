@@ -178,9 +178,9 @@ export default function PrizeLeaderboard() {
                         <span className="text-sm sm:text-base  text-pink-800 break-words">
                           {prizeLabel}
                         </span>
-                        <span className="text-xs sm:text-sm text-subtext-color break-words">
+                        {/* <span className="text-xs sm:text-sm text-subtext-color break-words">
                           {activeData.prizes[prizeIndex]}
-                        </span>
+                        </span> */}
                       </div>
                       <div className="flex w-px flex-none flex-col items-center gap-2 self-stretch bg-neutral-200" />
                       <div className="flex grow shrink-0 basis-0 min-w-0 items-center gap-6 px-4 py-4 sm:px-6">
@@ -208,9 +208,12 @@ export default function PrizeLeaderboard() {
                           </span>
                         ) : (
                           winner.country && (
-                            <span className="line-clamp-1 uppercase grow shrink-0 basis-0 text-sm sm:text-base font-body text-default-font break-words">
-                              {winner.country}
-                            </span>
+                            <div className="flex items-center gap-2 grow shrink-0 basis-0 min-w-0">
+                              <span className={`fi fi-${winner.country.toLowerCase()} rounded-sm shadow-sm text-lg`} />
+                              <span className="line-clamp-1 uppercase text-sm sm:text-base font-body text-default-font break-words">
+                                {winner.country}
+                              </span>
+                            </div>
                           )
                         )}
                       </div>

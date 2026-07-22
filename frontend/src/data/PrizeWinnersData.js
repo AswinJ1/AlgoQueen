@@ -9,9 +9,9 @@ const indianStates = [
 
 const generateStateWinners = (level) => {
   return indianStates.flatMap(state => [
-    { name: `First Ranker (${state})`, score: 450, institution: `Top ${level}, ${state}`, state: state },
-    { name: `Second Ranker (${state})`, score: 420, institution: `Excellent ${level}, ${state}`, state: state },
-    { name: `Third Ranker (${state})`, score: 400, institution: `Great ${level}, ${state}`, state: state }
+    { name: `First Ranker`, score: 450, institution: `Top ${level}, ${state}`, state: state },
+    { name: `Second Ranker`, score: 420, institution: `Excellent ${level}, ${state}`, state: state },
+    { name: `Third Ranker`, score: 400, institution: `Great ${level}, ${state}`, state: state }
   ]);
 };
 
