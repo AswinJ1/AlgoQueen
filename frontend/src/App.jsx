@@ -15,6 +15,7 @@ import Schedule from './pages/Schedule';
 import PricePage from './pages/PricePage';
 import QuestPage from './pages/QuestPage';
 import QuestLeaderboardPage from './pages/QuestLeaderboardPage';
+import PrizeLeaderboardpage from './pages/PrizeLeadeboardPage';
 const App = () => {
   return (
     <Router>
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/quest-about" element={<QuestPage />} />
         <Route path="/quest-leaderboard" element={<QuestLeaderboardPage />} />
         <Route path="/prizes" element={<PricePage />} />
+        <Route path="/prize-leaderboard" element={<PrizeLeaderboardpage/>}/>
+
         {/* <Route path="/speakers" element={<Speakerpage />} /> */}
         <Route path="/schedule" element={<Schedule />} />
         {/* <Route path="/leaderboard" element={<Board />} /> */}
