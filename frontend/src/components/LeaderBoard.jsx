@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import 'flag-icons/css/flag-icons.min.css';
 import { AlertTriangle, Mail } from "lucide-react";
+import { getCountryIso2 } from '../utils/countryCodes';
 
 const ITEMS_PER_PAGE = 10;
 
 export default function LeaderBoard() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedFilter, setSelectedFilter] = useState('all');
+  // const [selectedFilter, setSelectedFilter] = useState('all');
+  const [selectedFilter, setSelectedFilter] = useState('college');
   const [schoolData, setSchoolData] = useState([]);
   const [collegeData, setCollegeData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -87,7 +89,7 @@ export default function LeaderBoard() {
   const getAllData = () => {
     const normalizedSchoolData = schoolData.map(user => ({
       rank: user.rank,
-      countryCode: user.countryCode,
+      countryCode: getCountryIso2(user.countryCode),
       name: user.Name,
       attempted: user.solved_count,
       totalTime: user.total_time,
@@ -100,7 +102,7 @@ export default function LeaderBoard() {
     
     const normalizedCollegeData = collegeData.map(user => ({
       rank: user.rank,
-      countryCode: user.countryCode,
+      countryCode: getCountryIso2(user.countryCode),
       name: user.Name,
       attempted: user.Solved_count,
       totalTime: user.Total_time,
@@ -194,7 +196,44 @@ export default function LeaderBoard() {
   
   return (
     <div className="max-w-7xl mx-auto mt-4 md:mt-8 px-2 md:px-4">
+
       <div className="bg-white shadow-md rounded-lg overflow-hidden text-sm font-medium">
+        {/* Important Notice */}
+        <div className="bg-amber-50 border-b-2 border-amber-400 px-4 md:px-6 py-4">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="text-amber-600 w-5 h-5 mt-0.5 shrink-0" />
+            <div className="text-amber-900 leading-relaxed">
+              <h3 className="font-bold text-sm md:text-base mb-1">Important Notice</h3>
+              <p className="text-xs md:text-sm mb-2">
+                The <span className="font-semibold">tentative results</span> for{' '}
+                <span className="font-semibold">AlgoQueen 2026</span> have been published following
+                the preliminary evaluation process. These results are provisional and are subject to
+                verification.
+              </p>
+              <p className="text-xs md:text-sm mb-2">
+                Participants who wish to raise any queries, seek clarification, or submit an appeal
+                regarding the tentative results are requested to do so{' '}
+                <span className="font-semibold">on or before 5th August 2026</span>.
+              </p>
+              <p className="text-xs md:text-sm mb-1">All queries and appeals should be sent to:</p>
+              <div className="flex items-center gap-2 mb-2">
+                <Mail className="w-4 h-4 text-amber-700 shrink-0" />
+                <a
+                  href="mailto:algoqueen@cb.amrita.edu"
+                  className="text-amber-800 hover:text-amber-950 font-medium underline underline-offset-2 text-xs md:text-sm"
+                >
+                  algoqueen@cb.amrita.edu
+                </a>
+              </div>
+              <p className="text-xs md:text-sm italic">
+                Appeals received after the above deadline may not be considered.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-4 md:h-6 bg-white" />
+
         {/* Header */}
         <div className="bg-white text-white px-4 md:px-6 py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -217,7 +256,7 @@ export default function LeaderBoard() {
         {/* Filter Buttons */}
         <div className="px-4 md:px-6 py-4 border-b bg-gray-50">
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            <button
+            {/* <button
               onClick={() => handleFilterChange('all')}
               className={`px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-sm text-center ${
                 selectedFilter === 'all'
@@ -226,7 +265,7 @@ export default function LeaderBoard() {
               }`}
             >
               All ({filterCounts.all})
-            </button>
+            </button> */}
             <button
               onClick={() => handleFilterChange('college')}
               className={`px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-sm text-center ${
@@ -256,7 +295,7 @@ export default function LeaderBoard() {
           <div className="text-center">Country</div>
           <div className="text-center col-span-2">Name</div>
           <div className="text-center">Category</div>
-          <div className="text-center">Solved</div>
+          {/* <div className="text-center">Solved</div> */}
           <div className="text-center">Time</div>
           <div className="text-center">Score</div>
         </div>
@@ -272,7 +311,9 @@ export default function LeaderBoard() {
               
               {/* Country flag */}
               <div className="flex items-center justify-center gap-2">
-                <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm`}></span>
+                {user.countryCode && (
+                  <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm`}></span>
+                )}
               </div>
               
               <div className="col-span-2 text-center">
@@ -298,7 +339,7 @@ export default function LeaderBoard() {
                 </span>
               </div>
               
-              <div className="text-center">{user.attempted}</div>
+              {/* <div className="text-center">{user.attempted}</div> */}
               <div className="text-center text-xs">{user.totalTime}</div>
               <div className="text-center font-semibold text-pink-600">{user.points}</div>
             </div>
@@ -310,7 +351,9 @@ export default function LeaderBoard() {
                   <div className="text-lg font-bold text-gray-800">
                     {selectedFilter === 'all' ? user.globalRank : user.categoryRank}.
                   </div>
-                  <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm flex-shrink-0`}></span>
+                  {user.countryCode && (
+                    <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm flex-shrink-0`}></span>
+                  )}
                   <div className="min-w-0">
                     <div className="font-medium text-gray-900 truncate">{user.name}</div>
                   </div>
@@ -341,7 +384,7 @@ export default function LeaderBoard() {
               
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="text-center">
-                  <span className="text-gray-600">Solved:</span>
+                  {/* <span className="text-gray-600">Solved:</span> */}
                   <span className="font-medium">{user.attempted}</span>
                 </div>
                 <div className="text-center">
@@ -430,31 +473,33 @@ export default function LeaderBoard() {
       </div>
       
       {/* Results Disclaimer */}
-<div className="mt-8 bg-yellow-100 border border-yellow-300 rounded-xl p-6 shadow-sm flex items-start gap-4">
-  <AlertTriangle className="text-yellow-600 w-6 h-6 mt-1 shrink-0" />
+      {/*
+      <div className="mt-8 bg-yellow-100 border border-yellow-300 rounded-xl p-6 shadow-sm flex items-start gap-4">
+        <AlertTriangle className="text-yellow-600 w-6 h-6 mt-1 shrink-0" />
 
-  <div className="text-sm text-yellow-900 leading-relaxed">
-    <h3 className="font-semibold text-base mb-2">Important Notice</h3>
+        <div className="text-sm text-yellow-900 leading-relaxed">
+          <h3 className="font-semibold text-base mb-2">Important Notice</h3>
 
-    <p className="mb-3">
-      The <span className="font-semibold">Algoqueen 2025</span> results have been published after a thorough evaluation process. The organizing committee reserves the right to review, update, or withdraw the published ranklist and announce a revised one, should any form of malpractice, unfair means, or technical discrepancies be identified at any stage.
-    </p>
+          <p className="mb-3">
+            The <span className="font-semibold">Algoqueen 2025</span> results have been published after a thorough evaluation process. The organizing committee reserves the right to review, update, or withdraw the published ranklist and announce a revised one, should any form of malpractice, unfair means, or technical discrepancies be identified at any stage.
+          </p>
 
-    <p className="mb-2">
-      For any queries or clarifications regarding the results, please contact us at:
-    </p>
+          <p className="mb-2">
+            For any queries or clarifications regarding the results, please contact us at:
+          </p>
 
-    <div className="flex items-center gap-2 mt-2">
-      <Mail className="w-4 h-4 text-pink-600" />
-      <a
-        href="mailto:algoqueen@cb.amrita.edu"
-        className="text-pink-700 hover:text-pink-900 font-medium underline underline-offset-2"
-      >
-        algoqueen@cb.amrita.edu
-      </a>
-    </div>
-  </div>
-</div>
+          <div className="flex items-center gap-2 mt-2">
+            <Mail className="w-4 h-4 text-pink-600" />
+            <a
+              href="mailto:algoqueen@cb.amrita.edu"
+              className="text-pink-700 hover:text-pink-900 font-medium underline underline-offset-2"
+            >
+              algoqueen@cb.amrita.edu
+            </a>
+          </div>
+        </div>
+      </div>
+      */}
       
     </div>
   );

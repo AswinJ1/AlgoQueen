@@ -21,7 +21,7 @@ const navigation = [
     ]
   },
   { name: 'How to Register', to: 'how-to-register', type: 'section' },
-  // { name: 'leaderboard', to: '/leaderboard', type: 'page' },
+  { name: 'leaderboard', to: '/leaderboard', type: 'page' },
   { name: 'Top Registered Institutes', to: '/institute_leaderboard', type: 'page' },
   { name: 'Prizes', to: '/prizes', type: 'page' },
   { name: 'Schedule', to: '/schedule', type: 'page' },
