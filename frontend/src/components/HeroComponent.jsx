@@ -443,27 +443,16 @@ const HeroComponent = ({ hideHeroContent = false }) => {
                 {/* <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div> */}
                 {/* </div> */}
                 <RouterLink
-                  to="/prizes"
+                  to="/leaderboard"
                   ref={buttonRef}
                   className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
                   id="register-button"
                 >
                   <span className="relative z-10 flex items-center gap-2 ">
-                    REWARDS
+                    Tentative Rank List
                   </span>
                   <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
                 </RouterLink>
-                <a
-                  href="https://www.codechef.com/seb-guidelines"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-2 bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 transition-all duration-300 group overflow-hidden "
-                >
-                  <span className="relative z-10 flex items-center gap-2 ">
-                    SEB GUIDELINES
-                  </span>
-                  <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
-                </a>
               </div>
 
               {/* Question PDFs Row */}
