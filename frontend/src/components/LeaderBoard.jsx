@@ -5,6 +5,25 @@ import { getCountryIso2 } from '../utils/countryCodes';
 
 const ITEMS_PER_PAGE = 10;
 
+const parsePenaltyTime = (value) => {
+  if (!value) return Number.POSITIVE_INFINITY;
+
+  const parts = String(value).split(':').map(Number);
+  if (parts.some(Number.isNaN)) return Number.POSITIVE_INFINITY;
+
+  if (parts.length === 3) {
+    const [hours, minutes, seconds] = parts;
+    return (hours * 60 + minutes) * 60 + seconds;
+  }
+
+  if (parts.length === 2) {
+    const [minutes, seconds] = parts;
+    return minutes * 60 + seconds;
+  }
+
+  return Number.POSITIVE_INFINITY;
+};
+
 export default function LeaderBoard() {
   const [currentPage, setCurrentPage] = useState(1);
   // const [selectedFilter, setSelectedFilter] = useState('all');
@@ -57,8 +76,8 @@ export default function LeaderBoard() {
       try {
         setLoading(true);
         const [schoolResponse, collegeResponse] = await Promise.all([
-          fetch('data/School_ranklist.json'),
-          fetch('data/College_ranklist.json')
+          fetch('data/AlgoSchool_ranklist.json'),
+          fetch('data/AlgoCollege_ranklist.json')
         ]);
 
         if (!schoolResponse.ok || !collegeResponse.ok) {
@@ -69,8 +88,8 @@ export default function LeaderBoard() {
         const collegeJson = await collegeResponse.json();
 
         // Extract the arrays from the JSON objects
-        setSchoolData(schoolJson.School_ranklist || []);
-        setCollegeData(collegeJson.College_ranklist || []);
+        setSchoolData(schoolJson.AlgoSchool_ranklist || schoolJson.School_ranklist || []);
+        setCollegeData(collegeJson.AlgoCollege_ranklist || collegeJson.College_ranklist || []);
         setError(null);
       } catch (error) {
         console.error('Error fetching JSON data:', error);
@@ -91,9 +110,8 @@ export default function LeaderBoard() {
       rank: user.rank,
       countryCode: getCountryIso2(user.countryCode),
       name: user.Name,
-      attempted: user.solved_count,
-      totalTime: user.total_time,
-      penalty: user.penalty,
+      penaltyTime: user.penalty_time || user.Penalty_time || '',
+      penalty: Number(user.penalty ?? user.Penalty ?? 0),
       points: Number(user.score) || Number(user.Score) || 0,
       category: 'school',
       class: user.Class,
@@ -104,9 +122,8 @@ export default function LeaderBoard() {
       rank: user.rank,
       countryCode: getCountryIso2(user.countryCode),
       name: user.Name,
-      attempted: user.Solved_count,
-      totalTime: user.Total_time,
-      penalty: user.Penalty,
+      penaltyTime: user.penalty_time || user.Penalty_time || '',
+      penalty: Number(user.penalty ?? user.Penalty ?? 0),
       points: Number(user.Score) || Number(user.score) || 0,
       category: 'college',
       institute: user.institute
@@ -114,7 +131,13 @@ export default function LeaderBoard() {
 
     const combined = [...normalizedSchoolData, ...normalizedCollegeData];
     return combined
-      .sort((a, b) => b.points - a.points)
+      .sort((a, b) => {
+        if (b.points !== a.points) return b.points - a.points;
+        if (a.penalty !== b.penalty) return a.penalty - b.penalty;
+        const timeDiff = parsePenaltyTime(a.penaltyTime) - parsePenaltyTime(b.penaltyTime);
+        if (timeDiff !== 0) return timeDiff;
+        return Number(a.rank) - Number(b.rank);
+      })
       .map((user, index) => ({ ...user, globalRank: index + 1 }));
   }, [schoolData, collegeData]);
 
@@ -273,13 +296,13 @@ export default function LeaderBoard() {
         </div>
         
         {/* Desktop Table Header - Hidden on mobile */}
-        <div className="hidden lg:grid lg:grid-cols-8 bg-gray-50 text-gray-700 px-6 py-3 gap-4 text-sm">
+        <div className="hidden lg:grid lg:grid-cols-9 bg-gray-50 text-gray-700 px-6 py-3 gap-4 text-sm">
           <div className="text-center">Rank</div>
           <div className="text-center">Country</div>
           <div className="text-center col-span-2">Name</div>
           <div className="text-center">Category</div>
-          {/* <div className="text-center">Solved</div> */}
-          <div className="text-center">Time</div>
+          <div className="text-center">Penalty Time</div>
+          <div className="text-center">Penalty</div>
           <div className="text-center">Score</div>
         </div>
         
@@ -287,7 +310,7 @@ export default function LeaderBoard() {
         {paginatedData.map((user, index) => (
           <div key={`${user.category}-${user.rank}`}>
             {/* Desktop Layout */}
-            <div className="hidden lg:grid lg:grid-cols-8 items-center px-6 py-4 border-t hover:bg-gray-50 gap-4">
+            <div className="hidden lg:grid lg:grid-cols-9 items-center px-6 py-4 border-t hover:bg-gray-50 gap-4">
               <div className="text-center font-semibold text-gray-800">
                 {selectedFilter === 'all' ? user.globalRank : user.categoryRank}.
               </div>
@@ -322,8 +345,8 @@ export default function LeaderBoard() {
                 </span>
               </div>
               
-              {/* <div className="text-center">{user.attempted}</div> */}
-              <div className="text-center text-xs">{user.totalTime}</div>
+              <div className="text-center text-xs">{user.penaltyTime || '-'}</div>
+              <div className="text-center text-xs font-medium text-gray-700">{user.penalty ?? '-'}</div>
               <div className="text-center font-semibold text-pink-600">{user.points}</div>
             </div>
 
@@ -365,14 +388,18 @@ export default function LeaderBoard() {
                 <div className="text-xs text-gray-600 mb-2 text-center">{user.institute}</div>
               )}
               
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-3 gap-3 text-sm">
                 <div className="text-center">
-                  {/* <span className="text-gray-600">Solved:</span> */}
-                  <span className="font-medium">{user.attempted}</span>
+                  <span className="text-gray-600 block text-xs">Penalty Time</span>
+                  <span className="font-medium text-xs">{user.penaltyTime || '-'}</span>
                 </div>
                 <div className="text-center">
-                  <span className="text-gray-600">Time:</span>
-                  <span className="font-medium text-xs">{user.totalTime}</span>
+                  <span className="text-gray-600 block text-xs">Penalty</span>
+                  <span className="font-medium text-xs">{user.penalty ?? '-'}</span>
+                </div>
+                <div className="text-center">
+                  <span className="text-gray-600 block text-xs">Score</span>
+                  <span className="font-medium text-xs text-pink-600">{user.points}</span>
                 </div>
               </div>
             </div>
