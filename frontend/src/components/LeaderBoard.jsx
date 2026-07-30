@@ -246,7 +246,7 @@ export default function LeaderBoard() {
             <div className="flex justify-center md:justify-end">
               <img
                 alt="Algo Queen Logo"
-                src="/5.png"
+                src="/2026.png"
                 className="h-[60px] md:h-[80px] w-auto"
               />
             </div>
