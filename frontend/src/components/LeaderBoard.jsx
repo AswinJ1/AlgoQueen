@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import 'flag-icons/css/flag-icons.min.css';
 import { AlertTriangle, Mail } from "lucide-react";
 import { getCountryIso2 } from '../utils/countryCodes';
@@ -57,8 +57,8 @@ export default function LeaderBoard() {
       try {
         setLoading(true);
         const [schoolResponse, collegeResponse] = await Promise.all([
-          fetch('/data/School_ranklist.json'),
-          fetch('/data/College_ranklist.json')
+          fetch('data/School_ranklist.json'),
+          fetch('data/College_ranklist.json')
         ]);
 
         if (!schoolResponse.ok || !collegeResponse.ok) {
@@ -85,8 +85,8 @@ export default function LeaderBoard() {
     fetchJsonData();
   }, []);
   
-  // Combine and normalize data from both JSON files
-  const getAllData = () => {
+  // Combine and normalize data from both JSON files (memoized)
+  const allData = useMemo(() => {
     const normalizedSchoolData = schoolData.map(user => ({
       rank: user.rank,
       countryCode: getCountryIso2(user.countryCode),
@@ -94,12 +94,12 @@ export default function LeaderBoard() {
       attempted: user.solved_count,
       totalTime: user.total_time,
       penalty: user.penalty,
-      points: user.score,
+      points: Number(user.score) || Number(user.Score) || 0,
       category: 'school',
       class: user.Class,
       institute: user.institute
     }));
-    
+
     const normalizedCollegeData = collegeData.map(user => ({
       rank: user.rank,
       countryCode: getCountryIso2(user.countryCode),
@@ -107,40 +107,24 @@ export default function LeaderBoard() {
       attempted: user.Solved_count,
       totalTime: user.Total_time,
       penalty: user.Penalty,
-      points: user.Score,
+      points: Number(user.Score) || Number(user.score) || 0,
       category: 'college',
       institute: user.institute
     }));
-    
-    // Combine and sort by points
-    const allData = [...normalizedSchoolData, ...normalizedCollegeData];
-    return allData.sort((a, b) => b.points - a.points).map((user, index) => ({
-      ...user,
-      globalRank: index + 1
-    }));
-  };
-  
-  // Filter data based on selected category and re-rank
-  const getFilteredAndRankedData = () => {
-    const allData = getAllData();
-    
-    if (selectedFilter === 'all') {
-      return allData; // Keep global ranks for "All"
-    }
-    
-    // Filter by category and re-rank based on points
+
+    const combined = [...normalizedSchoolData, ...normalizedCollegeData];
+    return combined
+      .sort((a, b) => b.points - a.points)
+      .map((user, index) => ({ ...user, globalRank: index + 1 }));
+  }, [schoolData, collegeData]);
+
+  // Filter data based on selected category and re-rank (memoized)
+  const filteredData = useMemo(() => {
+    if (selectedFilter === 'all') return allData;
     const categoryData = allData.filter(user => user.category === selectedFilter);
-    
-    // Sort by points (descending) and assign new ranks
-    const sortedData = categoryData.sort((a, b) => b.points - a.points);
-    
-    return sortedData.map((user, index) => ({
-      ...user,
-      categoryRank: index + 1
-    }));
-  };
-  
-  const filteredData = getFilteredAndRankedData();
+    const sortedData = [...categoryData].sort((a, b) => b.points - a.points);
+    return sortedData.map((user, index) => ({ ...user, categoryRank: index + 1 }));
+  }, [allData, selectedFilter]);
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   
   const paginatedData = filteredData.slice(
@@ -160,7 +144,6 @@ export default function LeaderBoard() {
   };
   
   const getFilterCounts = () => {
-    const allData = getAllData();
     const collegeCount = allData.filter(user => user.category === 'college').length;
     const schoolCount = allData.filter(user => user.category === 'school').length;
     return { college: collegeCount, school: schoolCount, all: allData.length };
