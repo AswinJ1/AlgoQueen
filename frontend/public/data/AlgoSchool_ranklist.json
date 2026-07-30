@@ -1,0 +1,279 @@
+{
+  "AlgoSchool_ranklist": [
+    {
+      "rank": "1",
+      "Name": "Tetiana Zadniprovska",
+      "score": "600",
+      "penalty_time": "3:09:45",
+      "penalty": "3",
+      "category": "School Student",
+      "countryCode": "Ukraine",
+      "institute": "Lyceum 1",
+      "user_handle": "algoq_253861"
+    },
+    {
+      "rank": "2",
+      "Name": "Mariam Tsagareli",
+      "score": "600",
+      "penalty_time": "4:02:41",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "Georgia",
+      "institute": "Tbilisi Public School â„–199 of Physics and Mathematics",
+      "user_handle": "algoq_251368"
+    },
+    {
+      "rank": "3",
+      "Name": "Камила",
+      "score": "600",
+      "penalty_time": "5:10:30",
+      "penalty": "1",
+      "category": "School Student",
+      "countryCode": "Kazakhstan",
+      "institute": "Republican Specialized Physics and Mathematics School",
+      "user_handle": "algoq_257330"
+    },
+    {
+      "rank": "4",
+      "Name": "Swasti",
+      "score": "600",
+      "penalty_time": "5:10:47",
+      "penalty": "8",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "Unschooled",
+      "user_handle": "algoq_256113"
+    },
+    {
+      "rank": "5",
+      "Name": "Shreya Agarwal",
+      "score": "600",
+      "penalty_time": "6:09:52",
+      "penalty": "2",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "Shri R. S. Public School, Agra",
+      "user_handle": "algoq_257195"
+    },
+    {
+      "rank": "6",
+      "Name": "Jenny He",
+      "score": "500",
+      "penalty_time": "3:51:05",
+      "penalty": "9",
+      "category": "School Student",
+      "countryCode": "Australia",
+      "institute": "Pymble Ladiesâ€™ College",
+      "user_handle": "algoq_254544"
+    },
+    {
+      "rank": "7",
+      "Name": "Rana Azka Hanania",
+      "score": "500",
+      "penalty_time": "3:59:54",
+      "penalty": "7",
+      "category": "School Student",
+      "countryCode": "Indonesia",
+      "institute": "SMA S Al Kautsar",
+      "user_handle": "algoq_254590"
+    },
+    {
+      "rank": "8",
+      "Name": "Florenska Kalyca Nilandra Tofani",
+      "score": "500",
+      "penalty_time": "4:12:56",
+      "penalty": "1",
+      "category": "School Student",
+      "countryCode": "Indonesia",
+      "institute": "SMA Kolese Loyola Semarang",
+      "user_handle": "algoq_255676"
+    },
+    {
+      "rank": "9",
+      "Name": "Simiao Wang",
+      "score": "500",
+      "penalty_time": "4:24:51",
+      "penalty": "5",
+      "category": "School Student",
+      "countryCode": "United Kingdom",
+      "institute": "Kendrick School",
+      "user_handle": "algoq_250449"
+    },
+    {
+      "rank": "10",
+      "Name": "Diya Sathishdev",
+      "score": "400",
+      "penalty_time": "2:01:42",
+      "penalty": "3",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "Home School",
+      "user_handle": "algoq_253423"
+    },
+    {
+      "rank": "11",
+      "Name": "Damini Sharma",
+      "score": "400",
+      "penalty_time": "3:13:12",
+      "penalty": "4",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "Kendriya Vidyalaya Jhagrakhand",
+      "user_handle": "algoq_254595"
+    },
+    {
+      "rank": "12",
+      "Name": "Fatma Ezzahra Jlali",
+      "score": "400",
+      "penalty_time": "3:57:31",
+      "penalty": "4",
+      "category": "School Student",
+      "countryCode": "Tunisia",
+      "institute": "Pioneer High School Manouba",
+      "user_handle": "algoq_253263"
+    },
+    {
+      "rank": "13",
+      "Name": "Aatira Menon",
+      "score": "300",
+      "penalty_time": "0:55:59",
+      "penalty": "1",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "St Patricks Academy Bengaluru",
+      "user_handle": "algoq_253837"
+    },
+    {
+      "rank": "14",
+      "Name": "Meriam Louzi",
+      "score": "300",
+      "penalty_time": "1:15:52",
+      "penalty": "2",
+      "category": "School Student",
+      "countryCode": "Tunisia",
+      "institute": "Pioneer high school Monastir",
+      "user_handle": "algoq_256711"
+    },
+    {
+      "rank": "15",
+      "Name": "Shamika Marulkar",
+      "score": "300",
+      "penalty_time": "2:21:50",
+      "penalty": "6",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "J P Trust's Vidya Niketan School",
+      "user_handle": "algoq_251641"
+    },
+    {
+      "rank": "16",
+      "Name": "Nadia Zahra",
+      "score": "300",
+      "penalty_time": "2:26:04",
+      "penalty": "3",
+      "category": "School Student",
+      "countryCode": "Indonesia",
+      "institute": "MAN Insan Cendekia Kota Batam",
+      "user_handle": "algoq_255496"
+    },
+    {
+      "rank": "17",
+      "Name": "Sri Vidya Sundar",
+      "score": "300",
+      "penalty_time": "2:28:56",
+      "penalty": "8",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "DPS Electronic city",
+      "user_handle": "algoq_252859"
+    },
+    {
+      "rank": "18",
+      "Name": "Joyce Eliana Aritonang",
+      "score": "300",
+      "penalty_time": "2:32:59",
+      "penalty": "16",
+      "category": "School Student",
+      "countryCode": "Indonesia",
+      "institute": "SMAN Unggulan M.H. Thamrin",
+      "user_handle": "algoq_255652"
+    },
+    {
+      "rank": "19",
+      "Name": "Dagarova Solikha",
+      "score": "300",
+      "penalty_time": "4:36:03",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "Uzbekistan",
+      "institute": "School 21",
+      "user_handle": "algoq_252192"
+    },
+    {
+      "rank": "20",
+      "Name": "Laurencia Clio Setiadi",
+      "score": "200",
+      "penalty_time": "0:12:01",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "Indonesia",
+      "institute": "IPEKA PURI",
+      "user_handle": "algoq_253278"
+    },
+    {
+      "rank": "21",
+      "Name": "V RAMYA",
+      "score": "200",
+      "penalty_time": "2:10:08",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "Amrita Vidyalayam",
+      "user_handle": "algoq_256094"
+    },
+    {
+      "rank": "22",
+      "Name": "Anita Issayeva",
+      "score": "200",
+      "penalty_time": "2:41:14",
+      "penalty": "2",
+      "category": "School Student",
+      "countryCode": "Kazakhstan",
+      "institute": "National School of Physics and Math",
+      "user_handle": "algoq_254591"
+    },
+    {
+      "rank": "23",
+      "Name": "M Reyhan Kahfi",
+      "score": "200",
+      "penalty_time": "4:04:19",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "Indonesia",
+      "institute": "SMAN 10 GARUT",
+      "user_handle": "algoq_253773"
+    },
+    {
+      "rank": "24",
+      "Name": "Aarya Pawar",
+      "score": "100",
+      "penalty_time": "0:16:51",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "India",
+      "institute": "KSJC, Pune",
+      "user_handle": "algoq_255955"
+    },
+    {
+      "rank": "25",
+      "Name": "Yassmine Hajeb",
+      "score": "100",
+      "penalty_time": "0:20:32",
+      "penalty": "0",
+      "category": "School Student",
+      "countryCode": "Morocco",
+      "institute": "The Angloschool",
+      "user_handle": "algoq_255668"
+    }
+  ]
+}
