@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import 'flag-icons/css/flag-icons.min.css';
-import { AlertTriangle, Mail } from "lucide-react";
+import { AlertTriangle, Mail, Search, X } from "lucide-react";
 import { getCountryIso2 } from '../utils/countryCodes';
 
 const ITEMS_PER_PAGE = 10;
@@ -28,6 +28,7 @@ export default function LeaderBoard() {
   const [currentPage, setCurrentPage] = useState(1);
   // const [selectedFilter, setSelectedFilter] = useState('all');
   const [selectedFilter, setSelectedFilter] = useState('college');
+  const [searchQuery, setSearchQuery] = useState('');
   const [schoolData, setSchoolData] = useState([]);
   const [collegeData, setCollegeData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -104,10 +105,12 @@ export default function LeaderBoard() {
     fetchJsonData();
   }, []);
   
-  // Combine and normalize data from both JSON files (memoized)
+  // Combine and normalize data from both JSON files (memoized).
+  // Data is already ranked/sorted upstream, so we just map fields here — no re-sorting.
   const allData = useMemo(() => {
     const normalizedSchoolData = schoolData.map(user => ({
       rank: user.rank,
+      userHandle: user.user_handle,
       countryCode: getCountryIso2(user.countryCode),
       name: user.Name,
       penaltyTime: user.penalty_time || user.Penalty_time || '',
@@ -120,6 +123,7 @@ export default function LeaderBoard() {
 
     const normalizedCollegeData = collegeData.map(user => ({
       rank: user.rank,
+      userHandle: user.user_handle,
       countryCode: getCountryIso2(user.countryCode),
       name: user.Name,
       penaltyTime: user.penalty_time || user.Penalty_time || '',
@@ -129,25 +133,22 @@ export default function LeaderBoard() {
       institute: user.institute
     }));
 
-    const combined = [...normalizedSchoolData, ...normalizedCollegeData];
-    return combined
-      .sort((a, b) => {
-        if (b.points !== a.points) return b.points - a.points;
-        if (a.penalty !== b.penalty) return a.penalty - b.penalty;
-        const timeDiff = parsePenaltyTime(a.penaltyTime) - parsePenaltyTime(b.penaltyTime);
-        if (timeDiff !== 0) return timeDiff;
-        return Number(a.rank) - Number(b.rank);
-      })
-      .map((user, index) => ({ ...user, globalRank: index + 1 }));
+    return [...normalizedSchoolData, ...normalizedCollegeData];
   }, [schoolData, collegeData]);
 
-  // Filter data based on selected category and re-rank (memoized)
+  // Filter data based on selected category and search query (memoized) — no re-ranking, just filtering.
   const filteredData = useMemo(() => {
-    if (selectedFilter === 'all') return allData;
-    const categoryData = allData.filter(user => user.category === selectedFilter);
-    const sortedData = [...categoryData].sort((a, b) => b.points - a.points);
-    return sortedData.map((user, index) => ({ ...user, categoryRank: index + 1 }));
-  }, [allData, selectedFilter]);
+    const categoryFiltered = selectedFilter === 'all'
+      ? allData
+      : allData.filter(user => user.category === selectedFilter);
+
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return categoryFiltered;
+
+    return categoryFiltered.filter(user =>
+      user.name && user.name.toLowerCase().includes(query)
+    );
+  }, [allData, selectedFilter, searchQuery]);
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   
   const paginatedData = filteredData.slice(
@@ -164,6 +165,11 @@ export default function LeaderBoard() {
   const handleFilterChange = (filter) => {
     setSelectedFilter(filter);
     setCurrentPage(1); // Reset to first page when filter changes
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1); // Reset to first page when search changes
   };
   
   const getFilterCounts = () => {
@@ -293,6 +299,27 @@ export default function LeaderBoard() {
               School ({filterCounts.school})
             </button>
           </div>
+
+          {/* Search Bar */}
+          <div className="relative mt-3 max-w-md mx-auto">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Search by name..."
+              className="w-full pl-9 pr-9 py-2 rounded-lg border border-gray-300 bg-white text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => { setSearchQuery(''); setCurrentPage(1); }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                aria-label="Clear search"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
         
         {/* Desktop Table Header - Hidden on mobile */}
@@ -308,11 +335,11 @@ export default function LeaderBoard() {
         
         {/* Data Rows */}
         {paginatedData.map((user, index) => (
-          <div key={`${user.category}-${user.rank}`}>
+          <div key={user.userHandle || `${user.category}-${user.rank}-${index}`}>
             {/* Desktop Layout */}
             <div className="hidden lg:grid lg:grid-cols-9 items-center px-6 py-4 border-t hover:bg-gray-50 gap-4">
               <div className="text-center font-semibold text-gray-800">
-                {selectedFilter === 'all' ? user.globalRank : user.categoryRank}.
+                {user.rank}.
               </div>
               
               {/* Country flag */}
@@ -355,7 +382,7 @@ export default function LeaderBoard() {
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-3">
                   <div className="text-lg font-bold text-gray-800">
-                    {selectedFilter === 'all' ? user.globalRank : user.categoryRank}.
+                    {user.rank}.
                   </div>
                   {user.countryCode && (
                     <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm flex-shrink-0`}></span>
@@ -409,7 +436,9 @@ export default function LeaderBoard() {
         {/* No results message */}
         {paginatedData.length === 0 && (
           <div className="text-center py-8 text-gray-500">
-            No participants found for the selected filter.
+            {searchQuery
+              ? `No participants found matching "${searchQuery}".`
+              : 'No participants found for the selected filter.'}
           </div>
         )}
         
