@@ -5,25 +5,6 @@ import { getCountryIso2 } from '../utils/countryCodes';
 
 const ITEMS_PER_PAGE = 10;
 
-const parsePenaltyTime = (value) => {
-  if (!value) return Number.POSITIVE_INFINITY;
-
-  const parts = String(value).split(':').map(Number);
-  if (parts.some(Number.isNaN)) return Number.POSITIVE_INFINITY;
-
-  if (parts.length === 3) {
-    const [hours, minutes, seconds] = parts;
-    return (hours * 60 + minutes) * 60 + seconds;
-  }
-
-  if (parts.length === 2) {
-    const [minutes, seconds] = parts;
-    return minutes * 60 + seconds;
-  }
-
-  return Number.POSITIVE_INFINITY;
-};
-
 export default function LeaderBoard() {
   const [currentPage, setCurrentPage] = useState(1);
   // const [selectedFilter, setSelectedFilter] = useState('all');
@@ -35,50 +16,12 @@ export default function LeaderBoard() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // --- NEW API IMPLEMENTATION ---
-    // Replace 'API_URL_HERE' with your actual endpoint. 
-    // This assumes the API returns data in the same format as the JSON files.
-    const fetchApiData = async () => {
-      try {
-        setLoading(true);
-        // Example: If using two separate endpoints
-        const [schoolResponse, collegeResponse] = await Promise.all([
-          fetch('YOUR_SCHOOL_API_ENDPOINT_HERE'), 
-          fetch('YOUR_COLLEGE_API_ENDPOINT_HERE')
-        ]);
-
-        if (!schoolResponse.ok || !collegeResponse.ok) {
-          throw new Error('Failed to fetch data from API');
-        }
-
-        const schoolJson = await schoolResponse.json();
-        const collegeJson = await collegeResponse.json();
-
-        // Adjust based on actual API response structure (e.g., if it returns the array directly)
-        setSchoolData(schoolJson.School_ranklist || schoolJson || []);
-        setCollegeData(collegeJson.College_ranklist || collegeJson || []);
-        setError(null);
-      } catch (error) {
-        console.error('Error fetching API data:', error);
-        setError('Failed to load leaderboard data');
-        setSchoolData([]);
-        setCollegeData([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    // To use the API, uncomment the line below and comment out the JSON fetch block:
-    // fetchApiData();
-
-    // --- FALLBACK ALTERNATIVE (JSON FILES) ---
-    // Currently active. Comment this block out when switching to the API above.
     const fetchJsonData = async () => {
       try {
         setLoading(true);
         const [schoolResponse, collegeResponse] = await Promise.all([
-          fetch('data/AlgoSchool_ranklist.json'),
-          fetch('data/AlgoCollege_ranklist.json')
+          fetch('/data/School_ranklist.json'),
+          fetch('/data/College_ranklist.json')
         ]);
 
         if (!schoolResponse.ok || !collegeResponse.ok) {
@@ -88,9 +31,8 @@ export default function LeaderBoard() {
         const schoolJson = await schoolResponse.json();
         const collegeJson = await collegeResponse.json();
 
-        // Extract the arrays from the JSON objects
-        setSchoolData(schoolJson.AlgoSchool_ranklist || schoolJson.School_ranklist || []);
-        setCollegeData(collegeJson.AlgoCollege_ranklist || collegeJson.College_ranklist || []);
+        setSchoolData(schoolJson.School_ranklist || []);
+        setCollegeData(collegeJson.College_ranklist || []);
         setError(null);
       } catch (error) {
         console.error('Error fetching JSON data:', error);
@@ -110,12 +52,9 @@ export default function LeaderBoard() {
   const allData = useMemo(() => {
     const normalizedSchoolData = schoolData.map(user => ({
       rank: user.rank,
-      userHandle: user.user_handle,
+      userHandle: user.user_handle || user.User_handle || user.userHandle,
       countryCode: getCountryIso2(user.countryCode),
-      name: user.Name,
-      penaltyTime: user.penalty_time || user.Penalty_time || '',
-      penalty: Number(user.penalty ?? user.Penalty ?? 0),
-      points: Number(user.score) || Number(user.Score) || 0,
+      name: user.Name || user.name,
       category: 'school',
       class: user.Class,
       institute: user.institute
@@ -123,12 +62,9 @@ export default function LeaderBoard() {
 
     const normalizedCollegeData = collegeData.map(user => ({
       rank: user.rank,
-      userHandle: user.user_handle,
+      userHandle: user.user_handle || user.User_handle || user.userHandle,
       countryCode: getCountryIso2(user.countryCode),
-      name: user.Name,
-      penaltyTime: user.penalty_time || user.Penalty_time || '',
-      penalty: Number(user.penalty ?? user.Penalty ?? 0),
-      points: Number(user.Score) || Number(user.score) || 0,
+      name: user.Name || user.name,
       category: 'college',
       institute: user.institute
     }));
@@ -146,7 +82,9 @@ export default function LeaderBoard() {
     if (!query) return categoryFiltered;
 
     return categoryFiltered.filter(user =>
-      user.name && user.name.toLowerCase().includes(query)
+      [user.name, user.userHandle].some(value =>
+        value && String(value).toLowerCase().includes(query)
+      )
     );
   }, [allData, selectedFilter, searchQuery]);
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
@@ -211,7 +149,7 @@ export default function LeaderBoard() {
 
       <div className="bg-white shadow-md rounded-lg overflow-hidden text-sm font-medium">
         {/* Important Notice */}
-        <div className="bg-amber-50 border-b-2 border-amber-400 px-4 md:px-6 py-4">
+        {/* <div className="bg-amber-50 border-b-2 border-amber-400 px-4 md:px-6 py-4">
           <div className="flex items-start gap-3">
             <AlertTriangle className="text-amber-600 w-5 h-5 mt-0.5 shrink-0" />
             <div className="text-amber-900 leading-relaxed">
@@ -242,7 +180,7 @@ export default function LeaderBoard() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="h-4 md:h-6 bg-white" />
 
@@ -250,7 +188,7 @@ export default function LeaderBoard() {
         <div className="bg-white text-white px-4 md:px-6 py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-lg md:text-xl font-bold text-black text-center md:text-left">Algo Queen 2026 Ranklist</h2>
+              <h2 className="text-lg md:text-xl font-bold text-black text-center md:text-left">Algo Queen 2026 Final Ranklist</h2>
               <p className="text-gray-700 text-xs md:text-sm mt-1 text-center md:text-left">
                 Showing {paginatedData.length} of {filteredData.length} participants
               </p>
@@ -323,21 +261,19 @@ export default function LeaderBoard() {
         </div>
         
         {/* Desktop Table Header - Hidden on mobile */}
-        <div className="hidden lg:grid lg:grid-cols-9 bg-gray-50 text-gray-700 px-6 py-3 gap-4 text-sm">
+        <div className="hidden lg:grid lg:grid-cols-[0.7fr_0.8fr_2.5fr_1.5fr_1fr] bg-gray-50 text-gray-700 px-6 py-3 gap-4 text-sm">
           <div className="text-center">Rank</div>
           <div className="text-center">Country</div>
-          <div className="text-center col-span-2">Name</div>
+          <div className="text-left">Name</div>
+          <div className="text-left">User handle</div>
           <div className="text-center">Category</div>
-          <div className="text-center">Penalty Time</div>
-          <div className="text-center">Penalty</div>
-          <div className="text-center">Score</div>
         </div>
         
         {/* Data Rows */}
         {paginatedData.map((user, index) => (
           <div key={user.userHandle || `${user.category}-${user.rank}-${index}`}>
             {/* Desktop Layout */}
-            <div className="hidden lg:grid lg:grid-cols-9 items-center px-6 py-4 border-t hover:bg-gray-50 gap-4">
+            <div className="hidden lg:grid lg:grid-cols-[0.7fr_0.8fr_2.5fr_1.5fr_1fr] items-center px-6 py-4 border-t hover:bg-gray-50 gap-4">
               <div className="text-center font-semibold text-gray-800">
                 {user.rank}.
               </div>
@@ -349,16 +285,18 @@ export default function LeaderBoard() {
                 )}
               </div>
               
-              <div className="col-span-2 text-center">
-                <div className='text-left'>
-                <div className="font-medium ">{user.name}</div>
+              <div className="text-left min-w-0">
+                <div className="font-medium break-words">{user.name}</div>
                 {user.class && (
                   <div className="text-xs text-gray-500">Class {user.class}</div>
                 )}
                 {user.institute && (
                   <div className="text-xs text-gray-500">{user.institute}</div>
                 )}
-                </div>
+              </div>
+
+              <div className="text-left min-w-0 text-gray-600 break-all">
+                {user.userHandle ? `@${user.userHandle}` : '-'}
               </div>
               
               {/* Category badge */}
@@ -372,9 +310,6 @@ export default function LeaderBoard() {
                 </span>
               </div>
               
-              <div className="text-center text-xs">{user.penaltyTime || '-'}</div>
-              <div className="text-center text-xs font-medium text-gray-700">{user.penalty ?? '-'}</div>
-              <div className="text-center font-semibold text-pink-600">{user.points}</div>
             </div>
 
             {/* Mobile/Tablet Layout */}
@@ -388,12 +323,16 @@ export default function LeaderBoard() {
                     <span className={`fi fi-${user.countryCode} w-5 h-3 rounded-sm flex-shrink-0`}></span>
                   )}
                   <div className="min-w-0">
-                    <div className="font-medium text-gray-900 truncate">{user.name}</div>
+                    <div className="font-medium text-gray-900 break-words">{user.name}</div>
                   </div>
                 </div>
-                <div className="text-right font-semibold text-pink-600 text-lg">
-                  {user.points}
-                </div>
+              </div>
+
+              <div className="flex items-start gap-2 mb-2 text-xs">
+                <span className="text-gray-500 shrink-0">User handle:</span>
+                <span className="text-gray-700 break-all min-w-0">
+                  {user.userHandle ? `@${user.userHandle}` : '-'}
+                </span>
               </div>
               
               <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
@@ -415,20 +354,6 @@ export default function LeaderBoard() {
                 <div className="text-xs text-gray-600 mb-2 text-center">{user.institute}</div>
               )}
               
-              <div className="grid grid-cols-3 gap-3 text-sm">
-                <div className="text-center">
-                  <span className="text-gray-600 block text-xs">Penalty Time</span>
-                  <span className="font-medium text-xs">{user.penaltyTime || '-'}</span>
-                </div>
-                <div className="text-center">
-                  <span className="text-gray-600 block text-xs">Penalty</span>
-                  <span className="font-medium text-xs">{user.penalty ?? '-'}</span>
-                </div>
-                <div className="text-center">
-                  <span className="text-gray-600 block text-xs">Score</span>
-                  <span className="font-medium text-xs text-pink-600">{user.points}</span>
-                </div>
-              </div>
             </div>
           </div>
         ))}

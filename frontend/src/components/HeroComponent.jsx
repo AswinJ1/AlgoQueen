@@ -449,7 +449,7 @@ const HeroComponent = ({ hideHeroContent = false }) => {
                   id="register-button"
                 >
                   <span className="relative z-10 flex items-center gap-2 ">
-                    Tentative Rank List
+                    AlgoQueen 2026 Ranklist is Live ! 
                   </span>
                   <div className="absolute inset-0 bg-indigo-800 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 z-0"></div>
                 </RouterLink>

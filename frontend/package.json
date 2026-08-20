@@ -10,8 +10,8 @@
   "lint": "eslint .",
   "preview": "vite preview",
 
-  "convert:college": "node src/scripts/convert_ranklist.js public/data/College.xlsx public/data/College_ranklist.json College_ranklist",
-  "convert:school": "node src/scripts/convert_ranklist.js public/data/School.xlsx public/data/School_ranklist.json School_ranklist",
+  "convert:college": "node \"src/scripts/convert_ranklist.js\" \"public/data/AlgoQueen26_Finaldraft list_(College).xlsx\" public/data/College_ranklist.json College_ranklist",
+  "convert:school": "node \"src/scripts/convert_ranklist.js\" \"public/data/AlgoQueen26_Finallist(School).xlsx\" public/data/School_ranklist.json School_ranklist",
 
   "convert:algocollege": "node src/scripts/convert_ranklist.js public/data/AlgoCollege.xlsx public/data/AlgoCollege_ranklist.json AlgoCollege_ranklist",
   "convert:algschool": "node src/scripts/convert_ranklist.js public/data/AlgoSchool.xlsx public/data/AlgoSchool_ranklist.json AlgoSchool_ranklist",
