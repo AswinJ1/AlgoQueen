@@ -23,9 +23,15 @@ const navigation = [
   { name: 'How to Register', to: 'how-to-register', type: 'section' },
   { name: 'leaderboard', to: '/leaderboard', type: 'page' },
   { name: 'Top Registered Institutes', to: '/institute_leaderboard', type: 'page' },
-  { name: 'Prizes', to: '/prizes', type: 'page' },
+    {name: 'Prizes', type: 'dropdown', children: [
+          { name: 'About', to: '/prizes', type: 'page' },
+          {name: 'Leaderboard', to: "/prize-leaderboard", type:'page'}
+
+  ]},
   { name: 'Schedule', to: '/schedule', type: 'page' },
-  { name: 'Winners', to: '/winners', type: 'page' },
+
+    { name: 'Winners', to: '/winners', type: 'page' },
+
   {
     name: 'More', type: 'dropdown', children: [
       { name: 'Resources', to: '/learning-resources', type: 'page' },
@@ -37,7 +43,6 @@ const navigation = [
   },
   { name: 'Join Telegram', to: 'https://t.me/algoqueen2023', type: 'external' }
 ];
-
 const HeroComponent = ({ hideHeroContent = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

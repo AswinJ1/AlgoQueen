@@ -1,0 +1,25 @@
+{
+  "category": "Overall Champions",
+  "level": "College",
+  "description": "Overall Champions - College",
+  "winners": [
+    {
+      "name": "Ankita Kumari",
+      "institution": "Indian Institute of Technology, Patna",
+      "countryCode": "in",
+      "state": "Bihar"
+    },
+    {
+      "name": "Charul",
+      "institution": "National Institute of Technology Kurukshetra",
+      "countryCode": "in",
+      "state": "Punjab"
+    },
+    {
+      "name": "Pooja Bisht",
+      "institution": "Thapar Institute of Engineering & Technology",
+      "countryCode": "in",
+      "state": "Punjab"
+    }
+  ]
+}

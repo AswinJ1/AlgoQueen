@@ -1,0 +1,22 @@
+{
+  "category": "Overall Champions",
+  "level": "School",
+  "description": "Overall Champions - School",
+  "winners": [
+    {
+      "name": "Tetiana Zadniprovska",
+      "institution": "Lyceum 1",
+      "countryCode": "ua"
+    },
+    {
+      "name": "Mariam Tsagareli",
+      "institution": "Tbilisi Public School â„–199 of Physics and Mathematics",
+      "countryCode": "ge"
+    },
+    {
+      "name": "Kamila Djaparova",
+      "institution": "Republican Specialized Physics and Mathematics School",
+      "countryCode": "kz"
+    }
+  ]
+}
