@@ -1,0 +1,63 @@
+{
+  "category": "State Champions",
+  "level": "School",
+  "description": "State Champions - School",
+  "winners": [
+    {
+      "name": "Aatira Menon",
+      "institution": "St Patricks Academy Bengaluru",
+      "countryCode": "in",
+      "state": "Karnataka",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Sri Vidya Sundar",
+      "institution": "DPS Electronic city",
+      "countryCode": "in",
+      "state": "Karnataka",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Damini Sharma",
+      "institution": "Kendriya Vidyalaya Jhagrakhand",
+      "countryCode": "in",
+      "state": "Madhya pradesh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Swasti",
+      "institution": "Unschooled",
+      "countryCode": "in",
+      "state": "Maharashtra",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Shamika Marulkar",
+      "institution": "J P Trust's Vidya Niketan School",
+      "countryCode": "in",
+      "state": "Maharashtra",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Diya Sathishdev",
+      "institution": "National Institute of Open Schooling (NIOS), Chennai",
+      "countryCode": "in",
+      "state": "Tamil Nadu",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "V RAMYA",
+      "institution": "Amrita Vidyalayam",
+      "countryCode": "in",
+      "state": "Tamil Nadu",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Shreya Agarwal",
+      "institution": "Shri R. S. Public School, Agra",
+      "countryCode": "in",
+      "state": "Uttar pradesh",
+      "prize": "1st Rank"
+    }
+  ]
+}

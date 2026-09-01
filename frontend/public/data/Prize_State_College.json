@@ -1,0 +1,511 @@
+{
+  "category": "State Champions",
+  "level": "College",
+  "description": "State Champions - College",
+  "winners": [
+    {
+      "name": "Lahari Tummala",
+      "institution": "Shri Vishnu engineering college for Womens",
+      "countryCode": "xx",
+      "state": "Andhra Pradesh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Chintala Sri Pooja",
+      "institution": "Dr. RVR NRI University (NRIU)",
+      "countryCode": "xx",
+      "state": "Andhra Pradesh",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Preethika",
+      "institution": "Gayatri Vidya Parishad College of Engineering (GVPCE)",
+      "countryCode": "xx",
+      "state": "Andhra Pradesh",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Samiksha Mitra",
+      "institution": "Indian Institute of Technology Guwahati",
+      "countryCode": "xx",
+      "state": "Assam",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Parishmita Banik",
+      "institution": "National Institute of Technology, Silchar",
+      "countryCode": "xx",
+      "state": "Assam",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Ankita Kumari",
+      "institution": "Indian Institute of Technology, Patna",
+      "countryCode": "xx",
+      "state": "Bihar",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Sneha Shandilya",
+      "institution": "Indian Institute of Technology Bombay",
+      "countryCode": "xx",
+      "state": "Bihar",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Suruchi Kumari",
+      "institution": "Indian Institute of Technology, Patna",
+      "countryCode": "xx",
+      "state": "Bihar",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Pragya Mahajan",
+      "institution": "Indian Institute of Technology, Patna",
+      "countryCode": "xx",
+      "state": "Chandigarh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Namita",
+      "institution": "Punjab Engineering College",
+      "countryCode": "xx",
+      "state": "Chandigarh",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Sanchi Agarwal",
+      "institution": "UIET Chandigarh Panjab University",
+      "countryCode": "xx",
+      "state": "Chandigarh",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Tanisha Jain",
+      "institution": "Dr. SPM International Institute of Information Technology Naya Raipur",
+      "countryCode": "xx",
+      "state": "Chhattisgarh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Supriya Verma",
+      "institution": "National Institute of Technology Raipur",
+      "countryCode": "xx",
+      "state": "Chhattisgarh",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Sonal Singh",
+      "institution": "Government Engineering College, Bilaspur",
+      "countryCode": "xx",
+      "state": "Chhattisgarh",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Yashvi Patel",
+      "institution": "Dhirubhai Ambani University (DA-IICT)",
+      "countryCode": "xx",
+      "state": "Gujarat",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Shivangi Singh",
+      "institution": "Manipal University Jaipur",
+      "countryCode": "xx",
+      "state": "Gujarat",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Prisha Hadvani",
+      "institution": "Charotar University of Science and Technology (CHARUSAT)",
+      "countryCode": "xx",
+      "state": "Gujarat",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Arya Rathore",
+      "institution": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior",
+      "countryCode": "xx",
+      "state": "Haryana",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Sana Sindwani",
+      "institution": "Indira Gandhi Delhi Technical University for Women",
+      "countryCode": "xx",
+      "state": "Haryana",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Lipika Mandal",
+      "institution": "National Institute Of Technology Kurukshetra",
+      "countryCode": "xx",
+      "state": "Haryana",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Shalini Kashyap",
+      "institution": "National Institute of Technology Hamirpur",
+      "countryCode": "xx",
+      "state": "Himachal Pradesh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Manya Sethi",
+      "institution": "Jaypee University of Information Technology (JUIT) Himachal Pradesh",
+      "countryCode": "xx",
+      "state": "Himachal Pradesh",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Ananyaa",
+      "institution": "Jaypee Institute of Information Technology",
+      "countryCode": "xx",
+      "state": "Himachal Pradesh",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Japnoor Kaur",
+      "institution": "Indian Institute of Technology Jammu",
+      "countryCode": "xx",
+      "state": "Jammu and Kashmir",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Suhani Gupta",
+      "institution": "National Institute of Technology, Silchar",
+      "countryCode": "xx",
+      "state": "Jharkhand",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Aariya Kumari",
+      "institution": "Birla Institute of Technology - Mesra",
+      "countryCode": "xx",
+      "state": "Jharkhand",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Anshika Sinha",
+      "institution": "Birla Institute of Technology - Mesra",
+      "countryCode": "xx",
+      "state": "Jharkhand",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Adishree Gupta",
+      "institution": "PES University",
+      "countryCode": "xx",
+      "state": "Karnataka",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Anuska Roy",
+      "institution": "Scaler School Of Technology",
+      "countryCode": "xx",
+      "state": "Karnataka",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Aparna Singha",
+      "institution": "Scaler School Of Technology",
+      "countryCode": "xx",
+      "state": "Karnataka",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Geethika C",
+      "institution": "Muthoot Institute of Technology and Science (MITS-Kochi)",
+      "countryCode": "xx",
+      "state": "Kerala",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Jemima Mariam Mathew",
+      "institution": "Muthoot Institute of Technology and Science (MITS-Kochi)",
+      "countryCode": "xx",
+      "state": "Kerala",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Fathima Sana K T",
+      "institution": "Muthoot Institute of Technology and Science (MITS-Kochi)",
+      "countryCode": "xx",
+      "state": "Kerala",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Aditi Sahu",
+      "institution": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior",
+      "countryCode": "xx",
+      "state": "Madhya Pradesh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Saloni Jain",
+      "institution": "Shri Govindram Seksaria Institute of Technology and Science",
+      "countryCode": "xx",
+      "state": "Madhya Pradesh",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Radhika Sanjay Namdeo",
+      "institution": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior",
+      "countryCode": "xx",
+      "state": "Madhya Pradesh",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Radhika Dodain",
+      "institution": "Army Institute of Technology",
+      "countryCode": "xx",
+      "state": "Maharashtra",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Iqra Sayed",
+      "institution": "APSIT , Mumbai University",
+      "countryCode": "xx",
+      "state": "Maharashtra",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Arshiya Shaikh",
+      "institution": "JSPM Rajarshi Shahu College of Engineering Pune",
+      "countryCode": "xx",
+      "state": "Maharashtra",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Anisha Sadhukhan",
+      "institution": "Indian Institute of Information Technology Manipur",
+      "countryCode": "xx",
+      "state": "Manipur",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Priya Singh",
+      "institution": "Indian Institute of Information Technology Manipur",
+      "countryCode": "xx",
+      "state": "Manipur",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Jayanti Goyal",
+      "institution": "Indira Gandhi Delhi Technical University for Women",
+      "countryCode": "xx",
+      "state": "New Delhi",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Stuti Jain",
+      "institution": "Indian Institute of Technology Roorkee",
+      "countryCode": "xx",
+      "state": "New Delhi",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Durga",
+      "institution": "Maharaja Agrasen Insitute of Technology",
+      "countryCode": "xx",
+      "state": "New Delhi",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Puja Kumari",
+      "institution": "Kalinga Institute of Industrial Technology",
+      "countryCode": "xx",
+      "state": "Odisha",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Pratyasha Mishra",
+      "institution": "Kalinga Institue of Industrial Technology",
+      "countryCode": "xx",
+      "state": "Odisha",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Kritika Gaur",
+      "institution": "Kalinga Institue of Industrial Technology",
+      "countryCode": "xx",
+      "state": "Odisha",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "DURGADEVI T",
+      "institution": "Pondicherry University",
+      "countryCode": "xx",
+      "state": "Puducherry",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Charul",
+      "institution": "National Institute of Technology Kurukshetra",
+      "countryCode": "xx",
+      "state": "Punjab",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Pooja Bisht",
+      "institution": "Thapar Institute of Engineering & Technology",
+      "countryCode": "xx",
+      "state": "Punjab",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Kritika Sawhney",
+      "institution": "Chitkara University",
+      "countryCode": "xx",
+      "state": "Punjab",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Akshita Kumari",
+      "institution": "Indian Institute of Information Technology Kota",
+      "countryCode": "xx",
+      "state": "Rajasthan",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Insha",
+      "institution": "Indian Institute of Information Technology, Lucknow (IIIT Lucknow)",
+      "countryCode": "xx",
+      "state": "Rajasthan",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Grishmita Agrawal",
+      "institution": "Indian Institute of Technology, Patna",
+      "countryCode": "xx",
+      "state": "Rajasthan",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Divyanshi Katiyar",
+      "institution": "National lnstitute of Technology, Sikkim",
+      "countryCode": "xx",
+      "state": "Sikkim",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Shristi",
+      "institution": "Sikkim manipal Institute of technology",
+      "countryCode": "xx",
+      "state": "Sikkim",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Bhagavathy S",
+      "institution": "Amrita Vishwa Vidyapeetham",
+      "countryCode": "xx",
+      "state": "Tamil Nadu",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Shamuthrika SP",
+      "institution": "Chennai Institute of Technology",
+      "countryCode": "xx",
+      "state": "Tamil Nadu",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "DEEKSHITHA B",
+      "institution": "Chennai Institute of Technology",
+      "countryCode": "xx",
+      "state": "Tamil Nadu",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Vennela Varshini Anasoori",
+      "institution": "Indian Institute of Information Technology, Lucknow (IIIT Lucknow)",
+      "countryCode": "xx",
+      "state": "Telangana",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "sindhuja pagadala",
+      "institution": "Indian Institute of Information Technology, Lucknow (IIIT Lucknow)",
+      "countryCode": "xx",
+      "state": "Telangana",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Sharanya Lakkamsetti",
+      "institution": "Keshav Memorial Institute of Technology",
+      "countryCode": "xx",
+      "state": "Telangana",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Km Prachi Yadav",
+      "institution": "Indian Institute of Information Technology, Agartala",
+      "countryCode": "xx",
+      "state": "Tripura",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Purvi Jangde",
+      "institution": "Indian Institute of Information Technology Allahabad",
+      "countryCode": "xx",
+      "state": "Uttar Pradesh",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Garima Uttam",
+      "institution": "Indian Institute of Information Technology Jabalpur",
+      "countryCode": "xx",
+      "state": "Uttar Pradesh",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Saumya Sood",
+      "institution": "Indian Institute of Information Technology, Allahabad",
+      "countryCode": "xx",
+      "state": "Uttar Pradesh",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Ishika Sattawan",
+      "institution": "Indian Institute of Technology Roorkee",
+      "countryCode": "xx",
+      "state": "Uttarakhand",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Kanchan Bhatt",
+      "institution": "Graphic Era Deemed to be University",
+      "countryCode": "xx",
+      "state": "Uttarakhand",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "Sahaj Saxena",
+      "institution": "Indian Institute of Technology Roorkee",
+      "countryCode": "xx",
+      "state": "Uttarakhand",
+      "prize": "3rd Rank"
+    },
+    {
+      "name": "Anwesha Sarkar",
+      "institution": "National Institute of Technology, Rourkela",
+      "countryCode": "xx",
+      "state": "West Bengal",
+      "prize": "1st Rank"
+    },
+    {
+      "name": "Solanki Sarkar",
+      "institution": "National Institute of Technology Durgapur",
+      "countryCode": "xx",
+      "state": "West Bengal",
+      "prize": "2nd Rank"
+    },
+    {
+      "name": "SHRESTHA MONDAL",
+      "institution": "Jalpaiguri Government Engineering College (JGEC)",
+      "countryCode": "xx",
+      "state": "West Bengal",
+      "prize": "3rd Rank"
+    }
+  ]
+}

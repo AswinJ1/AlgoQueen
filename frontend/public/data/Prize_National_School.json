@@ -1,0 +1,25 @@
+{
+  "category": "National Champions",
+  "level": "School",
+  "description": "National Champions - School",
+  "winners": [
+    {
+      "name": "Swasti",
+      "institution": "Unschooled",
+      "countryCode": "in",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Shreya Agarwal",
+      "institution": "Shri R. S. Public School, Agra",
+      "countryCode": "in",
+      "state": "Uttar pradesh"
+    },
+    {
+      "name": "Diya Sathishdev",
+      "institution": "National Institute of Open Schooling (NIOS), Chennai",
+      "countryCode": "in",
+      "state": "Tamil Nadu"
+    }
+  ]
+}
